@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="uz" data-lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-Bob: Logistikaga kirish — Dispatcher Academy</title>
+  <meta name="description" content="Logistika ta'rifi, transport turlari, AQSh yuk tashish sanoati statistikasi">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme & Language: apply before paint -->
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-left">
+      <!-- Hamburger (mobile) -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <!-- Logo -->
+      <a href="index.html" class="header-logo">
+        <i data-lucide="truck" class="logo-icon"></i>
+        <span class="logo-text">
+          <span class="lang-uz">Dispatcher Academy</span>
+          <span class="lang-en">Dispatcher Academy</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="header-right">
+      <!-- Language Toggle -->
+      <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">
+        <i data-lucide="globe"></i>
+        <span class="toggle-label">EN</span>
+      </button>
+
+      <!-- Theme Toggle -->
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <!-- Home -->
+      <div class="sidebar-section">
+        <a href="index.html" class="sidebar-link">
+          <i data-lucide="home"></i>
+          <span class="lang-uz">Bosh sahifa</span>
+          <span class="lang-en">Home</span>
+        </a>
+      </div>
+
+      <!-- Chapters -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Boblar</span>
+          <span class="lang-en">Chapters</span>
+        </div>
+
+        <a href="chapter1.html" class="sidebar-link active">
+          <span class="chapter-num">1</span>
+          <span class="lang-uz">Logistikaga kirish</span>
+          <span class="lang-en">Introduction to Logistics</span>
+        </a>
+
+        <a href="chapter2.html" class="sidebar-link">
+          <span class="chapter-num">2</span>
+          <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+          <span class="lang-en">Stakeholders in Trucking</span>
+        </a>
+
+        <a href="chapter3.html" class="sidebar-link">
+          <span class="chapter-num">3</span>
+          <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+          <span class="lang-en">Truck Drivers and Their Operations</span>
+        </a>
+
+        <a href="chapter4.html" class="sidebar-link">
+          <span class="chapter-num">4</span>
+          <span class="lang-uz">Avtopark va jihozlar</span>
+          <span class="lang-en">Fleet and Equipment</span>
+        </a>
+
+        <a href="chapter5.html" class="sidebar-link">
+          <span class="chapter-num">5</span>
+          <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+          <span class="lang-en">Trailers and Weight Balance</span>
+        </a>
+
+        <a href="chapter6.html" class="sidebar-link">
+          <span class="chapter-num">6</span>
+          <span class="lang-uz">Yuk turlari</span>
+          <span class="lang-en">Freight Types</span>
+        </a>
+
+        <a href="chapter7.html" class="sidebar-link">
+          <span class="chapter-num">7</span>
+          <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+          <span class="lang-en">Load Security and Procedures</span>
+        </a>
+
+        <a href="chapter8.html" class="sidebar-link">
+          <span class="chapter-num">8</span>
+          <span class="lang-uz">AQSh avtomagistral tizimi</span>
+          <span class="lang-en">US Highway and Road System</span>
+        </a>
+
+        <a href="chapter9.html" class="sidebar-link">
+          <span class="chapter-num">9</span>
+          <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+          <span class="lang-en">US Safety and Compliance</span>
+        </a>
+      </div>
+
+      <!-- Tools -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Asboblar</span>
+          <span class="lang-en">Tools</span>
+        </div>
+
+        <a href="glossary.html" class="sidebar-link">
+          <i data-lucide="book-open"></i>
+          <span class="lang-uz">Glossariy</span>
+          <span class="lang-en">Glossary</span>
+        </a>
+
+        <a href="resources.html" class="sidebar-link">
+          <i data-lucide="link"></i>
+          <span class="lang-uz">Resurslar</span>
+          <span class="lang-en">Resources</span>
+        </a>
+
+        <a href="progress.html" class="sidebar-link">
+          <i data-lucide="bar-chart-3"></i>
+          <span class="lang-uz">Progress</span>
+          <span class="lang-en">Progress</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="app-layout">
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- Chapter Header -->
+        <section class="chapter-header">
+          <div class="chapter-badge-large">1</div>
+          <h1 class="page-title">
+            <span class="lang-uz">Logistikaga kirish</span>
+            <span class="lang-en">Introduction to Logistics</span>
+          </h1>
+          <p class="page-subtitle">
+            <span class="lang-uz">15 slayd &nbsp;·&nbsp; Logistika ta'rifi, transport turlari, AQSh yuk tashish sanoati statistikasi</span>
+            <span class="lang-en">15 slides &nbsp;·&nbsp; Logistics definition, transport modes, US trucking industry overview</span>
+          </p>
+        </section>
+
+        <!-- ===== 1.1 What Is Logistics? ===== -->
+        <section class="chapter-section card" id="section-1-1">
+          <h2 class="section-title">
+            <span class="section-num">1.1</span>
+            <span class="lang-uz">Logistika nima?</span>
+            <span class="lang-en">What Is Logistics?</span>
+          </h2>
+
+          <div class="section-body">
+            <p>
+              <span class="lang-uz"><strong>Ta'rif:</strong> Logistika — tovarlarni kelib chiqish nuqtasidan iste'mol nuqtasigacha samarali tashish va saqlashni rejalashtirish hamda amalga oshirish jarayoni.</span>
+              <span class="lang-en"><strong>Definition:</strong> The process of planning and executing efficient transportation and storage of goods from the point of origin to the point of consumption.</span>
+            </p>
+            <p>
+              <span class="lang-uz">"Logistika" so'zi yunon tilidan olingan bo'lib, "fikrlash va hisoblash san'ati" degan ma'noni anglatadi.</span>
+              <span class="lang-en">The word "logistics" comes from Greek — meaning "art of thinking and calculation."</span>
+            </p>
+            <div class="info-box">
+              <h4>
+                <span class="lang-uz">Ikki turi:</span>
+                <span class="lang-en">Two types:</span>
+              </h4>
+              <ul>
+                <li>
+                  <span class="lang-uz"><strong>Xalqaro logistika</strong> — chegaralar orqali tovar tashish</span>
+                  <span class="lang-en"><strong>International logistics</strong> — moving goods across borders</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>Ichki logistika</strong> — bir mamlakat ichida tovar tashish</span>
+                  <span class="lang-en"><strong>Domestic logistics</strong> — moving goods within one country</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 1.2 What Logistics Includes ===== -->
+        <section class="chapter-section card" id="section-1-2">
+          <h2 class="section-title">
+            <span class="section-num">1.2</span>
+            <span class="lang-uz">Logistika nimalarni o'z ichiga oladi</span>
+            <span class="lang-en">What Logistics Includes</span>
+          </h2>
+
+          <div class="section-body">
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">🚛</div>
+                <h4>
+                  <span class="lang-uz">Tashish</span>
+                  <span class="lang-en">Transportation</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Tovarlarni bir joydan boshqa joyga yetkazish</span>
+                  <span class="lang-en">Moving goods from one place to another</span>
+                </p>
+              </div>
+
+              <div class="item-card">
+                <div class="item-icon">🏭</div>
+                <h4>
+                  <span class="lang-uz">Ombor xo'jaligi</span>
+                  <span class="lang-en">Warehousing</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Tovarlarni saqlash va boshqarish</span>
+                  <span class="lang-en">Storing and managing goods</span>
+                </p>
+              </div>
+
+              <div class="item-card">
+                <div class="item-icon">📦</div>
+                <h4>
+                  <span class="lang-uz">Qadoqlash</span>
+                  <span class="lang-en">Packaging</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Tovarlarni himoyalash va tashishga tayyorlash</span>
+                  <span class="lang-en">Protecting and preparing goods for transport</span>
+                </p>
+              </div>
+
+              <div class="item-card">
+                <div class="item-icon">🔄</div>
+                <h4>
+                  <span class="lang-uz">Tarqatish</span>
+                  <span class="lang-en">Distribution</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Tovarlarni oxirgi foydalanuvchilarga yetkazish</span>
+                  <span class="lang-en">Delivering goods to end consumers</span>
+                </p>
+              </div>
+
+              <div class="item-card">
+                <div class="item-icon">↩️</div>
+                <h4>
+                  <span class="lang-uz">Teskari logistika</span>
+                  <span class="lang-en">Reverse Logistics</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Tovarlarni qaytarish yoki utilizatsiya qilish jarayoni</span>
+                  <span class="lang-en">Process of returning or recycling goods</span>
+                </p>
+              </div>
+
+              <div class="item-card">
+                <div class="item-icon">🤝</div>
+                <h4>
+                  <span class="lang-uz">3PL va 4PL</span>
+                  <span class="lang-en">3PL & 4PL</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Uchinchi/To'rtinchi tomon logistika provayderlari — tashqi kompaniyalar logistikani boshqaradi</span>
+                  <span class="lang-en">Third/Fourth-party logistics providers — outsourced logistics management</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 1.3 Transport Modes ===== -->
+        <section class="chapter-section card" id="section-1-3">
+          <h2 class="section-title">
+            <span class="section-num">1.3</span>
+            <span class="lang-uz">Transport turlari</span>
+            <span class="lang-en">Transport Modes</span>
+          </h2>
+
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Tur</span>
+                      <span class="lang-en">Mode</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Tavsif</span>
+                      <span class="lang-en">Description</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>
+                        <span class="lang-uz">Yo'l (Road)</span>
+                        <span class="lang-en">Road</span>
+                      </strong>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Yuk mashinalari — AQShda ichki yuk tashishning asosiy usuli</span>
+                      <span class="lang-en">Trucks — dominant mode in US domestic freight</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>
+                        <span class="lang-uz">Temir yo'l (Railway)</span>
+                        <span class="lang-en">Railway</span>
+                      </strong>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Uzoq masofali ommaviy va intermodal tashish</span>
+                      <span class="lang-en">Long-distance bulk and intermodal</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>
+                        <span class="lang-uz">Havo (Air)</span>
+                        <span class="lang-en">Air</span>
+                      </strong>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Tez, qimmat, kichik/yuqori qiymatli tovarlar</span>
+                      <span class="lang-en">Fast, expensive, small/high-value goods</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>
+                        <span class="lang-uz">Dengiz (Ship)</span>
+                        <span class="lang-en">Ship</span>
+                      </strong>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Xalqaro savdo, ommaviy tovarlar</span>
+                      <span class="lang-en">International trade, bulk commodities</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>
+                        <span class="lang-uz">Intermodal / Multimodal</span>
+                        <span class="lang-en">Intermodal / Multimodal</span>
+                      </strong>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Bir nechta transport turidan foydalanish. Intermodal — standart konteynerlar kema, temir yo'l, samolyot, yuk mashinasi o'rtasida ko'chiriladi. Multimodal — bir shartnoma asosida bir nechta transport turi.</span>
+                      <span class="lang-en">Shipments involving more than one mode. Intermodal uses standardized containers transferred between ship, rail, plane, truck. Multimodal implies a single contract for multiple modes.</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 1.4 US Trucking Industry Overview ===== -->
+        <section class="chapter-section card" id="section-1-4">
+          <h2 class="section-title">
+            <span class="section-num">1.4</span>
+            <span class="lang-uz">AQSh yuk tashish sanoati haqida umumiy ma'lumot</span>
+            <span class="lang-en">US Trucking Industry Overview</span>
+          </h2>
+
+          <div class="section-body">
+            <p>
+              <span class="lang-uz">AQSh yuk tashish sanoati dunyo iqtisodiyotining eng muhim bo'g'inlaridan biridir. Quyidagi statistikalar sanoat hajmini ko'rsatadi:</span>
+              <span class="lang-en">The US trucking industry is one of the most critical links in the world economy. The following statistics show the scale of the industry:</span>
+            </p>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-value">$796B</span>
+                <span class="stat-desc">
+                  <span class="lang-uz">Yillik daromad (2018)</span>
+                  <span class="lang-en">Annual revenue (2018)</span>
+                </span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">70%+</span>
+                <span class="stat-desc">
+                  <span class="lang-uz">AQShda tashiladigan barcha tovarlar</span>
+                  <span class="lang-en">Of all goods transported in the US</span>
+                </span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">3.5M</span>
+                <span class="stat-desc">
+                  <span class="lang-uz">Yuk mashinasi haydovchilari</span>
+                  <span class="lang-en">Truck drivers in the US</span>
+                </span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">7.4M</span>
+                <span class="stat-desc">
+                  <span class="lang-uz">Sanoatda ishlovchilar (~6% barcha ish o'rinlari)</span>
+                  <span class="lang-en">People employed (~6% of all US jobs)</span>
+                </span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">17.6B</span>
+                <span class="stat-desc">
+                  <span class="lang-uz">Yiliga tashiladigan yuk tonnasi</span>
+                  <span class="lang-en">Tons of freight per year</span>
+                </span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">48.3M</span>
+                <span class="stat-desc">
+                  <span class="lang-uz">Kuniga tashiladigan yuk tonnasi</span>
+                  <span class="lang-en">Tons of freight hauled daily</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="fact-list">
+              <div class="fact-item">
+                <span class="fact-icon">⛽</span>
+                <p>
+                  <span class="lang-uz">Yuk mashinalari <strong>50 milliard gallon</strong>dan ortiq yoqilg'i sarflaydi (mamlakatning 15%)</span>
+                  <span class="lang-en">Truckers use more than <strong>50 billion gallons</strong> of fuel (15% of nation's consumption)</span>
+                </p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">💰</span>
+                <p>
+                  <span class="lang-uz">Transport logistika xarajatlari <strong>$1.2 trillionga</strong> teng (YaIMning 7.7%)</span>
+                  <span class="lang-en">Transportation logistics costs over <strong>$1.2 trillion</strong> (7.7% of GDP)</span>
+                </p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">🏪</span>
+                <p>
+                  <span class="lang-uz">Agar haydovchilar haydashni to'xtatsalar, ko'pgina oziq-ovqat do'konlari <strong>atigi 3 kun</strong>da oziq-ovqatsiz qoladi</span>
+                  <span class="lang-en">Most grocery stores would run out of food in <strong>just 3 days</strong> if truckers stopped driving</span>
+                </p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">📊</span>
+                <p>
+                  <span class="lang-uz">Har bir amerikalikka yiliga <strong>57 tonna</strong> yuk to'g'ri keladi</span>
+                  <span class="lang-en"><strong>57 tons</strong> of freight per person each year</span>
+                </p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">💵</span>
+                <p>
+                  <span class="lang-uz">Yiliga <strong>$16.8 trillion</strong> qiymatdagi yuk tashiladi</span>
+                  <span class="lang-en"><strong>$16.8 trillion</strong> worth of freight yearly</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 1.5 Current Issues in Trucking ===== -->
+        <section class="chapter-section card" id="section-1-5">
+          <h2 class="section-title">
+            <span class="section-num">1.5</span>
+            <span class="lang-uz">Yuk tashishdagi dolzarb muammolar</span>
+            <span class="lang-en">Current Issues in Trucking</span>
+          </h2>
+
+          <div class="section-body">
+            <div class="issue-card highlight-card">
+              <h4>
+                <span class="lang-uz">⚠️ Haydovchilarning tanqisligi</span>
+                <span class="lang-en">⚠️ Critical Driver Shortage</span>
+              </h4>
+              <p>
+                <span class="lang-uz">Kompaniyalar har yili o'n minglab yangi haydovchilarga muhtoj. ATA 2019-yilda <strong>60,000</strong> haydovchi kamomadini hisoblagan.</span>
+                <span class="lang-en">Companies need tens of thousands of new drivers yearly. ATA estimated <strong>60,000</strong> drivers needed in 2019.</span>
+              </p>
+            </div>
+
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">35 yoshdan kichik haydovchilar orasida sanoatga ayollar erkaklar bilan teng ravishda kirib kelmoqda</span>
+                <span class="lang-en">Among truckers younger than 35, more women than men are entering the industry</span>
+              </li>
+              <li>
+                <span class="lang-uz">55 yoshdan katta haydovchilar orasida ispaniyaliklarning ulushi boshqa etnik guruhlardan yuqori</span>
+                <span class="lang-en">Hispanic people represent more drivers than any other ethnicity over 55 years old</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Sanoat omillari:</strong> Bozor narxi, ELD/FMCSA qoidalari, yuk hajmi</span>
+                <span class="lang-en"><strong>Industry triggers:</strong> Market price, ELD/FMCSA regulations, freight volume</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 1.6 Terminology ===== -->
+        <section class="chapter-section card" id="section-1-6">
+          <h2 class="section-title">
+            <span class="section-num">1.6</span>
+            <span class="lang-uz">Terminologiya — 1-bob</span>
+            <span class="lang-en">Terminology — Chapter 1</span>
+          </h2>
+
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table terminology-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Inglizcha atama</span>
+                      <span class="lang-en">English Term</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">O'zbekcha tarjima</span>
+                      <span class="lang-en">Uzbek Translation</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Ta'rif</span>
+                      <span class="lang-en">Definition</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Logistics</strong></td>
+                    <td>Logistika</td>
+                    <td>
+                      <span class="lang-uz">Tovarlarni samarali tashish va saqlashni rejalashtirish va amalga oshirish jarayoni</span>
+                      <span class="lang-en">The process of planning and executing efficient transportation and storage of goods</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>3PL</strong></td>
+                    <td>
+                      <span class="lang-uz">3PL (Uchinchi tomon logistika)</span>
+                      <span class="lang-en">3PL (Third-party logistics)</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Tashqi kompaniya logistikani boshqaradi</span>
+                      <span class="lang-en">Third-party logistics — external company manages logistics</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>4PL</strong></td>
+                    <td>
+                      <span class="lang-uz">4PL (To'rtinchi tomon logistika)</span>
+                      <span class="lang-en">4PL (Fourth-party logistics)</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Butun ta'minot zanjirini boshqaradi</span>
+                      <span class="lang-en">Fourth-party logistics — manages the entire supply chain</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Intermodal</strong></td>
+                    <td>Intermodal</td>
+                    <td>
+                      <span class="lang-uz">Bir necha transport turidan foydalangan holda konteyner tashish</span>
+                      <span class="lang-en">Shipping containers using multiple transport modes</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Freight</strong></td>
+                    <td>
+                      <span class="lang-uz">Yuk / Freight</span>
+                      <span class="lang-en">Freight</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Tijorat maqsadida tashiladigan har qanday tovar</span>
+                      <span class="lang-en">Any goods transported for commercial purposes</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Reverse Logistics</strong></td>
+                    <td>
+                      <span class="lang-uz">Teskari logistika</span>
+                      <span class="lang-en">Reverse Logistics</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Tovarlarni qaytarish yoki utilizatsiya qilish jarayoni</span>
+                      <span class="lang-en">Process of returning or recycling goods</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== ASOSIY FIKRLAR (Key Takeaways) ===== -->
+        <section class="chapter-section card takeaways-section" id="takeaways">
+          <h2 class="section-title">
+            <i data-lucide="star" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Asosiy fikrlar</span>
+            <span class="lang-en">Key Takeaways</span>
+          </h2>
+
+          <div class="section-body">
+            <ul class="takeaways-list">
+              <li>
+                <span class="lang-uz">Logistika — tovarlarni kelib chiqish nuqtasidan iste'mol nuqtasigacha samarali tashish va saqlash jarayoni. Ikki turi bor: xalqaro va ichki logistika.</span>
+                <span class="lang-en">Logistics is the process of efficiently transporting and storing goods from origin to consumption. Two types: international and domestic logistics.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Logistika 6 asosiy yo'nalishni o'z ichiga oladi: tashish, ombor, qadoqlash, tarqatish, teskari logistika va 3PL/4PL xizmatlari.</span>
+                <span class="lang-en">Logistics includes 6 main areas: transportation, warehousing, packaging, distribution, reverse logistics, and 3PL/4PL services.</span>
+              </li>
+              <li>
+                <span class="lang-uz">5 ta asosiy transport turi mavjud: yo'l, temir yo'l, havo, dengiz va intermodal/multimodal.</span>
+                <span class="lang-en">There are 5 main transport modes: road, railway, air, ship, and intermodal/multimodal.</span>
+              </li>
+              <li>
+                <span class="lang-uz">AQSh yuk tashish sanoati — $796 milliardlik bozor. Yuk mashinalari barcha tovarlarning 70%dan ortig'ini tashiydi. 3.5 million haydovchi ishlaydi.</span>
+                <span class="lang-en">US trucking is a $796 billion industry. Trucks move 70%+ of all goods. 3.5 million drivers are employed.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Sanoatning eng dolzarb muammosi — haydovchilar tanqisligi. Har yili o'n minglab yangi haydovchilarga talab bor.</span>
+                <span class="lang-en">The industry's most critical issue is driver shortage. Tens of thousands of new drivers are needed every year.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== SCENARIOS (Interactive) ===== -->
+        <section class="chapter-section card" id="scenarios">
+          <h2 class="section-title">
+            <i data-lucide="help-circle" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Amaliy vaziyatlar</span>
+            <span class="lang-en">Practice Scenarios</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher vaziyatlarini tahlil qiling va to'g'ri javobni tanlang.</span>
+            <span class="lang-en">Analyze the following real dispatcher situations and choose the correct answer.</span>
+          </p>
+          <div id="scenarios-container"></div>
+        </section>
+
+        <!-- ===== PHONE SCRIPTS ===== -->
+        <section class="chapter-section card" id="phone-scripts">
+          <h2 class="section-title">
+            <i data-lucide="phone" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Telefon skriptlari</span>
+            <span class="lang-en">Phone Scripts</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher telefon muloqotlarini o'rganing. Kalit iboralarni yodlang.</span>
+            <span class="lang-en">Study the following real dispatcher phone conversations. Memorize the key phrases.</span>
+          </p>
+          <div id="scripts-container"></div>
+        </section>
+
+        <!-- ===== MARK AS READ ===== -->
+        <div class="mark-read-wrap">
+          <button class="mark-read-btn" id="mark-read-btn">
+            <i data-lucide="book-check" style="width:18px;height:18px"></i>
+            <span class="lang-uz">O'qildi deb belgilash</span>
+            <span class="lang-en">Mark as read</span>
+          </button>
+        </div>
+
+        <!-- ===== CHAPTER NAVIGATION ===== -->
+        <div class="chapter-nav">
+          <a href="index.html" class="chapter-nav-btn prev">
+            <i data-lucide="arrow-left" style="width:18px;height:18px"></i>
+            <span>
+              <span class="lang-uz">Bosh sahifa</span>
+              <span class="lang-en">Home</span>
+            </span>
+          </a>
+          <a href="chapter2.html" class="chapter-nav-btn next">
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Keyingi bob</span>
+                <span class="lang-en">Next Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+                <span class="lang-en">Stakeholders in Trucking</span>
+              </span>
+            </span>
+            <i data-lucide="arrow-right" style="width:18px;height:18px"></i>
+          </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>
+            <span class="lang-uz">&copy; 2024 Dispatcher Academy — AQSh yuk tashish sanoati bo'yicha o'quv platformasi</span>
+            <span class="lang-en">&copy; 2024 Dispatcher Academy — US Trucking Industry Learning Platform</span>
+          </p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Progress Tracker -->
+  <script src="js/progress.js"></script>
+
+  <!-- Scenario Data -->
+  <script src="data/scenarios.js"></script>
+
+  <!-- Phone Scripts Data -->
+  <script src="data/scripts.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Scenario Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 1;
+    var container = document.getElementById('scenarios-container');
+    if (!container || typeof scenariosData === 'undefined') return;
+
+    var chapterScenarios = scenariosData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScenarios.length === 0) return;
+
+    function getLang() {
+      return document.documentElement.getAttribute('data-lang') || 'uz';
+    }
+
+    function escHtml(s) {
+      var d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    function renderScenarios() {
+      var lang = getLang();
+      container.innerHTML = '';
+
+      chapterScenarios.forEach(function(scenario, idx) {
+        var situation = lang === 'uz' ? scenario.situation_uz : scenario.situation_en;
+
+        var scenarioEl = document.createElement('div');
+        scenarioEl.className = 'scenario-block';
+        scenarioEl.setAttribute('data-id', scenario.id);
+
+        var header = '<div class="scenario-header">' +
+          '<span class="scenario-num">' + (idx + 1) + '</span>' +
+          '<div class="scenario-situation">' + escHtml(situation) + '</div>' +
+          '</div>';
+
+        var optionsHtml = '<div class="scenario-options">';
+        scenario.options.forEach(function(opt, oi) {
+          var optText = lang === 'uz' ? opt.text_uz : opt.text_en;
+          optionsHtml += '<button class="scenario-option" data-scenario="' + scenario.id + '" data-index="' + oi + '">' +
+            '<span class="option-letter">' + String.fromCharCode(65 + oi) + '</span>' +
+            '<span class="option-text">' + escHtml(optText) + '</span>' +
+            '</button>';
+        });
+        optionsHtml += '</div>';
+
+        var feedbackHtml = '<div class="scenario-feedback" id="feedback-' + scenario.id + '" style="display:none"></div>';
+
+        scenarioEl.innerHTML = header + optionsHtml + feedbackHtml;
+        container.appendChild(scenarioEl);
+      });
+
+      // Bind click events
+      container.querySelectorAll('.scenario-option').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          handleAnswer(this);
+        });
+      });
+    }
+
+    function handleAnswer(btn) {
+      var scenarioId = btn.getAttribute('data-scenario');
+      var chosenIndex = parseInt(btn.getAttribute('data-index'));
+      var scenario = chapterScenarios.find(function(s) { return s.id === scenarioId; });
+      if (!scenario) return;
+
+      var lang = getLang();
+      var block = btn.closest('.scenario-block');
+      var allBtns = block.querySelectorAll('.scenario-option');
+      var isCorrect = chosenIndex === scenario.correct_index;
+
+      // Disable all buttons
+      allBtns.forEach(function(b) {
+        b.disabled = true;
+        b.classList.add('disabled');
+        var bIdx = parseInt(b.getAttribute('data-index'));
+        if (bIdx === scenario.correct_index) {
+          b.classList.add('correct');
+        }
+        if (bIdx === chosenIndex && !isCorrect) {
+          b.classList.add('incorrect');
+        }
+      });
+
+      // Show feedback
+      var feedbackEl = document.getElementById('feedback-' + scenarioId);
+      var chosenOpt = scenario.options[chosenIndex];
+      var explanation = lang === 'uz' ? chosenOpt.explanation_uz : chosenOpt.explanation_en;
+
+      feedbackEl.className = 'scenario-feedback ' + (isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+      feedbackEl.innerHTML =
+        '<div class="feedback-icon">' +
+        (isCorrect
+          ? '<i data-lucide="check-circle" style="width:20px;height:20px;color:#16a34a"></i>'
+          : '<i data-lucide="x-circle" style="width:20px;height:20px;color:#dc2626"></i>') +
+        '</div>' +
+        '<div class="feedback-text">' + escHtml(explanation) + '</div>';
+      feedbackEl.style.display = 'flex';
+      lucide.createIcons();
+    }
+
+    // Language change observer
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') {
+          // Re-render only if no answers have been given
+          var answered = container.querySelector('.scenario-option.disabled');
+          if (!answered) renderScenarios();
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+
+    renderScenarios();
+  })();
+  </script>
+
+  <!-- Phone Scripts Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 1;
+    var container = document.getElementById('scripts-container');
+    if (!container || typeof scriptsData === 'undefined') return;
+    var chapterScripts = scriptsData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScripts.length === 0) return;
+
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+    function renderScripts() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScripts.forEach(function(script, idx) {
+        var title = lang === 'uz' ? script.title_uz : script.title_en;
+        var dialogue = lang === 'uz' ? script.script_uz : script.script_en;
+        var phrasesTitle = lang === 'uz' ? 'Kalit iboralar' : 'Key Phrases';
+
+        var el = document.createElement('div');
+        el.className = 'script-block';
+
+        var phrasesHtml = '';
+        script.key_phrases.forEach(function(kp) {
+          var phrase = lang === 'uz' ? kp.phrase_uz : kp.phrase_en;
+          phrasesHtml += '<div class="key-phrase"><span class="key-phrase-bullet">▸</span><span class="key-phrase-text">' + escHtml(phrase) + '</span></div>';
+        });
+
+        el.innerHTML =
+          '<div class="script-header" onclick="this.nextElementSibling.classList.toggle(\'open\'); this.querySelector(\'.script-toggle\').classList.toggle(\'open\')">' +
+            '<span class="script-num">' + (idx + 1) + '</span>' +
+            '<span class="script-title">' + escHtml(title) + '</span>' +
+            '<i data-lucide="chevron-down" class="script-toggle" style="width:20px;height:20px"></i>' +
+          '</div>' +
+          '<div class="script-body">' +
+            '<div class="script-dialogue">' + escHtml(dialogue) + '</div>' +
+            '<div class="script-key-phrases">' +
+              '<div class="script-key-phrases-title"><i data-lucide="bookmark" style="width:16px;height:16px"></i> ' + escHtml(phrasesTitle) + '</div>' +
+              phrasesHtml +
+            '</div>' +
+          '</div>';
+
+        container.appendChild(el);
+      });
+      lucide.createIcons();
+    }
+
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') renderScripts();
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+
+    renderScripts();
+  })();
+  </script>
+
+  <!-- Mark as Read Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 1;
+    var btn = document.getElementById('mark-read-btn');
+    if (!btn || typeof Progress === 'undefined') return;
+
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+
+    function updateBtn() {
+      var isRead = Progress.isChapterRead(CHAPTER);
+      var lang = getLang();
+      if (isRead) {
+        btn.classList.add('read');
+        btn.innerHTML =
+          '<i data-lucide="check-circle" style="width:18px;height:18px"></i>' +
+          '<span class="lang-uz">O\'qilgan</span>' +
+          '<span class="lang-en">Read</span>';
+      } else {
+        btn.classList.remove('read');
+        btn.innerHTML =
+          '<i data-lucide="book-check" style="width:18px;height:18px"></i>' +
+          '<span class="lang-uz">O\'qildi deb belgilash</span>' +
+          '<span class="lang-en">Mark as read</span>';
+      }
+      lucide.createIcons();
+    }
+
+    btn.addEventListener('click', function() {
+      if (!Progress.isChapterRead(CHAPTER)) {
+        Progress.markChapterRead(CHAPTER);
+        updateBtn();
+      }
+    });
+
+    // Language change → update button text
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') updateBtn();
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+
+    updateBtn();
+  })();
+  </script>
+</body>
+</html>

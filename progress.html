@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="uz" data-lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress — Dispatcher Academy</title>
+  <meta name="description" content="O'quv progressingizni kuzating — boblar, glossariy, scenariylar">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme & Language: apply before paint -->
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+
+  <style>
+    /* ===== Progress Page Styles ===== */
+    .progress-overview {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+    @media (min-width: 600px) {
+      .progress-overview {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .progress-stat-card {
+      background: var(--color-surface, #ffffff);
+      border: 1px solid var(--color-border, #e2e8f0);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .stat-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+    }
+    .stat-icon.chapters { background: rgba(26, 35, 126, 0.1); color: var(--color-primary, #1a237e); }
+    .stat-icon.glossary { background: rgba(255, 109, 0, 0.1); color: var(--color-accent, #ff6d00); }
+    .stat-icon.scenarios { background: rgba(22, 163, 74, 0.1); color: #16a34a; }
+
+    .stat-numbers {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-text, #1e293b);
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: var(--color-text-light, #64748b);
+    }
+
+    .stat-bar {
+      width: 100%;
+      height: 6px;
+      background: var(--color-border, #e2e8f0);
+      border-radius: 3px;
+      margin-top: 12px;
+      overflow: hidden;
+    }
+
+    .stat-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+    .stat-bar-fill.chapters { background: var(--color-primary, #1a237e); }
+    .stat-bar-fill.glossary { background: var(--color-accent, #ff6d00); }
+    .stat-bar-fill.scenarios { background: #16a34a; }
+
+    /* Overall progress */
+    .overall-progress {
+      background: var(--color-surface, #ffffff);
+      border: 1px solid var(--color-border, #e2e8f0);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .overall-percent {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--color-primary, #1a237e);
+      line-height: 1;
+    }
+
+    .overall-label {
+      font-size: 14px;
+      color: var(--color-text-light, #64748b);
+      margin-top: 4px;
+      margin-bottom: 16px;
+    }
+
+    .overall-bar {
+      width: 100%;
+      max-width: 400px;
+      height: 10px;
+      background: var(--color-border, #e2e8f0);
+      border-radius: 5px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .overall-bar-fill {
+      height: 100%;
+      border-radius: 5px;
+      background: linear-gradient(90deg, var(--color-primary, #1a237e), var(--color-accent, #ff6d00));
+      transition: width 0.5s ease;
+    }
+
+    /* Chapter list */
+    .progress-section {
+      background: var(--color-surface, #ffffff);
+      border: 1px solid var(--color-border, #e2e8f0);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .progress-section-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-text, #1e293b);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .chapter-progress-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .chapter-progress-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--color-border, #e2e8f0);
+      font-size: 14px;
+      color: var(--color-text, #1e293b);
+    }
+
+    .chapter-progress-item:last-child {
+      border-bottom: none;
+    }
+
+    .chapter-check {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid var(--color-border, #cbd5e1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .chapter-check.done {
+      border-color: #16a34a;
+      background: #16a34a;
+      color: #ffffff;
+    }
+
+    .chapter-progress-num {
+      font-weight: 600;
+      color: var(--color-text-light, #64748b);
+      min-width: 20px;
+    }
+
+    .chapter-progress-name {
+      flex: 1;
+    }
+
+    /* Export / Import */
+    .progress-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .progress-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 1px solid var(--color-border, #e2e8f0);
+      background: var(--color-surface, #ffffff);
+      color: var(--color-text, #1e293b);
+    }
+
+    .progress-btn:hover {
+      border-color: var(--color-primary, #1a237e);
+      color: var(--color-primary, #1a237e);
+    }
+
+    .progress-btn.primary {
+      background: var(--color-primary, #1a237e);
+      color: #ffffff;
+      border-color: var(--color-primary, #1a237e);
+    }
+
+    .progress-btn.primary:hover {
+      opacity: 0.9;
+    }
+
+    .progress-btn.danger {
+      color: #dc2626;
+      border-color: #dc2626;
+    }
+
+    .progress-btn.danger:hover {
+      background: #dc2626;
+      color: #ffffff;
+    }
+
+    .import-input {
+      display: none;
+    }
+
+    .import-status {
+      font-size: 13px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-top: 8px;
+      display: none;
+    }
+
+    .import-status.success {
+      display: block;
+      background: rgba(22, 163, 74, 0.1);
+      color: #16a34a;
+    }
+
+    .import-status.error {
+      display: block;
+      background: rgba(220, 38, 38, 0.1);
+      color: #dc2626;
+    }
+
+    /* Dark mode */
+    [data-theme="dark"] .progress-stat-card,
+    [data-theme="dark"] .overall-progress,
+    [data-theme="dark"] .progress-section {
+      background: var(--color-surface);
+      border-color: var(--color-border);
+    }
+
+    [data-theme="dark"] .stat-icon.chapters { background: rgba(121, 134, 203, 0.15); color: var(--color-primary-light, #7986cb); }
+    [data-theme="dark"] .stat-icon.glossary { background: rgba(255, 109, 0, 0.15); }
+    [data-theme="dark"] .stat-icon.scenarios { background: rgba(22, 163, 74, 0.15); }
+
+    [data-theme="dark"] .overall-percent { color: var(--color-primary-light, #7986cb); }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <a href="index.html" class="header-logo">
+        <i data-lucide="truck" class="logo-icon"></i>
+        <span class="logo-text">
+          <span class="lang-uz">Dispatcher Academy</span>
+          <span class="lang-en">Dispatcher Academy</span>
+        </span>
+      </a>
+    </div>
+    <div class="header-right">
+      <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">
+        <i data-lucide="globe"></i>
+        <span class="toggle-label">EN</span>
+      </button>
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <a href="index.html" class="sidebar-link">
+          <i data-lucide="home"></i>
+          <span class="lang-uz">Bosh sahifa</span>
+          <span class="lang-en">Home</span>
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Boblar</span>
+          <span class="lang-en">Chapters</span>
+        </div>
+
+        <a href="chapter1.html" class="sidebar-link">
+          <span class="chapter-num">1</span>
+          <span class="lang-uz">Logistikaga kirish</span>
+          <span class="lang-en">Introduction to Logistics</span>
+        </a>
+        <a href="chapter2.html" class="sidebar-link">
+          <span class="chapter-num">2</span>
+          <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+          <span class="lang-en">Stakeholders in Trucking</span>
+        </a>
+        <a href="chapter3.html" class="sidebar-link">
+          <span class="chapter-num">3</span>
+          <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+          <span class="lang-en">Truck Drivers and Their Operations</span>
+        </a>
+        <a href="chapter4.html" class="sidebar-link">
+          <span class="chapter-num">4</span>
+          <span class="lang-uz">Avtopark va jihozlar</span>
+          <span class="lang-en">Fleet and Equipment</span>
+        </a>
+        <a href="chapter5.html" class="sidebar-link">
+          <span class="chapter-num">5</span>
+          <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+          <span class="lang-en">Trailers and Weight Balance</span>
+        </a>
+        <a href="chapter6.html" class="sidebar-link">
+          <span class="chapter-num">6</span>
+          <span class="lang-uz">Yuk turlari</span>
+          <span class="lang-en">Freight Types</span>
+        </a>
+        <a href="chapter7.html" class="sidebar-link">
+          <span class="chapter-num">7</span>
+          <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+          <span class="lang-en">Load Security and Procedures</span>
+        </a>
+        <a href="chapter8.html" class="sidebar-link">
+          <span class="chapter-num">8</span>
+          <span class="lang-uz">AQSh avtomagistral tizimi</span>
+          <span class="lang-en">US Highway and Road System</span>
+        </a>
+        <a href="chapter9.html" class="sidebar-link">
+          <span class="chapter-num">9</span>
+          <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+          <span class="lang-en">US Safety and Compliance</span>
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Asboblar</span>
+          <span class="lang-en">Tools</span>
+        </div>
+        <a href="glossary.html" class="sidebar-link">
+          <i data-lucide="book-open"></i>
+          <span class="lang-uz">Glossariy</span>
+          <span class="lang-en">Glossary</span>
+        </a>
+        <a href="resources.html" class="sidebar-link">
+          <i data-lucide="link"></i>
+          <span class="lang-uz">Resurslar</span>
+          <span class="lang-en">Resources</span>
+        </a>
+        <a href="progress.html" class="sidebar-link active">
+          <i data-lucide="bar-chart-3"></i>
+          <span class="lang-uz">Progress</span>
+          <span class="lang-en">Progress</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="app-layout">
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- Page Title -->
+        <div class="page-header" style="margin-bottom:24px">
+          <h1 class="page-title">
+            <i data-lucide="bar-chart-3" style="width:28px;height:28px;color:var(--color-accent)"></i>
+            <span class="lang-uz">O'quv progressi</span>
+            <span class="lang-en">Learning Progress</span>
+          </h1>
+        </div>
+
+        <!-- Overall Progress -->
+        <div class="overall-progress">
+          <div class="overall-percent" id="overall-percent">0%</div>
+          <div class="overall-label">
+            <span class="lang-uz">Umumiy progress</span>
+            <span class="lang-en">Overall progress</span>
+          </div>
+          <div class="overall-bar">
+            <div class="overall-bar-fill" id="overall-bar-fill" style="width:0%"></div>
+          </div>
+        </div>
+
+        <!-- Stat Cards -->
+        <div class="progress-overview">
+          <!-- Chapters -->
+          <div class="progress-stat-card">
+            <div class="stat-icon chapters">
+              <i data-lucide="book-open" style="width:20px;height:20px"></i>
+            </div>
+            <div class="stat-numbers" id="stat-chapters">0 / 9</div>
+            <div class="stat-label">
+              <span class="lang-uz">Boblar o'qildi</span>
+              <span class="lang-en">Chapters read</span>
+            </div>
+            <div class="stat-bar"><div class="stat-bar-fill chapters" id="bar-chapters" style="width:0%"></div></div>
+          </div>
+
+          <!-- Glossary -->
+          <div class="progress-stat-card">
+            <div class="stat-icon glossary">
+              <i data-lucide="bookmark" style="width:20px;height:20px"></i>
+            </div>
+            <div class="stat-numbers" id="stat-glossary">0 / 110</div>
+            <div class="stat-label">
+              <span class="lang-uz">Atamalar ko'rildi</span>
+              <span class="lang-en">Terms viewed</span>
+            </div>
+            <div class="stat-bar"><div class="stat-bar-fill glossary" id="bar-glossary" style="width:0%"></div></div>
+          </div>
+
+          <!-- Scenarios -->
+          <div class="progress-stat-card">
+            <div class="stat-icon scenarios">
+              <i data-lucide="check-circle" style="width:20px;height:20px"></i>
+            </div>
+            <div class="stat-numbers" id="stat-scenarios">0 / 21</div>
+            <div class="stat-label">
+              <span class="lang-uz">Scenariylar bajarildi</span>
+              <span class="lang-en">Scenarios completed</span>
+            </div>
+            <div class="stat-bar"><div class="stat-bar-fill scenarios" id="bar-scenarios" style="width:0%"></div></div>
+          </div>
+        </div>
+
+        <!-- Chapters List -->
+        <div class="progress-section">
+          <div class="progress-section-title">
+            <i data-lucide="list" style="width:18px;height:18px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Boblar bo'yicha</span>
+            <span class="lang-en">By chapter</span>
+          </div>
+          <ul class="chapter-progress-list" id="chapter-list"></ul>
+        </div>
+
+        <!-- Export / Import / Reset -->
+        <div class="progress-section">
+          <div class="progress-section-title">
+            <i data-lucide="settings" style="width:18px;height:18px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Ma'lumotlar</span>
+            <span class="lang-en">Data</span>
+          </div>
+          <div class="progress-actions">
+            <button class="progress-btn primary" id="btn-export">
+              <i data-lucide="download" style="width:16px;height:16px"></i>
+              <span class="lang-uz">Eksport (JSON)</span>
+              <span class="lang-en">Export (JSON)</span>
+            </button>
+            <button class="progress-btn" id="btn-import">
+              <i data-lucide="upload" style="width:16px;height:16px"></i>
+              <span class="lang-uz">Import (JSON)</span>
+              <span class="lang-en">Import (JSON)</span>
+            </button>
+            <input type="file" accept=".json" class="import-input" id="import-input">
+            <button class="progress-btn danger" id="btn-reset">
+              <i data-lucide="trash-2" style="width:16px;height:16px"></i>
+              <span class="lang-uz">Tozalash</span>
+              <span class="lang-en">Reset</span>
+            </button>
+          </div>
+          <div class="import-status" id="import-status"></div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Progress Tracker -->
+  <script src="js/progress.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- Navigation -->
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Progress Page Logic -->
+  <script>
+  (function() {
+    var chapterNames = [
+      { uz: 'Logistikaga kirish', en: 'Introduction to Logistics' },
+      { uz: 'Yuk tashish ishtirokchilari', en: 'Stakeholders in Trucking' },
+      { uz: 'Haydovchilar va operatsiyalar', en: 'Truck Drivers and Their Operations' },
+      { uz: 'Avtopark va jihozlar', en: 'Fleet and Equipment' },
+      { uz: 'Traylerlar va og\'irlik balansi', en: 'Trailers and Weight Balance' },
+      { uz: 'Yuk turlari', en: 'Freight Types' },
+      { uz: 'Yuk xavfsizligi va protseduralar', en: 'Load Security and Procedures' },
+      { uz: 'AQSh avtomagistral tizimi', en: 'US Highway and Road System' },
+      { uz: 'AQSh xavfsizlik va muvofiqlik', en: 'US Safety and Compliance' }
+    ];
+
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+
+    function render() {
+      var stats = Progress.getStats();
+      var lang = getLang();
+
+      // Overall
+      document.getElementById('overall-percent').textContent = stats.overallPercent + '%';
+      document.getElementById('overall-bar-fill').style.width = stats.overallPercent + '%';
+
+      // Stat cards
+      document.getElementById('stat-chapters').textContent = stats.chapters.done + ' / ' + stats.chapters.total;
+      document.getElementById('bar-chapters').style.width = (stats.chapters.done / stats.chapters.total * 100) + '%';
+
+      document.getElementById('stat-glossary').textContent = stats.glossary.done + ' / ' + stats.glossary.total;
+      document.getElementById('bar-glossary').style.width = (stats.glossary.done / stats.glossary.total * 100) + '%';
+
+      document.getElementById('stat-scenarios').textContent = stats.scenarios.done + ' / ' + stats.scenarios.total;
+      document.getElementById('bar-scenarios').style.width = (stats.scenarios.done / stats.scenarios.total * 100) + '%';
+
+      // Chapter list
+      var list = document.getElementById('chapter-list');
+      list.innerHTML = '';
+      for (var i = 1; i <= 9; i++) {
+        var isRead = Progress.isChapterRead(i);
+        var name = lang === 'uz' ? chapterNames[i - 1].uz : chapterNames[i - 1].en;
+        var li = document.createElement('li');
+        li.className = 'chapter-progress-item';
+        li.innerHTML =
+          '<span class="chapter-check ' + (isRead ? 'done' : '') + '">' +
+            (isRead ? '<i data-lucide="check" style="width:14px;height:14px"></i>' : '') +
+          '</span>' +
+          '<span class="chapter-progress-num">' + i + '.</span>' +
+          '<a href="chapter' + i + '.html" class="chapter-progress-name" style="color:inherit;text-decoration:none">' + name + '</a>';
+        list.appendChild(li);
+      }
+      lucide.createIcons();
+    }
+
+    // Export
+    document.getElementById('btn-export').addEventListener('click', function() {
+      var json = Progress.exportData();
+      var blob = new Blob([json], { type: 'application/json' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'dispatcher-academy-progress.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    // Import
+    var importInput = document.getElementById('import-input');
+    var importStatus = document.getElementById('import-status');
+
+    document.getElementById('btn-import').addEventListener('click', function() {
+      importInput.click();
+    });
+
+    importInput.addEventListener('change', function(e) {
+      var file = e.target.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function(ev) {
+        var result = Progress.importData(ev.target.result);
+        var lang = getLang();
+        if (result.success) {
+          importStatus.className = 'import-status success';
+          importStatus.textContent = lang === 'uz' ? 'Ma\'lumotlar muvaffaqiyatli yuklandi!' : 'Data imported successfully!';
+          render();
+        } else {
+          importStatus.className = 'import-status error';
+          importStatus.textContent = lang === 'uz' ? 'Xatolik: fayl formati noto\'g\'ri.' : 'Error: invalid file format.';
+        }
+        setTimeout(function() { importStatus.style.display = 'none'; }, 4000);
+      };
+      reader.readAsText(file);
+      importInput.value = '';
+    });
+
+    // Reset
+    document.getElementById('btn-reset').addEventListener('click', function() {
+      var lang = getLang();
+      var msg = lang === 'uz'
+        ? 'Barcha progressni o\'chirmoqchimisiz? Bu amalni qaytarib bo\'lmaydi.'
+        : 'Are you sure you want to reset all progress? This cannot be undone.';
+      if (confirm(msg)) {
+        Progress.resetAll();
+        importStatus.className = 'import-status success';
+        importStatus.textContent = lang === 'uz' ? 'Progress tozalandi.' : 'Progress has been reset.';
+        importStatus.style.display = 'block';
+        setTimeout(function() { importStatus.style.display = 'none'; }, 3000);
+        render();
+      }
+    });
+
+    // Language change observer
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') render();
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+
+    // Initial render
+    render();
+  })();
+  </script>
+
+</body>
+</html>

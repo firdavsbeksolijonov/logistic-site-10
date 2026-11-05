@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="uz" data-lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7-Bob: Yuk xavfsizligi va protseduralar — Dispatcher Academy</title>
+  <meta name="description" content="Yuk mahkamlash, securing tools, tiedown rules, loading equipment, docks, facility types, loading/unloading procedures">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme & Language: apply before paint -->
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <a href="index.html" class="header-logo">
+        <i data-lucide="truck" class="logo-icon"></i>
+        <span class="logo-text">
+          <span class="lang-uz">Dispatcher Academy</span>
+          <span class="lang-en">Dispatcher Academy</span>
+        </span>
+      </a>
+    </div>
+    <div class="header-right">
+      <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">
+        <i data-lucide="globe"></i>
+        <span class="toggle-label">EN</span>
+      </button>
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <a href="index.html" class="sidebar-link">
+          <i data-lucide="home"></i>
+          <span class="lang-uz">Bosh sahifa</span>
+          <span class="lang-en">Home</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Boblar</span>
+          <span class="lang-en">Chapters</span>
+        </div>
+        <a href="chapter1.html" class="sidebar-link">
+          <span class="chapter-num">1</span>
+          <span class="lang-uz">Logistikaga kirish</span>
+          <span class="lang-en">Introduction to Logistics</span>
+        </a>
+        <a href="chapter2.html" class="sidebar-link">
+          <span class="chapter-num">2</span>
+          <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+          <span class="lang-en">Stakeholders in Trucking</span>
+        </a>
+        <a href="chapter3.html" class="sidebar-link">
+          <span class="chapter-num">3</span>
+          <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+          <span class="lang-en">Truck Drivers and Their Operations</span>
+        </a>
+        <a href="chapter4.html" class="sidebar-link">
+          <span class="chapter-num">4</span>
+          <span class="lang-uz">Avtopark va jihozlar</span>
+          <span class="lang-en">Fleet and Equipment</span>
+        </a>
+        <a href="chapter5.html" class="sidebar-link">
+          <span class="chapter-num">5</span>
+          <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+          <span class="lang-en">Trailers and Weight Balance</span>
+        </a>
+        <a href="chapter6.html" class="sidebar-link">
+          <span class="chapter-num">6</span>
+          <span class="lang-uz">Yuk turlari</span>
+          <span class="lang-en">Freight Types</span>
+        </a>
+        <a href="chapter7.html" class="sidebar-link active">
+          <span class="chapter-num">7</span>
+          <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+          <span class="lang-en">Load Security and Procedures</span>
+        </a>
+        <a href="chapter8.html" class="sidebar-link">
+          <span class="chapter-num">8</span>
+          <span class="lang-uz">AQSh avtomagistral tizimi</span>
+          <span class="lang-en">US Highway and Road System</span>
+        </a>
+        <a href="chapter9.html" class="sidebar-link">
+          <span class="chapter-num">9</span>
+          <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+          <span class="lang-en">US Safety and Compliance</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Asboblar</span>
+          <span class="lang-en">Tools</span>
+        </div>
+        <a href="glossary.html" class="sidebar-link">
+          <i data-lucide="book-open"></i>
+          <span class="lang-uz">Glossariy</span>
+          <span class="lang-en">Glossary</span>
+        </a>
+        <a href="resources.html" class="sidebar-link">
+          <i data-lucide="link"></i>
+          <span class="lang-uz">Resurslar</span>
+          <span class="lang-en">Resources</span>
+        </a>
+        <a href="progress.html" class="sidebar-link">
+          <i data-lucide="bar-chart-3"></i>
+          <span class="lang-uz">Progress</span>
+          <span class="lang-en">Progress</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="app-layout">
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- Chapter Header -->
+        <section class="chapter-header">
+          <div class="chapter-badge-large">7</div>
+          <h1 class="page-title">
+            <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+            <span class="lang-en">Load Security and Procedures</span>
+          </h1>
+          <p class="page-subtitle">
+            <span class="lang-uz">17 slayd &nbsp;·&nbsp; Yukni mahkamlash, asboblar, tiedown qoidalari, yuklash jihozlari, doklar, ob'ekt turlari, yuklash/tushirish tartibi</span>
+            <span class="lang-en">17 slides &nbsp;·&nbsp; Securing loads, tools, tiedown rules, loading equipment, docks, facility types, loading/unloading procedures</span>
+          </p>
+        </section>
+
+        <!-- ===== 7.1 Why Secure the Load? ===== -->
+        <section class="chapter-section card" id="section-7-1">
+          <h2 class="section-title">
+            <span class="section-num">7.1</span>
+            <span class="lang-uz">Nega yukni mahkamlash kerak?</span>
+            <span class="lang-en">Why Secure the Load?</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Siljigan, ag'darigan yoki tushib ketgan yuk tovarni, trailerni va boshqa haydovchilarni zararlaydi</span>
+                <span class="lang-en">Cargo that shifts, tips, or falls damages freight, trailer, and other drivers</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Federal qoidalar: 49 CFR 393.100–136</strong> (FMCSA yuk mahkamlash standartlari)</span>
+                <span class="lang-en"><strong>Federal rules: 49 CFR 393.100–136</strong> (FMCSA cargo securement)</span>
+              </li>
+              <li>
+                <span class="lang-uz">Haydovchi <strong>birinchi 50 mil</strong> ichida yukni tekshirishi kerak, keyin <strong>har 150 mil</strong> yoki <strong>3 soat</strong>da</span>
+                <span class="lang-en">Driver checks load within <strong>first 50 miles</strong>, then every <strong>150 miles or 3 hours</strong></span>
+              </li>
+              <li>
+                <span class="lang-uz">Plomblangan yuklar haydovchi ocholmaydigan bo'lsa, tekshiruvdan mustasno</span>
+                <span class="lang-en">Sealed loads driver can't open are exempt from those checks</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Shipper yuklaydi, carrier tashiydi</strong> — zarar da'volari ko'pincha kim yuklaganiga bog'liq</span>
+                <span class="lang-en"><strong>Shipper loads, carrier hauls</strong> — damage claims often depend on who loaded</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 7.2 Securing Tools ===== -->
+        <section class="chapter-section card" id="section-7-2">
+          <h2 class="section-title">
+            <span class="section-num">7.2</span>
+            <span class="lang-uz">Mahkamlash asboblari</span>
+            <span class="lang-en">Securing Tools</span>
+          </h2>
+          <div class="section-body">
+
+            <h3>
+              <span class="lang-uz">1. Yuk tasmalari (Load Straps)</span>
+              <span class="lang-en">1. Load Straps</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Yukni pastga yoki joyida ushlab turadigan to'qilgan tasmalar</span>
+                <span class="lang-en">Webbing straps that hold freight down or in place</span>
+              </li>
+              <li>
+                <span class="lang-uz">Vanda: devordagi e-track ga qistiriladi</span>
+                <span class="lang-en">In van: clip into e-track on walls</span>
+              </li>
+              <li>
+                <span class="lang-uz">Flatbedda: rub railga ilintiradi, ratchet yoki winch bilan tortadi</span>
+                <span class="lang-en">On flatbed: hook to rub rail, pull tight with ratchet or winch</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">2. Yuk barlari (Load Bars / Load Locks)</span>
+              <span class="lang-en">2. Load Bars (Load Locks)</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Sozlanadigan barlar — trailer ichida yukning orqasiga o'rnatiladi, tormozlashda siljishni oldini oladi</span>
+                <span class="lang-en">Adjustable bars set across trailer behind freight — prevents sliding when braking</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>E-track barlari:</strong> Uchki qismlari e-track relslariga qulflanadi</span>
+                <span class="lang-en"><strong>E-track bars:</strong> End fittings lock into e-track rails</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Ishqalanish barlari:</strong> Yassi rezina uchlari ratchet orqali devorlarga bosiladi — har qanday trailerda ishlaydi</span>
+                <span class="lang-en"><strong>Friction bars:</strong> Flat rubber ends press against walls by ratchet — work in any trailer</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">3. Block va Brace, Qulflar va Plombalar</span>
+              <span class="lang-en">3. Block and Brace, Locks and Seals</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Block and brace:</strong> Yog'och yukni atrofiga mixlanadi/ponalanadi — siljishni to'xtatadi</span>
+                <span class="lang-en"><strong>Block and brace:</strong> Lumber nailed/wedged around freight to stop sliding</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Padlocks:</strong> O'g'irlikni to'xtatadi</span>
+                <span class="lang-en"><strong>Padlocks:</strong> Stop theft</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Raqamlangan plombalar (Numbered seals):</strong> Eshiklar ochilmaganini isbotlaydi — <strong>plomba raqamini BOL ga yozing</strong></span>
+                <span class="lang-en"><strong>Numbered seals:</strong> Prove doors weren't opened — <strong>write seal number on BOL</strong></span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">4. Zanjirlar, Binder va Dunnage Airbag</span>
+              <span class="lang-en">4. Chains, Binders, and Dunnage Airbags</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Zanjirlar va binderlar:</strong> Og'ir flatbed yuklari uchun — po'lat rulonlar, mashinalar, quvurlar. Binder (ratchet/lever) zanjirni tortib mahkamlaydi</span>
+                <span class="lang-en"><strong>Chains and binders:</strong> For heavy flatbed freight — steel coils, machinery, pipe. Binder (ratchet/lever) pulls chain tight</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Dunnage airbaglar:</strong> Palletlar orasidagi bo'shliqlarda shishiriladi — siljishni oldini oladi</span>
+                <span class="lang-en"><strong>Dunnage airbags:</strong> Inflated in gaps between pallets — prevents shifting</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">5. Kingpin Lock va Adyollar</span>
+              <span class="lang-en">5. Kingpin Lock and Blankets</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Kingpin lock:</strong> Kingpin ustiga qulflanadigan quyma po'lat qopqoq — trailer o'g'irligini oldini oladi</span>
+                <span class="lang-en"><strong>Kingpin lock:</strong> Cast-steel cover locked over kingpin — prevents trailer theft</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Adyollar (Blankets):</strong> Mebel/tayyor mahsulotlarni tirnalishdan himoya qiladi — blanket-wrap yuklari uchun ishlatiladi</span>
+                <span class="lang-en"><strong>Blankets:</strong> Protect furniture/finished goods from scratches — used for blanket-wrap loads</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 7.3 Open Deck Tiedown Rules ===== -->
+        <section class="chapter-section card" id="section-7-3">
+          <h2 class="section-title">
+            <span class="section-num">7.3</span>
+            <span class="lang-uz">Ochiq platformali tiedown qoidalari</span>
+            <span class="lang-en">Open Deck Tiedown Rules</span>
+          </h2>
+          <div class="section-body">
+            <div class="highlight-card">
+              <p>
+                <span class="lang-uz">Ish yuki chegarasi (Working Load Limit) ≥ yuk og'irligining <strong>50%</strong>iga teng bo'lishi kerak.</span>
+                <span class="lang-en">Working load limits of tiedowns must be ≥ <strong>50%</strong> of cargo weight.</span>
+              </p>
+            </div>
+
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Yuk o'lchami</span>
+                      <span class="lang-en">Cargo Size</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Tiedown soni</span>
+                      <span class="lang-en">Tiedowns Required</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="lang-uz">≤5 ft va ≤1,100 lb</span>
+                      <span class="lang-en">≤5 ft and ≤1,100 lb</span>
+                    </td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz">≤5 ft va og'irroq, yoki 5–10 ft</span>
+                      <span class="lang-en">≤5 ft and heavier, or 5–10 ft</span>
+                    </td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz">>10 ft</span>
+                      <span class="lang-en">>10 ft</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">2 + har qo'shimcha 10 ft uchun 1 ta</span>
+                      <span class="lang-en">2 + 1 for every extra 10 ft</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="info-box">
+              <p>
+                <span class="lang-uz">⚠️ G'altaklar (coils), yog'ochlar (logs), mashinalar (machinery) va transport vositalari uchun qo'shimcha maxsus qoidalar mavjud.</span>
+                <span class="lang-en">⚠️ Coils, logs, machinery, and vehicles have extra specific rules beyond the general table.</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 7.4 Loading Equipment ===== -->
+        <section class="chapter-section card" id="section-7-4">
+          <h2 class="section-title">
+            <span class="section-num">7.4</span>
+            <span class="lang-uz">Yuklash jihozlari</span>
+            <span class="lang-en">Loading Equipment</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Jihoz</span>
+                      <span class="lang-en">Equipment</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Tavsif</span>
+                      <span class="lang-en">Description</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Forklift (lift truck)</strong></td>
+                    <td>
+                      <span class="lang-uz">Palletlarni ko'taradigan/joylashtradigan motorli yuk mashinasi. Operatorlar OSHA tomonidan o'qitilgan/sertifikatlangan bo'lishi kerak</span>
+                      <span class="lang-en">Powered truck that lifts/moves pallets. Operators must be OSHA trained/certified</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pallet jack</strong></td>
+                    <td>
+                      <span class="lang-uz">Eng oddiy ko'targich — tutqichni pompalashtiring palletni ko'tarish uchun, qo'lda torting</span>
+                      <span class="lang-en">Simplest lifter — pump handle to raise pallet, pull by hand</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz"><strong>Elektr pallet jack</strong></span>
+                      <span class="lang-en"><strong>Electric pallet jack</strong></span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Motorli, og'irroq/uyilgan palletlar uchun; ba'zilarida ustiga minish platformasi bor</span>
+                      <span class="lang-en">Motorized, for heavier/stacked pallets; some have ride-on platform</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Yard jockey (yard truck)</strong></td>
+                    <td>
+                      <span class="lang-uz">Qisqa bir o'rindiqli traktor — traylerlarni hovli bo'ylab/dok eshiklari orasida joylashtiradi</span>
+                      <span class="lang-en">Short single-seat tractor that moves trailers around yard/between dock doors</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 7.5 Loading Docks ===== -->
+        <section class="chapter-section card" id="section-7-5">
+          <h2 class="section-title">
+            <span class="section-num">7.5</span>
+            <span class="lang-uz">Yuklash doklari</span>
+            <span class="lang-en">Loading Docks</span>
+          </h2>
+          <div class="section-body">
+            <p>
+              <span class="lang-uz">Binoning trucklar orqaga kiradigan qismi — odatda trailer pol balandligida (~4 ft)</span>
+              <span class="lang-en">Part of building where trucks back in — usually at trailer floor height (~4 ft)</span>
+            </p>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Dok leveler:</strong> Dok va trailer poli orasidagi bo'shliqni ko'prik qiluvchi plastina</span>
+                <span class="lang-en"><strong>Dock leveler:</strong> Plate bridging gap to trailer floor</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Muhrlash/boshpana (Seal/shelter):</strong> Eshik atrofidagi yostiqchalar — ob-havoni tashqarida ushlab turadi</span>
+                <span class="lang-en"><strong>Seal/shelter:</strong> Pads around door keeping weather out</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Vehicle restraint (Dock lock):</strong> Orqa bamperni ilmoqlaydi — trailer yurmasligi uchun</span>
+                <span class="lang-en"><strong>Vehicle restraint (dock lock):</strong> Hooks rear bumper so trailer can't roll away</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Wheel chocks:</strong> Dok lock bo'lmaganda g'ildiraklar orqasiga qo'yiladigan bloklar</span>
+                <span class="lang-en"><strong>Wheel chocks:</strong> Blocks behind tires where no dock lock</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 7.6 Types of Facilities ===== -->
+        <section class="chapter-section card" id="section-7-6">
+          <h2 class="section-title">
+            <span class="section-num">7.6</span>
+            <span class="lang-uz">Ob'ekt turlari</span>
+            <span class="lang-en">Types of Facilities</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Ob'ekt turi</span>
+                      <span class="lang-en">Facility Type</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Tavsif</span>
+                      <span class="lang-en">Description</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="lang-uz"><strong>Ishlab chiqarish (Manufacturing)</strong></span>
+                      <span class="lang-en"><strong>Manufacturing</strong></span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Tovar ishlab chiqaradigan zavodlar. Ko'pchilik just-in-time ishlaydi — xom ashyo kechiksa liniya to'xtaydi</span>
+                      <span class="lang-en">Factories making goods. Many run just-in-time — late raw materials stop the line</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz"><strong>Terminal</strong></span>
+                      <span class="lang-en"><strong>Terminal</strong></span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Portlar, temir yo'l rampalari, ommaviy terminallar — yukni rejimlar orasida ko'chiradi. Port konteynerlari odatda &lt;1 hafta turadi</span>
+                      <span class="lang-en">Ports, rail ramps, bulk terminals — move cargo between modes. Port containers usually dwell &lt;1 week</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz"><strong>Saqlash (Storage)</strong></span>
+                      <span class="lang-en"><strong>Storage</strong></span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Omborlar — tovarlarni haftalab/oylab saqlaydi, shu jumladan ommaviy saqlash</span>
+                      <span class="lang-en">Warehouses holding inventory for weeks/months, including bulk storage</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz"><strong>Tarqatish markazi (Distribution center)</strong></span>
+                      <span class="lang-en"><strong>Distribution center</strong></span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">O'tkazish uchun qurilgan, saqlash uchun emas — yuk keladi, saralanadi, tez chiqadi (cross-docking)</span>
+                      <span class="lang-en">Built for throughput, not storage — freight in, sorted, out fast (cross-docking)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz"><strong>Pochta/E-fulfillment</strong></span>
+                      <span class="lang-en"><strong>Parcel / E-fulfillment</strong></span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Onlayn buyurtmalarni yig'ish, qadoqlash, yakka posilkalar sifatida jo'natish — eng tez o'sayotgan ob'ekt turi</span>
+                      <span class="lang-en">Pick, pack, ship online orders as single parcels — fastest-growing facility type</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 7.7 Loading and Unloading Procedures ===== -->
+        <section class="chapter-section card" id="section-7-7">
+          <h2 class="section-title">
+            <span class="section-num">7.7</span>
+            <span class="lang-uz">Yuklash va tushirish tartiblari</span>
+            <span class="lang-en">Loading and Unloading Procedures</span>
+          </h2>
+          <div class="section-body">
+
+            <h3>
+              <span class="lang-uz">Vaqt bo'yicha:</span>
+              <span class="lang-en">By Time:</span>
+            </h3>
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">🔢</div>
+                <h4>FCFS</h4>
+                <p>
+                  <span class="lang-uz">First Come, First Served — trucklar belgilangan soatlarda navbatda kutadi</span>
+                  <span class="lang-en">First Come, First Served — trucks wait in line during set hours</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">📅</div>
+                <h4>
+                  <span class="lang-uz">Appointment</span>
+                  <span class="lang-en">By Appointment</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Aniq vaqt oynasi — kech kelsangiz, navbat yo'qolishi mumkin</span>
+                  <span class="lang-en">Fixed time slot — arrive late and it may be lost</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🕐</div>
+                <h4>24/7</h4>
+                <p>
+                  <span class="lang-uz">Kechayu kunduz ochiq, har kuni</span>
+                  <span class="lang-en">Open around the clock, every day</span>
+                </p>
+              </div>
+            </div>
+
+            <h3>
+              <span class="lang-uz">Tartib bo'yicha:</span>
+              <span class="lang-en">By Procedure:</span>
+            </h3>
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">⏱️</div>
+                <h4>
+                  <span class="lang-uz">Live load / unload</span>
+                  <span class="lang-en">Live load / unload</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Haydovchi kutadi, trailer yuklanyapti/tushirilayapti</span>
+                  <span class="lang-en">Driver waits while trailer is loaded/unloaded</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">📦</div>
+                <h4>
+                  <span class="lang-uz">Drop trailer</span>
+                  <span class="lang-en">Drop trailer</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Carrier trailerni qoldiradi, ko'pincha 24–72 soatga</span>
+                  <span class="lang-en">Carrier leaves trailer, often for 24–72 hours</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🔗</div>
+                <h4>
+                  <span class="lang-uz">Hook and drop (pre-loaded)</span>
+                  <span class="lang-en">Hook and drop (pre-loaded)</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Allaqachon yuklangan trailerni olib ketish (power-only yuklar)</span>
+                  <span class="lang-en">Pick up already-loaded trailer (power-only loads)</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="highlight-card">
+              <h4>
+                <span class="lang-uz">⏰ Detention (kutish to'lovi):</span>
+                <span class="lang-en">⏰ Detention:</span>
+              </h4>
+              <p>
+                <span class="lang-uz">Bepul vaqtdan keyin (ko'pincha <strong>2 soat</strong>), carrier har soat uchun hisob-kitob qilishi mumkin, agar rate confirmation da ko'rsatilgan bo'lsa.</span>
+                <span class="lang-en">After free time (often <strong>2 hours</strong>), carrier can bill per hour, if on the rate confirmation.</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 7.8 Terminology ===== -->
+        <section class="chapter-section card" id="section-7-8">
+          <h2 class="section-title">
+            <span class="section-num">7.8</span>
+            <span class="lang-uz">Terminologiya — 7-bob</span>
+            <span class="lang-en">Terminology — Chapter 7</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Inglizcha atama</span>
+                      <span class="lang-en">English Term</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">O'zbekcha tarjima</span>
+                      <span class="lang-en">Uzbek Translation</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Ta'rif</span>
+                      <span class="lang-en">Definition</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Load bar</strong></td>
+                    <td>Yuk bari</td>
+                    <td>
+                      <span class="lang-uz">Devordan devorga cho'ziladigan bar — yukni surish va ag'darishdan saqlaydi</span>
+                      <span class="lang-en">Adjustable bar stretching wall to wall — stops freight from sliding</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Strap</strong></td>
+                    <td>Tasma</td>
+                    <td>
+                      <span class="lang-uz">To'qilgan tasma — yukni mahkamlash uchun</span>
+                      <span class="lang-en">Webbing strap — secures freight</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Chain</strong></td>
+                    <td>Zanjir</td>
+                    <td>
+                      <span class="lang-uz">Og'ir flatbed yuklari uchun po'lat zanjir</span>
+                      <span class="lang-en">Steel chain for heavy flatbed loads</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Binder</strong></td>
+                    <td>Binder</td>
+                    <td>
+                      <span class="lang-uz">Zanjirni tortib mahkamlash uchun richag</span>
+                      <span class="lang-en">Lever that pulls chain tight</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dunnage airbag</strong></td>
+                    <td>Dunnage airbag</td>
+                    <td>
+                      <span class="lang-uz">Yuklar orasidagi bo'shliqqa qo'yiladigan havo yostiq</span>
+                      <span class="lang-en">Air-filled bag placed in gaps between freight</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Seal</strong></td>
+                    <td>Plomba</td>
+                    <td>
+                      <span class="lang-uz">Raqamlangan plomba — o'g'irlik/buzilishni aniqlash uchun</span>
+                      <span class="lang-en">Numbered seal — detects tampering or theft</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Forklift</strong></td>
+                    <td>Forklift</td>
+                    <td>
+                      <span class="lang-uz">Motorli ko'tarish mashinasi — OSHA treningi kerak</span>
+                      <span class="lang-en">Powered lift truck — requires OSHA training</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pallet jack</strong></td>
+                    <td>Pallet jack</td>
+                    <td>
+                      <span class="lang-uz">Qo'lda boshqariladigan pallet ko'targich</span>
+                      <span class="lang-en">Manual pallet lifter — pump and pull by hand</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dock</strong></td>
+                    <td>Dok</td>
+                    <td>
+                      <span class="lang-uz">Trailer yuklash/tushirish platformasi</span>
+                      <span class="lang-en">Platform where trailers are loaded/unloaded</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Detention</strong></td>
+                    <td>Detention / Kutish to'lovi</td>
+                    <td>
+                      <span class="lang-uz">Bepul vaqtdan keyin har soat uchun to'lov</span>
+                      <span class="lang-en">Charge per hour after free time expires</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>FCFS</strong></td>
+                    <td>FCFS</td>
+                    <td>
+                      <span class="lang-uz">First Come, First Served — kelish tartibida</span>
+                      <span class="lang-en">First Come, First Served — arrival order</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Drop trailer</strong></td>
+                    <td>Drop trailer</td>
+                    <td>
+                      <span class="lang-uz">Trailer qoldirib ketish — keyinroq olib ketiladi</span>
+                      <span class="lang-en">Leave trailer — picked up later</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Live load</strong></td>
+                    <td>Live load</td>
+                    <td>
+                      <span class="lang-uz">Haydovchi kutib turgan paytda yuklash/tushirish</span>
+                      <span class="lang-en">Loading/unloading while driver waits</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== ASOSIY FIKRLAR (Key Takeaways) ===== -->
+        <section class="chapter-section card takeaways-section" id="takeaways">
+          <h2 class="section-title">
+            <i data-lucide="star" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Asosiy fikrlar</span>
+            <span class="lang-en">Key Takeaways</span>
+          </h2>
+          <div class="section-body">
+            <ul class="takeaways-list">
+              <li>
+                <span class="lang-uz">Federal qoidalar (49 CFR 393.100–136) yukni mahkamlashni tartibga soladi. Haydovchi birinchi 50 mil ichida, keyin har 150 mil yoki 3 soatda tekshirishi shart.</span>
+                <span class="lang-en">Federal rules (49 CFR 393.100–136) govern cargo securement. Driver must check within the first 50 miles, then every 150 miles or 3 hours.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Asosiy mahkamlash asboblari: tasmalar (straps), yuk barlari (load bars), zanjirlar (chains), binderlar, dunnage airbaglar, plombalar va qulflar.</span>
+                <span class="lang-en">Main securing tools: straps, load bars, chains, binders, dunnage airbags, seals and locks.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Ochiq platformada (flatbed) tiedown ish yuki chegarasi yuk og'irligining kamida 50% bo'lishi kerak. 10 ft dan uzun yuklar uchun har 10 ft ga qo'shimcha tiedown kerak.</span>
+                <span class="lang-en">On open decks (flatbed), tiedown working load limits must be at least 50% of cargo weight. Loads over 10 ft need one extra tiedown per 10 ft.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Yuklash jihozlari: forklift (OSHA treningi kerak), pallet jack, elektr pallet jack va yard jockey.</span>
+                <span class="lang-en">Loading equipment: forklift (needs OSHA training), pallet jack, electric pallet jack and yard jockey.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Yuklash usullari: Live load (haydovchi kutadi), Drop trailer (qoldiriladi, 24–72 soat), Hook and drop (tayyor trailerni ulash). Bepul vaqtdan (odatda 2 soat) keyin detention to'lovi hisoblanadi.</span>
+                <span class="lang-en">Loading methods: Live load (driver waits), Drop trailer (left for 24–72 hours), Hook and drop (hook pre-loaded trailer). Detention charges apply after free time (usually 2 hours).</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== SCENARIOS (Interactive) ===== -->
+        <section class="chapter-section card" id="scenarios">
+          <h2 class="section-title">
+            <i data-lucide="help-circle" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Amaliy vaziyatlar</span>
+            <span class="lang-en">Practice Scenarios</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher vaziyatlarini tahlil qiling va to'g'ri javobni tanlang.</span>
+            <span class="lang-en">Analyze the following real dispatcher situations and choose the correct answer.</span>
+          </p>
+          <div id="scenarios-container"></div>
+        </section>
+
+        <!-- ===== PHONE SCRIPTS ===== -->
+        <section class="chapter-section card" id="phone-scripts">
+          <h2 class="section-title">
+            <i data-lucide="phone" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Telefon skriptlari</span>
+            <span class="lang-en">Phone Scripts</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher telefon muloqotlarini o'rganing. Kalit iboralarni yodlang.</span>
+            <span class="lang-en">Study the following real dispatcher phone conversations. Memorize the key phrases.</span>
+          </p>
+          <div id="scripts-container"></div>
+        </section>
+
+        <!-- ===== MARK AS READ ===== -->
+        <div class="mark-read-wrap">
+          <button class="mark-read-btn" id="mark-read-btn">
+            <i data-lucide="book-check" style="width:18px;height:18px"></i>
+            <span class="lang-uz">O'qildi deb belgilash</span>
+            <span class="lang-en">Mark as read</span>
+          </button>
+        </div>
+
+        <!-- ===== CHAPTER NAVIGATION ===== -->
+        <div class="chapter-nav">
+          <a href="chapter6.html" class="chapter-nav-btn prev">
+            <i data-lucide="arrow-left" style="width:18px;height:18px"></i>
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Oldingi bob</span>
+                <span class="lang-en">Previous Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Yuk turlari</span>
+                <span class="lang-en">Freight Types</span>
+              </span>
+            </span>
+          </a>
+          <a href="chapter8.html" class="chapter-nav-btn next">
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Keyingi bob</span>
+                <span class="lang-en">Next Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">AQSh avtomagistral tizimi</span>
+                <span class="lang-en">US Highway and Road System</span>
+              </span>
+            </span>
+            <i data-lucide="arrow-right" style="width:18px;height:18px"></i>
+          </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>
+            <span class="lang-uz">&copy; 2024 Dispatcher Academy — AQSh yuk tashish sanoati bo'yicha o'quv platformasi</span>
+            <span class="lang-en">&copy; 2024 Dispatcher Academy — US Trucking Industry Learning Platform</span>
+          </p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Lucide Icons -->
+  <!-- Progress Tracker -->
+  <script src="js/progress.js"></script>
+
+  <!-- Scenario Data -->
+  <script src="data/scenarios.js"></script>
+
+  <!-- Phone Scripts Data -->
+  <script src="data/scripts.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Scenario Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 7;
+    var container = document.getElementById('scenarios-container');
+    if (!container || typeof scenariosData === 'undefined') return;
+    var chapterScenarios = scenariosData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScenarios.length === 0) return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    function renderScenarios() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScenarios.forEach(function(scenario, idx) {
+        var situation = lang === 'uz' ? scenario.situation_uz : scenario.situation_en;
+        var scenarioEl = document.createElement('div');
+        scenarioEl.className = 'scenario-block';
+        scenarioEl.setAttribute('data-id', scenario.id);
+        var header = '<div class="scenario-header"><span class="scenario-num">' + (idx + 1) + '</span><div class="scenario-situation">' + escHtml(situation) + '</div></div>';
+        var optionsHtml = '<div class="scenario-options">';
+        scenario.options.forEach(function(opt, oi) {
+          var optText = lang === 'uz' ? opt.text_uz : opt.text_en;
+          optionsHtml += '<button class="scenario-option" data-scenario="' + scenario.id + '" data-index="' + oi + '"><span class="option-letter">' + String.fromCharCode(65 + oi) + '</span><span class="option-text">' + escHtml(optText) + '</span></button>';
+        });
+        optionsHtml += '</div>';
+        var feedbackHtml = '<div class="scenario-feedback" id="feedback-' + scenario.id + '" style="display:none"></div>';
+        scenarioEl.innerHTML = header + optionsHtml + feedbackHtml;
+        container.appendChild(scenarioEl);
+      });
+      container.querySelectorAll('.scenario-option').forEach(function(btn) { btn.addEventListener('click', function() { handleAnswer(this); }); });
+    }
+    function handleAnswer(btn) {
+      var scenarioId = btn.getAttribute('data-scenario');
+      var chosenIndex = parseInt(btn.getAttribute('data-index'));
+      var scenario = chapterScenarios.find(function(s) { return s.id === scenarioId; });
+      if (!scenario) return;
+      var lang = getLang();
+      var block = btn.closest('.scenario-block');
+      var allBtns = block.querySelectorAll('.scenario-option');
+      var isCorrect = chosenIndex === scenario.correct_index;
+      allBtns.forEach(function(b) {
+        b.disabled = true; b.classList.add('disabled');
+        var bIdx = parseInt(b.getAttribute('data-index'));
+        if (bIdx === scenario.correct_index) b.classList.add('correct');
+        if (bIdx === chosenIndex && !isCorrect) b.classList.add('incorrect');
+      });
+      var feedbackEl = document.getElementById('feedback-' + scenarioId);
+      var chosenOpt = scenario.options[chosenIndex];
+      var explanation = lang === 'uz' ? chosenOpt.explanation_uz : chosenOpt.explanation_en;
+      feedbackEl.className = 'scenario-feedback ' + (isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+      feedbackEl.innerHTML = '<div class="feedback-icon">' + (isCorrect ? '<i data-lucide="check-circle" style="width:20px;height:20px;color:#16a34a"></i>' : '<i data-lucide="x-circle" style="width:20px;height:20px;color:#dc2626"></i>') + '</div><div class="feedback-text">' + escHtml(explanation) + '</div>';
+      feedbackEl.style.display = 'flex';
+      lucide.createIcons();
+    }
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') {
+          var answered = container.querySelector('.scenario-option.disabled');
+          if (!answered) renderScenarios();
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    renderScenarios();
+  })();
+  </script>
+
+  <!-- Phone Scripts Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 7;
+    var container = document.getElementById('scripts-container');
+    if (!container || typeof scriptsData === 'undefined') return;
+    var chapterScripts = scriptsData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScripts.length === 0) return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    function renderScripts() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScripts.forEach(function(script, idx) {
+        var title = lang === 'uz' ? script.title_uz : script.title_en;
+        var dialogue = lang === 'uz' ? script.script_uz : script.script_en;
+        var phrasesTitle = lang === 'uz' ? 'Kalit iboralar' : 'Key Phrases';
+        var el = document.createElement('div');
+        el.className = 'script-block';
+        var phrasesHtml = '';
+        script.key_phrases.forEach(function(kp) {
+          var phrase = lang === 'uz' ? kp.phrase_uz : kp.phrase_en;
+          phrasesHtml += '<div class="key-phrase"><span class="key-phrase-bullet">▸</span><span class="key-phrase-text">' + escHtml(phrase) + '</span></div>';
+        });
+        el.innerHTML =
+          '<div class="script-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.script-toggle').classList.toggle('open')">' +
+            '<span class="script-num">' + (idx + 1) + '</span>' +
+            '<span class="script-title">' + escHtml(title) + '</span>' +
+            '<i data-lucide="chevron-down" class="script-toggle" style="width:20px;height:20px"></i>' +
+          '</div>' +
+          '<div class="script-body">' +
+            '<div class="script-dialogue">' + escHtml(dialogue) + '</div>' +
+            '<div class="script-key-phrases">' +
+              '<div class="script-key-phrases-title"><i data-lucide="bookmark" style="width:16px;height:16px"></i> ' + escHtml(phrasesTitle) + '</div>' +
+              phrasesHtml +
+            '</div>' +
+          '</div>';
+        container.appendChild(el);
+      });
+      lucide.createIcons();
+    }
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') renderScripts();
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    renderScripts();
+  })();
+  </script>
+
+  <!-- Mark as Read Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 7;
+    var btn = document.getElementById('mark-read-btn');
+    if (!btn || typeof Progress === 'undefined') return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function updateBtn() {
+      var isRead = Progress.isChapterRead(CHAPTER);
+      if (isRead) {
+        btn.classList.add('read');
+        btn.innerHTML = '<i data-lucide="check-circle" style="width:18px;height:18px"></i><span class="lang-uz">O\'qilgan</span><span class="lang-en">Read</span>';
+      } else {
+        btn.classList.remove('read');
+        btn.innerHTML = '<i data-lucide="book-check" style="width:18px;height:18px"></i><span class="lang-uz">O\'qildi deb belgilash</span><span class="lang-en">Mark as read</span>';
+      }
+      lucide.createIcons();
+    }
+    btn.addEventListener('click', function() {
+      if (!Progress.isChapterRead(CHAPTER)) { Progress.markChapterRead(CHAPTER); updateBtn(); }
+    });
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) { if (m.attributeName === 'data-lang') updateBtn(); });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    updateBtn();
+  })();
+  </script>
+</body>
+</html>

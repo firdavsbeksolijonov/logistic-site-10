@@ -1,0 +1,209 @@
+/* ============================================
+   RESPONSIVE STYLES — responsive.css
+   Mobile-first approach
+   ============================================ */
+
+/* --- Mobile: up to 768px --- */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 56px;
+    --sidebar-width: 280px;
+  }
+
+  /* Show hamburger menu */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Hide sidebar by default on mobile */
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay.open {
+    display: block;
+  }
+
+  /* Full-width content */
+  .main-content {
+    margin-left: 0;
+    padding: var(--spacing-md);
+    min-width: 0; /* flexbox fix: allow flex item to shrink below content width */
+  }
+
+  /* Smaller welcome section */
+  .welcome-section {
+    padding: var(--spacing-lg);
+  }
+
+  .page-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .page-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  /* Stack stats vertically */
+  .welcome-stats {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-align: left;
+  }
+
+  /* Single column cards */
+  .chapters-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  /* Smaller cards */
+  .card {
+    padding: var(--spacing-md);
+  }
+
+  /* Header adjustments */
+  .header {
+    padding: 0 var(--spacing-md);
+  }
+
+  .header-logo .logo-text {
+    font-size: var(--font-size-sm);
+  }
+
+  /* Toggle label hidden on small screens */
+  .toggle-btn .toggle-label {
+    display: none;
+  }
+
+  .toggle-btn {
+    padding: var(--spacing-xs);
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+  }
+
+  /* Section header */
+  .section-title {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Chapter page mobile */
+  .chapter-header {
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+  }
+
+  .chapter-badge-large {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+  }
+
+  .items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chapter-nav {
+    flex-direction: column;
+  }
+
+  .chapter-nav-btn {
+    max-width: 100%;
+  }
+
+  .chapter-nav-btn.next {
+    margin-left: 0;
+  }
+
+  .data-table {
+    font-size: 0.8rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px 10px;
+  }
+
+  .data-table th {
+    white-space: normal; /* allow header text to wrap on mobile */
+  }
+}
+
+/* --- Tablet: 769px to 1024px --- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --sidebar-width: 240px;
+  }
+
+  .chapters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .welcome-section {
+    padding: var(--spacing-xl);
+  }
+
+  .header-logo .logo-text {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* --- Desktop: 1025px and up --- */
+@media (min-width: 1025px) {
+  .chapters-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Large Desktop: 1440px+ --- */
+@media (min-width: 1440px) {
+  .main-content {
+    padding: var(--spacing-2xl) var(--spacing-xl);
+  }
+}
+
+/* --- Print Styles --- */
+@media print {
+  .header,
+  .sidebar,
+  .sidebar-overlay,
+  .menu-toggle,
+  .toggle-btn {
+    display: none !important;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+
+  .app-layout {
+    padding-top: 0;
+  }
+
+  .card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    break-inside: avoid;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+}

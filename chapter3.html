@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="uz" data-lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-Bob: Haydovchilar va operatsiyalar — Dispatcher Academy</title>
+  <meta name="description" content="Haydovchi turlari, CDL, haftalik daromad, SSN, tibbiy sertifikat, DMV, truck stoplar">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <a href="index.html" class="header-logo">
+        <i data-lucide="truck" class="logo-icon"></i>
+        <span class="logo-text">
+          <span class="lang-uz">Dispatcher Academy</span>
+          <span class="lang-en">Dispatcher Academy</span>
+        </span>
+      </a>
+    </div>
+    <div class="header-right">
+      <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">
+        <i data-lucide="globe"></i>
+        <span class="toggle-label">EN</span>
+      </button>
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <a href="index.html" class="sidebar-link">
+          <i data-lucide="home"></i>
+          <span class="lang-uz">Bosh sahifa</span>
+          <span class="lang-en">Home</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Boblar</span>
+          <span class="lang-en">Chapters</span>
+        </div>
+        <a href="chapter1.html" class="sidebar-link">
+          <span class="chapter-num">1</span>
+          <span class="lang-uz">Logistikaga kirish</span>
+          <span class="lang-en">Introduction to Logistics</span>
+        </a>
+        <a href="chapter2.html" class="sidebar-link">
+          <span class="chapter-num">2</span>
+          <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+          <span class="lang-en">Stakeholders in Trucking</span>
+        </a>
+        <a href="chapter3.html" class="sidebar-link active">
+          <span class="chapter-num">3</span>
+          <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+          <span class="lang-en">Truck Drivers and Their Operations</span>
+        </a>
+        <a href="chapter4.html" class="sidebar-link">
+          <span class="chapter-num">4</span>
+          <span class="lang-uz">Avtopark va jihozlar</span>
+          <span class="lang-en">Fleet and Equipment</span>
+        </a>
+        <a href="chapter5.html" class="sidebar-link">
+          <span class="chapter-num">5</span>
+          <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+          <span class="lang-en">Trailers and Weight Balance</span>
+        </a>
+        <a href="chapter6.html" class="sidebar-link">
+          <span class="chapter-num">6</span>
+          <span class="lang-uz">Yuk turlari</span>
+          <span class="lang-en">Freight Types</span>
+        </a>
+        <a href="chapter7.html" class="sidebar-link">
+          <span class="chapter-num">7</span>
+          <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+          <span class="lang-en">Load Security and Procedures</span>
+        </a>
+        <a href="chapter8.html" class="sidebar-link">
+          <span class="chapter-num">8</span>
+          <span class="lang-uz">AQSh avtomagistral tizimi</span>
+          <span class="lang-en">US Highway and Road System</span>
+        </a>
+        <a href="chapter9.html" class="sidebar-link">
+          <span class="chapter-num">9</span>
+          <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+          <span class="lang-en">US Safety and Compliance</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Asboblar</span>
+          <span class="lang-en">Tools</span>
+        </div>
+        <a href="glossary.html" class="sidebar-link">
+          <i data-lucide="book-open"></i>
+          <span class="lang-uz">Glossariy</span>
+          <span class="lang-en">Glossary</span>
+        </a>
+        <a href="resources.html" class="sidebar-link">
+          <i data-lucide="link"></i>
+          <span class="lang-uz">Resurslar</span>
+          <span class="lang-en">Resources</span>
+        </a>
+        <a href="progress.html" class="sidebar-link">
+          <i data-lucide="bar-chart-3"></i>
+          <span class="lang-uz">Progress</span>
+          <span class="lang-en">Progress</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="app-layout">
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- Chapter Header -->
+        <section class="chapter-header">
+          <div class="chapter-badge-large">3</div>
+          <h1 class="page-title">
+            <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+            <span class="lang-en">Truck Drivers and Their Operations</span>
+          </h1>
+          <p class="page-subtitle">
+            <span class="lang-uz">20 slayd &nbsp;·&nbsp; Haydovchi turlari, CDL, haftalik daromad, SSN, tibbiy sertifikat, DMV, truck stoplar</span>
+            <span class="lang-en">20 slides &nbsp;·&nbsp; Driver types, CDL, weekly gross, SSN, medical cert, DMV, truck stops</span>
+          </p>
+        </section>
+
+        <!-- ===== 3.1 Pros and Cons of Truck Driving ===== -->
+        <section class="chapter-section card" id="section-3-1">
+          <h2 class="section-title">
+            <span class="section-num">3.1</span>
+            <span class="lang-uz">Yuk tashish haydovchiligining afzalliklari va kamchiliklari</span>
+            <span class="lang-en">Pros and Cons of Truck Driving</span>
+          </h2>
+          <div class="section-body">
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">✅</div>
+                <h4>
+                  <span class="lang-uz">Afzalliklari</span>
+                  <span class="lang-en">Pros</span>
+                </h4>
+                <ul class="content-list">
+                  <li>
+                    <span class="lang-uz">Tez boshlash — CDL plus boshlang'ich ta'lim: haftalar, yillar emas</span>
+                    <span class="lang-en">Fast start — CDL plus entry-level training: weeks, not years</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz">Barqaror talab — trucklar AQSh yukining og'irlik bo'yicha taxminan 72% ini tashiydi (ATA)</span>
+                    <span class="lang-en">Steady demand — trucks haul about 72% of all US freight by weight (ATA)</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz">Mustaqil ish kuni — stol yo'q, boshlig'ing yelkangda emas</span>
+                    <span class="lang-en">Independent workday — no desk, no boss at your shoulder</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz">Yaxshi maosh — AQSh mediana $57,440/yil; uzoq masofali va jamoaviy haydovchilar ko'proq ishlaydi</span>
+                    <span class="lang-en">Solid pay — US median $57,440/year; long-haul and team drivers earn more</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">⚠️</div>
+                <h4>
+                  <span class="lang-uz">Kamchiliklari</span>
+                  <span class="lang-en">Cons</span>
+                </h4>
+                <ul class="content-list">
+                  <li>
+                    <span class="lang-uz">Nosog'lom turmush tarzi — uzoq soatlar o'tirish, fast-food to'xtash joylari</span>
+                    <span class="lang-en">Unhealthy lifestyle — long hours sitting, fast-food stops</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz">Charchoq — uzoq kunlar, HOS cheklovlari muhim</span>
+                    <span class="lang-en">Fatigue — long days, HOS limits matter</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz">Kunning katta qismini yolg'iz</span>
+                    <span class="lang-en">Alone most of the day</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz">Uydan uzoqda vaqt — OTR haydovchilari haftalab yo'lda bo'lishi mumkin</span>
+                    <span class="lang-en">Time away from home — OTR drivers can spend weeks away</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 3.2 Types of Drivers ===== -->
+        <section class="chapter-section card" id="section-3-2">
+          <h2 class="section-title">
+            <span class="section-num">3.2</span>
+            <span class="lang-uz">Haydovchi turlari</span>
+            <span class="lang-en">Types of Drivers</span>
+          </h2>
+          <div class="section-body">
+            <div class="items-grid">
+              <!-- Owner-Operator -->
+              <div class="item-card">
+                <div class="item-icon">👤</div>
+                <h4>Owner-Operator (OO)</h4>
+                <ul class="content-list">
+                  <li>
+                    <span class="lang-uz">O'z truckiga ega bo'lgan mustaqil haydovchi, uni biznes sifatida boshqaradi</span>
+                    <span class="lang-en">Self-employed driver who owns the truck and runs it as a business</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz">Har bir ishni o'zi bajaradi: dispatcher, buxgalter, xavfsizlik menejeri</span>
+                    <span class="lang-en">Does every job alone: dispatcher, accountant, safety manager</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz">O'z vakolatida: USDOT raqami, MC vakolati, BOC-3, minimum $750,000 javobgarlik sug'urtasi</span>
+                    <span class="lang-en">Under their own authority: USDOT number, MC authority, BOC-3 filing, minimum $750,000 liability insurance</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz">Yoki carrierga qo'shiladi (yalpi daromadning 10–15% to'lov)</span>
+                    <span class="lang-en">Or leases onto a carrier (10–15% of gross fee)</span>
+                  </li>
+                </ul>
+                <div class="info-box" style="margin-top:var(--spacing-md)">
+                  <p><strong><span class="lang-uz">Afzallik:</span><span class="lang-en">Pro:</span></strong>
+                    <span class="lang-uz">Yalpi daromadning ko'p qismini saqlaydi, o'z jadvalini belgilaydi, eng yuqori daromad potentsiali</span>
+                    <span class="lang-en">Keeps most of gross, sets own schedule, highest earning potential</span>
+                  </p>
+                  <p><strong><span class="lang-uz">Kamchilik:</span><span class="lang-en">Con:</span></strong>
+                    <span class="lang-uz">Yoqilg'i, sug'urta, ta'mirlash to'laydi — himoya yo'q</span>
+                    <span class="lang-en">Pays fuel, insurance, repairs — no safety net</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Lease Operator -->
+              <div class="item-card">
+                <div class="item-icon">📋</div>
+                <h4>Lease Operator</h4>
+                <ul class="content-list">
+                  <li>
+                    <span class="lang-uz">OO kabi yalpi foiz bo'yicha ishlaydi, lekin truckni carrierdan ijaraga oladi</span>
+                    <span class="lang-en">Works on gross percentage like an OO but rents the truck from a carrier</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz">Haftalik truck ijarasi to'laydi — vaqt o'tishi bilan odatda sotib olishdan ko'ra qimmatroq</span>
+                    <span class="lang-en">Pays weekly truck lease — over time usually costs more than buying</span>
+                  </li>
+                </ul>
+                <div class="info-box" style="margin-top:var(--spacing-md)">
+                  <p><strong><span class="lang-uz">Afzallik:</span><span class="lang-en">Pro:</span></strong>
+                    <span class="lang-uz">Yalpi foiz bo'yicha to'lov, jadval belgilash, kompaniya haydovchisidan ko'proq daromad</span>
+                    <span class="lang-en">Paid percentage of gross, sets schedule, more revenue than company driver</span>
+                  </p>
+                  <p><strong><span class="lang-uz">Kamchilik:</span><span class="lang-en">Con:</span></strong>
+                    <span class="lang-uz">Haftalik truck ijara to'lovi, lease-purchase shartnomalari juda turli-tuman</span>
+                    <span class="lang-en">Weekly truck lease payment, lease-purchase contracts vary widely</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Company Driver -->
+              <div class="item-card">
+                <div class="item-icon">🏢</div>
+                <h4>Company Driver</h4>
+                <ul class="content-list">
+                  <li>
+                    <span class="lang-uz">Carrier xodimi, mil boshiga haq oladi</span>
+                    <span class="lang-en">Employee of a carrier, paid per mile</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz">Truck xarajatlari yo'q: yoqilg'i, yo'l to'lovlari, sug'urta, ta'mirlash = kompaniya javobgarligi</span>
+                    <span class="lang-en">None of the truck costs: fuel, tolls, insurance, repairs = company's responsibility</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz">Carrier jadval va qoidalarni belgilaydi</span>
+                    <span class="lang-en">Carrier sets schedule and rules</span>
+                  </li>
+                  <li>
+                    <span class="lang-uz"><strong>To'lov diapazoni:</strong> $0.50–$0.75 mil boshiga (carrier, tajriba, yuk turiga qarab)</span>
+                    <span class="lang-en"><strong>Pay range:</strong> $0.50–$0.75 per mile (varies by carrier, experience, freight type)</span>
+                  </li>
+                </ul>
+                <div class="info-box" style="margin-top:var(--spacing-md)">
+                  <p><strong><span class="lang-uz">Afzallik:</span><span class="lang-en">Pro:</span></strong>
+                    <span class="lang-uz">Xarajat yo'q, barqaror</span>
+                    <span class="lang-en">No expenses, stable</span>
+                  </p>
+                  <p><strong><span class="lang-uz">Kamchilik:</span><span class="lang-en">Con:</span></strong>
+                    <span class="lang-uz">Belgilangan jadval, kamroq daromad</span>
+                    <span class="lang-en">Fixed schedule, less income</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 3.3 Solo vs Team Drivers ===== -->
+        <section class="chapter-section card" id="section-3-3">
+          <h2 class="section-title">
+            <span class="section-num">3.3</span>
+            <span class="lang-uz">Solo va jamoaviy haydovchilar</span>
+            <span class="lang-en">Solo vs Team Drivers</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>
+                      <span class="lang-uz">Solo haydovchi</span>
+                      <span class="lang-en">Solo Driver</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Jamoaviy haydovchilar</span>
+                      <span class="lang-en">Team Drivers</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong><span class="lang-uz">Afzalliklari</span><span class="lang-en">Pros</span></strong></td>
+                    <td>
+                      <span class="lang-uz">Shaxsiy makon, butun maoshni saqlaydi, mustaqil</span>
+                      <span class="lang-en">Personal space, keeps whole paycheck, independent</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Truck to'xtovsiz harakatda, haftasiga ancha ko'p mil, yuqori to'lovli tezkor yuklar</span>
+                      <span class="lang-en">Truck keeps rolling, far more miles/week, high-paying expedited loads</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong><span class="lang-uz">Kamchiliklari</span><span class="lang-en">Cons</span></strong></td>
+                    <td>
+                      <span class="lang-uz">Kam tezkor yuklar, haydovchi dam olganda truck to'xtaydi, HOS cheklovlari</span>
+                      <span class="lang-en">Few expedited loads, truck stops when driver rests, HOS limits</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Harakatdagi truckda uxlash qiyin, bir-biriga bog'liq, yalpi daromad ikkita maoshni qoplaydi</span>
+                      <span class="lang-en">Hard to sleep in moving truck, depend on each other, gross covers two paychecks</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 3.4 Weekly Gross by Driver Type ===== -->
+        <section class="chapter-section card" id="section-3-4">
+          <h2 class="section-title">
+            <span class="section-num">3.4</span>
+            <span class="lang-uz">Haydovchi turiga ko'ra haftalik yalpi daromad</span>
+            <span class="lang-en">Weekly Gross by Driver Type</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Haydovchi turi</span>
+                      <span class="lang-en">Driver Type</span>
+                    </th>
+                    <th>Solo</th>
+                    <th>
+                      <span class="lang-uz">Jamoaviy</span>
+                      <span class="lang-en">Team</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Owner-Operator</strong></td>
+                    <td>$8,000+</td>
+                    <td>$12,000+</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lease Operator</strong></td>
+                    <td>$8,000+</td>
+                    <td>$12,000+</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Company Driver</strong></td>
+                    <td>
+                      <span class="lang-uz">2,500–3,000 mil</span>
+                      <span class="lang-en">2,500–3,000 miles</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">5,000–6,500 mil</span>
+                      <span class="lang-en">5,000–6,500 miles</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 style="margin-top:var(--spacing-lg);margin-bottom:var(--spacing-md)">
+              <span class="lang-uz">Haftalik yalpi daromad hisob-kitobi:</span>
+              <span class="lang-en">Weekly Gross Calculation Example:</span>
+            </h3>
+
+            <div class="info-box">
+              <h4>Solo:</h4>
+              <p>NJ→OH $1,000 + OH→IL $1,200 + IL→TX $2,500 + TX→KS $1,000 + KS→KY $1,500 + KY→NJ $2,000</p>
+              <div class="stat-card" style="margin-top:var(--spacing-sm)">
+                <div class="stat-value">$9,200/<span class="lang-uz">hafta</span><span class="lang-en">week</span></div>
+              </div>
+            </div>
+
+            <div class="info-box" style="margin-top:var(--spacing-md)">
+              <h4>Team:</h4>
+              <p>NJ→IL $1,500 + IL→TX $2,800 + TX→CA $3,000 + CA→KS $5,000 + KS→IL $1,600</p>
+              <div class="stat-card" style="margin-top:var(--spacing-sm)">
+                <div class="stat-value">$13,900/<span class="lang-uz">hafta</span><span class="lang-en">week</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 3.5 CDL — Commercial Driver's License ===== -->
+        <section class="chapter-section card" id="section-3-5">
+          <h2 class="section-title">
+            <span class="section-num">3.5</span>
+            <span class="lang-uz">CDL — Tijorat haydovchilik guvohnomasi</span>
+            <span class="lang-en">CDL — Commercial Driver's License</span>
+          </h2>
+          <div class="section-body">
+            <p>
+              <span class="lang-uz">AQShda katta, og'ir yoki xavfli yuklar (hazmat) bilan tijorat maqsadida haydash uchun talab qilinadi. Uy shtati tomonidan federal FMCSA qoidalari asosida beriladi.</span>
+              <span class="lang-en">Required in the US to drive large, heavy, or placarded hazmat vehicles in commerce. Issued by home state under federal FMCSA rules.</span>
+            </p>
+
+            <h3 style="margin-top:var(--spacing-lg);margin-bottom:var(--spacing-md)">
+              <span class="lang-uz">CDL sinflari</span>
+              <span class="lang-en">CDL Classes</span>
+            </h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Sinf</span>
+                      <span class="lang-en">Class</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Nimani qamraydi</span>
+                      <span class="lang-en">What It Covers</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Odatiy transport vositalari</span>
+                      <span class="lang-en">Typical Vehicles</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>A</strong></td>
+                    <td>
+                      <span class="lang-uz">Kombinatsiyalar ≥26,001 lb (GCWR), tortish birligi &gt;10,000 lb</span>
+                      <span class="lang-en">Combinations ≥26,001 lb (GCWR), towing unit &gt;10,000 lb</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Traktor-traylerlar, tankerlar, flatbedlar</span>
+                      <span class="lang-en">Tractor-trailers, tankers, flatbeds</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>B</strong></td>
+                    <td>
+                      <span class="lang-uz">Bitta transport vositasi ≥26,001 lb, tortish ≤10,000 lb</span>
+                      <span class="lang-en">Single vehicle ≥26,001 lb, towing ≤10,000 lb</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Straight trucklar, box trucklar, dump trucklar, avtobuslar</span>
+                      <span class="lang-en">Straight trucks, box trucks, dump trucks, buses</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>C</strong></td>
+                    <td>
+                      <span class="lang-uz">Kichikroq transport vositalari: 16+ odam yoki plakardalangan hazmat</span>
+                      <span class="lang-en">Smaller vehicles carrying 16+ people or placarded hazmat</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Yo'lovchi furgonlari, kichik hazmat trucklar</span>
+                      <span class="lang-en">Passenger vans, small hazmat trucks</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 style="margin-top:var(--spacing-lg);margin-bottom:var(--spacing-md)">
+              <span class="lang-uz">CDL endorsementlari</span>
+              <span class="lang-en">CDL Endorsements</span>
+            </h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Kod</span>
+                      <span class="lang-en">Code</span>
+                    </th>
+                    <th>Endorsement</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>H</strong></td><td>Hazmat</td></tr>
+                  <tr><td><strong>N</strong></td><td>Tank</td></tr>
+                  <tr><td><strong>P</strong></td><td>Passenger</td></tr>
+                  <tr><td><strong>S</strong></td><td>School bus</td></tr>
+                  <tr><td><strong>T</strong></td><td>Doubles/Triples</td></tr>
+                  <tr><td><strong>X</strong></td><td>Tank + Hazmat</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 style="margin-top:var(--spacing-lg);margin-bottom:var(--spacing-md)">
+              <span class="lang-uz">CDL olish bosqichlari</span>
+              <span class="lang-en">Steps to Get a CDL</span>
+            </h3>
+            <div class="fact-list">
+              <div class="fact-item">
+                <span class="fact-icon">1️⃣</span>
+                <span>
+                  <strong><span class="lang-uz">Ariza:</span><span class="lang-en">Apply:</span></strong>
+                  <span class="lang-uz">21+ yosh (18–20: faqat shtat ichida), DOT tibbiy tekshiruvidan o'tish, ID/SSN/AQShda yashash dalilini taqdim etish, shtat Drug & Alcohol Clearinghouseni tekshiradi, ko'rish va bilim testlaridan o'tish</span>
+                  <span class="lang-en">Be 21+ (18–20: in-state only), pass DOT medical exam, provide ID/SSN/proof of US domicile, state checks Drug & Alcohol Clearinghouse, pass vision and knowledge tests</span>
+                </span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">2️⃣</span>
+                <span>
+                  <strong><span class="lang-uz">O'quvchi ruxsatnomasi:</span><span class="lang-en">Learner's Permit:</span></strong>
+                  <span class="lang-uz">CLP (Commercial Learner's Permit) olish, ro'yxatdan o'tgan provayder bilan boshlang'ich darajadagi haydovchi ta'limini tugatish, CLPni kamida 14 kun saqlash</span>
+                  <span class="lang-en">Get CLP (Commercial Learner's Permit), complete Entry-Level Driver Training with registered provider, hold CLP at least 14 days</span>
+                </span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">3️⃣</span>
+                <span>
+                  <strong><span class="lang-uz">Ko'nikmalar testi:</span><span class="lang-en">Skills Test:</span></strong>
+                  <span class="lang-uz">Sayohat oldidan transport vositasini tekshirish, asosiy boshqarish ko'nikmalari, kerakli sinf transport vositasida yo'l testi</span>
+                  <span class="lang-en">Pre-trip vehicle inspection, basic control skills, road test in vehicle of desired class</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="highlight-card" style="margin-top:var(--spacing-lg)">
+              <p>
+                <span class="lang-uz"><strong>2025-yil iyundan boshlab:</strong> Ingliz tilini yetarlicha o'qiy va gapira olmaydigan haydovchilar yo'l chetida tekshiruvda xizmatdan chetlatilishi mumkin.</span>
+                <span class="lang-en"><strong>Since June 2025:</strong> Drivers who can't read and speak English well enough can be placed out of service at roadside inspections.</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 3.6 Social Security Number (SSN) ===== -->
+        <section class="chapter-section card" id="section-3-6">
+          <h2 class="section-title">
+            <span class="section-num">3.6</span>
+            <span class="lang-uz">Ijtimoiy sug'urta raqami (SSN)</span>
+            <span class="lang-en">Social Security Number (SSN)</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">AQSh hukumati tomonidan fuqarolar va huquqli rezidentlarga beriladigan to'qqiz xonali raqam</span>
+                <span class="lang-en">Nine-digit number issued by US government to citizens and eligible residents</span>
+              </li>
+              <li>
+                <span class="lang-uz">Umr bo'yi daromad va ishlagan yillarni kuzatadi</span>
+                <span class="lang-en">Tracks lifetime earnings and years worked</span>
+              </li>
+              <li>
+                <span class="lang-uz">AQShdagi har qanday ish va CDL arizasi uchun kerak</span>
+                <span class="lang-en">Needed for any US job and CDL application</span>
+              </li>
+              <li>
+                <span class="lang-uz">Kredit, bank hisobvaraqlari, sug'urta, imtiyozlar uchun ham ishlatiladi</span>
+                <span class="lang-en">Also used for credit, bank accounts, insurance, benefits</span>
+              </li>
+              <li>
+                <span class="lang-uz">2011-yil iyundan beri: raqamlar tasodifiy tarzda beriladi (birinchi raqamlar endi shtatni ko'rsatmaydi)</span>
+                <span class="lang-en">Since June 2011: numbers assigned at random (first digits no longer show state)</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 3.7 Medical Certification ===== -->
+        <section class="chapter-section card" id="section-3-7">
+          <h2 class="section-title">
+            <span class="section-num">3.7</span>
+            <span class="lang-uz">Tibbiy sertifikatlash</span>
+            <span class="lang-en">Medical Certification</span>
+          </h2>
+          <div class="section-body">
+            <p>
+              <span class="lang-uz">FMCSA har bir CDL haydovchidan Milliy reestrda ro'yxatdan o'tgan tibbiy tekshiruvchi tomonidan DOT fizik tekshiruvidan o'tishni talab qiladi.</span>
+              <span class="lang-en">FMCSA requires every CDL driver to pass a DOT physical by a medical examiner on the National Registry.</span>
+            </p>
+
+            <div class="stats-grid" style="margin-top:var(--spacing-md)">
+              <div class="stat-card">
+                <div class="stat-value">24 <span class="lang-uz">oy</span><span class="lang-en">months</span></div>
+                <div class="stat-desc">
+                  <span class="lang-uz">Amal qilish muddati (holat monitoring kerak bo'lsa qisqaroq)</span>
+                  <span class="lang-en">Validity period (shorter if condition needs monitoring)</span>
+                </div>
+              </div>
+            </div>
+
+            <h3 style="margin-top:var(--spacing-lg);margin-bottom:var(--spacing-md)">
+              <span class="lang-uz">Tekshiruv qamrovi:</span>
+              <span class="lang-en">Exam checks:</span>
+            </h3>
+            <div class="fact-list">
+              <div class="fact-item"><span class="fact-icon">👁️</span><span><span class="lang-uz">Ko'rish</span><span class="lang-en">Vision</span></span></div>
+              <div class="fact-item"><span class="fact-icon">👂</span><span><span class="lang-uz">Eshitish</span><span class="lang-en">Hearing</span></span></div>
+              <div class="fact-item"><span class="fact-icon">💓</span><span><span class="lang-uz">Qon bosimi/puls</span><span class="lang-en">Blood pressure/pulse</span></span></div>
+              <div class="fact-item"><span class="fact-icon">🧪</span><span><span class="lang-uz">Siydik tahlili</span><span class="lang-en">Urinalysis</span></span></div>
+              <div class="fact-item"><span class="fact-icon">❤️</span><span><span class="lang-uz">Yurak, o'pka, a'zolar</span><span class="lang-en">Heart, lungs, limbs</span></span></div>
+            </div>
+
+            <ul class="content-list" style="margin-top:var(--spacing-md)">
+              <li>
+                <span class="lang-uz">Giyohvand moddalar va alkogol testlari alohida</span>
+                <span class="lang-en">Drug and alcohol tests are separate</span>
+              </li>
+              <li>
+                <span class="lang-uz">Insulin bilan davolangan diabet endi avtomatik ravishda nomuvofiq deb topilmaydi</span>
+                <span class="lang-en">Insulin-treated diabetes no longer automatically disqualifies</span>
+              </li>
+              <li>
+                <span class="lang-uz">2025-yil iyundan beri: natijalar tekshiruvchidan FMCSA va shtatga elektron ravishda yuboriladi</span>
+                <span class="lang-en">Since June 2025: results go electronically from examiner to FMCSA and state</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 3.8 DMV ===== -->
+        <section class="chapter-section card" id="section-3-8">
+          <h2 class="section-title">
+            <span class="section-num">3.8</span>
+            <span class="lang-uz">DMV (Avtotransport vositalarini ro'yxatga olish bo'limi)</span>
+            <span class="lang-en">DMV (Department of Motor Vehicles)</span>
+          </h2>
+          <div class="section-body">
+            <p>
+              <span class="lang-uz">Transport vositalarini ro'yxatga olish va haydovchilik guvohnomasi berish uchun shtat agentligi. Nomi shtatga qarab o'zgaradi:</span>
+              <span class="lang-en">State agency for vehicle registration and driver licensing. Name varies by state:</span>
+            </p>
+
+            <div class="fact-list" style="margin-top:var(--spacing-md)">
+              <div class="fact-item">
+                <span class="fact-icon">🏛️</span>
+                <span><strong>Maryland:</strong> Motor Vehicle Administration (MVA)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">🏛️</span>
+                <span><strong>Louisiana:</strong> Office of Motor Vehicles (OMV)</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">🏛️</span>
+                <span><strong>Kentucky:</strong> Kentucky Transportation Cabinet</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">🏛️</span>
+                <span><strong>Georgia:</strong>
+                  <span class="lang-uz">Dept. of Driver Services (guvohnomalar) + Dept. of Revenue (ro'yxatga olish)</span>
+                  <span class="lang-en">Dept. of Driver Services (licenses) + Dept. of Revenue (registration)</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 3.9 Truck Stops ===== -->
+        <section class="chapter-section card" id="section-3-9">
+          <h2 class="section-title">
+            <span class="section-num">3.9</span>
+            <span class="lang-uz">Truck stoplar</span>
+            <span class="lang-en">Truck Stops</span>
+          </h2>
+          <div class="section-body">
+            <p>
+              <span class="lang-uz">Yuk tashuvchi haydovchilar uchun katta yo'l bo'yi xizmat stantsiyalari: yoqilg'i, to'xtash joyi, dush, kir yuvish, restoranlar, tarozilar, ATM, truck/trayler ustaxonasi.</span>
+              <span class="lang-en">Large roadside service stations for truck drivers: fuel, parking, showers, laundry, restaurants, scales, ATM, truck/trailer shop.</span>
+            </p>
+
+            <div class="items-grid" style="margin-top:var(--spacing-md)">
+              <div class="item-card">
+                <div class="item-icon">⛽</div>
+                <h4>TA & Petro</h4>
+                <p>
+                  <span class="lang-uz">bp egaligi</span>
+                  <span class="lang-en">Owned by bp</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">⛽</div>
+                <h4>Pilot Flying J</h4>
+                <p>
+                  <span class="lang-uz">Berkshire Hathaway egaligi</span>
+                  <span class="lang-en">Owned by Berkshire Hathaway</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="highlight-card" style="margin-top:var(--spacing-md)">
+              <p>
+                <span class="lang-uz"><strong>To'xtash joyi kam:</strong> har <strong>11 ta truck</strong>ga taxminan <strong>1 ta to'xtash joyi</strong></span>
+                <span class="lang-en"><strong>Parking is scarce:</strong> about <strong>1 space for every 11 trucks</strong></span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 3.10 TripPak / Transflo ===== -->
+        <section class="chapter-section card" id="section-3-10">
+          <h2 class="section-title">
+            <span class="section-num">3.10</span>
+            <span class="lang-uz">TripPak / Transflo</span>
+            <span class="lang-en">TripPak / Transflo</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Carrierlar har bir yukdan asl hujjatlarni talab qiladi</span>
+                <span class="lang-en">Carriers need original paperwork from every load</span>
+              </li>
+              <li>
+                <span class="lang-uz">Haydovchilar hujjatlarni o'sha kuni <strong>Transflo mobil ilovasi</strong> bilan skanerlaydi</span>
+                <span class="lang-en">Drivers scan documents same day with <strong>Transflo mobile app</strong></span>
+              </li>
+              <li>
+                <span class="lang-uz">Asl nusxalarni truck stop drop boxiga oldindan to'langan <strong>TripPak Express</strong> konvertiga tashlaydi</span>
+                <span class="lang-en">Drop originals in prepaid <strong>TripPak Express</strong> envelope at truck stop drop box</span>
+              </li>
+            </ul>
+
+            <h3 style="margin-top:var(--spacing-md);margin-bottom:var(--spacing-sm)">
+              <span class="lang-uz">Variantlar:</span>
+              <span class="lang-en">Options:</span>
+            </h3>
+            <div class="fact-list">
+              <div class="fact-item"><span class="fact-icon">📦</span><span>Next Day</span></div>
+              <div class="fact-item"><span class="fact-icon">📦</span><span>2nd Day</span></div>
+              <div class="fact-item"><span class="fact-icon">📦</span><span>Consolidated (<span class="lang-uz">haftalik</span><span class="lang-en">weekly</span>)</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 3.11 Terminology ===== -->
+        <section class="chapter-section card" id="section-3-11">
+          <h2 class="section-title">
+            <span class="section-num">3.11</span>
+            <span class="lang-uz">Terminologiya — 3-bob</span>
+            <span class="lang-en">Terminology — Chapter 3</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Inglizcha</span>
+                      <span class="lang-en">English Term</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">O'zbekcha</span>
+                      <span class="lang-en">Uzbek Translation</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Ta'rif</span>
+                      <span class="lang-en">Definition</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Owner-Operator (OO)</strong></td>
+                    <td>O'z yuk mashinasi egasi</td>
+                    <td>
+                      <span class="lang-uz">O'z truckiga ega bo'lgan mustaqil haydovchi</span>
+                      <span class="lang-en">Self-employed driver who owns their own truck</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lease Operator</strong></td>
+                    <td>Lizing operatori</td>
+                    <td>
+                      <span class="lang-uz">Carrierdan truck ijaraga olgan haydovchi</span>
+                      <span class="lang-en">Driver who leases a truck from a carrier</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Company Driver</strong></td>
+                    <td>Kompaniya haydovchisi</td>
+                    <td>
+                      <span class="lang-uz">Carrier xodimi sifatida ishlaydi, mil boshiga haq oladi</span>
+                      <span class="lang-en">Works as carrier employee, paid per mile</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>CDL</strong></td>
+                    <td>CDL (Tijorat haydovchilik guvohnomasi)</td>
+                    <td>Commercial Driver's License</td>
+                  </tr>
+                  <tr>
+                    <td><strong>SSN</strong></td>
+                    <td>SSN (Ijtimoiy sug'urta raqami)</td>
+                    <td>Social Security Number</td>
+                  </tr>
+                  <tr>
+                    <td><strong>DOT Physical</strong></td>
+                    <td>DOT tibbiy tekshiruvi</td>
+                    <td>
+                      <span class="lang-uz">CDL uchun majburiy sog'liqni tekshirish</span>
+                      <span class="lang-en">Mandatory health exam for CDL</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>CLP</strong></td>
+                    <td>CLP (Tijorat o'quvchi guvohnomasi)</td>
+                    <td>Commercial Learner's Permit</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Gross</strong></td>
+                    <td>Yalpi daromad</td>
+                    <td>
+                      <span class="lang-uz">Haftalik yoki oylik jami daromad</span>
+                      <span class="lang-en">Weekly or monthly total revenue</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Deadhead</strong></td>
+                    <td>Bo'sh yurish</td>
+                    <td>
+                      <span class="lang-uz">Yuksiz harakatlanish — daromadsiz millar</span>
+                      <span class="lang-en">Driving empty — miles without revenue</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>TripPak</strong></td>
+                    <td>TripPak</td>
+                    <td>
+                      <span class="lang-uz">Yuk hujjatlarini jo'natish tizimi</span>
+                      <span class="lang-en">Load document shipping system</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Transflo</strong></td>
+                    <td>Transflo</td>
+                    <td>
+                      <span class="lang-uz">Yuk hujjatlarini skanerlash ilova</span>
+                      <span class="lang-en">Load document scanning app</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== ASOSIY FIKRLAR (Key Takeaways) ===== -->
+        <section class="chapter-section card takeaways-section" id="takeaways">
+          <h2 class="section-title">
+            <i data-lucide="star" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Asosiy fikrlar</span>
+            <span class="lang-en">Key Takeaways</span>
+          </h2>
+          <div class="section-body">
+            <ul class="takeaways-list">
+              <li>
+                <span class="lang-uz">Truck haydovchiligining asosiy afzalliklari: tez boshlash (CDL haftalar ichida), barqaror talab (AQSh yukining 72%), mustaqil ish va yaxshi maosh ($57,440/yil mediana). Kamchiliklari: nosog'lom turmush tarzi, charchoq va uydan uzoqda bo'lish.</span>
+                <span class="lang-en">Key pros of trucking: fast start (CDL in weeks), steady demand (72% of US freight), independent work and solid pay ($57,440/year median). Cons: unhealthy lifestyle, fatigue and time away from home.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Uchta haydovchi turi mavjud: Owner-Operator (eng yuqori daromad, barcha xarajatlar o'zida), Lease Operator (truckni ijaraga oladi), Company Driver ($0.50–$0.75/mil, xarajat yo'q). Solo haydovchi haftasiga ~$9,200, jamoaviy ~$13,900 ishlay oladi.</span>
+                <span class="lang-en">Three driver types: Owner-Operator (highest earnings, all expenses), Lease Operator (rents truck), Company Driver ($0.50–$0.75/mile, no expenses). Solo drivers can earn ~$9,200/week, teams ~$13,900/week.</span>
+              </li>
+              <li>
+                <span class="lang-uz">CDL olish uchun 21+ yosh (18–20: faqat shtat ichida), DOT tibbiy tekshiruvi, SSN kerak. Uch bosqich: ariza va bilim testi, CLP olish (kamida 14 kun), ko'nikmalar testi. 2025-yil iyundan beri ingliz tili bilimi majburiy.</span>
+                <span class="lang-en">CDL requires age 21+ (18–20: in-state only), DOT medical exam, SSN. Three steps: apply and knowledge test, get CLP (minimum 14 days), skills test. Since June 2025 English proficiency is mandatory.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Tibbiy sertifikat 24 oygacha amal qiladi. DOT tekshiruvi ko'rish, eshitish, qon bosimi, siydik tahlili va boshqalarni qamraydi. Truck stoplarda to'xtash joyi kam: har 11 ta truckga 1 joy. TripPak/Transflo hujjat boshqaruvi uchun.</span>
+                <span class="lang-en">Medical cert valid up to 24 months. DOT exam covers vision, hearing, blood pressure, urinalysis and more. Truck stop parking is scarce: 1 space per 11 trucks. TripPak/Transflo for document management.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== SCENARIOS (Interactive) ===== -->
+        <section class="chapter-section card" id="scenarios">
+          <h2 class="section-title">
+            <i data-lucide="help-circle" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Amaliy vaziyatlar</span>
+            <span class="lang-en">Practice Scenarios</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher vaziyatlarini tahlil qiling va to'g'ri javobni tanlang.</span>
+            <span class="lang-en">Analyze the following real dispatcher situations and choose the correct answer.</span>
+          </p>
+          <div id="scenarios-container"></div>
+        </section>
+
+        <!-- ===== PHONE SCRIPTS ===== -->
+        <section class="chapter-section card" id="phone-scripts">
+          <h2 class="section-title">
+            <i data-lucide="phone" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Telefon skriptlari</span>
+            <span class="lang-en">Phone Scripts</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher telefon muloqotlarini o'rganing. Kalit iboralarni yodlang.</span>
+            <span class="lang-en">Study the following real dispatcher phone conversations. Memorize the key phrases.</span>
+          </p>
+          <div id="scripts-container"></div>
+        </section>
+
+        <!-- ===== MARK AS READ ===== -->
+        <div class="mark-read-wrap">
+          <button class="mark-read-btn" id="mark-read-btn">
+            <i data-lucide="book-check" style="width:18px;height:18px"></i>
+            <span class="lang-uz">O'qildi deb belgilash</span>
+            <span class="lang-en">Mark as read</span>
+          </button>
+        </div>
+
+        <!-- ===== CHAPTER NAVIGATION ===== -->
+        <div class="chapter-nav">
+          <a href="chapter2.html" class="chapter-nav-btn prev">
+            <i data-lucide="arrow-left" style="width:18px;height:18px"></i>
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Oldingi bob</span>
+                <span class="lang-en">Previous Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+                <span class="lang-en">Stakeholders in Trucking</span>
+              </span>
+            </span>
+          </a>
+          <a href="chapter4.html" class="chapter-nav-btn next">
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Keyingi bob</span>
+                <span class="lang-en">Next Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Avtopark va jihozlar</span>
+                <span class="lang-en">Fleet and Equipment</span>
+              </span>
+            </span>
+            <i data-lucide="arrow-right" style="width:18px;height:18px"></i>
+          </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>
+            <span class="lang-uz">&copy; 2024 Dispatcher Academy — AQSh yuk tashish sanoati bo'yicha o'quv platformasi</span>
+            <span class="lang-en">&copy; 2024 Dispatcher Academy — US Trucking Industry Learning Platform</span>
+          </p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Lucide Icons -->
+  <!-- Progress Tracker -->
+  <script src="js/progress.js"></script>
+
+  <!-- Scenario Data -->
+  <script src="data/scenarios.js"></script>
+
+  <!-- Phone Scripts Data -->
+  <script src="data/scripts.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Scenario Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 3;
+    var container = document.getElementById('scenarios-container');
+    if (!container || typeof scenariosData === 'undefined') return;
+
+    var chapterScenarios = scenariosData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScenarios.length === 0) return;
+
+    function getLang() {
+      return document.documentElement.getAttribute('data-lang') || 'uz';
+    }
+
+    function escHtml(s) {
+      var d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    function renderScenarios() {
+      var lang = getLang();
+      container.innerHTML = '';
+
+      chapterScenarios.forEach(function(scenario, idx) {
+        var situation = lang === 'uz' ? scenario.situation_uz : scenario.situation_en;
+
+        var scenarioEl = document.createElement('div');
+        scenarioEl.className = 'scenario-block';
+        scenarioEl.setAttribute('data-id', scenario.id);
+
+        var header = '<div class="scenario-header">' +
+          '<span class="scenario-num">' + (idx + 1) + '</span>' +
+          '<div class="scenario-situation">' + escHtml(situation) + '</div>' +
+          '</div>';
+
+        var optionsHtml = '<div class="scenario-options">';
+        scenario.options.forEach(function(opt, oi) {
+          var optText = lang === 'uz' ? opt.text_uz : opt.text_en;
+          optionsHtml += '<button class="scenario-option" data-scenario="' + scenario.id + '" data-index="' + oi + '">' +
+            '<span class="option-letter">' + String.fromCharCode(65 + oi) + '</span>' +
+            '<span class="option-text">' + escHtml(optText) + '</span>' +
+            '</button>';
+        });
+        optionsHtml += '</div>';
+
+        var feedbackHtml = '<div class="scenario-feedback" id="feedback-' + scenario.id + '" style="display:none"></div>';
+
+        scenarioEl.innerHTML = header + optionsHtml + feedbackHtml;
+        container.appendChild(scenarioEl);
+      });
+
+      container.querySelectorAll('.scenario-option').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          handleAnswer(this);
+        });
+      });
+    }
+
+    function handleAnswer(btn) {
+      var scenarioId = btn.getAttribute('data-scenario');
+      var chosenIndex = parseInt(btn.getAttribute('data-index'));
+      var scenario = chapterScenarios.find(function(s) { return s.id === scenarioId; });
+      if (!scenario) return;
+
+      var lang = getLang();
+      var block = btn.closest('.scenario-block');
+      var allBtns = block.querySelectorAll('.scenario-option');
+      var isCorrect = chosenIndex === scenario.correct_index;
+
+      allBtns.forEach(function(b) {
+        b.disabled = true;
+        b.classList.add('disabled');
+        var bIdx = parseInt(b.getAttribute('data-index'));
+        if (bIdx === scenario.correct_index) {
+          b.classList.add('correct');
+        }
+        if (bIdx === chosenIndex && !isCorrect) {
+          b.classList.add('incorrect');
+        }
+      });
+
+      var feedbackEl = document.getElementById('feedback-' + scenarioId);
+      var chosenOpt = scenario.options[chosenIndex];
+      var explanation = lang === 'uz' ? chosenOpt.explanation_uz : chosenOpt.explanation_en;
+
+      feedbackEl.className = 'scenario-feedback ' + (isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+      feedbackEl.innerHTML =
+        '<div class="feedback-icon">' +
+        (isCorrect
+          ? '<i data-lucide="check-circle" style="width:20px;height:20px;color:#16a34a"></i>'
+          : '<i data-lucide="x-circle" style="width:20px;height:20px;color:#dc2626"></i>') +
+        '</div>' +
+        '<div class="feedback-text">' + escHtml(explanation) + '</div>';
+      feedbackEl.style.display = 'flex';
+      lucide.createIcons();
+    }
+
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') {
+          var answered = container.querySelector('.scenario-option.disabled');
+          if (!answered) renderScenarios();
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+
+    renderScenarios();
+  })();
+  </script>
+
+  <!-- Phone Scripts Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 3;
+    var container = document.getElementById('scripts-container');
+    if (!container || typeof scriptsData === 'undefined') return;
+    var chapterScripts = scriptsData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScripts.length === 0) return;
+
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+    function renderScripts() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScripts.forEach(function(script, idx) {
+        var title = lang === 'uz' ? script.title_uz : script.title_en;
+        var dialogue = lang === 'uz' ? script.script_uz : script.script_en;
+        var phrasesTitle = lang === 'uz' ? 'Kalit iboralar' : 'Key Phrases';
+
+        var el = document.createElement('div');
+        el.className = 'script-block';
+
+        var phrasesHtml = '';
+        script.key_phrases.forEach(function(kp) {
+          var phrase = lang === 'uz' ? kp.phrase_uz : kp.phrase_en;
+          phrasesHtml += '<div class="key-phrase"><span class="key-phrase-bullet">▸</span><span class="key-phrase-text">' + escHtml(phrase) + '</span></div>';
+        });
+
+        el.innerHTML =
+          '<div class="script-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.script-toggle').classList.toggle('open')">' +
+            '<span class="script-num">' + (idx + 1) + '</span>' +
+            '<span class="script-title">' + escHtml(title) + '</span>' +
+            '<i data-lucide="chevron-down" class="script-toggle" style="width:20px;height:20px"></i>' +
+          '</div>' +
+          '<div class="script-body">' +
+            '<div class="script-dialogue">' + escHtml(dialogue) + '</div>' +
+            '<div class="script-key-phrases">' +
+              '<div class="script-key-phrases-title"><i data-lucide="bookmark" style="width:16px;height:16px"></i> ' + escHtml(phrasesTitle) + '</div>' +
+              phrasesHtml +
+            '</div>' +
+          '</div>';
+
+        container.appendChild(el);
+      });
+      lucide.createIcons();
+    }
+
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') renderScripts();
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+
+    renderScripts();
+  })();
+  </script>
+
+  <!-- Mark as Read Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 3;
+    var btn = document.getElementById('mark-read-btn');
+    if (!btn || typeof Progress === 'undefined') return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function updateBtn() {
+      var isRead = Progress.isChapterRead(CHAPTER);
+      if (isRead) {
+        btn.classList.add('read');
+        btn.innerHTML = '<i data-lucide="check-circle" style="width:18px;height:18px"></i><span class="lang-uz">O\'qilgan</span><span class="lang-en">Read</span>';
+      } else {
+        btn.classList.remove('read');
+        btn.innerHTML = '<i data-lucide="book-check" style="width:18px;height:18px"></i><span class="lang-uz">O\'qildi deb belgilash</span><span class="lang-en">Mark as read</span>';
+      }
+      lucide.createIcons();
+    }
+    btn.addEventListener('click', function() {
+      if (!Progress.isChapterRead(CHAPTER)) { Progress.markChapterRead(CHAPTER); updateBtn(); }
+    });
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) { if (m.attributeName === 'data-lang') updateBtn(); });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    updateBtn();
+  })();
+  </script>
+</body>
+</html>

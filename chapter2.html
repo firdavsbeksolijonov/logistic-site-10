@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="uz" data-lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2-Bob: Yuk tashish ishtirokchilari — Dispatcher Academy</title>
+  <meta name="description" content="Yuk tashish sanoatidagi uchta asosiy ishtirokchi, deal flow, zarar holatlari">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme & Language: apply before paint -->
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <a href="index.html" class="header-logo">
+        <i data-lucide="truck" class="logo-icon"></i>
+        <span class="logo-text">
+          <span class="lang-uz">Dispatcher Academy</span>
+          <span class="lang-en">Dispatcher Academy</span>
+        </span>
+      </a>
+    </div>
+    <div class="header-right">
+      <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">
+        <i data-lucide="globe"></i>
+        <span class="toggle-label">EN</span>
+      </button>
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <a href="index.html" class="sidebar-link">
+          <i data-lucide="home"></i>
+          <span class="lang-uz">Bosh sahifa</span>
+          <span class="lang-en">Home</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Boblar</span>
+          <span class="lang-en">Chapters</span>
+        </div>
+        <a href="chapter1.html" class="sidebar-link">
+          <span class="chapter-num">1</span>
+          <span class="lang-uz">Logistikaga kirish</span>
+          <span class="lang-en">Introduction to Logistics</span>
+        </a>
+        <a href="chapter2.html" class="sidebar-link active">
+          <span class="chapter-num">2</span>
+          <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+          <span class="lang-en">Stakeholders in Trucking</span>
+        </a>
+        <a href="chapter3.html" class="sidebar-link">
+          <span class="chapter-num">3</span>
+          <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+          <span class="lang-en">Truck Drivers and Their Operations</span>
+        </a>
+        <a href="chapter4.html" class="sidebar-link">
+          <span class="chapter-num">4</span>
+          <span class="lang-uz">Avtopark va jihozlar</span>
+          <span class="lang-en">Fleet and Equipment</span>
+        </a>
+        <a href="chapter5.html" class="sidebar-link">
+          <span class="chapter-num">5</span>
+          <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+          <span class="lang-en">Trailers and Weight Balance</span>
+        </a>
+        <a href="chapter6.html" class="sidebar-link">
+          <span class="chapter-num">6</span>
+          <span class="lang-uz">Yuk turlari</span>
+          <span class="lang-en">Freight Types</span>
+        </a>
+        <a href="chapter7.html" class="sidebar-link">
+          <span class="chapter-num">7</span>
+          <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+          <span class="lang-en">Load Security and Procedures</span>
+        </a>
+        <a href="chapter8.html" class="sidebar-link">
+          <span class="chapter-num">8</span>
+          <span class="lang-uz">AQSh avtomagistral tizimi</span>
+          <span class="lang-en">US Highway and Road System</span>
+        </a>
+        <a href="chapter9.html" class="sidebar-link">
+          <span class="chapter-num">9</span>
+          <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+          <span class="lang-en">US Safety and Compliance</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Asboblar</span>
+          <span class="lang-en">Tools</span>
+        </div>
+        <a href="glossary.html" class="sidebar-link">
+          <i data-lucide="book-open"></i>
+          <span class="lang-uz">Glossariy</span>
+          <span class="lang-en">Glossary</span>
+        </a>
+        <a href="resources.html" class="sidebar-link">
+          <i data-lucide="link"></i>
+          <span class="lang-uz">Resurslar</span>
+          <span class="lang-en">Resources</span>
+        </a>
+        <a href="progress.html" class="sidebar-link">
+          <i data-lucide="bar-chart-3"></i>
+          <span class="lang-uz">Progress</span>
+          <span class="lang-en">Progress</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="app-layout">
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- Chapter Header -->
+        <section class="chapter-header">
+          <div class="chapter-badge-large">2</div>
+          <h1 class="page-title">
+            <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+            <span class="lang-en">Stakeholders in Trucking</span>
+          </h1>
+          <p class="page-subtitle">
+            <span class="lang-uz">12 slayd &nbsp;·&nbsp; Uchta asosiy ishtirokchi, deal flow, rate confirmation, BOL, zarar holatlari</span>
+            <span class="lang-en">12 slides &nbsp;·&nbsp; The three main participants, deal flow, rate confirmation, BOL, damage cases</span>
+          </p>
+        </section>
+
+        <!-- ===== 2.1 Three Main Stakeholders ===== -->
+        <section class="chapter-section card" id="section-2-1">
+          <h2 class="section-title">
+            <span class="section-num">2.1</span>
+            <span class="lang-uz">Uchta asosiy ishtirokchi</span>
+            <span class="lang-en">Three Main Stakeholders</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Ishtirokchi</span>
+                      <span class="lang-en">Stakeholder</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Vazifasi</span>
+                      <span class="lang-en">Role</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Customer (Shipper/Receiver)</strong></td>
+                    <td>
+                      <span class="lang-uz">Tashishga muhtoj bo'lgan yukka egalik qiluvchi yoki manfaatdor tomon</span>
+                      <span class="lang-en">Owns or is interested in freight that needs transportation</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Broker</strong></td>
+                    <td>
+                      <span class="lang-uz">Shipper va carrier o'rtasidagi vositachi; logistika va tashish jarayonini boshqaradi</span>
+                      <span class="lang-en">Intermediary between shipper and carrier; manages logistics and transportation process</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Carrier</strong></td>
+                    <td>
+                      <span class="lang-uz">Yukni A nuqtadan B nuqtaga tashish uchun tegishli jihozlarga (trucklarga) ega kompaniya</span>
+                      <span class="lang-en">Asset-based company with proper equipment (trucks) to move freight from point A to point B</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 2.2 Trucking Company vs Owner Operator ===== -->
+        <section class="chapter-section card" id="section-2-2">
+          <h2 class="section-title">
+            <span class="section-num">2.2</span>
+            <span class="lang-uz">Trucking Company va Owner Operator</span>
+            <span class="lang-en">Trucking Company vs Owner Operator</span>
+          </h2>
+          <div class="section-body">
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">🏢</div>
+                <h4>
+                  <span class="lang-uz">Trucking Company (Carrier)</span>
+                  <span class="lang-en">Trucking Company (Carrier)</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Bir necha trucklarga, haydovchilarga, dispatcherlarga va xavfsizlik bo'limiga ega kompaniya</span>
+                  <span class="lang-en">Has multiple trucks, drivers, dispatchers, safety department</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">👤</div>
+                <h4>
+                  <span class="lang-uz">Owner Operator</span>
+                  <span class="lang-en">Owner Operator</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">O'z truckiga ega bo'lgan mustaqil haydovchi</span>
+                  <span class="lang-en">Self-employed driver who owns their own truck</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 2.3 Freight Forwarder ===== -->
+        <section class="chapter-section card" id="section-2-3">
+          <h2 class="section-title">
+            <span class="section-num">2.3</span>
+            <span class="lang-uz">Freight Forwarder</span>
+            <span class="lang-en">Freight Forwarder</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Sotuvchi yoki xaridor nomidan tovar tashishni tashkil qiluvchi shaxs yoki korporatsiya</span>
+                <span class="lang-en">A person or corporation who arranges transport of goods on behalf of either the seller or buyer</span>
+              </li>
+              <li>
+                <span class="lang-uz">Ko'pincha bir necha kichik yukni bitta kattaroq yukga birlashtiradi — yaxshiroq yuk narxlari uchun</span>
+                <span class="lang-en">Often consolidates several small shipments into one larger one for better freight rates</span>
+              </li>
+              <li>
+                <span class="lang-uz">Ko'p hollarda carrier sifatida harakat qilishning huquqiy mas'uliyatini o'z zimmasiga oladi</span>
+                <span class="lang-en">In most cases assumes legal liabilities of acting as a carrier</span>
+              </li>
+              <li>
+                <span class="lang-uz">Odatda multimodal yuklarni tashish bilan shug'ullanadi</span>
+                <span class="lang-en">Usually works on multimodal shipments</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 2.4 The Deal Flow ===== -->
+        <section class="chapter-section card" id="section-2-4">
+          <h2 class="section-title">
+            <span class="section-num">2.4</span>
+            <span class="lang-uz">Deal Flow — $3,000 yuk qanday ishlaydi</span>
+            <span class="lang-en">The Deal Flow — How a $3,000 Load Works</span>
+          </h2>
+          <div class="section-body">
+            <div class="info-box">
+              <h4>
+                <span class="lang-uz">Jarayon bosqichlari:</span>
+                <span class="lang-en">Process steps:</span>
+              </h4>
+              <ul class="content-list">
+                <li>
+                  <span class="lang-uz"><strong>1.</strong> Shipper yukni e'lon qiladi</span>
+                  <span class="lang-en"><strong>1.</strong> Shipper posts freight</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>2.</strong> Broker yukni $3,000 ga oladi</span>
+                  <span class="lang-en"><strong>2.</strong> Broker books it for $3,000</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>3.</strong> Broker carrierga $2,200 taklif qiladi</span>
+                  <span class="lang-en"><strong>3.</strong> Broker offers carrier $2,200</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>4.</strong> Carrier qabul qiladi (+$2,200)</span>
+                  <span class="lang-en"><strong>4.</strong> Carrier accepts (+$2,200)</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>5.</strong> Broker $800 marjani saqlaydi (+$800)</span>
+                  <span class="lang-en"><strong>5.</strong> Broker keeps $800 margin (+$800)</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>6.</strong> Rate Confirmation carrierga yuboriladi</span>
+                  <span class="lang-en"><strong>6.</strong> Rate Confirmation sent to carrier</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>7.</strong> Haydovchi yukni oladi → Bill of Lading (BOL) imzolanadi</span>
+                  <span class="lang-en"><strong>7.</strong> Driver picks up → Bill of Lading (BOL) signed</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>8.</strong> Haydovchi yetkazadi → BOL qabul qiluvchida imzolanadi</span>
+                  <span class="lang-en"><strong>8.</strong> Driver delivers → BOL signed at receiver</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>9.</strong> Carrier brokerga hisob-faktura yuboradi → Broker shipperga hisob-faktura yuboradi</span>
+                  <span class="lang-en"><strong>9.</strong> Carrier invoices broker → Broker invoices shipper</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="stats-grid" style="margin-top:var(--spacing-lg)">
+              <div class="stat-card">
+                <div class="stat-value">$3,000</div>
+                <div class="stat-desc">
+                  <span class="lang-uz">Shipper to'lovi</span>
+                  <span class="lang-en">Shipper pays</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">$2,200</div>
+                <div class="stat-desc">
+                  <span class="lang-uz">Carrier oladi</span>
+                  <span class="lang-en">Carrier receives</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">$800</div>
+                <div class="stat-desc">
+                  <span class="lang-uz">Broker marjasi</span>
+                  <span class="lang-en">Broker margin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 2.5 Damage Case Flow ===== -->
+        <section class="chapter-section card" id="section-2-5">
+          <h2 class="section-title">
+            <span class="section-num">2.5</span>
+            <span class="lang-uz">Zarar holati jarayoni</span>
+            <span class="lang-en">Damage Case Flow</span>
+          </h2>
+          <div class="section-body">
+            <div class="info-box">
+              <h4>
+                <span class="lang-uz">Zarar aniqlanganda:</span>
+                <span class="lang-en">When damage is found:</span>
+              </h4>
+              <ul class="content-list">
+                <li>
+                  <span class="lang-uz"><strong>1.</strong> Xuddi shu deal flow, lekin yetkazishda:</span>
+                  <span class="lang-en"><strong>1.</strong> Same deal flow, but at delivery:</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>2.</strong> Qabul qiluvchi BOLda zararni qayd etadi → DAMAGE NOTE</span>
+                  <span class="lang-en"><strong>2.</strong> Receiver notes damage on BOL → DAMAGE NOTE</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>3.</strong> Broker carrierga $2,200 to'lovni USHLAB TURADI</span>
+                  <span class="lang-en"><strong>3.</strong> Broker HOLDS $2,200 payment to carrier</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>4.</strong> Tergov boshlanadi</span>
+                  <span class="lang-en"><strong>4.</strong> Investigation begins</span>
+                </li>
+              </ul>
+            </div>
+
+            <h3 style="margin-top:var(--spacing-lg);margin-bottom:var(--spacing-md)">
+              <span class="lang-uz">Yuk zarari oqibatlari:</span>
+              <span class="lang-en">Consequences of Load Damage:</span>
+            </h3>
+            <div class="fact-list">
+              <div class="fact-item">
+                <span class="fact-icon">⚠️</span>
+                <span>
+                  <span class="lang-uz">Broker bilan munosabat yomonlashadi</span>
+                  <span class="lang-en">Bad relationship with broker</span>
+                </span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">🚫</span>
+                <span>
+                  <span class="lang-uz">"No buy" — carrier o'sha mijoz uchun qora ro'yxatga tushadi</span>
+                  <span class="lang-en">"No buy" — carrier blacklisted for that customer</span>
+                </span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">📋</span>
+                <span>
+                  <span class="lang-uz">Sug'urtaga da'vo (claim)</span>
+                  <span class="lang-en">Claim on insurance</span>
+                </span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">💰</span>
+                <span>
+                  <span class="lang-uz">Sug'urta narxi oshadi</span>
+                  <span class="lang-en">Increase of insurance cost</span>
+                </span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">⏳</span>
+                <span>
+                  <span class="lang-uz">Buxgalteriya tomonida kechikish</span>
+                  <span class="lang-en">Delay on accounting side</span>
+                </span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">🕐</span>
+                <span>
+                  <span class="lang-uz">Yechim topish uzoq davom etadi</span>
+                  <span class="lang-en">Long solution time</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="highlight-card" style="margin-top:var(--spacing-lg)">
+              <h4>
+                <span class="lang-uz">Dispatcherning vazifasi:</span>
+                <span class="lang-en">Dispatcher's role:</span>
+              </h4>
+              <p>
+                <span class="lang-uz">Butun tergov jarayonini nazorat qilish; noto'g'ri boshqarilsa kompaniya obro'siga zarar yetkaziladi</span>
+                <span class="lang-en">Control the whole investigation process; damage to company reputation if mishandled</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 2.6 Terminology ===== -->
+        <section class="chapter-section card" id="section-2-6">
+          <h2 class="section-title">
+            <span class="section-num">2.6</span>
+            <span class="lang-uz">Terminologiya — 2-bob</span>
+            <span class="lang-en">Terminology — Chapter 2</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Inglizcha</span>
+                      <span class="lang-en">English Term</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">O'zbekcha</span>
+                      <span class="lang-en">Uzbek Translation</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Ta'rif</span>
+                      <span class="lang-en">Definition</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Shipper</strong></td>
+                    <td>Yuboruvchi / Shipper</td>
+                    <td>
+                      <span class="lang-uz">Yukni jo'natuvchi tomon</span>
+                      <span class="lang-en">The party that sends the freight</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Receiver</strong></td>
+                    <td>Qabul qiluvchi / Receiver</td>
+                    <td>
+                      <span class="lang-uz">Yukni qabul qiluvchi tomon</span>
+                      <span class="lang-en">The party that receives the freight</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Broker</strong></td>
+                    <td>Broker / Vositachi</td>
+                    <td>
+                      <span class="lang-uz">Shipper va carrier o'rtasidagi vositachi</span>
+                      <span class="lang-en">Intermediary between shipper and carrier</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Carrier</strong></td>
+                    <td>Tashuvchi / Carrier</td>
+                    <td>
+                      <span class="lang-uz">Yuk tashish uchun transport vositasiga ega kompaniya</span>
+                      <span class="lang-en">Company with transportation equipment for hauling freight</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Rate Confirmation (Rate Con)</strong></td>
+                    <td>Rate Con</td>
+                    <td>
+                      <span class="lang-uz">Yuk narxi va shartlarini tasdiqlovchi hujjat</span>
+                      <span class="lang-en">Document confirming load price and terms</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Bill of Lading (BOL)</strong></td>
+                    <td>BOL / Yuk xati</td>
+                    <td>
+                      <span class="lang-uz">Yuk tashish hujjati — nima, qayerdan, qayerga</span>
+                      <span class="lang-en">Shipping document — what, from where, to where</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Freight Forwarder</strong></td>
+                    <td>Freight Forwarder</td>
+                    <td>
+                      <span class="lang-uz">Yuboruvchi/qabul qiluvchi nomidan transport tashkil qiluvchi</span>
+                      <span class="lang-en">Arranges transport on behalf of seller or buyer</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Claim</strong></td>
+                    <td>Da'vo / Claim</td>
+                    <td>
+                      <span class="lang-uz">Zarar uchun sug'urta yoki tomon tomoniga talabgi</span>
+                      <span class="lang-en">Insurance or party claim for damage</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== ASOSIY FIKRLAR (Key Takeaways) ===== -->
+        <section class="chapter-section card takeaways-section" id="takeaways">
+          <h2 class="section-title">
+            <i data-lucide="star" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Asosiy fikrlar</span>
+            <span class="lang-en">Key Takeaways</span>
+          </h2>
+          <div class="section-body">
+            <ul class="takeaways-list">
+              <li>
+                <span class="lang-uz">Yuk tashish sanoatida uchta asosiy ishtirokchi bor: Customer (Shipper/Receiver), Broker va Carrier. Har birining o'z vazifasi bor.</span>
+                <span class="lang-en">There are three main stakeholders in trucking: Customer (Shipper/Receiver), Broker, and Carrier. Each has a distinct role.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Trucking Company bir necha trucklarga ega, Owner Operator esa o'z truckida mustaqil ishlaydi. Freight Forwarder sotuvchi/xaridor nomidan tashishni tashkil qiladi.</span>
+                <span class="lang-en">A Trucking Company has multiple trucks, while an Owner Operator works independently with their own truck. A Freight Forwarder arranges transport on behalf of sellers/buyers.</span>
+              </li>
+              <li>
+                <span class="lang-uz">$3,000 yukda broker $800 marjani saqlaydi, carrier $2,200 oladi. Jarayon Rate Confirmation va BOL hujjatlari orqali rasmiylashtiriladi.</span>
+                <span class="lang-en">On a $3,000 load, the broker keeps $800 margin, carrier receives $2,200. The process is formalized through Rate Confirmation and BOL documents.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Yuk zarari jiddiy oqibatlarga olib keladi: broker bilan munosabat buzilishi, qora ro'yxat, sug'urta xarajatlari oshishi. Dispatcher butun tergov jarayonini nazorat qiladi.</span>
+                <span class="lang-en">Load damage has serious consequences: broken broker relationship, blacklisting, increased insurance costs. The dispatcher controls the entire investigation process.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== SCENARIOS (Interactive) ===== -->
+        <section class="chapter-section card" id="scenarios">
+          <h2 class="section-title">
+            <i data-lucide="help-circle" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Amaliy vaziyatlar</span>
+            <span class="lang-en">Practice Scenarios</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher vaziyatlarini tahlil qiling va to'g'ri javobni tanlang.</span>
+            <span class="lang-en">Analyze the following real dispatcher situations and choose the correct answer.</span>
+          </p>
+          <div id="scenarios-container"></div>
+        </section>
+
+        <!-- ===== PHONE SCRIPTS ===== -->
+        <section class="chapter-section card" id="phone-scripts">
+          <h2 class="section-title">
+            <i data-lucide="phone" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Telefon skriptlari</span>
+            <span class="lang-en">Phone Scripts</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher telefon muloqotlarini o'rganing. Kalit iboralarni yodlang.</span>
+            <span class="lang-en">Study the following real dispatcher phone conversations. Memorize the key phrases.</span>
+          </p>
+          <div id="scripts-container"></div>
+        </section>
+
+        <!-- ===== MARK AS READ ===== -->
+        <div class="mark-read-wrap">
+          <button class="mark-read-btn" id="mark-read-btn">
+            <i data-lucide="book-check" style="width:18px;height:18px"></i>
+            <span class="lang-uz">O'qildi deb belgilash</span>
+            <span class="lang-en">Mark as read</span>
+          </button>
+        </div>
+
+        <!-- ===== CHAPTER NAVIGATION ===== -->
+        <div class="chapter-nav">
+          <a href="chapter1.html" class="chapter-nav-btn prev">
+            <i data-lucide="arrow-left" style="width:18px;height:18px"></i>
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Oldingi bob</span>
+                <span class="lang-en">Previous Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Logistikaga kirish</span>
+                <span class="lang-en">Introduction to Logistics</span>
+              </span>
+            </span>
+          </a>
+          <a href="chapter3.html" class="chapter-nav-btn next">
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Keyingi bob</span>
+                <span class="lang-en">Next Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+                <span class="lang-en">Truck Drivers and Their Operations</span>
+              </span>
+            </span>
+            <i data-lucide="arrow-right" style="width:18px;height:18px"></i>
+          </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>
+            <span class="lang-uz">&copy; 2024 Dispatcher Academy — AQSh yuk tashish sanoati bo'yicha o'quv platformasi</span>
+            <span class="lang-en">&copy; 2024 Dispatcher Academy — US Trucking Industry Learning Platform</span>
+          </p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Lucide Icons -->
+  <!-- Progress Tracker -->
+  <script src="js/progress.js"></script>
+
+  <!-- Scenario Data -->
+  <script src="data/scenarios.js"></script>
+
+  <!-- Phone Scripts Data -->
+  <script src="data/scripts.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Scenario Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 2;
+    var container = document.getElementById('scenarios-container');
+    if (!container || typeof scenariosData === 'undefined') return;
+
+    var chapterScenarios = scenariosData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScenarios.length === 0) return;
+
+    function getLang() {
+      return document.documentElement.getAttribute('data-lang') || 'uz';
+    }
+
+    function escHtml(s) {
+      var d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    function renderScenarios() {
+      var lang = getLang();
+      container.innerHTML = '';
+
+      chapterScenarios.forEach(function(scenario, idx) {
+        var situation = lang === 'uz' ? scenario.situation_uz : scenario.situation_en;
+
+        var scenarioEl = document.createElement('div');
+        scenarioEl.className = 'scenario-block';
+        scenarioEl.setAttribute('data-id', scenario.id);
+
+        var header = '<div class="scenario-header">' +
+          '<span class="scenario-num">' + (idx + 1) + '</span>' +
+          '<div class="scenario-situation">' + escHtml(situation) + '</div>' +
+          '</div>';
+
+        var optionsHtml = '<div class="scenario-options">';
+        scenario.options.forEach(function(opt, oi) {
+          var optText = lang === 'uz' ? opt.text_uz : opt.text_en;
+          optionsHtml += '<button class="scenario-option" data-scenario="' + scenario.id + '" data-index="' + oi + '">' +
+            '<span class="option-letter">' + String.fromCharCode(65 + oi) + '</span>' +
+            '<span class="option-text">' + escHtml(optText) + '</span>' +
+            '</button>';
+        });
+        optionsHtml += '</div>';
+
+        var feedbackHtml = '<div class="scenario-feedback" id="feedback-' + scenario.id + '" style="display:none"></div>';
+
+        scenarioEl.innerHTML = header + optionsHtml + feedbackHtml;
+        container.appendChild(scenarioEl);
+      });
+
+      container.querySelectorAll('.scenario-option').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          handleAnswer(this);
+        });
+      });
+    }
+
+    function handleAnswer(btn) {
+      var scenarioId = btn.getAttribute('data-scenario');
+      var chosenIndex = parseInt(btn.getAttribute('data-index'));
+      var scenario = chapterScenarios.find(function(s) { return s.id === scenarioId; });
+      if (!scenario) return;
+
+      var lang = getLang();
+      var block = btn.closest('.scenario-block');
+      var allBtns = block.querySelectorAll('.scenario-option');
+      var isCorrect = chosenIndex === scenario.correct_index;
+
+      allBtns.forEach(function(b) {
+        b.disabled = true;
+        b.classList.add('disabled');
+        var bIdx = parseInt(b.getAttribute('data-index'));
+        if (bIdx === scenario.correct_index) {
+          b.classList.add('correct');
+        }
+        if (bIdx === chosenIndex && !isCorrect) {
+          b.classList.add('incorrect');
+        }
+      });
+
+      var feedbackEl = document.getElementById('feedback-' + scenarioId);
+      var chosenOpt = scenario.options[chosenIndex];
+      var explanation = lang === 'uz' ? chosenOpt.explanation_uz : chosenOpt.explanation_en;
+
+      feedbackEl.className = 'scenario-feedback ' + (isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+      feedbackEl.innerHTML =
+        '<div class="feedback-icon">' +
+        (isCorrect
+          ? '<i data-lucide="check-circle" style="width:20px;height:20px;color:#16a34a"></i>'
+          : '<i data-lucide="x-circle" style="width:20px;height:20px;color:#dc2626"></i>') +
+        '</div>' +
+        '<div class="feedback-text">' + escHtml(explanation) + '</div>';
+      feedbackEl.style.display = 'flex';
+      lucide.createIcons();
+    }
+
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') {
+          var answered = container.querySelector('.scenario-option.disabled');
+          if (!answered) renderScenarios();
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+
+    renderScenarios();
+  })();
+  </script>
+
+  <!-- Phone Scripts Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 2;
+    var container = document.getElementById('scripts-container');
+    if (!container || typeof scriptsData === 'undefined') return;
+    var chapterScripts = scriptsData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScripts.length === 0) return;
+
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+    function renderScripts() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScripts.forEach(function(script, idx) {
+        var title = lang === 'uz' ? script.title_uz : script.title_en;
+        var dialogue = lang === 'uz' ? script.script_uz : script.script_en;
+        var phrasesTitle = lang === 'uz' ? 'Kalit iboralar' : 'Key Phrases';
+
+        var el = document.createElement('div');
+        el.className = 'script-block';
+
+        var phrasesHtml = '';
+        script.key_phrases.forEach(function(kp) {
+          var phrase = lang === 'uz' ? kp.phrase_uz : kp.phrase_en;
+          phrasesHtml += '<div class="key-phrase"><span class="key-phrase-bullet">▸</span><span class="key-phrase-text">' + escHtml(phrase) + '</span></div>';
+        });
+
+        el.innerHTML =
+          '<div class="script-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.script-toggle').classList.toggle('open')">' +
+            '<span class="script-num">' + (idx + 1) + '</span>' +
+            '<span class="script-title">' + escHtml(title) + '</span>' +
+            '<i data-lucide="chevron-down" class="script-toggle" style="width:20px;height:20px"></i>' +
+          '</div>' +
+          '<div class="script-body">' +
+            '<div class="script-dialogue">' + escHtml(dialogue) + '</div>' +
+            '<div class="script-key-phrases">' +
+              '<div class="script-key-phrases-title"><i data-lucide="bookmark" style="width:16px;height:16px"></i> ' + escHtml(phrasesTitle) + '</div>' +
+              phrasesHtml +
+            '</div>' +
+          '</div>';
+
+        container.appendChild(el);
+      });
+      lucide.createIcons();
+    }
+
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') renderScripts();
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+
+    renderScripts();
+  })();
+  </script>
+
+  <!-- Mark as Read Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 2;
+    var btn = document.getElementById('mark-read-btn');
+    if (!btn || typeof Progress === 'undefined') return;
+
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+
+    function updateBtn() {
+      var isRead = Progress.isChapterRead(CHAPTER);
+      if (isRead) {
+        btn.classList.add('read');
+        btn.innerHTML =
+          '<i data-lucide="check-circle" style="width:18px;height:18px"></i>' +
+          '<span class="lang-uz">O\'qilgan</span>' +
+          '<span class="lang-en">Read</span>';
+      } else {
+        btn.classList.remove('read');
+        btn.innerHTML =
+          '<i data-lucide="book-check" style="width:18px;height:18px"></i>' +
+          '<span class="lang-uz">O\'qildi deb belgilash</span>' +
+          '<span class="lang-en">Mark as read</span>';
+      }
+      lucide.createIcons();
+    }
+
+    btn.addEventListener('click', function() {
+      if (!Progress.isChapterRead(CHAPTER)) {
+        Progress.markChapterRead(CHAPTER);
+        updateBtn();
+      }
+    });
+
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') updateBtn();
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+
+    updateBtn();
+  })();
+  </script>
+</body>
+</html>

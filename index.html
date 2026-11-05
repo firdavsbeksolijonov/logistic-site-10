@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="uz" data-lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logistics Dispatcher — O'quv Platformasi</title>
+  <meta name="description" content="AQSh yuk tashish sanoati bo'yicha dispatcherlar uchun ikki tilli interaktiv o'quv platformasi">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme & Language: apply before paint -->
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-left">
+      <!-- Hamburger (mobile) -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <!-- Logo -->
+      <a href="index.html" class="header-logo">
+        <i data-lucide="truck" class="logo-icon"></i>
+        <span class="logo-text">
+          <span class="lang-uz">Dispatcher Academy</span>
+          <span class="lang-en">Dispatcher Academy</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="header-right">
+      <!-- Language Toggle -->
+      <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">
+        <i data-lucide="globe"></i>
+        <span class="toggle-label">EN</span>
+      </button>
+
+      <!-- Theme Toggle -->
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <!-- Home -->
+      <div class="sidebar-section">
+        <a href="index.html" class="sidebar-link active">
+          <i data-lucide="home"></i>
+          <span class="lang-uz">Bosh sahifa</span>
+          <span class="lang-en">Home</span>
+        </a>
+      </div>
+
+      <!-- Chapters -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Boblar</span>
+          <span class="lang-en">Chapters</span>
+        </div>
+
+        <a href="chapter1.html" class="sidebar-link">
+          <span class="chapter-num">1</span>
+          <span class="lang-uz">Logistikaga kirish</span>
+          <span class="lang-en">Introduction to Logistics</span>
+        </a>
+
+        <a href="chapter2.html" class="sidebar-link">
+          <span class="chapter-num">2</span>
+          <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+          <span class="lang-en">Stakeholders in Trucking</span>
+        </a>
+
+        <a href="chapter3.html" class="sidebar-link">
+          <span class="chapter-num">3</span>
+          <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+          <span class="lang-en">Truck Drivers and Their Operations</span>
+        </a>
+
+        <a href="chapter4.html" class="sidebar-link">
+          <span class="chapter-num">4</span>
+          <span class="lang-uz">Avtopark va jihozlar</span>
+          <span class="lang-en">Fleet and Equipment</span>
+        </a>
+
+        <a href="chapter5.html" class="sidebar-link">
+          <span class="chapter-num">5</span>
+          <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+          <span class="lang-en">Trailers and Weight Balance</span>
+        </a>
+
+        <a href="chapter6.html" class="sidebar-link">
+          <span class="chapter-num">6</span>
+          <span class="lang-uz">Yuk turlari</span>
+          <span class="lang-en">Freight Types</span>
+        </a>
+
+        <a href="chapter7.html" class="sidebar-link">
+          <span class="chapter-num">7</span>
+          <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+          <span class="lang-en">Load Security and Procedures</span>
+        </a>
+
+        <a href="chapter8.html" class="sidebar-link">
+          <span class="chapter-num">8</span>
+          <span class="lang-uz">AQSh avtomagistral tizimi</span>
+          <span class="lang-en">US Highway and Road System</span>
+        </a>
+
+        <a href="chapter9.html" class="sidebar-link">
+          <span class="chapter-num">9</span>
+          <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+          <span class="lang-en">US Safety and Compliance</span>
+        </a>
+      </div>
+
+      <!-- Tools -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Asboblar</span>
+          <span class="lang-en">Tools</span>
+        </div>
+
+        <a href="glossary.html" class="sidebar-link">
+          <i data-lucide="book-open"></i>
+          <span class="lang-uz">Glossariy</span>
+          <span class="lang-en">Glossary</span>
+        </a>
+
+        <a href="resources.html" class="sidebar-link">
+          <i data-lucide="link"></i>
+          <span class="lang-uz">Resurslar</span>
+          <span class="lang-en">Resources</span>
+        </a>
+
+        <a href="progress.html" class="sidebar-link">
+          <i data-lucide="bar-chart-3"></i>
+          <span class="lang-uz">Progress</span>
+          <span class="lang-en">Progress</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="app-layout">
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+          <h1 class="page-title">
+            <span class="lang-uz">Dispatcher Academy</span>
+            <span class="lang-en">Dispatcher Academy</span>
+          </h1>
+          <p class="page-subtitle">
+            <span class="lang-uz">AQSh yuk tashish sanoati bo'yicha dispatcherlar uchun to'liq o'quv qo'llanma. 9 ta bob, 215+ slayd, glossariy va interaktiv ssenariylar.</span>
+            <span class="lang-en">Complete learning guide for dispatchers in the US trucking industry. 9 chapters, 215+ slides, glossary and interactive scenarios.</span>
+          </p>
+
+          <div class="welcome-stats">
+            <div class="stat-item">
+              <span class="stat-number">9</span>
+              <span class="stat-label">
+                <span class="lang-uz">Boblar</span>
+                <span class="lang-en">Chapters</span>
+              </span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">215+</span>
+              <span class="stat-label">
+                <span class="lang-uz">Slaydlar</span>
+                <span class="lang-en">Slides</span>
+              </span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">200+</span>
+              <span class="stat-label">
+                <span class="lang-uz">Atamalar</span>
+                <span class="lang-en">Terms</span>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Overall Progress -->
+        <div class="card mt-lg" style="margin-bottom: var(--spacing-lg)">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-sm);">
+            <span class="fw-semibold">
+              <span class="lang-uz">Umumiy progress</span>
+              <span class="lang-en">Overall Progress</span>
+            </span>
+            <span class="text-muted" id="progress-text">0 / 9</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" id="progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Chapters Grid -->
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="lang-uz">O'quv boblari</span>
+              <span class="lang-en">Learning Chapters</span>
+            </h2>
+          </div>
+
+          <div class="chapters-grid">
+
+            <!-- Chapter 1 -->
+            <a href="chapter1.html" class="chapter-card card">
+              <div class="card-header">
+                <span class="chapter-badge">1</span>
+                <h3 class="card-title">
+                  <span class="lang-uz">Logistikaga kirish</span>
+                  <span class="lang-en">Introduction to Logistics</span>
+                </h3>
+              </div>
+              <p class="card-text">
+                <span class="lang-uz">Logistika ta'rifi, transport turlari, AQSh yuk tashish statistikasi, yuk mashinalari turlari</span>
+                <span class="lang-en">Logistics definition, transport modes, US trucking stats, truck types</span>
+              </p>
+              <div class="card-topics">
+                <span class="topic-tag lang-uz">Transport</span>
+                <span class="topic-tag lang-uz">Statistika</span>
+                <span class="topic-tag lang-en">Transport</span>
+                <span class="topic-tag lang-en">Statistics</span>
+              </div>
+            </a>
+
+            <!-- Chapter 2 -->
+            <a href="chapter2.html" class="chapter-card card">
+              <div class="card-header">
+                <span class="chapter-badge">2</span>
+                <h3 class="card-title">
+                  <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+                  <span class="lang-en">Stakeholders in Trucking</span>
+                </h3>
+              </div>
+              <p class="card-text">
+                <span class="lang-uz">Mijoz/Jo'natuvchi/Qabul qiluvchi, Broker, Tashuvchi, Kelishuv jarayoni, Rate Con, BOL</span>
+                <span class="lang-en">Customer/Shipper/Receiver, Broker, Carrier, Deal flow, Rate Con, BOL</span>
+              </p>
+              <div class="card-topics">
+                <span class="topic-tag lang-uz">Broker</span>
+                <span class="topic-tag lang-uz">Hujjatlar</span>
+                <span class="topic-tag lang-en">Broker</span>
+                <span class="topic-tag lang-en">Documents</span>
+              </div>
+            </a>
+
+            <!-- Chapter 3 -->
+            <a href="chapter3.html" class="chapter-card card">
+              <div class="card-header">
+                <span class="chapter-badge">3</span>
+                <h3 class="card-title">
+                  <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+                  <span class="lang-en">Truck Drivers and Their Operations</span>
+                </h3>
+              </div>
+              <p class="card-text">
+                <span class="lang-uz">OO/Lease/Company haydovchi, CDL sinflari, SSN, Med Cert, DMV, Truck Stop</span>
+                <span class="lang-en">OO/Lease/Company driver, CDL classes, SSN, Med Cert, DMV, Truck Stops</span>
+              </p>
+              <div class="card-topics">
+                <span class="topic-tag lang-uz">CDL</span>
+                <span class="topic-tag lang-uz">Haydovchi</span>
+                <span class="topic-tag lang-en">CDL</span>
+                <span class="topic-tag lang-en">Driver</span>
+              </div>
+            </a>
+
+            <!-- Chapter 4 -->
+            <a href="chapter4.html" class="chapter-card card">
+              <div class="card-header">
+                <span class="chapter-badge">4</span>
+                <h3 class="card-title">
+                  <span class="lang-uz">Avtopark va jihozlar</span>
+                  <span class="lang-en">Fleet and Equipment</span>
+                </h3>
+              </div>
+              <p class="card-text">
+                <span class="lang-uz">Yuk mashina brendlari, tashqi qismlar, Ijara, Ta'minot zanjirlari, DPF Regen</span>
+                <span class="lang-en">Truck brands, exterior parts, Rental/Lease, Supply Lines, DPF Regen</span>
+              </p>
+              <div class="card-topics">
+                <span class="topic-tag lang-uz">Jihozlar</span>
+                <span class="topic-tag lang-uz">Brendlar</span>
+                <span class="topic-tag lang-en">Equipment</span>
+                <span class="topic-tag lang-en">Brands</span>
+              </div>
+            </a>
+
+            <!-- Chapter 5 -->
+            <a href="chapter5.html" class="chapter-card card">
+              <div class="card-header">
+                <span class="chapter-badge">5</span>
+                <h3 class="card-title">
+                  <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+                  <span class="lang-en">Trailers and Weight Balance</span>
+                </h3>
+              </div>
+              <p class="card-text">
+                <span class="lang-uz">15+ trayler turi, texnik xususiyatlar, Fifth Wheel, Tormozlar, CAT Scale</span>
+                <span class="lang-en">15+ trailer types, specs, Fifth Wheel, Brakes, CAT Scale, Fleet ops</span>
+              </p>
+              <div class="card-topics">
+                <span class="topic-tag lang-uz">Trayler</span>
+                <span class="topic-tag lang-uz">Og'irlik</span>
+                <span class="topic-tag lang-en">Trailer</span>
+                <span class="topic-tag lang-en">Weight</span>
+              </div>
+            </a>
+
+            <!-- Chapter 6 -->
+            <a href="chapter6.html" class="chapter-card card">
+              <div class="card-header">
+                <span class="chapter-badge">6</span>
+                <h3 class="card-title">
+                  <span class="lang-uz">Yuk turlari</span>
+                  <span class="lang-en">Freight Types</span>
+                </h3>
+              </div>
+              <p class="card-text">
+                <span class="lang-uz">LTL/Partial/TL, Hazmat 9 sinf, Reefer, Intermodal, Dedicated Lanes</span>
+                <span class="lang-en">LTL/Partial/TL, Hazmat 9 classes, Reefer, Intermodal, Dedicated Lanes</span>
+              </p>
+              <div class="card-topics">
+                <span class="topic-tag lang-uz">Hazmat</span>
+                <span class="topic-tag lang-uz">LTL</span>
+                <span class="topic-tag lang-en">Hazmat</span>
+                <span class="topic-tag lang-en">LTL</span>
+              </div>
+            </a>
+
+            <!-- Chapter 7 -->
+            <a href="chapter7.html" class="chapter-card card">
+              <div class="card-header">
+                <span class="chapter-badge">7</span>
+                <h3 class="card-title">
+                  <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+                  <span class="lang-en">Load Security and Procedures</span>
+                </h3>
+              </div>
+              <p class="card-text">
+                <span class="lang-uz">49 CFR 393, bog'lash vositalari, yuklash jihozlari, doklar, protseduralar</span>
+                <span class="lang-en">49 CFR 393, straps/bars/chains, loading equipment, docks, procedures</span>
+              </p>
+              <div class="card-topics">
+                <span class="topic-tag lang-uz">Xavfsizlik</span>
+                <span class="topic-tag lang-uz">CFR</span>
+                <span class="topic-tag lang-en">Security</span>
+                <span class="topic-tag lang-en">CFR</span>
+              </div>
+            </a>
+
+            <!-- Chapter 8 -->
+            <a href="chapter8.html" class="chapter-card card">
+              <div class="card-header">
+                <span class="chapter-badge">8</span>
+                <h3 class="card-title">
+                  <span class="lang-uz">AQSh avtomagistral tizimi</span>
+                  <span class="lang-en">US Highway and Road System</span>
+                </h3>
+              </div>
+              <p class="card-text">
+                <span class="lang-uz">Mintaqalar, vaqt zonalari, interstate raqamlash, GPS, yo'l to'lovlari, evakuatsiya</span>
+                <span class="lang-en">Regions, time zones, interstate numbering, GPS, tolls, towing</span>
+              </p>
+              <div class="card-topics">
+                <span class="topic-tag lang-uz">Interstate</span>
+                <span class="topic-tag lang-uz">GPS</span>
+                <span class="topic-tag lang-en">Interstate</span>
+                <span class="topic-tag lang-en">GPS</span>
+              </div>
+            </a>
+
+            <!-- Chapter 9 -->
+            <a href="chapter9.html" class="chapter-card card">
+              <div class="card-header">
+                <span class="chapter-badge">9</span>
+                <h3 class="card-title">
+                  <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+                  <span class="lang-en">US Safety and Compliance</span>
+                </h3>
+              </div>
+              <p class="card-text">
+                <span class="lang-uz">DOT/FMCSA, CSA/BASICs, auditlar, DQ file, sug'urta, tekshiruvlar, buzilishlar</span>
+                <span class="lang-en">DOT/FMCSA, CSA/BASICs, audits, DQ file, insurance, inspections, violations</span>
+              </p>
+              <div class="card-topics">
+                <span class="topic-tag lang-uz">DOT</span>
+                <span class="topic-tag lang-uz">FMCSA</span>
+                <span class="topic-tag lang-en">DOT</span>
+                <span class="topic-tag lang-en">FMCSA</span>
+              </div>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>
+            <span class="lang-uz">© 2024 Dispatcher Academy — AQSh yuk tashish sanoati bo'yicha o'quv platformasi</span>
+            <span class="lang-en">© 2024 Dispatcher Academy — US Trucking Industry Learning Platform</span>
+          </p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

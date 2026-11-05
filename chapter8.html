@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="uz" data-lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8-Bob: AQSh avtomagistral tizimi — Dispatcher Academy</title>
+  <meta name="description" content="AQSh mintaqalari, vaqt zonalari, interstate vs intrastate, avtomagistral raqamlash, marshrutlash muammolari, pullik yo'llar">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme & Language: apply before paint -->
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <a href="index.html" class="header-logo">
+        <i data-lucide="truck" class="logo-icon"></i>
+        <span class="logo-text">
+          <span class="lang-uz">Dispatcher Academy</span>
+          <span class="lang-en">Dispatcher Academy</span>
+        </span>
+      </a>
+    </div>
+    <div class="header-right">
+      <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">
+        <i data-lucide="globe"></i>
+        <span class="toggle-label">EN</span>
+      </button>
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <a href="index.html" class="sidebar-link">
+          <i data-lucide="home"></i>
+          <span class="lang-uz">Bosh sahifa</span>
+          <span class="lang-en">Home</span>
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Boblar</span>
+          <span class="lang-en">Chapters</span>
+        </div>
+
+        <a href="chapter1.html" class="sidebar-link">
+          <span class="chapter-num">1</span>
+          <span class="lang-uz">Logistikaga kirish</span>
+          <span class="lang-en">Introduction to Logistics</span>
+        </a>
+        <a href="chapter2.html" class="sidebar-link">
+          <span class="chapter-num">2</span>
+          <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+          <span class="lang-en">Stakeholders in Trucking</span>
+        </a>
+        <a href="chapter3.html" class="sidebar-link">
+          <span class="chapter-num">3</span>
+          <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+          <span class="lang-en">Truck Drivers and Their Operations</span>
+        </a>
+        <a href="chapter4.html" class="sidebar-link">
+          <span class="chapter-num">4</span>
+          <span class="lang-uz">Avtopark va jihozlar</span>
+          <span class="lang-en">Fleet and Equipment</span>
+        </a>
+        <a href="chapter5.html" class="sidebar-link">
+          <span class="chapter-num">5</span>
+          <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+          <span class="lang-en">Trailers and Weight Balance</span>
+        </a>
+        <a href="chapter6.html" class="sidebar-link">
+          <span class="chapter-num">6</span>
+          <span class="lang-uz">Yuk turlari</span>
+          <span class="lang-en">Freight Types</span>
+        </a>
+        <a href="chapter7.html" class="sidebar-link">
+          <span class="chapter-num">7</span>
+          <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+          <span class="lang-en">Load Security and Procedures</span>
+        </a>
+        <a href="chapter8.html" class="sidebar-link active">
+          <span class="chapter-num">8</span>
+          <span class="lang-uz">AQSh avtomagistral tizimi</span>
+          <span class="lang-en">US Highway and Road System</span>
+        </a>
+        <a href="chapter9.html" class="sidebar-link">
+          <span class="chapter-num">9</span>
+          <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+          <span class="lang-en">US Safety and Compliance</span>
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Asboblar</span>
+          <span class="lang-en">Tools</span>
+        </div>
+        <a href="glossary.html" class="sidebar-link">
+          <i data-lucide="book-open"></i>
+          <span class="lang-uz">Glossariy</span>
+          <span class="lang-en">Glossary</span>
+        </a>
+        <a href="resources.html" class="sidebar-link">
+          <i data-lucide="link"></i>
+          <span class="lang-uz">Resurslar</span>
+          <span class="lang-en">Resources</span>
+        </a>
+        <a href="progress.html" class="sidebar-link">
+          <i data-lucide="bar-chart-3"></i>
+          <span class="lang-uz">Progress</span>
+          <span class="lang-en">Progress</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="app-layout">
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- Chapter Header -->
+        <section class="chapter-header">
+          <div class="chapter-badge-large">8</div>
+          <h1 class="page-title">
+            <span class="lang-uz">AQSh avtomagistral tizimi</span>
+            <span class="lang-en">US Highway and Road System</span>
+          </h1>
+          <p class="page-subtitle">
+            <span class="lang-uz">24 slayd &nbsp;·&nbsp; AQSh mintaqalari, vaqt zonalari, interstate va intrastate, avtomagistral raqamlash, marshrutlash, pullik yo'llar</span>
+            <span class="lang-en">24 slides &nbsp;·&nbsp; US regions, time zones, interstate vs intrastate, highway numbering, routing issues, toll roads</span>
+          </p>
+        </section>
+
+        <!-- ===== 8.1 US Regions ===== -->
+        <section class="chapter-section card" id="section-8-1">
+          <h2 class="section-title">
+            <span class="section-num">8.1</span>
+            <span class="lang-uz">AQSh mintaqalari</span>
+            <span class="lang-en">US Regions</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Mintaqa</span>
+                      <span class="lang-en">Region</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Shtatlar</span>
+                      <span class="lang-en">States</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Northeast</strong></td>
+                    <td>
+                      <span class="lang-uz">New England, NY, NJ, PA</span>
+                      <span class="lang-en">New England, NY, NJ, PA</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Midwest</strong></td>
+                    <td>
+                      <span class="lang-uz">Ohio dan Dakotalar va Kanzasgacha</span>
+                      <span class="lang-en">From Ohio to the Dakotas and Kansas</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>South</strong></td>
+                    <td>
+                      <span class="lang-uz">Delaware va Floridadan Texasgacha</span>
+                      <span class="lang-en">From Delaware and Florida to Texas</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>West</strong></td>
+                    <td>
+                      <span class="lang-uz">Tog'li mintaqalar, Janubi-g'arb va Tinch okeani sohili</span>
+                      <span class="lang-en">The Rockies, the Southwest, and the Pacific coast</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="info-box">
+              <p>
+                <span class="lang-uz">Xaritani mintaqalarga bo'lish dispetcherga marshrutlarni guruhlash, narxlarni kuzatish va truckning keyingi yo'nalishini rejalashtirish imkonini beradi.</span>
+                <span class="lang-en">Splitting the map into regions helps a dispatcher group lanes, follow rates, and plan where a truck goes next.</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 8.2 US Time Zones ===== -->
+        <section class="chapter-section card" id="section-8-2">
+          <h2 class="section-title">
+            <span class="section-num">8.2</span>
+            <span class="lang-uz">AQSh vaqt zonalari</span>
+            <span class="lang-en">US Time Zones</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Vaqt zonasi</span>
+                      <span class="lang-en">Time Zone</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Eastern 8:00 AM bo'lganda</span>
+                      <span class="lang-en">When it's 8:00 AM Eastern</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Eastern (ET)</strong></td>
+                    <td>8:00 AM</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Central (CT)</strong></td>
+                    <td>7:00 AM</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mountain (MT)</strong></td>
+                    <td>6:00 AM</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pacific (PT)</strong></td>
+                    <td>5:00 AM</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Mart — Noyabr: ko'pchilik shtatlar yozgi vaqtdan foydalanadi (EDT, CDT, MDT, PDT)</span>
+                <span class="lang-en">March to November: most states use daylight time (EDT, CDT, MDT, PDT)</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Arizona yil bo'yi MST da qoladi</strong></span>
+                <span class="lang-en"><strong>Arizona stays on MST all year</strong></span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Dispetcher maslahati:</strong> Har doim yuk olish/yetkazib berish uchrashuvi qaysi vaqt zonasida ekanligini tasdiqlang</span>
+                <span class="lang-en"><strong>Dispatcher tip:</strong> Always confirm which time zone a pickup/delivery appointment is in</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 8.3 Interstate vs Intrastate ===== -->
+        <section class="chapter-section card" id="section-8-3">
+          <h2 class="section-title">
+            <span class="section-num">8.3</span>
+            <span class="lang-uz">Interstate va Intrastate</span>
+            <span class="lang-en">Interstate vs Intrastate</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Tur</span>
+                      <span class="lang-en">Type</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Tavsif</span>
+                      <span class="lang-en">Description</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Intrastate</strong></td>
+                    <td>
+                      <span class="lang-uz">Tashuvchi faqat bitta shtat ichida yuk tashiydi; yuk uzoqroq shtatlararo sayohatning bir qismi emas</span>
+                      <span class="lang-en">Carrier hauls only inside one state; freight not part of longer interstate trip</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Interstate</strong></td>
+                    <td>
+                      <span class="lang-uz">Yuk bir shtatdan boshqasiga boradi yoki ichki sayohat shtatlararo/xalqaro jo'natmaning bir qismi</span>
+                      <span class="lang-en">Freight goes from one state to another, or intrastate trip is part of interstate/international shipment</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Bu CDL endorsement emas — har bir CDL egasi haydash turini o'zi tasdiqlaydi</span>
+                <span class="lang-en">Not a CDL endorsement — every CDL holder self-certifies driving type</span>
+              </li>
+              <li>
+                <span class="lang-uz">Interstate haydovchilar: 21 yoshdan katta bo'lishi va DOT tibbiy kartasini olib yurishi kerak</span>
+                <span class="lang-en">Interstate drivers: must be 21+, carry DOT medical card</span>
+              </li>
+              <li>
+                <span class="lang-uz">Tashuvchiga ko'pchilik yollanma yuklar uchun USDOT raqami + MC raqami kerak</span>
+                <span class="lang-en">Carrier needs USDOT number + MC number for most for-hire loads</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 8.4 Highway System — Three Types ===== -->
+        <section class="chapter-section card" id="section-8-4">
+          <h2 class="section-title">
+            <span class="section-num">8.4</span>
+            <span class="lang-uz">Avtomagistral tizimi — Uch tur</span>
+            <span class="lang-en">Highway System — Three Types</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Tur</span>
+                      <span class="lang-en">Type</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Tavsif</span>
+                      <span class="lang-en">Description</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Belgi</span>
+                      <span class="lang-en">Sign</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Interstate highways</strong></td>
+                    <td>
+                      <span class="lang-uz">~49,000 mil bo'lingan yo'l, svetoforsiz, faqat kirish yo'llari orqali</span>
+                      <span class="lang-en">~49,000 miles of divided freeway, no traffic lights, ramp entry only</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Qizil/oq/ko'k qalqon</span>
+                      <span class="lang-en">Red/white/blue shield</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>US highways</strong></td>
+                    <td>
+                      <span class="lang-uz">Eski milliy tarmoq (1926-yildan), ko'pincha shaharchalar orqali 2-qatorli</span>
+                      <span class="lang-en">Older national network (since 1926), often 2-lane through towns</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Oq qalqon</span>
+                      <span class="lang-en">White shield</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>State highways</strong></td>
+                    <td>
+                      <span class="lang-uz">Har bir shtat tomonidan qurilgan/raqamlangan, belgi shakli har xil, sifati turlicha</span>
+                      <span class="lang-en">Built/numbered by each state, sign shape varies, quality ranges</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Shtatga xos</span>
+                      <span class="lang-en">State-specific</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 8.5 Interstate Highway Numbering ===== -->
+        <section class="chapter-section card" id="section-8-5">
+          <h2 class="section-title">
+            <span class="section-num">8.5</span>
+            <span class="lang-uz">Interstate avtomagistral raqamlash</span>
+            <span class="lang-en">Interstate Highway Numbering</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Toq raqamlar:</strong> Shimol–janub (g'arbda past: I-5; sharqda baland: I-95)</span>
+                <span class="lang-en"><strong>Odd numbers:</strong> North–south (low in west: I-5; high in east: I-95)</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Juft raqamlar:</strong> Sharq–g'arb (janubda past: I-10; shimolda baland: I-90, I-94)</span>
+                <span class="lang-en"><strong>Even numbers:</strong> East–west (low in south: I-10; high in north: I-90, I-94)</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Asosiy mamlakat bo'ylab yo'llar:</strong> 0 yoki 5 bilan tugaydi (I-10, I-40, I-80, I-35, I-75)</span>
+                <span class="lang-en"><strong>Main cross-country routes:</strong> End in 0 or 5 (I-10, I-40, I-80, I-35, I-75)</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Uch raqamli:</strong> Juft birinchi raqam = asosiy yo'lga qaytadigan halqa (I-495); toq birinchi raqam = shaharga kiradigan tarmog'i</span>
+                <span class="lang-en"><strong>Three digits:</strong> Even first digit = loop that rejoins main road (I-495); odd first digit = spur into city</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 8.6 Exits, Mile Markers, and Direction ===== -->
+        <section class="chapter-section card" id="section-8-6">
+          <h2 class="section-title">
+            <span class="section-num">8.6</span>
+            <span class="lang-uz">Chiqishlar, mil belgilari va yo'nalish</span>
+            <span class="lang-en">Exits, Mile Markers, and Direction</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Chiqishlar (Exits):</strong> Interstate dan chiqishning yagona yo'li — yoqilg'i, ovqat, kesishuvchi yo'llarga kirish yo'llari orqali</span>
+                <span class="lang-en"><strong>Exits:</strong> Only way off interstate — fuel, food, crossing roads reached by ramps</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Mil belgilari:</strong> Janubiy/g'arbiy shtat chegarasida 0 dan boshlanib, yuqoriga sanaydi. Politsiya/tortish/ta'mirlashga truck qayerdaligini aytadi</span>
+                <span class="lang-en"><strong>Mile markers:</strong> Start at 0 at south/west state line, count up. Tell police/towing/repair where truck is</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Chiqish raqamlari eng yaqin mil belgisiga mos keladi</strong> (Exit 44 ≈ mile 44)</span>
+                <span class="lang-en"><strong>Exit numbers match nearest mile marker</strong> (Exit 44 ≈ mile 44)</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Yo'nalish:</strong> Toq marshrutlarda shimol/janubga, juft marshrutlarda sharq/g'arbga</span>
+                <span class="lang-en"><strong>Direction:</strong> Northbound/southbound on odd routes, eastbound/westbound on even</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 8.7 US and State Highways ===== -->
+        <section class="chapter-section card" id="section-8-7">
+          <h2 class="section-title">
+            <span class="section-num">8.7</span>
+            <span class="lang-uz">US va shtat avtomagistrallari</span>
+            <span class="lang-en">US and State Highways</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">US avtomagistrallari raqamlashi <strong>Interstate ga teskari</strong>: toq S-J marshrutlari sharqda boshlanadi (US 1) va g'arbda tugaydi (US 101)</span>
+                <span class="lang-en">US highways numbering is <strong>reverse of interstates</strong>: odd N-S routes start in east (US 1) and end in west (US 101)</span>
+              </li>
+              <li>
+                <span class="lang-uz">Shtat avtomagistrallari: har bir shtatning o'z tizimi/belgisi bor; band bo'lganlari Interstate standartida qurilgan, tinch joylardagi tor va og'irlik chegarasi past bo'lishi mumkin</span>
+                <span class="lang-en">State highways: every state has own system/sign; busy ones built to Interstate standard, quiet ones can be narrow with low weight limits</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 8.8 Routing Issues ===== -->
+        <section class="chapter-section card" id="section-8-8">
+          <h2 class="section-title">
+            <span class="section-num">8.8</span>
+            <span class="lang-uz">Marshrutlash muammolari</span>
+            <span class="lang-en">Routing Issues</span>
+          </h2>
+          <div class="section-body">
+            <h3>
+              <span class="lang-uz">Xarita muammolari</span>
+              <span class="lang-en">Map Issues</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Tog'lar:</strong> Rokiy tog'lari, Sierra Nevada, Appalachi — sekin; kuz-bahor yopilishi yoki zanjir talab qilishi mumkin</span>
+                <span class="lang-en"><strong>Mountains:</strong> Rockies, Sierra Nevada, Appalachians — slow; fall-spring may close or need chains</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Ob-havo:</strong> Qor, shamol, bo'ronlar truckni soatlab/kunlab to'xtatishi mumkin</span>
+                <span class="lang-en"><strong>Weather:</strong> Snow, wind, storms can stop truck for hours/days</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Katta shaharlar:</strong> NYC, Chicago, LA, Atlantada pik soatlar soatlab vaqt oladi</span>
+                <span class="lang-en"><strong>Big cities:</strong> Rush hour in NYC, Chicago, LA, Atlanta costs hours</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Avtomobil xaritalari trucklarni noto'g'ri yo'naltiradi</span>
+              <span class="lang-en">Car Maps Send Trucks Wrong Way</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Kanada orqali:</strong> Shimoli-sharqdan Midwest ga Ontario orqali kesib o'tishi mumkin — Kanada ruxsati va pasportsiz, Erie ko'lining janubidan Cleveland orqali boring</span>
+                <span class="lang-en"><strong>Through Canada:</strong> NE to Midwest may cut across Ontario — without Canadian authority and passport, route south of Lake Erie through Cleveland</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Paromlar:</strong> Long Island dan New England ga parom orqali yo'naltirishi mumkin — trucklar truck marshrutida NYC orqali haydashi kerak</span>
+                <span class="lang-en"><strong>Ferries:</strong> Long Island to New England may route via ferry — trucks should drive through NYC on truck route</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Lake Champlain:</strong> NY dan VT ga ko'l paromlari orqali yo'naltirishi mumkin — ko'prik orqali aylanib o'ting</span>
+                <span class="lang-en"><strong>Lake Champlain:</strong> NY to VT may route via lake ferries — go around by bridge</span>
+              </li>
+            </ul>
+
+            <div class="info-box">
+              <p>
+                <span class="lang-uz"><strong>Truck GPS yoki truck marshrutlash ilovasidan foydalaning.</strong> Google Maps truck balandligi, og'irligi yoki xavfli yuk cheklovlarini bilmaydi.</span>
+                <span class="lang-en"><strong>Use truck GPS or truck routing app.</strong> Google Maps does NOT know truck height, weight, or hazmat limits.</span>
+              </p>
+            </div>
+
+            <h3>
+              <span class="lang-uz">Aylanma yo'llar (Bypasses)</span>
+              <span class="lang-en">Bypasses</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Katta shaharlar atrofidan o'tadigan yo'llar — trucklar shahar markazidan o'tmasligi uchun</span>
+                <span class="lang-en">Roads going around big cities so trucks avoid downtown traffic</span>
+              </li>
+              <li>
+                <span class="lang-uz">Halqa yo'llar = beltway — odatda 3 raqamli Interstate raqami (masalan, Atlanta atrofida I-285)</span>
+                <span class="lang-en">Ring roads = beltways — usually 3-digit Interstate number (e.g., I-285 around Atlanta)</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 8.9 Highway Rules ===== -->
+        <section class="chapter-section card" id="section-8-9">
+          <h2 class="section-title">
+            <span class="section-num">8.9</span>
+            <span class="lang-uz">Avtomagistral qoidalari</span>
+            <span class="lang-en">Highway Rules</span>
+          </h2>
+          <div class="section-body">
+            <h3>
+              <span class="lang-uz">Yo'l chetlari (Shoulders)</span>
+              <span class="lang-en">Shoulders</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Faqat favqulodda holat uchun — hech qachon dam olish yoki uxlash uchun to'xtamang</span>
+                <span class="lang-en">For emergencies only — never stop to rest or sleep</span>
+              </li>
+              <li>
+                <span class="lang-uz">Agar truck buzilsa: darhol xavf chiroqlari YOQILSIN; 10 daqiqa ichida 3 ta ogohlantirish uchburchagini qo'ying</span>
+                <span class="lang-en">If truck breaks down: hazard lights ON immediately; within 10 minutes set 3 warning triangles</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Ikki tomonlama yo'l:</strong> 10 fut orqada, 100 fut orqada, 100 fut oldinda</span>
+                <span class="lang-en"><strong>Two-way road:</strong> 10 ft behind, 100 ft behind, 100 ft ahead</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Bo'lingan yo'l:</strong> 10 fut, 100 fut, 200 fut orqada</span>
+                <span class="lang-en"><strong>Divided highway:</strong> 10 ft, 100 ft, 200 ft behind</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Qochish yo'lagi (Runaway Truck Ramp)</span>
+              <span class="lang-en">Runaway Truck Ramp</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Uzoq pastga yonbag'irda qochish yo'lagi — chuqur yumshoq shag'al tepaga qarab truckni tormozi buzilganda to'xtatadi</span>
+                <span class="lang-en">Escape lane on long downhill grade — deep loose gravel going uphill stops truck with failed brakes</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Oldini olish:</strong> Tepalikdan oldin past tezlik tanlang, bir xil xavfsiz tezlik, tormozlarni surishtirmang. Hech qachon rampaga kirishda to'xtamang</span>
+                <span class="lang-en"><strong>Prevention:</strong> Pick low gear before hill, steady safe speed, don't ride brakes. Never park in ramp entrance</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Qora muz (Black Ice)</span>
+              <span class="lang-en">Black Ice</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Yupqa, shaffof muz qatlami — yo'l ko'rinadi, haydovchilar ko'rmaydi</span>
+                <span class="lang-en">Thin, clear ice layer — road shows through, drivers don't see it</span>
+              </li>
+              <li>
+                <span class="lang-uz">Muzlash nuqtasi yaqinida hosil bo'ladi (32°F / 0°C), ko'pincha kechqurun/erta tongda</span>
+                <span class="lang-en">Forms near freezing (32°F / 0°C), often at night/early morning</span>
+              </li>
+              <li>
+                <span class="lang-uz">Ko'priklar, o'tkazgichlar, soyali joylar birinchi muzlaydi</span>
+                <span class="lang-en">Bridges, overpasses, shaded spots freeze first</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Ogohlantirish belgilari:</strong> ho'l yaltiroq yo'l, oynalardagi muz, boshqa shinalardan purkalish yo'q</span>
+                <span class="lang-en"><strong>Warning signs:</strong> wet shiny road, ice on mirrors, no spray from other tires</span>
+              </li>
+              <li>
+                <span class="lang-uz">Muzda: juda sekin yuring, xavfsiz bo'lganda haydashni to'xtating</span>
+                <span class="lang-en">On ice: slow to crawl, stop driving when safe</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Shina zanjirlari (Tire Chains)</span>
+              <span class="lang-en">Tire Chains</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Qor/muzda tutish uchun — yakkama, juft, kabel turlari</span>
+                <span class="lang-en">For grip on snow/ice — single, double, cable types</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Kolorado zanjir qonuni:</strong> 1-sentabr — 31-may, I-70 da Dotsero (mil 133) va Morrison (mil 259) orasida har bir tijorat transporti zanjir olib yurishi shart</span>
+                <span class="lang-en"><strong>Colorado chain law:</strong> Sept 1 – May 31, every commercial vehicle on I-70 between Dotsero (mile 133) and Morrison (mile 259) must carry chains</span>
+              </li>
+              <li>
+                <span class="lang-uz">Shuningdek: Kaliforniya, Oregon, Vashington, Aydaxo, Montana tog' dovonlarida zanjir nazorati qo'yadi</span>
+                <span class="lang-en">Also: California, Oregon, Washington, Idaho, Montana post chain controls on mountain passes</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Qurilish zonalari va truck taqiqlangan yo'llar</span>
+              <span class="lang-en">Construction Zones and No-Truck Roads</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Qurilish:</strong> qatorlar yopiladi, tezlik chegaralari tushadi, aylanma yo'llar; ko'p shtatlar ish zonalarida tezlik jazolarini ikki barobar oshiradi</span>
+                <span class="lang-en"><strong>Construction:</strong> lanes close, speed limits drop, detours; many states double speeding fines in work zones</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Truck taqiqlangan yo'llar:</strong> shaharlar parkwaylar va ko'chalarni trucklarga yopadi; oxirgi millarni truck marshrutlari, past ko'priklar, og'irlik chegaralari uchun tekshiring</span>
+                <span class="lang-en"><strong>No-truck roads:</strong> cities close parkways and streets to trucks; check last miles for truck routes, low bridges, weight limits</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 8.10 Toll Roads ===== -->
+        <section class="chapter-section card" id="section-8-10">
+          <h2 class="section-title">
+            <span class="section-num">8.10</span>
+            <span class="lang-uz">Pullik yo'llar</span>
+            <span class="lang-en">Toll Roads</span>
+          </h2>
+          <div class="section-body">
+            <p>
+              <span class="lang-uz">Pullik yo'l (turnpike/tollway) to'lov oladi — trucklar ko'proq to'laydi (o'qlar bo'yicha, ba'zan og'irlik bo'yicha).</span>
+              <span class="lang-en">Toll road (turnpike/tollway) charges fee — trucks pay more (by axles, sometimes weight).</span>
+            </p>
+
+            <div class="items-grid">
+              <div class="item-card">
+                <h4>E-ZPass</h4>
+                <p>
+                  <span class="lang-uz">Bitta transponder ~20 shtat uchun (Sharq/Midwest, Meyndan Illinoysgacha, Floridagacha)</span>
+                  <span class="lang-en">One transponder for ~20 states (East/Midwest, Maine to Illinois to Florida)</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <h4>Bestpass</h4>
+                <p>
+                  <span class="lang-uz">Avtopark pullik yo'l dasturi — bitta hisob/qurilma butun mamlakat bo'ylab to'laydi, truck uchun bitta hisob-kitob</span>
+                  <span class="lang-en">Fleet toll program — one account/device pays nationwide, one bill per truck</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <h4>PrePass</h4>
+                <p>
+                  <span class="lang-uz">Vazn stansiyasini chetlab o'tish bilan tanilgan; PrePass Plus butun mamlakat bo'ylab pullik yo'lni qo'shadi</span>
+                  <span class="lang-en">Known for weigh-station bypass; PrePass Plus adds nationwide tolling</span>
+                </p>
+              </div>
+            </div>
+
+            <h3>
+              <span class="lang-uz">Elektron to'lov tizimi</span>
+              <span class="lang-en">Electronic Tolling</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Transponder:</strong> Yo'l ustidagi o'quvchi oynaga o'rnatilgan qurilma orqali hisobdan to'lov oladi</span>
+                <span class="lang-en"><strong>Transponder:</strong> Reader over lane charges account via device on windshield</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Plitali kamera:</strong> Qurilma yo'q → kamera plitani o'qiydi, egasiga yuqori narxda hisob yuboriladi</span>
+                <span class="lang-en"><strong>Plate camera:</strong> No device → camera reads plate, bill to owner at higher rate</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Naqdsiz yo'llar:</strong> Ko'plari endi naqd qabul qilmaydi</span>
+                <span class="lang-en"><strong>Cashless roads:</strong> Many no longer take cash</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Xarajat rejalashtirish:</strong> Pullik yo'l kalkulyatori (TollGuru) yoki truck GPS dan foydalaning</span>
+                <span class="lang-en"><strong>Cost planning:</strong> Use toll calculator (TollGuru) or truck GPS</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 8.11 Towing and Recovery ===== -->
+        <section class="chapter-section card" id="section-8-11">
+          <h2 class="section-title">
+            <span class="section-num">8.11</span>
+            <span class="lang-uz">Tortish va tiklash</span>
+            <span class="lang-en">Towing and Recovery</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Tow truck</strong> buzilgan transportni ta'mirlash ustaxonasiga olib boradi</span>
+                <span class="lang-en"><strong>Tow truck</strong> moves disabled vehicle to repair shop</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Recovery</strong> = qiyinroq: halokat/ag'darilish/ariqqa tushgandan keyin truckni tortib chiqarish</span>
+                <span class="lang-en"><strong>Recovery</strong> = harder: pulling truck back after crash/rollover/slide into ditch</span>
+              </li>
+              <li>
+                <span class="lang-uz">Yuklangan semi uchun <strong>og'ir yuk tortgich (heavy-duty wrecker)</strong> kerak; ag'darilish uchun <strong>rotator</strong> (kranni tortish mashinasi) kerak bo'lishi mumkin</span>
+                <span class="lang-en">Loaded semi needs <strong>heavy-duty wrecker</strong>; rollover may need <strong>rotator</strong> (crane tow truck)</span>
+              </li>
+            </ul>
+            <div class="info-box">
+              <h4>
+                <span class="lang-uz">Tayyor bo'ling:</span>
+                <span class="lang-en">Have ready:</span>
+              </h4>
+              <ul>
+                <li>
+                  <span class="lang-uz">Aniq joylashuv — avtomagistral, yo'nalish, mil belgisi</span>
+                  <span class="lang-en">Exact location — highway, direction, mile marker</span>
+                </li>
+                <li>
+                  <span class="lang-uz">Avval tekshiring: tashuvchining yo'l yordami rejasi yoki sug'urtasi; tortishdan oldin narxini oling</span>
+                  <span class="lang-en">Check first: carrier's roadside plan or insurance; get price before tow</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 8.12 Terminology — Chapter 8 ===== -->
+        <section class="chapter-section card" id="section-8-12">
+          <h2 class="section-title">
+            <span class="section-num">8.12</span>
+            <span class="lang-uz">Terminologiya — 8-bob</span>
+            <span class="lang-en">Terminology — Chapter 8</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table terminology-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Inglizcha atama</span>
+                      <span class="lang-en">English Term</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">O'zbekcha tarjima</span>
+                      <span class="lang-en">Uzbek Translation</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Ta'rif</span>
+                      <span class="lang-en">Definition</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Interstate</strong></td>
+                    <td>Interstate</td>
+                    <td>
+                      <span class="lang-uz">Shtatlararo avtomagistral — tezkor, svetoforsiz</span>
+                      <span class="lang-en">Interstate highway — fast, no traffic lights</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Intrastate</strong></td>
+                    <td>Intrastate</td>
+                    <td>
+                      <span class="lang-uz">Bitta shtat ichida yuk tashish</span>
+                      <span class="lang-en">Hauling freight within one state</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mile marker</strong></td>
+                    <td>Mile marker</td>
+                    <td>
+                      <span class="lang-uz">Yo'l bo'ylab masofa belgilari (davlat chegarasidan boshlab)</span>
+                      <span class="lang-en">Distance markers along highway (from state border)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Bypass / Beltway</strong></td>
+                    <td>
+                      <span class="lang-uz">Bypass / Aylanma yo'l</span>
+                      <span class="lang-en">Bypass / Beltway</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Shahar atrofidagi aylanma yo'l</span>
+                      <span class="lang-en">Ring road around a city</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Black ice</strong></td>
+                    <td>
+                      <span class="lang-uz">Qora muz</span>
+                      <span class="lang-en">Black ice</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Ko'rinmas yupqa muz qatlami — juda xavfli</span>
+                      <span class="lang-en">Invisible thin ice layer — very dangerous</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Chain law</strong></td>
+                    <td>
+                      <span class="lang-uz">Zanjir qonuni</span>
+                      <span class="lang-en">Chain law</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Qishki sharoitda zanjir taqish majburiy</span>
+                      <span class="lang-en">Mandatory chains in winter conditions</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Toll road</strong></td>
+                    <td>
+                      <span class="lang-uz">Pullik yo'l</span>
+                      <span class="lang-en">Toll road</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Foydalanish uchun to'lov olinadigan yo'l</span>
+                      <span class="lang-en">Road that charges a fee for use</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>E-ZPass</strong></td>
+                    <td>E-ZPass</td>
+                    <td>
+                      <span class="lang-uz">Elektron to'lov transponder tizimi</span>
+                      <span class="lang-en">Electronic toll transponder system</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>PrePass</strong></td>
+                    <td>PrePass</td>
+                    <td>
+                      <span class="lang-uz">Vazn stansiyasini chetlab o'tish tizimi</span>
+                      <span class="lang-en">Weigh station bypass system</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Deadhead</strong></td>
+                    <td>Deadhead</td>
+                    <td>
+                      <span class="lang-uz">Bo'sh trailer bilan haydash — daromadsiz</span>
+                      <span class="lang-en">Driving with empty trailer — no revenue</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Runaway truck ramp</strong></td>
+                    <td>Runaway truck ramp</td>
+                    <td>
+                      <span class="lang-uz">Tormoz ishlamay qolgan truck uchun qutqaruv yo'li</span>
+                      <span class="lang-en">Escape route for trucks with failed brakes</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Weigh station</strong></td>
+                    <td>
+                      <span class="lang-uz">Vazn stansiyasi</span>
+                      <span class="lang-en">Weigh station</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Truck vaznini tekshiradigan yo'l yonidagi punkt</span>
+                      <span class="lang-en">Roadside checkpoint where trucks are weighed</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== ASOSIY FIKRLAR (Key Takeaways) ===== -->
+        <section class="chapter-section card takeaways-section" id="takeaways">
+          <h2 class="section-title">
+            <i data-lucide="star" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Asosiy fikrlar</span>
+            <span class="lang-en">Key Takeaways</span>
+          </h2>
+          <div class="section-body">
+            <ul class="takeaways-list">
+              <li>
+                <span class="lang-uz">AQSh 4 ta asosiy mintaqaga bo'linadi (Shimoli-sharq, Midwest, Janub, G'arb) va 4 ta vaqt zonasiga ega. Dispetcher har doim uchrashuv vaqt zonasini tasdiqlashi kerak.</span>
+                <span class="lang-en">The US is divided into 4 main regions (Northeast, Midwest, South, West) and has 4 time zones. Dispatchers must always confirm appointment time zones.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Interstate trucklar shtatlararo yuk tashiydi (21+ yosh, DOT tibbiy karta kerak), intrastate esa faqat bir shtat ichida. Interstate avtomagistrallarda toq raqamlar shimol-janubga, juft raqamlar sharq-g'arbga boradi.</span>
+                <span class="lang-en">Interstate trucks haul across state lines (21+, DOT medical card required), intrastate within one state only. On interstates, odd numbers run north-south, even numbers east-west.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Marshrutlashda tog'lar, ob-havo va katta shahar tirbandliklari hisobga olinishi kerak. Avtomobil xaritalari (Google Maps) truck balandligi, og'irligi va xavfli yuk chegaralarini bilmaydi — truck GPS dan foydalaning.</span>
+                <span class="lang-en">Routing must account for mountains, weather, and big city congestion. Car maps (Google Maps) don't know truck height, weight, or hazmat limits — use truck GPS.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Yo'l chetlari faqat favqulodda vaziyat uchun. Qora muz ko'rinmas xavf. Kolorado I-70 da zanjir qonuni mavjud (sentabr-may). Qurilish zonalarida jarima ikki barobar oshirilishi mumkin.</span>
+                <span class="lang-en">Shoulders are for emergencies only. Black ice is an invisible hazard. Colorado has a chain law on I-70 (Sept–May). Construction zone fines may double.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Pullik yo'llar uchun E-ZPass (~20 shtat), Bestpass (butun mamlakat, bitta hisob) va PrePass (vazn stansiyasi bypass + pullik yo'l) mavjud. Ko'p yo'llar endi faqat elektron to'lov qabul qiladi.</span>
+                <span class="lang-en">For toll roads: E-ZPass (~20 states), Bestpass (nationwide, one bill), and PrePass (weigh station bypass + tolling). Many roads now accept only electronic payment.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== SCENARIOS (Interactive) ===== -->
+        <section class="chapter-section card" id="scenarios">
+          <h2 class="section-title">
+            <i data-lucide="help-circle" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Amaliy vaziyatlar</span>
+            <span class="lang-en">Practice Scenarios</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher vaziyatlarini tahlil qiling va to'g'ri javobni tanlang.</span>
+            <span class="lang-en">Analyze the following real dispatcher situations and choose the correct answer.</span>
+          </p>
+          <div id="scenarios-container"></div>
+        </section>
+
+        <!-- ===== PHONE SCRIPTS ===== -->
+        <section class="chapter-section card" id="phone-scripts">
+          <h2 class="section-title">
+            <i data-lucide="phone" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Telefon skriptlari</span>
+            <span class="lang-en">Phone Scripts</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher telefon muloqotlarini o'rganing. Kalit iboralarni yodlang.</span>
+            <span class="lang-en">Study the following real dispatcher phone conversations. Memorize the key phrases.</span>
+          </p>
+          <div id="scripts-container"></div>
+        </section>
+
+        <!-- ===== MARK AS READ ===== -->
+        <div class="mark-read-wrap">
+          <button class="mark-read-btn" id="mark-read-btn">
+            <i data-lucide="book-check" style="width:18px;height:18px"></i>
+            <span class="lang-uz">O'qildi deb belgilash</span>
+            <span class="lang-en">Mark as read</span>
+          </button>
+        </div>
+
+        <!-- ===== CHAPTER NAVIGATION ===== -->
+        <div class="chapter-nav">
+          <a href="chapter7.html" class="chapter-nav-btn prev">
+            <i data-lucide="arrow-left" style="width:18px;height:18px"></i>
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Oldingi bob</span>
+                <span class="lang-en">Previous Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+                <span class="lang-en">Load Security and Procedures</span>
+              </span>
+            </span>
+          </a>
+          <a href="chapter9.html" class="chapter-nav-btn next">
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Keyingi bob</span>
+                <span class="lang-en">Next Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+                <span class="lang-en">US Safety and Compliance</span>
+              </span>
+            </span>
+            <i data-lucide="arrow-right" style="width:18px;height:18px"></i>
+          </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>
+            <span class="lang-uz">&copy; 2024 Dispatcher Academy — AQSh yuk tashish sanoati bo'yicha o'quv platformasi</span>
+            <span class="lang-en">&copy; 2024 Dispatcher Academy — US Trucking Industry Learning Platform</span>
+          </p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Lucide Icons -->
+  <!-- Progress Tracker -->
+  <script src="js/progress.js"></script>
+
+  <!-- Scenario Data -->
+  <script src="data/scenarios.js"></script>
+
+  <!-- Phone Scripts Data -->
+  <script src="data/scripts.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Scenario Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 8;
+    var container = document.getElementById('scenarios-container');
+    if (!container || typeof scenariosData === 'undefined') return;
+    var chapterScenarios = scenariosData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScenarios.length === 0) return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    function renderScenarios() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScenarios.forEach(function(scenario, idx) {
+        var situation = lang === 'uz' ? scenario.situation_uz : scenario.situation_en;
+        var scenarioEl = document.createElement('div');
+        scenarioEl.className = 'scenario-block';
+        scenarioEl.setAttribute('data-id', scenario.id);
+        var header = '<div class="scenario-header"><span class="scenario-num">' + (idx + 1) + '</span><div class="scenario-situation">' + escHtml(situation) + '</div></div>';
+        var optionsHtml = '<div class="scenario-options">';
+        scenario.options.forEach(function(opt, oi) {
+          var optText = lang === 'uz' ? opt.text_uz : opt.text_en;
+          optionsHtml += '<button class="scenario-option" data-scenario="' + scenario.id + '" data-index="' + oi + '"><span class="option-letter">' + String.fromCharCode(65 + oi) + '</span><span class="option-text">' + escHtml(optText) + '</span></button>';
+        });
+        optionsHtml += '</div>';
+        var feedbackHtml = '<div class="scenario-feedback" id="feedback-' + scenario.id + '" style="display:none"></div>';
+        scenarioEl.innerHTML = header + optionsHtml + feedbackHtml;
+        container.appendChild(scenarioEl);
+      });
+      container.querySelectorAll('.scenario-option').forEach(function(btn) { btn.addEventListener('click', function() { handleAnswer(this); }); });
+    }
+    function handleAnswer(btn) {
+      var scenarioId = btn.getAttribute('data-scenario');
+      var chosenIndex = parseInt(btn.getAttribute('data-index'));
+      var scenario = chapterScenarios.find(function(s) { return s.id === scenarioId; });
+      if (!scenario) return;
+      var lang = getLang();
+      var block = btn.closest('.scenario-block');
+      var allBtns = block.querySelectorAll('.scenario-option');
+      var isCorrect = chosenIndex === scenario.correct_index;
+      allBtns.forEach(function(b) {
+        b.disabled = true; b.classList.add('disabled');
+        var bIdx = parseInt(b.getAttribute('data-index'));
+        if (bIdx === scenario.correct_index) b.classList.add('correct');
+        if (bIdx === chosenIndex && !isCorrect) b.classList.add('incorrect');
+      });
+      var feedbackEl = document.getElementById('feedback-' + scenarioId);
+      var chosenOpt = scenario.options[chosenIndex];
+      var explanation = lang === 'uz' ? chosenOpt.explanation_uz : chosenOpt.explanation_en;
+      feedbackEl.className = 'scenario-feedback ' + (isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+      feedbackEl.innerHTML = '<div class="feedback-icon">' + (isCorrect ? '<i data-lucide="check-circle" style="width:20px;height:20px;color:#16a34a"></i>' : '<i data-lucide="x-circle" style="width:20px;height:20px;color:#dc2626"></i>') + '</div><div class="feedback-text">' + escHtml(explanation) + '</div>';
+      feedbackEl.style.display = 'flex';
+      lucide.createIcons();
+    }
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') {
+          var answered = container.querySelector('.scenario-option.disabled');
+          if (!answered) renderScenarios();
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    renderScenarios();
+  })();
+  </script>
+
+  <!-- Phone Scripts Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 8;
+    var container = document.getElementById('scripts-container');
+    if (!container || typeof scriptsData === 'undefined') return;
+    var chapterScripts = scriptsData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScripts.length === 0) return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    function renderScripts() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScripts.forEach(function(script, idx) {
+        var title = lang === 'uz' ? script.title_uz : script.title_en;
+        var dialogue = lang === 'uz' ? script.script_uz : script.script_en;
+        var phrasesTitle = lang === 'uz' ? 'Kalit iboralar' : 'Key Phrases';
+        var el = document.createElement('div');
+        el.className = 'script-block';
+        var phrasesHtml = '';
+        script.key_phrases.forEach(function(kp) {
+          var phrase = lang === 'uz' ? kp.phrase_uz : kp.phrase_en;
+          phrasesHtml += '<div class="key-phrase"><span class="key-phrase-bullet">▸</span><span class="key-phrase-text">' + escHtml(phrase) + '</span></div>';
+        });
+        el.innerHTML =
+          '<div class="script-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.script-toggle').classList.toggle('open')">' +
+            '<span class="script-num">' + (idx + 1) + '</span>' +
+            '<span class="script-title">' + escHtml(title) + '</span>' +
+            '<i data-lucide="chevron-down" class="script-toggle" style="width:20px;height:20px"></i>' +
+          '</div>' +
+          '<div class="script-body">' +
+            '<div class="script-dialogue">' + escHtml(dialogue) + '</div>' +
+            '<div class="script-key-phrases">' +
+              '<div class="script-key-phrases-title"><i data-lucide="bookmark" style="width:16px;height:16px"></i> ' + escHtml(phrasesTitle) + '</div>' +
+              phrasesHtml +
+            '</div>' +
+          '</div>';
+        container.appendChild(el);
+      });
+      lucide.createIcons();
+    }
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') renderScripts();
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    renderScripts();
+  })();
+  </script>
+
+  <!-- Mark as Read Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 8;
+    var btn = document.getElementById('mark-read-btn');
+    if (!btn || typeof Progress === 'undefined') return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function updateBtn() {
+      var isRead = Progress.isChapterRead(CHAPTER);
+      if (isRead) {
+        btn.classList.add('read');
+        btn.innerHTML = '<i data-lucide="check-circle" style="width:18px;height:18px"></i><span class="lang-uz">O\'qilgan</span><span class="lang-en">Read</span>';
+      } else {
+        btn.classList.remove('read');
+        btn.innerHTML = '<i data-lucide="book-check" style="width:18px;height:18px"></i><span class="lang-uz">O\'qildi deb belgilash</span><span class="lang-en">Mark as read</span>';
+      }
+      lucide.createIcons();
+    }
+    btn.addEventListener('click', function() {
+      if (!Progress.isChapterRead(CHAPTER)) { Progress.markChapterRead(CHAPTER); updateBtn(); }
+    });
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) { if (m.attributeName === 'data-lang') updateBtn(); });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    updateBtn();
+  })();
+  </script>
+</body>
+</html>

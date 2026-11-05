@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="uz" data-lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9-Bob: AQSh xavfsizlik va muvofiqlik — Dispatcher Academy</title>
+  <meta name="description" content="AQSh yuk tashish xavfsizligi, DOT, FMCSA, CSA, SMS, haydovchi malakasi, ruxsatnomalar, sug'urta, tekshiruvlar">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme & Language: apply before paint -->
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <a href="index.html" class="header-logo">
+        <i data-lucide="truck" class="logo-icon"></i>
+        <span class="logo-text">
+          <span class="lang-uz">Dispatcher Academy</span>
+          <span class="lang-en">Dispatcher Academy</span>
+        </span>
+      </a>
+    </div>
+    <div class="header-right">
+      <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">
+        <i data-lucide="globe"></i>
+        <span class="toggle-label">EN</span>
+      </button>
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <a href="index.html" class="sidebar-link">
+          <i data-lucide="home"></i>
+          <span class="lang-uz">Bosh sahifa</span>
+          <span class="lang-en">Home</span>
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Boblar</span>
+          <span class="lang-en">Chapters</span>
+        </div>
+
+        <a href="chapter1.html" class="sidebar-link">
+          <span class="chapter-num">1</span>
+          <span class="lang-uz">Logistikaga kirish</span>
+          <span class="lang-en">Introduction to Logistics</span>
+        </a>
+        <a href="chapter2.html" class="sidebar-link">
+          <span class="chapter-num">2</span>
+          <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+          <span class="lang-en">Stakeholders in Trucking</span>
+        </a>
+        <a href="chapter3.html" class="sidebar-link">
+          <span class="chapter-num">3</span>
+          <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+          <span class="lang-en">Truck Drivers and Their Operations</span>
+        </a>
+        <a href="chapter4.html" class="sidebar-link">
+          <span class="chapter-num">4</span>
+          <span class="lang-uz">Avtopark va jihozlar</span>
+          <span class="lang-en">Fleet and Equipment</span>
+        </a>
+        <a href="chapter5.html" class="sidebar-link">
+          <span class="chapter-num">5</span>
+          <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+          <span class="lang-en">Trailers and Weight Balance</span>
+        </a>
+        <a href="chapter6.html" class="sidebar-link">
+          <span class="chapter-num">6</span>
+          <span class="lang-uz">Yuk turlari</span>
+          <span class="lang-en">Freight Types</span>
+        </a>
+        <a href="chapter7.html" class="sidebar-link">
+          <span class="chapter-num">7</span>
+          <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+          <span class="lang-en">Load Security and Procedures</span>
+        </a>
+        <a href="chapter8.html" class="sidebar-link">
+          <span class="chapter-num">8</span>
+          <span class="lang-uz">AQSh avtomagistral tizimi</span>
+          <span class="lang-en">US Highway and Road System</span>
+        </a>
+        <a href="chapter9.html" class="sidebar-link active">
+          <span class="chapter-num">9</span>
+          <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+          <span class="lang-en">US Safety and Compliance</span>
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Asboblar</span>
+          <span class="lang-en">Tools</span>
+        </div>
+        <a href="glossary.html" class="sidebar-link">
+          <i data-lucide="book-open"></i>
+          <span class="lang-uz">Glossariy</span>
+          <span class="lang-en">Glossary</span>
+        </a>
+        <a href="resources.html" class="sidebar-link">
+          <i data-lucide="link"></i>
+          <span class="lang-uz">Resurslar</span>
+          <span class="lang-en">Resources</span>
+        </a>
+        <a href="progress.html" class="sidebar-link">
+          <i data-lucide="bar-chart-3"></i>
+          <span class="lang-uz">Progress</span>
+          <span class="lang-en">Progress</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="app-layout">
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- Chapter Header -->
+        <section class="chapter-header">
+          <div class="chapter-badge-large">9</div>
+          <h1 class="page-title">
+            <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+            <span class="lang-en">US Safety and Compliance</span>
+          </h1>
+          <p class="page-subtitle">
+            <span class="lang-uz">47 slayd &nbsp;·&nbsp; DOT, FMCSA, CSA, haydovchi malakasi, ruxsatnomalar, sug'urta, tekshiruvlar va qoidabuzarliklar</span>
+            <span class="lang-en">47 slides &nbsp;·&nbsp; DOT, FMCSA, CSA, driver qualification, permits, insurance, inspections and violations</span>
+          </p>
+        </section>
+
+        <!-- ===== 9.1 Why Safety Matters ===== -->
+        <section class="chapter-section card" id="section-9-1">
+          <h2 class="section-title">
+            <span class="section-num">9.1</span>
+            <span class="lang-uz">Nima uchun xavfsizlik muhim</span>
+            <span class="lang-en">Why Safety Matters</span>
+          </h2>
+          <div class="section-body">
+            <div class="highlight-card">
+              <h4>
+                <span class="lang-uz">AQShda har yili 5,000 dan ortiq odam og'ir yuk mashinalari bilan bog'liq halokatlarda halok bo'ladi</span>
+                <span class="lang-en">Over 5,000 people die annually in the US in crashes involving large trucks</span>
+              </h4>
+            </div>
+            <p>
+              <span class="lang-uz">Xavfsizlik bo'limi tashuvchi kompaniyaning eng muhim qismlaridan biri. U haydovchilarni himoya qiladi va kompaniyaning muvofiqligini ta'minlaydi.</span>
+              <span class="lang-en">The safety department is one of the most critical parts of a carrier. It protects drivers and ensures the company stays compliant.</span>
+            </p>
+            <h3>
+              <span class="lang-uz">Xavfsizlik bo'limi nimalar ustida ishlaydi:</span>
+              <span class="lang-en">What the safety department works on:</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Halokatlar sonini kamaytirish</span>
+                <span class="lang-en">Lowering crash numbers</span>
+              </li>
+              <li>
+                <span class="lang-uz">Texnik xizmat standartlarini saqlash</span>
+                <span class="lang-en">Maintaining maintenance standards</span>
+              </li>
+              <li>
+                <span class="lang-uz">HOS (xizmat soatlari) muvofiqligini ta'minlash</span>
+                <span class="lang-en">Ensuring HOS (Hours of Service) compliance</span>
+              </li>
+              <li>
+                <span class="lang-uz">Hujjatlarning to'g'ri va yangilangan bo'lishini ta'minlash</span>
+                <span class="lang-en">Keeping documents correct and up to date</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 9.2 Notable Truck Accidents ===== -->
+        <section class="chapter-section card" id="section-9-2">
+          <h2 class="section-title">
+            <span class="section-num">9.2</span>
+            <span class="lang-uz">Taniqli yuk mashinasi halokatlari</span>
+            <span class="lang-en">Notable Truck Accidents</span>
+          </h2>
+          <div class="section-body">
+            <div class="items-grid">
+              <div class="item-card">
+                <h4>I-95, Baltimore (2016)</h4>
+                <p>
+                  <span class="lang-uz">Yuk mashinasi to'xtagan transport ustiga haydab ketdi, ko'p transportli zanjirli halokat yuz berdi</span>
+                  <span class="lang-en">Truck drove into stopped traffic, causing a multi-vehicle chain-reaction crash</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <h4>I-94, Kalamazoo (2015)</h4>
+                <p>
+                  <span class="lang-uz">Qor bo'ronida bir nechta yuk mashinalari va yengil avtomobillar qatnashshgan ommaviy halokat</span>
+                  <span class="lang-en">Massive pileup involving multiple trucks and cars in a snowstorm</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <h4>I-5, Sacramento</h4>
+                <p>
+                  <span class="lang-uz">Jiddiy yuk mashinasi halokati — xavfsizlik tartib-qoidalariga rioya qilish zarurligi haqida ogohlantirish</span>
+                  <span class="lang-en">Serious truck crash — a reminder of the importance of following safety regulations</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 9.3 Who Regulates Trucking ===== -->
+        <section class="chapter-section card" id="section-9-3">
+          <h2 class="section-title">
+            <span class="section-num">9.3</span>
+            <span class="lang-uz">Yuk tashishni kim tartibga soladi</span>
+            <span class="lang-en">Who Regulates Trucking</span>
+          </h2>
+          <div class="section-body">
+            <div class="items-grid">
+              <div class="item-card">
+                <h4>DOT (Department of Transportation)</h4>
+                <p>
+                  <span class="lang-uz">Federal idora — barcha transport turlarini nazorat qiladi (avtomobil, temir yo'l, havo, dengiz)</span>
+                  <span class="lang-en">Federal agency — oversees all transportation modes (road, rail, air, sea)</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <h4>FMCSA (Federal Motor Carrier Safety Administration)</h4>
+                <p>
+                  <span class="lang-uz">DOT tarkibida — faqat tijorat yuk mashinalari va avtobuslar xavfsizligi uchun mas'ul</span>
+                  <span class="lang-en">Under DOT — responsible only for commercial truck and bus safety</span>
+                </p>
+              </div>
+            </div>
+
+            <h3>
+              <span class="lang-uz">49 CFR — Federal qoidalar</span>
+              <span class="lang-en">49 CFR — Federal Regulations</span>
+            </h3>
+            <p>
+              <span class="lang-uz">Yuk tashish qoidalari 49 CFR (Code of Federal Regulations) da joylashgan: Parts 300–399 (yuk tashish) va Parts 100–180 (xavfli materiallar).</span>
+              <span class="lang-en">Trucking regulations are in 49 CFR (Code of Federal Regulations): Parts 300–399 (trucking) and Parts 100–180 (hazardous materials).</span>
+            </p>
+
+            <h3>
+              <span class="lang-uz">Eng muhim qismlar</span>
+              <span class="lang-en">Key Parts</span>
+            </h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Qism</span>
+                      <span class="lang-en">Part</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Mavzu</span>
+                      <span class="lang-en">Subject</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>382</strong></td>
+                    <td>
+                      <span class="lang-uz">Giyohvand moddalar va alkogol testi</span>
+                      <span class="lang-en">Drug and alcohol testing</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>383</strong></td>
+                    <td>
+                      <span class="lang-uz">CDL standartlari</span>
+                      <span class="lang-en">CDL standards</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>391</strong></td>
+                    <td>
+                      <span class="lang-uz">Haydovchi malakasi</span>
+                      <span class="lang-en">Driver qualifications</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>392</strong></td>
+                    <td>
+                      <span class="lang-uz">Haydash qoidalari</span>
+                      <span class="lang-en">Driving regulations</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>393</strong></td>
+                    <td>
+                      <span class="lang-uz">Transport vositalari qismlari va jihozlari</span>
+                      <span class="lang-en">Vehicle parts and accessories</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>395</strong></td>
+                    <td>
+                      <span class="lang-uz">Xizmat soatlari (HOS)</span>
+                      <span class="lang-en">Hours of Service (HOS)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>396</strong></td>
+                    <td>
+                      <span class="lang-uz">Tekshiruv, ta'mirlash va texnik xizmat</span>
+                      <span class="lang-en">Inspection, repair, and maintenance</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 9.4 Authority Numbers ===== -->
+        <section class="chapter-section card" id="section-9-4">
+          <h2 class="section-title">
+            <span class="section-num">9.4</span>
+            <span class="lang-uz">Vakolatli raqamlar</span>
+            <span class="lang-en">Authority Numbers</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Raqam</span>
+                      <span class="lang-en">Number</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Format</span>
+                      <span class="lang-en">Format</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Maqsad</span>
+                      <span class="lang-en">Purpose</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>USDOT</strong></td>
+                    <td>
+                      <span class="lang-uz">Faqat raqamlar (masalan, 1234567)</span>
+                      <span class="lang-en">Numbers only (e.g., 1234567)</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Xavfsizlik maqsadlarida ro'yxatga olish — barcha tijorat tashuvchilarga kerak</span>
+                      <span class="lang-en">Registration for safety purposes — required for all commercial carriers</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>MC</strong></td>
+                    <td>
+                      <span class="lang-uz">MC- + raqamlar (masalan, MC-123456)</span>
+                      <span class="lang-en">MC- + numbers (e.g., MC-123456)</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Yollanma yuk tashish vakolati — shtatlararo yuk tashuvchilar uchun</span>
+                      <span class="lang-en">For-hire operating authority — for interstate freight carriers</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>SCAC</strong></td>
+                    <td>
+                      <span class="lang-uz">2-4 harfli kod (masalan, ABCD)</span>
+                      <span class="lang-en">2-4 letter code (e.g., ABCD)</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Standart tashuvchi alfa kodi — hujjatlarda aniqlash uchun</span>
+                      <span class="lang-en">Standard Carrier Alpha Code — for identification in documents</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>
+              <span class="lang-uz">Vakolatli hujjatlar</span>
+              <span class="lang-en">Authority Documents</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Tashuvchi USDOT va MC raqamlarini olganidan keyin, FMCSA vakolatni faollashtirish uchun sug'urta isbotini talab qiladi</span>
+                <span class="lang-en">After carrier gets USDOT and MC numbers, FMCSA requires proof of insurance to activate authority</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>FMCSA SAFER Company Snapshot:</strong> safer.fmcsa.dot.gov — har qanday tashuvchining xavfsizlik ma'lumotlarini tekshirish</span>
+                <span class="lang-en"><strong>FMCSA SAFER Company Snapshot:</strong> safer.fmcsa.dot.gov — check any carrier's safety data</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 9.5 Safety Scores — SMS and CSA ===== -->
+        <section class="chapter-section card" id="section-9-5">
+          <h2 class="section-title">
+            <span class="section-num">9.5</span>
+            <span class="lang-uz">Xavfsizlik ballari — SMS va CSA</span>
+            <span class="lang-en">Safety Scores — SMS and CSA</span>
+          </h2>
+          <div class="section-body">
+            <h3>
+              <span class="lang-uz">SMS (Safety Measurement System)</span>
+              <span class="lang-en">SMS (Safety Measurement System)</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">FMCSA ning 24 oylik xavfsizlik tarixini o'lchaydigan tizimi</span>
+                <span class="lang-en">FMCSA's system that measures 24 months of safety history</span>
+              </li>
+              <li>
+                <span class="lang-uz">7 ta BASIC (Behavior Analysis and Safety Improvement Categories) kategoriyasini baholaydi</span>
+                <span class="lang-en">Evaluates 7 BASICs (Behavior Analysis and Safety Improvement Categories)</span>
+              </li>
+              <li>
+                <span class="lang-uz">Har bir BASIC uchun 0-100 foiz ko'rsatkich — yuqori raqam = yomonroq</span>
+                <span class="lang-en">Percentile 0-100 for each BASIC — higher number = worse</span>
+              </li>
+              <li>
+                <span class="lang-uz">Chegara: aksariyat BASIClar uchun <strong>65%</strong>, halokat ko'rsatkichi uchun <strong>80%</strong></span>
+                <span class="lang-en">Thresholds: <strong>65%</strong> for most BASICs, <strong>80%</strong> for crash indicator</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Yetti BASIC kategoriyasi</span>
+              <span class="lang-en">Seven BASICs</span>
+            </h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>BASIC</th>
+                    <th>
+                      <span class="lang-uz">Tavsif</span>
+                      <span class="lang-en">Description</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Unsafe Driving</strong></td>
+                    <td>
+                      <span class="lang-uz">Xavfli haydash (tezlikni oshirish, befarq haydash)</span>
+                      <span class="lang-en">Dangerous driving (speeding, reckless driving)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Crash Indicator</strong></td>
+                    <td>
+                      <span class="lang-uz">Halokat tarixi va jiddiyligi</span>
+                      <span class="lang-en">Crash history and severity</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>HOS Compliance</strong></td>
+                    <td>
+                      <span class="lang-uz">Xizmat soatlari qoidalariga rioya qilish</span>
+                      <span class="lang-en">Hours of Service rules compliance</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Vehicle Maintenance</strong></td>
+                    <td>
+                      <span class="lang-uz">Transport texnik holati</span>
+                      <span class="lang-en">Vehicle condition and maintenance</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Controlled Substances / Alcohol</strong></td>
+                    <td>
+                      <span class="lang-uz">Giyohvand moddalar va alkogol buzilishlari</span>
+                      <span class="lang-en">Drug and alcohol violations</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Hazardous Materials</strong></td>
+                    <td>
+                      <span class="lang-uz">Xavfli moddalar qoidalariga rioya</span>
+                      <span class="lang-en">Hazmat regulation compliance</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Driver Fitness</strong></td>
+                    <td>
+                      <span class="lang-uz">Haydovchi malakasi va hujjatlari</span>
+                      <span class="lang-en">Driver qualification and documentation</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 9.6 Audits and Safety Ratings ===== -->
+        <section class="chapter-section card" id="section-9-6">
+          <h2 class="section-title">
+            <span class="section-num">9.6</span>
+            <span class="lang-uz">Auditlar va xavfsizlik reytinglari</span>
+            <span class="lang-en">Audits and Safety Ratings</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Yangi tashuvchi auditi:</strong> FMCSA yangi tashuvchilarni 12 oy ichida tekshiradi</span>
+                <span class="lang-en"><strong>New Entrant audit:</strong> FMCSA audits new carriers within 12 months</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Tekshiruv/Muvofiqlik ko'rigi:</strong> FMCSA mavjud tashuvchilarni chuqur tekshirishi mumkin</span>
+                <span class="lang-en"><strong>Investigation/Compliance Review:</strong> FMCSA may conduct in-depth review of existing carriers</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Xavfsizlik reytinglari</span>
+              <span class="lang-en">Safety Ratings</span>
+            </h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Reyting</span>
+                      <span class="lang-en">Rating</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Ma'nosi</span>
+                      <span class="lang-en">Meaning</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>NOT RATED</strong></td>
+                    <td>
+                      <span class="lang-uz">Hali tekshirilmagan — standart yangi tashuvchilar uchun</span>
+                      <span class="lang-en">Not yet audited — standard for new carriers</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>SATISFACTORY</strong></td>
+                    <td>
+                      <span class="lang-uz">Barcha xavfsizlik talablariga javob beradi</span>
+                      <span class="lang-en">Meets all safety requirements</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>CONDITIONAL</strong></td>
+                    <td>
+                      <span class="lang-uz">Xavfsizlik kamchiliklari bor — tuzatish kerak</span>
+                      <span class="lang-en">Has safety deficiencies — must correct</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>UNSATISFACTORY</strong></td>
+                    <td>
+                      <span class="lang-uz">Jiddiy muammolar — ish to'xtatilishi mumkin</span>
+                      <span class="lang-en">Serious problems — may be shut down</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 9.7 Safety Department Responsibilities ===== -->
+        <section class="chapter-section card" id="section-9-7">
+          <h2 class="section-title">
+            <span class="section-num">9.7</span>
+            <span class="lang-uz">Xavfsizlik bo'limi vazifalari</span>
+            <span class="lang-en">Safety Department Responsibilities</span>
+          </h2>
+          <div class="section-body">
+            <div class="items-grid">
+              <div class="item-card">
+                <h4>
+                  <span class="lang-uz">Haydovchi fayllari</span>
+                  <span class="lang-en">Driver Files</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">DQ (Driver Qualification) fayllarini yuritish va yangilash</span>
+                  <span class="lang-en">Maintain and update DQ (Driver Qualification) files</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <h4>
+                  <span class="lang-uz">Ruxsatnomalar</span>
+                  <span class="lang-en">Permits</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Barcha kerakli ruxsatnomalar va endorsementlarni saqlash</span>
+                  <span class="lang-en">Keep all required permits and endorsements current</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <h4>ELD</h4>
+                <p>
+                  <span class="lang-uz">Elektron logbook qurilmalarini boshqarish</span>
+                  <span class="lang-en">Manage Electronic Logging Devices</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <h4>
+                  <span class="lang-uz">Yozuvlar</span>
+                  <span class="lang-en">Records</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Barcha xavfsizlik yozuvlarini tartibli saqlash</span>
+                  <span class="lang-en">Keep all safety records organized</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <h4>
+                  <span class="lang-uz">Qoidabuzarliklar</span>
+                  <span class="lang-en">Violations</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Tekshiruv qoidabuzarliklarini kuzatish va tuzatish</span>
+                  <span class="lang-en">Track and correct inspection violations</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <h4>
+                  <span class="lang-uz">Sug'urta</span>
+                  <span class="lang-en">Insurance</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Barcha sug'urta polislarini amal qilish muddatida saqlash</span>
+                  <span class="lang-en">Keep all insurance policies active</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <h4>
+                  <span class="lang-uz">Halokatlar</span>
+                  <span class="lang-en">Crashes</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Halokatlarni hujjatlashtirish va hisobot berish</span>
+                  <span class="lang-en">Document and report crashes</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <h4>
+                  <span class="lang-uz">Texnik xizmat</span>
+                  <span class="lang-en">Maintenance</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Avtopark texnik holatini nazorat qilish</span>
+                  <span class="lang-en">Oversee fleet maintenance</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 9.8 Driver Qualification (DQ File) ===== -->
+        <section class="chapter-section card" id="section-9-8">
+          <h2 class="section-title">
+            <span class="section-num">9.8</span>
+            <span class="lang-uz">Haydovchi malakasi (DQ fayl)</span>
+            <span class="lang-en">Driver Qualification (DQ File)</span>
+          </h2>
+          <div class="section-body">
+            <h3>
+              <span class="lang-uz">Tajriba va kelib chiqish</span>
+              <span class="lang-en">Experience and Background</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Aksariyat tashuvchilar 1-2 yillik CDL tajribasini talab qiladi</span>
+                <span class="lang-en">Most carriers require 1-2 years CDL experience</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>MVR (Motor Vehicle Record):</strong> Haydovchilik tarixini tekshirish</span>
+                <span class="lang-en"><strong>MVR (Motor Vehicle Record):</strong> Check driving history</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>PSP (Pre-Employment Screening Program):</strong> FMCSA dan tekshiruv va halokat tarixini olish</span>
+                <span class="lang-en"><strong>PSP (Pre-Employment Screening Program):</strong> Get inspection and crash history from FMCSA</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">DOT tibbiy tekshiruvi</span>
+              <span class="lang-en">DOT Medical Exam</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Sertifikatlangan DOT tibbiy tekshiruvchisi tomonidan o'tkaziladi</span>
+                <span class="lang-en">Performed by a certified DOT medical examiner</span>
+              </li>
+              <li>
+                <span class="lang-uz">Tibbiy karta <strong>24 oy</strong> amal qiladi (ba'zi holatlar qisqaroq)</span>
+                <span class="lang-en">Medical card valid for <strong>24 months</strong> (shorter for some conditions)</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Giyohvand moddalar va alkogol testi</span>
+              <span class="lang-en">Drug and Alcohol Testing</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Qachon test qilinadi:</strong> Ishga olishdan oldin, tasodifiy, halokat keyin, asosli shubha, qaytish testi</span>
+                <span class="lang-en"><strong>When tested:</strong> Pre-employment, random, post-accident, reasonable suspicion, return-to-duty</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>5 ta modda:</strong> Marihuana, kokain, amfetaminlar, opioidlar, PCP</span>
+                <span class="lang-en"><strong>5 drugs:</strong> Marijuana, cocaine, amphetamines, opioids, PCP</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>FMCSA Clearinghouse:</strong> Barcha ijobiy testlar va rad etishlar markaziy bazada saqlanadi — ish beruvchi oldingi buzilishlarni ko'radi</span>
+                <span class="lang-en"><strong>FMCSA Clearinghouse:</strong> All positive tests and refusals stored in central database — employers can see prior violations</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Jinoyat va kredit tarixi</span>
+              <span class="lang-en">Criminal and Credit History</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>FCRA (Fair Credit Reporting Act)</strong> qoidalariga muvofiq o'tkaziladi</span>
+                <span class="lang-en">Conducted under <strong>FCRA (Fair Credit Reporting Act)</strong> rules</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Muhim:</strong> Odamlarni qidirish veb-saytlaridan foydalanmang — faqat rasmiy xizmatlar orqali</span>
+                <span class="lang-en"><strong>Important:</strong> Do not use people-search websites — use only official services</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 9.9 Permits and Endorsements ===== -->
+        <section class="chapter-section card" id="section-9-9">
+          <h2 class="section-title">
+            <span class="section-num">9.9</span>
+            <span class="lang-uz">Ruxsatnomalar va endorsementlar</span>
+            <span class="lang-en">Permits and Endorsements</span>
+          </h2>
+          <div class="section-body">
+            <h3>
+              <span class="lang-uz">CDL endorsementlari</span>
+              <span class="lang-en">CDL Endorsements</span>
+            </h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Kod</span>
+                      <span class="lang-en">Code</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Endorsement</span>
+                      <span class="lang-en">Endorsement</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>H</strong></td>
+                    <td>
+                      <span class="lang-uz">Hazmat (xavfli materiallar)</span>
+                      <span class="lang-en">Hazmat (hazardous materials)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>N</strong></td>
+                    <td>
+                      <span class="lang-uz">Tanker (suyuqlik tashuvchi)</span>
+                      <span class="lang-en">Tanker (liquid hauler)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>T</strong></td>
+                    <td>
+                      <span class="lang-uz">Ikki tirkegli (double/triple trailers)</span>
+                      <span class="lang-en">Double/triple trailers</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>X</strong></td>
+                    <td>
+                      <span class="lang-uz">H va N kombinatsiyasi (hazmat + tanker)</span>
+                      <span class="lang-en">Combination of H and N (hazmat + tanker)</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>IFTA (International Fuel Tax Agreement)</h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">48 shtat + 10 Kanada provinsiyasini qamrab oladi</span>
+                <span class="lang-en">Covers 48 states + 10 Canadian provinces</span>
+              </li>
+              <li>
+                <span class="lang-uz">Har chorakda hisobot berish kerak (yoqilg'i iste'moli va millar bo'yicha)</span>
+                <span class="lang-en">Quarterly reporting required (fuel usage and miles by jurisdiction)</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Besh og'irlik-masofa soliq shtati</span>
+              <span class="lang-en">Five Weight-Distance Tax States</span>
+            </h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Shtat</span>
+                      <span class="lang-en">State</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Chegara</span>
+                      <span class="lang-en">Threshold</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Kentucky (KY)</strong></td>
+                    <td>
+                      <span class="lang-uz">59,999 lbs dan yuqori</span>
+                      <span class="lang-en">Over 59,999 lbs</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>New Mexico (NM)</strong></td>
+                    <td>
+                      <span class="lang-uz">26,001 lbs dan yuqori</span>
+                      <span class="lang-en">Over 26,001 lbs</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Oregon (OR)</strong></td>
+                    <td>
+                      <span class="lang-uz">26,001 lbs dan yuqori</span>
+                      <span class="lang-en">Over 26,001 lbs</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>New York (NY)</strong></td>
+                    <td>
+                      <span class="lang-uz">18,001 lbs dan yuqori</span>
+                      <span class="lang-en">Over 18,001 lbs</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Connecticut (CT)</strong></td>
+                    <td>
+                      <span class="lang-uz">26,001 lbs dan yuqori</span>
+                      <span class="lang-en">Over 26,001 lbs</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>
+              <span class="lang-uz">CARB — Kaliforniya qoidalari</span>
+              <span class="lang-en">CARB — California Rules</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Kaliforniyaga kiradigan trucklar <strong>2010 yil yoki undan keyin ishlab chiqarilgan dvigatel</strong> bo'lishi kerak</span>
+                <span class="lang-en">Trucks entering California must have a <strong>2010 or newer engine</strong></span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Clean Truck Check:</strong> Emissiya tekshiruvi dasturi</span>
+                <span class="lang-en"><strong>Clean Truck Check:</strong> Emissions inspection program</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Issiqxona gazi qoidasi:</strong> Trayler aerodynamikasi va shina talablari</span>
+                <span class="lang-en"><strong>Greenhouse gas rule:</strong> Trailer aerodynamics and tire requirements</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>5 daqiqali bo'sh turish qoidasi:</strong> Dvigatel 5 daqiqadan ortiq bo'sh turmasligi kerak</span>
+                <span class="lang-en"><strong>5-minute idling rule:</strong> Engine must not idle more than 5 minutes</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 9.10 Truck Documents ===== -->
+        <section class="chapter-section card" id="section-9-10">
+          <h2 class="section-title">
+            <span class="section-num">9.10</span>
+            <span class="lang-uz">Truck hujjatlari</span>
+            <span class="lang-en">Truck Documents</span>
+          </h2>
+          <div class="section-body">
+            <h3>
+              <span class="lang-uz">Belgilash (Marking)</span>
+              <span class="lang-en">Marking</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Kompaniya nomi + USDOT raqami truckning <strong>ikkala tomonida</strong> bo'lishi kerak</span>
+                <span class="lang-en">Company name + USDOT number must be on <strong>both sides</strong> of the truck</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>50 fut</strong> masofadan o'qilishi kerak</span>
+                <span class="lang-en">Must be readable from <strong>50 feet</strong></span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Cab Card / IRP</span>
+              <span class="lang-en">Cab Card / IRP</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">IRP (International Registration Plan) ro'yxatga olish hujjati — truckning VIN raqamiga mos kelishi kerak</span>
+                <span class="lang-en">IRP (International Registration Plan) registration document — VIN must match the truck</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Trayler ro'yxatga olish</span>
+              <span class="lang-en">Trailer Registration</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Trayler ro'yxatga olish hujjati odatda <strong>burun qutisi (nose box)</strong> da saqlanadi</span>
+                <span class="lang-en">Trailer registration document usually kept in <strong>nose box</strong></span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Yillik tekshiruv</span>
+              <span class="lang-en">Annual Inspection</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Har bir tijorat transport vositasi <strong>har 12 oyda</strong> tekshiruvdan o'tishi kerak</span>
+                <span class="lang-en">Every commercial vehicle must pass inspection <strong>every 12 months</strong></span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 9.11 Insurance (7 Types) ===== -->
+        <section class="chapter-section card" id="section-9-11">
+          <h2 class="section-title">
+            <span class="section-num">9.11</span>
+            <span class="lang-uz">Sug'urta (7 tur)</span>
+            <span class="lang-en">Insurance (7 Types)</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Sug'urta turi</span>
+                      <span class="lang-en">Insurance Type</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Tafsilotlar</span>
+                      <span class="lang-en">Details</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Auto Liability</strong></td>
+                    <td>
+                      <span class="lang-uz">Minimum $750,000 — <strong>majburiy</strong>. Halokatda boshqa odamlarga yetkazilgan zarar uchun</span>
+                      <span class="lang-en">Minimum $750,000 — <strong>required</strong>. Covers damage to others in a crash</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>General Liability</strong></td>
+                    <td>
+                      <span class="lang-uz">Kompaniya operatsiyalari bilan bog'liq umumiy javobgarlik</span>
+                      <span class="lang-en">General liability for company operations</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cargo Insurance</strong></td>
+                    <td>
+                      <span class="lang-uz">$100,000 — aksariyat brokerlar talab qiladi. Tashilayotgan yuk uchun</span>
+                      <span class="lang-en">$100,000 — most brokers require. Covers freight being hauled</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Physical Damage</strong></td>
+                    <td>
+                      <span class="lang-uz">Collision (to'qnashuv) va comprehensive (boshqa zarar: o'g'irlik, yong'in, tabiat ofati)</span>
+                      <span class="lang-en">Collision and comprehensive (theft, fire, natural disaster)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Trailer Interchange</strong></td>
+                    <td>
+                      <span class="lang-uz">Boshqa kompaniyaning traylerini tortish paytidagi zarar uchun</span>
+                      <span class="lang-en">Covers damage while pulling another company's trailer</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Workers' Comp</strong></td>
+                    <td>
+                      <span class="lang-uz">W-2 xodimlar uchun — ish joyidagi jarohat/kasallik</span>
+                      <span class="lang-en">For W-2 employees — workplace injury/illness</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Occupational Accident</strong></td>
+                    <td>
+                      <span class="lang-uz">1099 mustaqil pudratchilarga o'xshash himoya (workers' comp o'rniga)</span>
+                      <span class="lang-en">Similar protection for 1099 independent contractors (instead of workers' comp)</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>
+              <span class="lang-uz">COI (Certificate of Insurance) o'qish tartibi</span>
+              <span class="lang-en">COI (Certificate of Insurance) Reading Order</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Sug'urtalovchi nomi → Polisa raqami → Qamrov summasi → Amal qilish muddati → Sug'urtalangan shaxs</span>
+                <span class="lang-en">Insurer name → Policy number → Coverage amount → Effective dates → Named insured</span>
+              </li>
+            </ul>
+
+            <div class="info-box">
+              <h4>
+                <span class="lang-uz">Odatiy broker talablari:</span>
+                <span class="lang-en">Typical Broker Requirements:</span>
+              </h4>
+              <ul>
+                <li>
+                  <span class="lang-uz">Auto Liability: $1,000,000</span>
+                  <span class="lang-en">Auto Liability: $1,000,000</span>
+                </li>
+                <li>
+                  <span class="lang-uz">Cargo: $100,000</span>
+                  <span class="lang-en">Cargo: $100,000</span>
+                </li>
+                <li>
+                  <span class="lang-uz">General Liability (GL): majburiy</span>
+                  <span class="lang-en">General Liability (GL): required</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 9.12 DOT Inspections ===== -->
+        <section class="chapter-section card" id="section-9-12">
+          <h2 class="section-title">
+            <span class="section-num">9.12</span>
+            <span class="lang-uz">DOT tekshiruvlari</span>
+            <span class="lang-en">DOT Inspections</span>
+          </h2>
+          <div class="section-body">
+            <h3>
+              <span class="lang-uz">Tekshiruv darajalari</span>
+              <span class="lang-en">Inspection Levels</span>
+            </h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Daraja</span>
+                      <span class="lang-en">Level</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Tavsif</span>
+                      <span class="lang-en">Description</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>I</strong></td>
+                    <td>
+                      <span class="lang-uz">To'liq tekshiruv — haydovchi + transport (eng keng qamrovli)</span>
+                      <span class="lang-en">Full inspection — driver + vehicle (most comprehensive)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>II</strong></td>
+                    <td>
+                      <span class="lang-uz">Yurish tekshiruvi — haydovchi + transport tashqi ko'rinishi (pastga tushmasdan)</span>
+                      <span class="lang-en">Walk-around — driver + vehicle exterior (without going under)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>III</strong></td>
+                    <td>
+                      <span class="lang-uz">Faqat haydovchi (hujjatlar, HOS)</span>
+                      <span class="lang-en">Driver only (documents, HOS)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>IV</strong></td>
+                    <td>
+                      <span class="lang-uz">Maxsus tekshiruv (bir martalik muammo uchun)</span>
+                      <span class="lang-en">Special inspection (for a one-time issue)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>V</strong></td>
+                    <td>
+                      <span class="lang-uz">Faqat transport (haydovchisiz)</span>
+                      <span class="lang-en">Vehicle only (without driver)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>VI</strong></td>
+                    <td>
+                      <span class="lang-uz">Kuchaytirilgan transport tekshiruvi (radioaktiv/xavfli materiallar)</span>
+                      <span class="lang-en">Enhanced vehicle inspection (radioactive/hazmat)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>VII</strong></td>
+                    <td>
+                      <span class="lang-uz">Jurisdiksiya bo'yicha (shtatga xos)</span>
+                      <span class="lang-en">Jurisdictional (state-specific)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>VIII</strong></td>
+                    <td>
+                      <span class="lang-uz">Elektron tekshiruv (ELD/loglar)</span>
+                      <span class="lang-en">Electronic inspection (ELD/logs)</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>
+              <span class="lang-uz">Vazn stansiyalari</span>
+              <span class="lang-en">Weigh Stations</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Umumiy yuk vazni:</strong> 80,000 lbs (brutto)</span>
+                <span class="lang-en"><strong>Gross weight:</strong> 80,000 lbs</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Yagona o'q:</strong> 20,000 lbs</span>
+                <span class="lang-en"><strong>Single axle:</strong> 20,000 lbs</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Tandem o'q:</strong> 34,000 lbs</span>
+                <span class="lang-en"><strong>Tandem axle:</strong> 34,000 lbs</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Chetlab o'tish dasturlari</span>
+              <span class="lang-en">Bypass Programs</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>PrePass:</strong> Transponder yashil chiroq bersa, haydovchi to'xtamasdan o'tadi</span>
+                <span class="lang-en"><strong>PrePass:</strong> If transponder gives green light, driver passes without stopping</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Drivewyze:</strong> Ilovaga asoslangan chetlab o'tish tizimi</span>
+                <span class="lang-en"><strong>Drivewyze:</strong> App-based bypass system</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 9.13 Violations ===== -->
+        <section class="chapter-section card" id="section-9-13">
+          <h2 class="section-title">
+            <span class="section-num">9.13</span>
+            <span class="lang-uz">Qoidabuzarliklar</span>
+            <span class="lang-en">Violations</span>
+          </h2>
+          <div class="section-body">
+            <h3>
+              <span class="lang-uz">Tekshiruv natijalari</span>
+              <span class="lang-en">Inspection Results</span>
+            </h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Natija</span>
+                      <span class="lang-en">Result</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Ma'nosi</span>
+                      <span class="lang-en">Meaning</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Oral warning</strong></td>
+                    <td>
+                      <span class="lang-uz">Og'zaki ogohlantirish — hujjatlanmaydi</span>
+                      <span class="lang-en">Verbal warning — not documented</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Written warning</strong></td>
+                    <td>
+                      <span class="lang-uz">Yozma ogohlantirish</span>
+                      <span class="lang-en">Written warning</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Citation (ticket)</strong></td>
+                    <td>
+                      <span class="lang-uz">Jarima — sudga borishi mumkin</span>
+                      <span class="lang-en">Fine — may go to court</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Out of Service (OOS)</strong></td>
+                    <td>
+                      <span class="lang-uz">Xizmatdan chiqarish — muammo tuzatilgunicha haydash mumkin emas</span>
+                      <span class="lang-en">Taken off road — cannot drive until issue is fixed</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>No violations</strong></td>
+                    <td>
+                      <span class="lang-uz">Qoidabuzarlik topilmadi, lekin tekshiruv yozuvga kiradi</span>
+                      <span class="lang-en">No violations found, but inspection goes on record</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Clean inspection</strong></td>
+                    <td>
+                      <span class="lang-uz">Toza tekshiruv — hech qanday muammo topilmadi (eng yaxshi natija)</span>
+                      <span class="lang-en">Clean inspection — no issues found (best result)</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>
+              <span class="lang-uz">DataQs orqali bahslash</span>
+              <span class="lang-en">Disputing via DataQs</span>
+            </h3>
+            <p>
+              <span class="lang-uz">Tekshiruv qoidabuzarligi noto'g'ri deb hisoblasangiz, FMCSA DataQs tizimi orqali rasmiy bahslashingiz mumkin.</span>
+              <span class="lang-en">If you believe an inspection violation is incorrect, you can formally dispute it through FMCSA's DataQs system.</span>
+            </p>
+
+            <h3>
+              <span class="lang-uz">CSA ball misollari</span>
+              <span class="lang-en">CSA Points Examples</span>
+            </h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Ball</span>
+                      <span class="lang-en">Points</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Qoidabuzarlik misoli</span>
+                      <span class="lang-en">Violation Example</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>10</strong></td><td>
+                    <span class="lang-uz">Mast holda haydash</span>
+                    <span class="lang-en">Driving under the influence</span>
+                  </td></tr>
+                  <tr><td><strong>8</strong></td><td>
+                    <span class="lang-uz">Befarq haydash</span>
+                    <span class="lang-en">Reckless driving</span>
+                  </td></tr>
+                  <tr><td><strong>7</strong></td><td>
+                    <span class="lang-uz">Tezlik — 15+ mph ortiqcha</span>
+                    <span class="lang-en">Speeding — 15+ mph over</span>
+                  </td></tr>
+                  <tr><td><strong>6</strong></td><td>
+                    <span class="lang-uz">Tezlik — 11-14 mph ortiqcha</span>
+                    <span class="lang-en">Speeding — 11-14 mph over</span>
+                  </td></tr>
+                  <tr><td><strong>4</strong></td><td>
+                    <span class="lang-uz">Yo'l belgisiga rioya qilmaslik</span>
+                    <span class="lang-en">Failure to obey traffic sign</span>
+                  </td></tr>
+                  <tr><td><strong>4</strong></td><td>
+                    <span class="lang-uz">Qatorni noto'g'ri o'zgartirish</span>
+                    <span class="lang-en">Improper lane change</span>
+                  </td></tr>
+                  <tr><td><strong>3</strong></td><td>
+                    <span class="lang-uz">Tezlik — 6-10 mph ortiqcha</span>
+                    <span class="lang-en">Speeding — 6-10 mph over</span>
+                  </td></tr>
+                  <tr><td><strong>2</strong></td><td>
+                    <span class="lang-uz">Xavfsiz masofa saqlamaslik</span>
+                    <span class="lang-en">Following too closely</span>
+                  </td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>
+              <span class="lang-uz">Ball o'sish formulasi</span>
+              <span class="lang-en">Points Growth Formula</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>OOS (Out of Service):</strong> Ball + 2 qo'shimcha</span>
+                <span class="lang-en"><strong>OOS (Out of Service):</strong> Points + 2 additional</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Vaqt bo'yicha koeffitsient:</strong> Oxirgi 6 oy = ×3, 6-12 oy = ×2, 12-24 oy = ×1</span>
+                <span class="lang-en"><strong>Time decay multiplier:</strong> Last 6 months = ×3, 6-12 months = ×2, 12-24 months = ×1</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 9.14 Post-Accident Steps ===== -->
+        <section class="chapter-section card" id="section-9-14">
+          <h2 class="section-title">
+            <span class="section-num">9.14</span>
+            <span class="lang-uz">Halokatdan keyingi qadamlar</span>
+            <span class="lang-en">Post-Accident Steps</span>
+          </h2>
+          <div class="section-body">
+            <h3>
+              <span class="lang-uz">5 ta asosiy qadam</span>
+              <span class="lang-en">5 Key Steps</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>1.</strong> Xavfsizlikni ta'minlang — xavf chiroqlarini yoqing, ogohlantirish uchburchaklarini qo'ying</span>
+                <span class="lang-en"><strong>1.</strong> Secure the scene — hazard lights on, set warning triangles</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>2.</strong> 911 ga qo'ng'iroq qiling (zarar yetganlarga yordam, politsiya hisoboti)</span>
+                <span class="lang-en"><strong>2.</strong> Call 911 (help injured, get police report)</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>3.</strong> Kompaniyaga (dispetcher/xavfsizlik bo'limiga) xabar bering</span>
+                <span class="lang-en"><strong>3.</strong> Notify company (dispatcher/safety department)</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>4.</strong> Hujjatlashtiring — suratlar, boshqa haydovchi ma'lumotlari, guvohlar, politsiya hisoboti raqami</span>
+                <span class="lang-en"><strong>4.</strong> Document — photos, other driver info, witnesses, police report number</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>5.</strong> Hech narsani tan olmang — faqat faktlarni ayting</span>
+                <span class="lang-en"><strong>5.</strong> Don't admit fault — state only facts</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">Giyohvand moddalar/alkogol testi qoidalari</span>
+              <span class="lang-en">Drug/Alcohol Test Rules</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz"><strong>Har doim test qilinadi:</strong> Agar halokat natijasida biror kishi halok bo'lsa</span>
+                <span class="lang-en"><strong>Always tested:</strong> If someone dies as a result of the accident</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>Boshqa hollarda test:</strong> Agar truck haydovchisiga jarima yozilsa VA tibbiy yordam ko'rsatilsa YOKI transport vositasi olib ketilsa</span>
+                <span class="lang-en"><strong>Otherwise tested:</strong> If the truck driver gets a citation AND someone receives medical treatment OR a vehicle is towed</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 9.15 Terminology — Chapter 9 ===== -->
+        <section class="chapter-section card" id="section-9-15">
+          <h2 class="section-title">
+            <span class="section-num">9.15</span>
+            <span class="lang-uz">Terminologiya — 9-bob</span>
+            <span class="lang-en">Terminology — Chapter 9</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table terminology-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Inglizcha atama</span>
+                      <span class="lang-en">English Term</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">O'zbekcha tarjima</span>
+                      <span class="lang-en">Uzbek Translation</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Ta'rif</span>
+                      <span class="lang-en">Definition</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>DOT</strong></td>
+                    <td>DOT</td>
+                    <td>
+                      <span class="lang-uz">Department of Transportation — AQSh transport vazirligi</span>
+                      <span class="lang-en">Department of Transportation — federal agency overseeing all transport</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>FMCSA</strong></td>
+                    <td>FMCSA</td>
+                    <td>
+                      <span class="lang-uz">Federal Motor Carrier Safety Administration — tijorat yuk mashinalari xavfsizligi</span>
+                      <span class="lang-en">Federal Motor Carrier Safety Administration — commercial truck safety</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>49 CFR</strong></td>
+                    <td>49 CFR</td>
+                    <td>
+                      <span class="lang-uz">Code of Federal Regulations — transport qoidalari to'plami</span>
+                      <span class="lang-en">Code of Federal Regulations — transportation regulation code</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>USDOT Number</strong></td>
+                    <td>USDOT raqami</td>
+                    <td>
+                      <span class="lang-uz">Tashuvchining federal ro'yxatga olish raqami</span>
+                      <span class="lang-en">Carrier's federal registration number</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>MC Number</strong></td>
+                    <td>MC raqami</td>
+                    <td>
+                      <span class="lang-uz">Yollanma tashish vakolati raqami</span>
+                      <span class="lang-en">For-hire operating authority number</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>SCAC</strong></td>
+                    <td>SCAC</td>
+                    <td>
+                      <span class="lang-uz">Standard Carrier Alpha Code — 2-4 harfli tashuvchi identifikatsiya kodi</span>
+                      <span class="lang-en">Standard Carrier Alpha Code — 2-4 letter carrier ID code</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>CSA</strong></td>
+                    <td>CSA</td>
+                    <td>
+                      <span class="lang-uz">Compliance, Safety, Accountability — FMCSA xavfsizlik dasturi</span>
+                      <span class="lang-en">Compliance, Safety, Accountability — FMCSA safety program</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>SMS</strong></td>
+                    <td>SMS</td>
+                    <td>
+                      <span class="lang-uz">Safety Measurement System — xavfsizlik o'lchash tizimi</span>
+                      <span class="lang-en">Safety Measurement System — safety scoring tool</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>BASICs</strong></td>
+                    <td>BASICs</td>
+                    <td>
+                      <span class="lang-uz">Behavior Analysis and Safety Improvement Categories — 7 ta xavfsizlik kategoriyasi</span>
+                      <span class="lang-en">Behavior Analysis and Safety Improvement Categories — 7 safety areas</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>MVR</strong></td>
+                    <td>MVR</td>
+                    <td>
+                      <span class="lang-uz">Motor Vehicle Record — haydovchilik tarixi hujjati</span>
+                      <span class="lang-en">Motor Vehicle Record — driving history document</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>PSP</strong></td>
+                    <td>PSP</td>
+                    <td>
+                      <span class="lang-uz">Pre-Employment Screening Program — ishga olishdan oldingi tekshiruv</span>
+                      <span class="lang-en">Pre-Employment Screening Program — pre-hire screening</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Clearinghouse</strong></td>
+                    <td>Clearinghouse</td>
+                    <td>
+                      <span class="lang-uz">FMCSA giyohvand moddalar test natijalari bazasi</span>
+                      <span class="lang-en">FMCSA drug/alcohol test results database</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>DQ File</strong></td>
+                    <td>DQ fayl</td>
+                    <td>
+                      <span class="lang-uz">Driver Qualification File — haydovchi malakasi hujjatlari to'plami</span>
+                      <span class="lang-en">Driver Qualification File — collection of driver qualification documents</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>IFTA</strong></td>
+                    <td>IFTA</td>
+                    <td>
+                      <span class="lang-uz">International Fuel Tax Agreement — yoqilg'i solig'i kelishuvi</span>
+                      <span class="lang-en">International Fuel Tax Agreement — fuel tax sharing agreement</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>CARB</strong></td>
+                    <td>CARB</td>
+                    <td>
+                      <span class="lang-uz">California Air Resources Board — Kaliforniya havo sifati nazorat kengashi</span>
+                      <span class="lang-en">California Air Resources Board — California emissions regulator</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>COI</strong></td>
+                    <td>COI</td>
+                    <td>
+                      <span class="lang-uz">Certificate of Insurance — sug'urta guvohnomasi</span>
+                      <span class="lang-en">Certificate of Insurance — proof of insurance document</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Auto Liability</strong></td>
+                    <td>
+                      <span class="lang-uz">Avto javobgarlik sug'urtasi</span>
+                      <span class="lang-en">Auto Liability</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Halokatda boshqalarga yetkazilgan zarar uchun sug'urta (min $750K)</span>
+                      <span class="lang-en">Insurance for damage to others in crash (min $750K)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cargo Insurance</strong></td>
+                    <td>
+                      <span class="lang-uz">Yuk sug'urtasi</span>
+                      <span class="lang-en">Cargo Insurance</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Tashilayotgan yukning sug'urtasi</span>
+                      <span class="lang-en">Insurance covering freight being hauled</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Workers' Comp</strong></td>
+                    <td>
+                      <span class="lang-uz">Ishchilar kompensatsiyasi</span>
+                      <span class="lang-en">Workers' Compensation</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">W-2 xodimlar uchun ish jarohatidan himoya</span>
+                      <span class="lang-en">W-2 employee workplace injury protection</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Occupational Accident</strong></td>
+                    <td>
+                      <span class="lang-uz">Kasbiy baxtsiz hodisa sug'urtasi</span>
+                      <span class="lang-en">Occupational Accident Insurance</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">1099 pudratchilarga workers' comp o'rnidagi himoya</span>
+                      <span class="lang-en">Workers' comp alternative for 1099 contractors</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>DataQs</strong></td>
+                    <td>DataQs</td>
+                    <td>
+                      <span class="lang-uz">Tekshiruv qoidabuzarliklarini bahslash tizimi</span>
+                      <span class="lang-en">System to dispute inspection violations</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Clean Inspection</strong></td>
+                    <td>
+                      <span class="lang-uz">Toza tekshiruv</span>
+                      <span class="lang-en">Clean Inspection</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Hech qanday qoidabuzarlik topilmagan tekshiruv</span>
+                      <span class="lang-en">Inspection with zero violations found</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Out of Service (OOS)</strong></td>
+                    <td>
+                      <span class="lang-uz">Xizmatdan chiqarish</span>
+                      <span class="lang-en">Out of Service</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Muammo tuzatilgunicha haydash taqiqlangan</span>
+                      <span class="lang-en">Cannot drive until issue is fixed</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Detention</strong></td>
+                    <td>
+                      <span class="lang-uz">Kutish to'lovi</span>
+                      <span class="lang-en">Detention</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Yuklash/tushirish joyida ortiqcha kutish uchun to'lov</span>
+                      <span class="lang-en">Payment for excessive waiting at pickup/delivery</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== ASOSIY FIKRLAR (Key Takeaways) ===== -->
+        <section class="chapter-section card takeaways-section" id="takeaways">
+          <h2 class="section-title">
+            <i data-lucide="star" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Asosiy fikrlar</span>
+            <span class="lang-en">Key Takeaways</span>
+          </h2>
+          <div class="section-body">
+            <ul class="takeaways-list">
+              <li>
+                <span class="lang-uz">AQShda yiliga 5,000+ odam truck halokatlarida halok bo'ladi. DOT va FMCSA yuk tashishni tartibga soladi; asosiy qoidalar 49 CFR da, jumladan 382 (giyohvand test), 391 (haydovchi malakasi), 395 (HOS) qismlarida.</span>
+                <span class="lang-en">Over 5,000 die annually in US truck crashes. DOT and FMCSA regulate trucking; key rules are in 49 CFR, including Parts 382 (drug testing), 391 (driver qualification), and 395 (HOS).</span>
+              </li>
+              <li>
+                <span class="lang-uz">Har bir tashuvchiga USDOT raqami kerak; shtatlararo yollanma tashuvchilarga MC raqami ham kerak. FMCSA SAFER Company Snapshot (safer.fmcsa.dot.gov) har qanday tashuvchi haqida ma'lumot beradi.</span>
+                <span class="lang-en">Every carrier needs a USDOT number; interstate for-hire carriers also need an MC number. FMCSA SAFER Company Snapshot (safer.fmcsa.dot.gov) provides data on any carrier.</span>
+              </li>
+              <li>
+                <span class="lang-uz">CSA/SMS tizimi 7 ta BASIC kategoriyada 24 oylik xavfsizlik tarixini o'lchaydi. Foiz ko'rsatkich 65% dan oshsa (halokat uchun 80%), FMCSA aralashishi mumkin. Yangi tashuvchilar 12 oy ichida auditdan o'tadi.</span>
+                <span class="lang-en">CSA/SMS measures 24 months of safety history across 7 BASICs. Percentiles above 65% (80% for crashes) trigger FMCSA intervention. New carriers are audited within 12 months.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Haydovchi DQ faylida CDL tajribasi, MVR, PSP, DOT tibbiy karta (24 oy), giyohvand test natijalari (Clearinghouse) va FCRA talablariga muvofiq jinoyat/kredit tekshiruvi bo'lishi kerak.</span>
+                <span class="lang-en">Driver DQ file must include CDL experience, MVR, PSP, DOT medical card (24 months), drug test results (Clearinghouse), and criminal/credit check per FCRA requirements.</span>
+              </li>
+              <li>
+                <span class="lang-uz">CDL endorsementlari: H (hazmat), N (tanker), T (ikki tirkegli), X (H+N). IFTA har chorakda yoqilg'i solig'i hisoboti talab qiladi. 5 ta shtat og'irlik-masofa solig'i oladi. Kaliforniya CARB qoidalari qat'iy.</span>
+                <span class="lang-en">CDL endorsements: H (hazmat), N (tanker), T (doubles/triples), X (H+N). IFTA requires quarterly fuel tax reporting. 5 states charge weight-distance tax. California CARB rules are strict.</span>
+              </li>
+              <li>
+                <span class="lang-uz">7 xil sug'urta turi mavjud. Auto Liability (min $750K) majburiy. Brokerlar odatda $1M auto, $100K cargo va GL talab qiladi. DOT tekshiruvlari I dan VIII gacha darajada o'tkaziladi.</span>
+                <span class="lang-en">There are 7 insurance types. Auto Liability (min $750K) is required. Brokers typically require $1M auto, $100K cargo, and GL. DOT inspections run from Level I to VIII.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Halokatdan keyin: joy xavfsizligini ta'minlang, 911 ga qo'ng'iroq qiling, kompaniyaga xabar bering, hujjatlashtiring, aybni tan olmang. O'lim yuz bersa giyohvand testi majburiy; boshqa hollarda jarima + tibbiy yordam/tortish bo'lsa test qilinadi.</span>
+                <span class="lang-en">After an accident: secure the scene, call 911, notify company, document, don't admit fault. Drug test is mandatory if death occurs; otherwise test when citation + medical treatment or towing.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== SCENARIOS (Interactive) ===== -->
+        <section class="chapter-section card" id="scenarios">
+          <h2 class="section-title">
+            <i data-lucide="help-circle" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Amaliy vaziyatlar</span>
+            <span class="lang-en">Practice Scenarios</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher vaziyatlarini tahlil qiling va to'g'ri javobni tanlang.</span>
+            <span class="lang-en">Analyze the following real dispatcher situations and choose the correct answer.</span>
+          </p>
+          <div id="scenarios-container"></div>
+        </section>
+
+        <!-- ===== PHONE SCRIPTS ===== -->
+        <section class="chapter-section card" id="phone-scripts">
+          <h2 class="section-title">
+            <i data-lucide="phone" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Telefon skriptlari</span>
+            <span class="lang-en">Phone Scripts</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher telefon muloqotlarini o'rganing. Kalit iboralarni yodlang.</span>
+            <span class="lang-en">Study the following real dispatcher phone conversations. Memorize the key phrases.</span>
+          </p>
+          <div id="scripts-container"></div>
+        </section>
+
+        <!-- ===== MARK AS READ ===== -->
+        <div class="mark-read-wrap">
+          <button class="mark-read-btn" id="mark-read-btn">
+            <i data-lucide="book-check" style="width:18px;height:18px"></i>
+            <span class="lang-uz">O'qildi deb belgilash</span>
+            <span class="lang-en">Mark as read</span>
+          </button>
+        </div>
+
+        <!-- ===== CHAPTER NAVIGATION ===== -->
+        <div class="chapter-nav">
+          <a href="chapter8.html" class="chapter-nav-btn prev">
+            <i data-lucide="arrow-left" style="width:18px;height:18px"></i>
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Oldingi bob</span>
+                <span class="lang-en">Previous Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">AQSh avtomagistral tizimi</span>
+                <span class="lang-en">US Highway and Road System</span>
+              </span>
+            </span>
+          </a>
+          <a href="index.html" class="chapter-nav-btn next">
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Bosh sahifa</span>
+                <span class="lang-en">Home</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Bosh sahifa</span>
+                <span class="lang-en">Home</span>
+              </span>
+            </span>
+            <i data-lucide="arrow-right" style="width:18px;height:18px"></i>
+          </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>
+            <span class="lang-uz">&copy; 2024 Dispatcher Academy — AQSh yuk tashish sanoati bo'yicha o'quv platformasi</span>
+            <span class="lang-en">&copy; 2024 Dispatcher Academy — US Trucking Industry Learning Platform</span>
+          </p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Lucide Icons -->
+  <!-- Progress Tracker -->
+  <script src="js/progress.js"></script>
+
+  <!-- Scenario Data -->
+  <script src="data/scenarios.js"></script>
+
+  <!-- Phone Scripts Data -->
+  <script src="data/scripts.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Scenario Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 9;
+    var container = document.getElementById('scenarios-container');
+    if (!container || typeof scenariosData === 'undefined') return;
+    var chapterScenarios = scenariosData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScenarios.length === 0) return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    function renderScenarios() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScenarios.forEach(function(scenario, idx) {
+        var situation = lang === 'uz' ? scenario.situation_uz : scenario.situation_en;
+        var scenarioEl = document.createElement('div');
+        scenarioEl.className = 'scenario-block';
+        scenarioEl.setAttribute('data-id', scenario.id);
+        var header = '<div class="scenario-header"><span class="scenario-num">' + (idx + 1) + '</span><div class="scenario-situation">' + escHtml(situation) + '</div></div>';
+        var optionsHtml = '<div class="scenario-options">';
+        scenario.options.forEach(function(opt, oi) {
+          var optText = lang === 'uz' ? opt.text_uz : opt.text_en;
+          optionsHtml += '<button class="scenario-option" data-scenario="' + scenario.id + '" data-index="' + oi + '"><span class="option-letter">' + String.fromCharCode(65 + oi) + '</span><span class="option-text">' + escHtml(optText) + '</span></button>';
+        });
+        optionsHtml += '</div>';
+        var feedbackHtml = '<div class="scenario-feedback" id="feedback-' + scenario.id + '" style="display:none"></div>';
+        scenarioEl.innerHTML = header + optionsHtml + feedbackHtml;
+        container.appendChild(scenarioEl);
+      });
+      container.querySelectorAll('.scenario-option').forEach(function(btn) { btn.addEventListener('click', function() { handleAnswer(this); }); });
+    }
+    function handleAnswer(btn) {
+      var scenarioId = btn.getAttribute('data-scenario');
+      var chosenIndex = parseInt(btn.getAttribute('data-index'));
+      var scenario = chapterScenarios.find(function(s) { return s.id === scenarioId; });
+      if (!scenario) return;
+      var lang = getLang();
+      var block = btn.closest('.scenario-block');
+      var allBtns = block.querySelectorAll('.scenario-option');
+      var isCorrect = chosenIndex === scenario.correct_index;
+      allBtns.forEach(function(b) {
+        b.disabled = true; b.classList.add('disabled');
+        var bIdx = parseInt(b.getAttribute('data-index'));
+        if (bIdx === scenario.correct_index) b.classList.add('correct');
+        if (bIdx === chosenIndex && !isCorrect) b.classList.add('incorrect');
+      });
+      var feedbackEl = document.getElementById('feedback-' + scenarioId);
+      var chosenOpt = scenario.options[chosenIndex];
+      var explanation = lang === 'uz' ? chosenOpt.explanation_uz : chosenOpt.explanation_en;
+      feedbackEl.className = 'scenario-feedback ' + (isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+      feedbackEl.innerHTML = '<div class="feedback-icon">' + (isCorrect ? '<i data-lucide="check-circle" style="width:20px;height:20px;color:#16a34a"></i>' : '<i data-lucide="x-circle" style="width:20px;height:20px;color:#dc2626"></i>') + '</div><div class="feedback-text">' + escHtml(explanation) + '</div>';
+      feedbackEl.style.display = 'flex';
+      lucide.createIcons();
+    }
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') {
+          var answered = container.querySelector('.scenario-option.disabled');
+          if (!answered) renderScenarios();
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    renderScenarios();
+  })();
+  </script>
+
+  <!-- Phone Scripts Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 9;
+    var container = document.getElementById('scripts-container');
+    if (!container || typeof scriptsData === 'undefined') return;
+    var chapterScripts = scriptsData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScripts.length === 0) return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    function renderScripts() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScripts.forEach(function(script, idx) {
+        var title = lang === 'uz' ? script.title_uz : script.title_en;
+        var dialogue = lang === 'uz' ? script.script_uz : script.script_en;
+        var phrasesTitle = lang === 'uz' ? 'Kalit iboralar' : 'Key Phrases';
+        var el = document.createElement('div');
+        el.className = 'script-block';
+        var phrasesHtml = '';
+        script.key_phrases.forEach(function(kp) {
+          var phrase = lang === 'uz' ? kp.phrase_uz : kp.phrase_en;
+          phrasesHtml += '<div class="key-phrase"><span class="key-phrase-bullet">▸</span><span class="key-phrase-text">' + escHtml(phrase) + '</span></div>';
+        });
+        el.innerHTML =
+          '<div class="script-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.script-toggle').classList.toggle('open')">' +
+            '<span class="script-num">' + (idx + 1) + '</span>' +
+            '<span class="script-title">' + escHtml(title) + '</span>' +
+            '<i data-lucide="chevron-down" class="script-toggle" style="width:20px;height:20px"></i>' +
+          '</div>' +
+          '<div class="script-body">' +
+            '<div class="script-dialogue">' + escHtml(dialogue) + '</div>' +
+            '<div class="script-key-phrases">' +
+              '<div class="script-key-phrases-title"><i data-lucide="bookmark" style="width:16px;height:16px"></i> ' + escHtml(phrasesTitle) + '</div>' +
+              phrasesHtml +
+            '</div>' +
+          '</div>';
+        container.appendChild(el);
+      });
+      lucide.createIcons();
+    }
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') renderScripts();
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    renderScripts();
+  })();
+  </script>
+
+  <!-- Mark as Read Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 9;
+    var btn = document.getElementById('mark-read-btn');
+    if (!btn || typeof Progress === 'undefined') return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function updateBtn() {
+      var isRead = Progress.isChapterRead(CHAPTER);
+      if (isRead) {
+        btn.classList.add('read');
+        btn.innerHTML = '<i data-lucide="check-circle" style="width:18px;height:18px"></i><span class="lang-uz">O\'qilgan</span><span class="lang-en">Read</span>';
+      } else {
+        btn.classList.remove('read');
+        btn.innerHTML = '<i data-lucide="book-check" style="width:18px;height:18px"></i><span class="lang-uz">O\'qildi deb belgilash</span><span class="lang-en">Mark as read</span>';
+      }
+      lucide.createIcons();
+    }
+    btn.addEventListener('click', function() {
+      if (!Progress.isChapterRead(CHAPTER)) { Progress.markChapterRead(CHAPTER); updateBtn(); }
+    });
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) { if (m.attributeName === 'data-lang') updateBtn(); });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    updateBtn();
+  })();
+  </script>
+</body>
+</html>

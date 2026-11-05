@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="uz" data-lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4-Bob: Avtopark va jihozlar — Dispatcher Academy</title>
+  <meta name="description" content="Truck turlari, brendlar, tashqi qismlar, lizing, DPF regen">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <a href="index.html" class="header-logo">
+        <i data-lucide="truck" class="logo-icon"></i>
+        <span class="logo-text">
+          <span class="lang-uz">Dispatcher Academy</span>
+          <span class="lang-en">Dispatcher Academy</span>
+        </span>
+      </a>
+    </div>
+    <div class="header-right">
+      <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">
+        <i data-lucide="globe"></i>
+        <span class="toggle-label">EN</span>
+      </button>
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <a href="index.html" class="sidebar-link">
+          <i data-lucide="home"></i>
+          <span class="lang-uz">Bosh sahifa</span>
+          <span class="lang-en">Home</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Boblar</span>
+          <span class="lang-en">Chapters</span>
+        </div>
+        <a href="chapter1.html" class="sidebar-link">
+          <span class="chapter-num">1</span>
+          <span class="lang-uz">Logistikaga kirish</span>
+          <span class="lang-en">Introduction to Logistics</span>
+        </a>
+        <a href="chapter2.html" class="sidebar-link">
+          <span class="chapter-num">2</span>
+          <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+          <span class="lang-en">Stakeholders in Trucking</span>
+        </a>
+        <a href="chapter3.html" class="sidebar-link">
+          <span class="chapter-num">3</span>
+          <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+          <span class="lang-en">Truck Drivers and Their Operations</span>
+        </a>
+        <a href="chapter4.html" class="sidebar-link active">
+          <span class="chapter-num">4</span>
+          <span class="lang-uz">Avtopark va jihozlar</span>
+          <span class="lang-en">Fleet and Equipment</span>
+        </a>
+        <a href="chapter5.html" class="sidebar-link">
+          <span class="chapter-num">5</span>
+          <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+          <span class="lang-en">Trailers and Weight Balance</span>
+        </a>
+        <a href="chapter6.html" class="sidebar-link">
+          <span class="chapter-num">6</span>
+          <span class="lang-uz">Yuk turlari</span>
+          <span class="lang-en">Freight Types</span>
+        </a>
+        <a href="chapter7.html" class="sidebar-link">
+          <span class="chapter-num">7</span>
+          <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+          <span class="lang-en">Load Security and Procedures</span>
+        </a>
+        <a href="chapter8.html" class="sidebar-link">
+          <span class="chapter-num">8</span>
+          <span class="lang-uz">AQSh avtomagistral tizimi</span>
+          <span class="lang-en">US Highway and Road System</span>
+        </a>
+        <a href="chapter9.html" class="sidebar-link">
+          <span class="chapter-num">9</span>
+          <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+          <span class="lang-en">US Safety and Compliance</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Asboblar</span>
+          <span class="lang-en">Tools</span>
+        </div>
+        <a href="glossary.html" class="sidebar-link">
+          <i data-lucide="book-open"></i>
+          <span class="lang-uz">Glossariy</span>
+          <span class="lang-en">Glossary</span>
+        </a>
+        <a href="resources.html" class="sidebar-link">
+          <i data-lucide="link"></i>
+          <span class="lang-uz">Resurslar</span>
+          <span class="lang-en">Resources</span>
+        </a>
+        <a href="progress.html" class="sidebar-link">
+          <i data-lucide="bar-chart-3"></i>
+          <span class="lang-uz">Progress</span>
+          <span class="lang-en">Progress</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="app-layout">
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- Chapter Header -->
+        <section class="chapter-header">
+          <div class="chapter-badge-large">4</div>
+          <h1 class="page-title">
+            <span class="lang-uz">Avtopark va jihozlar</span>
+            <span class="lang-en">Fleet and Equipment</span>
+          </h1>
+          <p class="page-subtitle">
+            <span class="lang-uz">15 slayd · Truck turlari, brendlar, tashqi qismlar, lizing, DPF regen</span>
+            <span class="lang-en">15 slides · Truck types, brands, exterior parts, rental vs lease, DPF regen</span>
+          </p>
+        </section>
+
+        <!-- ===== 4.1 Types of Trucks ===== -->
+        <section class="chapter-section card" id="section-4-1">
+          <h2 class="section-title">
+            <span class="section-num">4.1</span>
+            <span class="lang-uz">Truck turlari</span>
+            <span class="lang-en">Types of Trucks</span>
+          </h2>
+          <div class="section-body">
+            <h4>
+              <span class="lang-uz">Semi-Truck (Tractor)</span>
+              <span class="lang-en">Semi-Truck (Tractor)</span>
+            </h4>
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">🛏️</div>
+                <h4>
+                  <span class="lang-uz">Sleeper truck</span>
+                  <span class="lang-en">Sleeper truck</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">O'rindiq orqasida uxlash kabinasi bor — haydovchi uzoq yo'llarda truck ichida dam oladi, mehmonxona xarajati yo'q</span>
+                  <span class="lang-en">Has sleeper cab behind seats — driver rests in truck on long runs, no motel costs</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">☀️</div>
+                <h4>
+                  <span class="lang-uz">Day cab truck</span>
+                  <span class="lang-en">Day cab truck</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Uxlash kabinasi yo'q — mahalliy/regional yuklar uchun, haydovchi har kuni uyiga qaytadi</span>
+                  <span class="lang-en">No sleeper — runs local/regional loads, driver gets home every day</span>
+                </p>
+              </div>
+            </div>
+
+            <h4 style="margin-top:1.5rem">
+              <span class="lang-uz">Straight Truck (To'g'ri truck)</span>
+              <span class="lang-en">Straight Truck</span>
+            </h4>
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">🚚</div>
+                <h4>
+                  <span class="lang-uz">Expedite straight truck</span>
+                  <span class="lang-en">Expedite straight truck</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Odatda 24–26 ft quti va uxlash joyi bor, jamoalar tomonidan shoshilinch uzoq masofali yuklarda ishlatiladi</span>
+                  <span class="lang-en">Usually 24–26 ft box with sleeper, run by teams on urgent long-distance loads</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">📦</div>
+                <h4>
+                  <span class="lang-uz">Box truck</span>
+                  <span class="lang-en">Box truck</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Mahalliy/kichik yuklar uchun. 26,001 lb dan kam bo'lsa ko'pincha CDLsiz haydash mumkin</span>
+                  <span class="lang-en">For local/smaller loads. Under 26,001 lb can often be driven without CDL</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 4.2 Truck Brands ===== -->
+        <section class="chapter-section card" id="section-4-2">
+          <h2 class="section-title">
+            <span class="section-num">4.2</span>
+            <span class="lang-uz">Truck brendlari</span>
+            <span class="lang-en">Truck Brands</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th><span class="lang-uz">Brend</span><span class="lang-en">Brand</span></th>
+                    <th><span class="lang-uz">Bosh kompaniya</span><span class="lang-en">Parent Company</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Freightliner</strong></td><td>Daimler Truck</td></tr>
+                  <tr><td><strong>Western Star</strong></td><td>Daimler Truck</td></tr>
+                  <tr><td><strong>Kenworth</strong></td><td>PACCAR</td></tr>
+                  <tr><td><strong>Peterbilt</strong></td><td>PACCAR</td></tr>
+                  <tr><td><strong>Volvo</strong></td><td>Volvo Group</td></tr>
+                  <tr><td><strong>Mack</strong></td><td>Volvo Group</td></tr>
+                  <tr><td><strong>International</strong></td><td>Traton</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 4.3 Truck Exterior Parts ===== -->
+        <section class="chapter-section card" id="section-4-3">
+          <h2 class="section-title">
+            <span class="section-num">4.3</span>
+            <span class="lang-uz">Truck tashqi qismlari</span>
+            <span class="lang-en">Truck Exterior Parts</span>
+          </h2>
+          <div class="section-body">
+            <div class="info-box">
+              <h4><span class="lang-uz">🔍 Old ko'rinish (Front View)</span><span class="lang-en">🔍 Front View</span></h4>
+              <ul>
+                <li><span class="lang-uz">Marker/Clearance Lights (Amber) — belgi/tozalash chiroqlari</span><span class="lang-en">Marker/Clearance Lights (Amber)</span></li>
+                <li><span class="lang-uz">CMV ID Lights — barcha 3 tasi ishlashi kerak</span><span class="lang-en">CMV ID Lights — all 3 must work</span></li>
+                <li><span class="lang-uz">CB/Radio Antenna — radio antennasi</span><span class="lang-en">CB/Radio Antenna</span></li>
+                <li><span class="lang-uz">Windshield — old oyna</span><span class="lang-en">Windshield</span></li>
+                <li><span class="lang-uz">Wind Deflector — shamol yo'naltiruvchi</span><span class="lang-en">Wind Deflector</span></li>
+                <li><span class="lang-uz">Side View Mirrors ("West Coast Mirrors") — yon ko'zgular</span><span class="lang-en">Side View Mirrors ("West Coast Mirrors")</span></li>
+                <li><span class="lang-uz">Bug-Eye Mirrors — kichik yumaloq ko'zgular</span><span class="lang-en">Bug-Eye Mirrors</span></li>
+                <li><span class="lang-uz">Hood — kapot</span><span class="lang-en">Hood</span></li>
+                <li><span class="lang-uz">Radiator Grille — radiator panjarasi</span><span class="lang-en">Radiator Grille</span></li>
+                <li><span class="lang-uz">Headlights (Low/High Beams) — faralar</span><span class="lang-en">Headlights (Low/High Beams)</span></li>
+                <li><span class="lang-uz">Bumper — bamper</span><span class="lang-en">Bumper</span></li>
+                <li><span class="lang-uz">Turn Signals — burilish chiroqlari</span><span class="lang-en">Turn Signals</span></li>
+                <li><span class="lang-uz">Tag/Plate — raqam belgisi</span><span class="lang-en">Tag/Plate</span></li>
+              </ul>
+            </div>
+
+            <div class="info-box" style="margin-top:1rem">
+              <h4><span class="lang-uz">🔍 Orqa ko'rinish (Rear View)</span><span class="lang-en">🔍 Rear View</span></h4>
+              <ul>
+                <li><span class="lang-uz">Reflectors — aks ettiruvchilar</span><span class="lang-en">Reflectors</span></li>
+                <li><span class="lang-uz">Utility Light — yordamchi chiroq</span><span class="lang-en">Utility Light</span></li>
+                <li><span class="lang-uz">Air &amp; Electric Lines — havo va elektr liniyalari</span><span class="lang-en">Air &amp; Electric Lines</span></li>
+                <li><span class="lang-uz">Mud Flaps — loy tutqichlar</span><span class="lang-en">Mud Flaps</span></li>
+                <li><span class="lang-uz">Exhaust Stack — chiqindi gaz trubasi</span><span class="lang-en">Exhaust Stack</span></li>
+                <li><span class="lang-uz">Fifth Wheel — beshinchi g'ildirak (ulanish plitasi)</span><span class="lang-en">Fifth Wheel</span></li>
+                <li><span class="lang-uz">Tail Lights — orqa chiroqlar</span><span class="lang-en">Tail Lights</span></li>
+                <li><span class="lang-uz">Backup Lights — orqaga yurish chiroqlari</span><span class="lang-en">Backup Lights</span></li>
+              </ul>
+            </div>
+
+            <div class="info-box" style="margin-top:1rem">
+              <h4><span class="lang-uz">🔍 Yon ko'rinish (Side View)</span><span class="lang-en">🔍 Side View</span></h4>
+              <ul>
+                <li><span class="lang-uz">Door/Window/Latch — eshik/oyna/ilgak</span><span class="lang-en">Door/Window/Latch</span></li>
+                <li><span class="lang-uz">Rear Gap Fairing — orqa bo'shliq qoplamasi</span><span class="lang-en">Rear Gap Fairing</span></li>
+                <li><span class="lang-uz">Emergency Equipment — favqulodda jihozlar</span><span class="lang-en">Emergency Equipment</span></li>
+                <li><span class="lang-uz">Catwalk — tractor orqasidagi platforma</span><span class="lang-en">Catwalk</span></li>
+                <li><span class="lang-uz">Quarter Fenders — chorak qanot</span><span class="lang-en">Quarter Fenders</span></li>
+                <li><span class="lang-uz">Tractor Rear Tires — tractor orqa shinalar</span><span class="lang-en">Tractor Rear Tires</span></li>
+                <li><span class="lang-uz">Front Tire — old shina</span><span class="lang-en">Front Tire</span></li>
+                <li><span class="lang-uz">Front Axle Seal — old o'q muhri</span><span class="lang-en">Front Axle Seal</span></li>
+                <li><span class="lang-uz">Front Wheel/Rim — old g'ildirak/disk</span><span class="lang-en">Front Wheel/Rim</span></li>
+                <li><span class="lang-uz">Steps — zinapoya</span><span class="lang-en">Steps</span></li>
+                <li><span class="lang-uz">Fuel Tank — yoqilg'i baki</span><span class="lang-en">Fuel Tank</span></li>
+                <li><span class="lang-uz">Side Fairings — yon qoplamalar</span><span class="lang-en">Side Fairings</span></li>
+                <li><span class="lang-uz">Air Tanks — havo tanklari</span><span class="lang-en">Air Tanks</span></li>
+                <li><span class="lang-uz">Tractor Rear Wheels/Rims — tractor orqa g'ildiraklar/disklar</span><span class="lang-en">Tractor Rear Wheels/Rims</span></li>
+                <li><span class="lang-uz">Tractor Rear Axle Seals — tractor orqa o'q muhrlari</span><span class="lang-en">Tractor Rear Axle Seals</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 4.4 Rental vs Leasing vs Lease-to-Purchase ===== -->
+        <section class="chapter-section card" id="section-4-4">
+          <h2 class="section-title">
+            <span class="section-num">4.4</span>
+            <span class="lang-uz">Truck ijarasi, lizingi va sotib olish</span>
+            <span class="lang-en">Truck Rental vs Leasing vs Lease-to-Purchase</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th><span class="lang-uz">Ijara (Rental)</span><span class="lang-en">Rental</span></th>
+                    <th><span class="lang-uz">Lizing (Lease)</span><span class="lang-en">Lease</span></th>
+                    <th><span class="lang-uz">Sotib olish lizingi</span><span class="lang-en">Lease-to-Purchase</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong><span class="lang-uz">Afzalliklari</span><span class="lang-en">Pros</span></strong></td>
+                    <td><span class="lang-uz">Kichik majburiyat, qarzsiz, texnik xizmat kiritilgan</span><span class="lang-en">Small commitment, no debt, maintenance included</span></td>
+                    <td><span class="lang-uz">Deyarli yangi trucklar, lizing kompaniyasi texnik xizmat ko'rsatadi, kam boshlang'ich to'lov, almashtirish truck mavjud</span><span class="lang-en">Nearly new trucks, maintenance by leasing co, low down payment, replacement truck available</span></td>
+                    <td><span class="lang-uz">Yangi truck, to'lov tugagach carrier egalik qiladi</span><span class="lang-en">New truck, carrier owns it once paid off</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong><span class="lang-uz">Kamchiliklari</span><span class="lang-en">Cons</span></strong></td>
+                    <td><span class="lang-uz">Ko'pincha eski trucklar, kam qulayliklar, eng yuqori haftalik narx</span><span class="lang-en">Often older trucks, few comforts, highest weekly price</span></td>
+                    <td><span class="lang-uz">Shartnoma tugagach truck qaytariladi, kechikkan to'lovlar kreditga zarar</span><span class="lang-en">Truck goes back at contract end, late payments hurt credit</span></td>
+                    <td><span class="lang-uz">Yuqori boshlang'ich to'lov, texnik xizmat kiritilmagan, eng qimmat jami</span><span class="lang-en">High down payment, no maintenance included, most expensive total</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="fact-list" style="margin-top:1rem">
+              <div class="fact-item">
+                <span class="fact-icon">🏢</span>
+                <p><span class="lang-uz"><strong>Asosiy provayderlar:</strong> Ryder, Penske Truck Leasing</span><span class="lang-en"><strong>Major providers:</strong> Ryder, Penske Truck Leasing</span></p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">📊</span>
+                <p><span class="lang-uz"><strong>Hisob eslatmasi:</strong> ASC 842 bo'yicha 12 oydan ortiq lizinglar balans varag'ida ko'rsatiladi; faqat qisqa ijaralar bundan mustasno</span><span class="lang-en"><strong>Accounting note:</strong> Under ASC 842, leases &gt;12 months appear on balance sheet; only short rentals stay off</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 4.5 Supply Lines ===== -->
+        <section class="chapter-section card" id="section-4-5">
+          <h2 class="section-title">
+            <span class="section-num">4.5</span>
+            <span class="lang-uz">Ta'minot liniyalari (Tractor-Trailer ulanishlari)</span>
+            <span class="lang-en">Supply Lines (Tractor-to-Trailer Connections)</span>
+          </h2>
+          <div class="section-body">
+            <p><span class="lang-uz">Kabina orqasida haydovchi tomonida uchta liniya — harakatlanishdan oldin uchtasini ham ulang:</span><span class="lang-en">Three lines behind the cab on the driver's side — connect all three before moving:</span></p>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th><span class="lang-uz">Liniya</span><span class="lang-en">Line</span></th>
+                    <th><span class="lang-uz">Rangi</span><span class="lang-en">Color</span></th>
+                    <th><span class="lang-uz">Vazifasi</span><span class="lang-en">Function</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="lang-uz">Favqulodda (ta'minot)</span><span class="lang-en">Emergency (supply)</span></td>
+                    <td><strong style="color:#e53935"><span class="lang-uz">Qizil (Red)</span><span class="lang-en">Red</span></strong></td>
+                    <td><span class="lang-uz">Trailer havo tanklarini to'ldiradi, havo yo'qolsa favqulodda tormozlarni qo'yadi</span><span class="lang-en">Fills trailer air tanks, sets emergency brakes if air lost</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="lang-uz">Xizmat (Service)</span><span class="lang-en">Service</span></td>
+                    <td><strong style="color:#1565c0"><span class="lang-uz">Ko'k (Blue)</span><span class="lang-en">Blue</span></strong></td>
+                    <td><span class="lang-uz">Tormoz signalini uzatadi — pedalni bosing, trailer tormozlari ishlaydi</span><span class="lang-en">Carries brake signal — press pedal, trailer brakes apply</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="lang-uz">Elektr shnuri (7-way)</span><span class="lang-en">Electrical cord (7-way)</span></td>
+                    <td><strong style="color:#2e7d32"><span class="lang-uz">Yashil (Green)</span><span class="lang-en">Green</span></strong></td>
+                    <td><span class="lang-uz">Trailer chiroqlari va ABS ga quvvat beradi</span><span class="lang-en">Powers trailer lights and ABS</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="highlight-card" style="margin-top:1rem">
+              <p><span class="lang-uz">💡 <strong>Maslahat:</strong> Avval ko'k liniyani ulang — u eng uzoqda joylashgan.</span><span class="lang-en">💡 <strong>Tip:</strong> Connect the blue line first — it is the farthest away.</span></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 4.6 Automotive Fuses ===== -->
+        <section class="chapter-section card" id="section-4-6">
+          <h2 class="section-title">
+            <span class="section-num">4.6</span>
+            <span class="lang-uz">Avtomobil sigortalar (Fuses)</span>
+            <span class="lang-en">Automotive Fuses</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li><span class="lang-uz">Transport vositasi simlarini va jihozlarni himoyalaydi — agar juda ko'p tok oqsa, sigorta zanjirni uzadi</span><span class="lang-en">Protects vehicle wiring and equipment — if too much current flows, fuse breaks circuit</span></li>
+              <li><span class="lang-uz">Standart pichoq sigortalar 32V DC gacha baholangan (ba'zilari 42/48V tizimlari uchun yuqoriroq)</span><span class="lang-en">Standard blade fuses rated up to 32V DC (some higher for 42/48V systems)</span></li>
+              <li><span class="lang-uz">Kuygan sigortani <strong>bir xil amperaj bilan almashtiring, hech qachon yuqoriroq emas</strong></span><span class="lang-en">Replace blown fuse with <strong>same amperage, never higher</strong></span></li>
+              <li><span class="lang-uz">Zaxira sigortalarni olib yuring — truck avtomatik uzgichlardan foydalanmasa, bu majburiy favqulodda jihozdir</span><span class="lang-en">Carry spares — required emergency equipment unless truck uses circuit breakers</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 4.7 DPF Regen ===== -->
+        <section class="chapter-section card" id="section-4-7">
+          <h2 class="section-title">
+            <span class="section-num">4.7</span>
+            <span class="lang-uz">DPF Regen (Eng ko'p uchraydigan truck muammosi)</span>
+            <span class="lang-en">DPF Regen (Most Common Truck Issue)</span>
+          </h2>
+          <div class="section-body">
+            <p><span class="lang-uz">Dizel zarralar filtri (DPF) kuya va kulni tutadi. Kuya davriy ravishda yoqilishi kerak = "regen."</span><span class="lang-en">The Diesel Particulate Filter (DPF) traps soot and ash. Soot must be burned off periodically = "regen."</span></p>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th><span class="lang-uz">Regen turi</span><span class="lang-en">Regen Type</span></th>
+                    <th><span class="lang-uz">Nima sodir bo'ladi</span><span class="lang-en">What Happens</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Passive</strong></td>
+                    <td><span class="lang-uz">Uzoq avtomagistral yurishlarida o'z-o'zidan yonib ketadi</span><span class="lang-en">Burns off by itself on long highway runs</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Active</strong></td>
+                    <td><span class="lang-uz">Dvigatel haydash paytida avtomatik ravishda issiqlik qo'shadi</span><span class="lang-en">Engine adds heat automatically while driving</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Parked</strong></td>
+                    <td><span class="lang-uz">Ogohlantirish chirog'i yonadi — haydovchi to'xtab, boshqaruv panelidan boshlaydi (~20–60 daqiqa)</span><span class="lang-en">Warning light flashes — driver parks and starts from dash (~20–60 min)</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="highlight-card" style="margin-top:1rem">
+              <p><span class="lang-uz">⚠️ <strong>Ogohlantirish:</strong> Chiroqni e'tiborsiz qoldirsangiz → dvigatel quvvati kamayadi (derate) → ustaxonaga borish kerak bo'ladi.</span><span class="lang-en">⚠️ <strong>Warning:</strong> Ignore the light → engine derates (less power) → shop visit required.</span></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 4.8 Terminology ===== -->
+        <section class="chapter-section card" id="section-4-8">
+          <h2 class="section-title">
+            <span class="section-num">4.8</span>
+            <span class="lang-uz">Terminologiya — 4-bob</span>
+            <span class="lang-en">Terminology — Chapter 4</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th><span class="lang-uz">Inglizcha atama</span><span class="lang-en">English Term</span></th>
+                    <th><span class="lang-uz">O'zbekcha tarjima</span><span class="lang-en">Uzbek Translation</span></th>
+                    <th><span class="lang-uz">Ta'rif</span><span class="lang-en">Definition</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Sleeper truck</strong></td>
+                    <td><span class="lang-uz">Uxlash kabinali truck</span><span class="lang-en">Sleeper truck</span></td>
+                    <td><span class="lang-uz">Uzoq masofaga sayohat uchun dam olish joyi bor yuk mashinasi</span><span class="lang-en">Truck with sleeping compartment for long-distance travel</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Day cab</strong></td>
+                    <td><span class="lang-uz">Kunlik kabina</span><span class="lang-en">Day cab</span></td>
+                    <td><span class="lang-uz">Uxlash kabinasiz truck — mahalliy/regional yuklar uchun</span><span class="lang-en">Truck without sleeper — for local/regional loads</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Straight truck</strong></td>
+                    <td><span class="lang-uz">To'g'ri truck</span><span class="lang-en">Straight truck</span></td>
+                    <td><span class="lang-uz">Kabina va kuzov bitta ramada — CDLsiz haydash mumkin (26,001 lb gacha)</span><span class="lang-en">Cab and body on one frame — can be driven without CDL (up to 26,001 lb)</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Fifth wheel</strong></td>
+                    <td><span class="lang-uz">Beshinchi g'ildirak</span><span class="lang-en">Fifth wheel</span></td>
+                    <td><span class="lang-uz">Tractor orqasidagi ulanish plitasi — trailer kingpin kiritiladi</span><span class="lang-en">Coupling plate on back of tractor — trailer kingpin locks in</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Supply lines</strong></td>
+                    <td><span class="lang-uz">Ta'minot liniyalari</span><span class="lang-en">Supply lines</span></td>
+                    <td><span class="lang-uz">Tractor va trailer orasidagi 3 ta ulanish liniyasi (qizil/ko'k/yashil)</span><span class="lang-en">3 connection lines between tractor and trailer (red/blue/green)</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>DPF Regen</strong></td>
+                    <td><span class="lang-uz">DPF Regeneratsiya</span><span class="lang-en">DPF Regen</span></td>
+                    <td><span class="lang-uz">Dizel zarralar filtrini tozalash jarayoni</span><span class="lang-en">Diesel Particulate Filter cleaning process</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lease</strong></td>
+                    <td><span class="lang-uz">Lizing</span><span class="lang-en">Lease</span></td>
+                    <td><span class="lang-uz">Uzoq muddatli truck ijarasi</span><span class="lang-en">Long-term truck rental agreement</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Rental</strong></td>
+                    <td><span class="lang-uz">Ijara</span><span class="lang-en">Rental</span></td>
+                    <td><span class="lang-uz">Qisqa muddatli truck ijarasi</span><span class="lang-en">Short-term truck rental</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== ASOSIY FIKRLAR ===== -->
+        <section class="chapter-section card takeaways-section" id="takeaways">
+          <h2 class="section-title">
+            <i data-lucide="star" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Asosiy fikrlar</span>
+            <span class="lang-en">Key Takeaways</span>
+          </h2>
+          <div class="section-body">
+            <ul class="takeaways-list">
+              <li><span class="lang-uz">Trucklar 4 asosiy turga bo'linadi: sleeper truck (uzoq masofali), day cab (mahalliy), expedite straight truck (shoshilinch) va box truck (kichik yuklar). 7 ta yirik brend: Freightliner, Western Star, Kenworth, Peterbilt, Volvo, Mack, International.</span><span class="lang-en">Trucks come in 4 main types: sleeper (long-haul), day cab (local), expedite straight truck (urgent), and box truck (small loads). 7 major brands: Freightliner, Western Star, Kenworth, Peterbilt, Volvo, Mack, International.</span></li>
+              <li><span class="lang-uz">Truck tashqi qismlarini bilish pre-trip tekshiruv uchun muhim: old (13 qism), orqa (8 qism) va yon (15 qism) tomondan barcha qismlarni tekshiring.</span><span class="lang-en">Knowing truck exterior parts is essential for pre-trip inspection: check all components from front (13 parts), rear (8 parts), and side (15 parts) views.</span></li>
+              <li><span class="lang-uz">Truck olish uchun 3 variant: ijara (rental — qisqa, qimmat), lizing (lease — uzoq, texnik xizmat bilan) va sotib olish lizingi (lease-to-purchase — egalik). Ryder va Penske asosiy provayderlar.</span><span class="lang-en">3 options for getting a truck: rental (short, expensive), lease (long-term, with maintenance), and lease-to-purchase (own it). Ryder and Penske are major providers.</span></li>
+              <li><span class="lang-uz">Tractor-trailer orasida 3 ta ta'minot liniyasi: qizil (favqulodda havo), ko'k (tormoz signali) va yashil (elektr). Ko'k liniyani birinchi ulang.</span><span class="lang-en">3 supply lines connect tractor to trailer: red (emergency air), blue (brake signal), green (electrical). Connect blue first.</span></li>
+              <li><span class="lang-uz">DPF regen eng ko'p uchraydigan truck muammosi. 3 turi: passive, active, parked. Ogohlantirish chirog'ini e'tiborsiz qoldirmang — dvigatel quvvati pasayadi.</span><span class="lang-en">DPF regen is the most common truck issue. 3 types: passive, active, parked. Don't ignore the warning light — engine loses power.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== SCENARIOS (Interactive) ===== -->
+        <section class="chapter-section card" id="scenarios">
+          <h2 class="section-title">
+            <i data-lucide="help-circle" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Amaliy vaziyatlar</span>
+            <span class="lang-en">Practice Scenarios</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher vaziyatlarini tahlil qiling va to'g'ri javobni tanlang.</span>
+            <span class="lang-en">Analyze the following real dispatcher situations and choose the correct answer.</span>
+          </p>
+          <div id="scenarios-container"></div>
+        </section>
+
+        <!-- ===== PHONE SCRIPTS ===== -->
+        <section class="chapter-section card" id="phone-scripts">
+          <h2 class="section-title">
+            <i data-lucide="phone" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Telefon skriptlari</span>
+            <span class="lang-en">Phone Scripts</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher telefon muloqotlarini o'rganing. Kalit iboralarni yodlang.</span>
+            <span class="lang-en">Study the following real dispatcher phone conversations. Memorize the key phrases.</span>
+          </p>
+          <div id="scripts-container"></div>
+        </section>
+
+        <!-- ===== MARK AS READ ===== -->
+        <div class="mark-read-wrap">
+          <button class="mark-read-btn" id="mark-read-btn">
+            <i data-lucide="book-check" style="width:18px;height:18px"></i>
+            <span class="lang-uz">O'qildi deb belgilash</span>
+            <span class="lang-en">Mark as read</span>
+          </button>
+        </div>
+
+        <!-- ===== CHAPTER NAVIGATION ===== -->
+        <div class="chapter-nav">
+          <a href="chapter3.html" class="chapter-nav-btn prev">
+            <i data-lucide="arrow-left" style="width:18px;height:18px"></i>
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Oldingi bob</span>
+                <span class="lang-en">Previous Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+                <span class="lang-en">Truck Drivers and Their Operations</span>
+              </span>
+            </span>
+          </a>
+          <a href="chapter5.html" class="chapter-nav-btn next">
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Keyingi bob</span>
+                <span class="lang-en">Next Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+                <span class="lang-en">Trailers and Weight Balance</span>
+              </span>
+            </span>
+            <i data-lucide="arrow-right" style="width:18px;height:18px"></i>
+          </a>
+        </div>
+
+        <footer class="footer">
+          <p>
+            <span class="lang-uz">&copy; 2024 Dispatcher Academy — AQSh yuk tashish sanoati bo'yicha o'quv platformasi</span>
+            <span class="lang-en">&copy; 2024 Dispatcher Academy — US Trucking Industry Learning Platform</span>
+          </p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Progress Tracker -->
+  <script src="js/progress.js"></script>
+
+  <!-- Scenario Data -->
+  <script src="data/scenarios.js"></script>
+
+  <!-- Phone Scripts Data -->
+  <script src="data/scripts.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Scenario Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 4;
+    var container = document.getElementById('scenarios-container');
+    if (!container || typeof scenariosData === 'undefined') return;
+
+    var chapterScenarios = scenariosData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScenarios.length === 0) return;
+
+    function getLang() {
+      return document.documentElement.getAttribute('data-lang') || 'uz';
+    }
+
+    function escHtml(s) {
+      var d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    function renderScenarios() {
+      var lang = getLang();
+      container.innerHTML = '';
+
+      chapterScenarios.forEach(function(scenario, idx) {
+        var situation = lang === 'uz' ? scenario.situation_uz : scenario.situation_en;
+
+        var scenarioEl = document.createElement('div');
+        scenarioEl.className = 'scenario-block';
+        scenarioEl.setAttribute('data-id', scenario.id);
+
+        var header = '<div class="scenario-header">' +
+          '<span class="scenario-num">' + (idx + 1) + '</span>' +
+          '<div class="scenario-situation">' + escHtml(situation) + '</div>' +
+          '</div>';
+
+        var optionsHtml = '<div class="scenario-options">';
+        scenario.options.forEach(function(opt, oi) {
+          var optText = lang === 'uz' ? opt.text_uz : opt.text_en;
+          optionsHtml += '<button class="scenario-option" data-scenario="' + scenario.id + '" data-index="' + oi + '">' +
+            '<span class="option-letter">' + String.fromCharCode(65 + oi) + '</span>' +
+            '<span class="option-text">' + escHtml(optText) + '</span>' +
+            '</button>';
+        });
+        optionsHtml += '</div>';
+
+        var feedbackHtml = '<div class="scenario-feedback" id="feedback-' + scenario.id + '" style="display:none"></div>';
+
+        scenarioEl.innerHTML = header + optionsHtml + feedbackHtml;
+        container.appendChild(scenarioEl);
+      });
+
+      container.querySelectorAll('.scenario-option').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          handleAnswer(this);
+        });
+      });
+    }
+
+    function handleAnswer(btn) {
+      var scenarioId = btn.getAttribute('data-scenario');
+      var chosenIndex = parseInt(btn.getAttribute('data-index'));
+      var scenario = chapterScenarios.find(function(s) { return s.id === scenarioId; });
+      if (!scenario) return;
+
+      var lang = getLang();
+      var block = btn.closest('.scenario-block');
+      var allBtns = block.querySelectorAll('.scenario-option');
+      var isCorrect = chosenIndex === scenario.correct_index;
+
+      allBtns.forEach(function(b) {
+        b.disabled = true;
+        b.classList.add('disabled');
+        var bIdx = parseInt(b.getAttribute('data-index'));
+        if (bIdx === scenario.correct_index) {
+          b.classList.add('correct');
+        }
+        if (bIdx === chosenIndex && !isCorrect) {
+          b.classList.add('incorrect');
+        }
+      });
+
+      var feedbackEl = document.getElementById('feedback-' + scenarioId);
+      var chosenOpt = scenario.options[chosenIndex];
+      var explanation = lang === 'uz' ? chosenOpt.explanation_uz : chosenOpt.explanation_en;
+
+      feedbackEl.className = 'scenario-feedback ' + (isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+      feedbackEl.innerHTML =
+        '<div class="feedback-icon">' +
+        (isCorrect
+          ? '<i data-lucide="check-circle" style="width:20px;height:20px;color:#16a34a"></i>'
+          : '<i data-lucide="x-circle" style="width:20px;height:20px;color:#dc2626"></i>') +
+        '</div>' +
+        '<div class="feedback-text">' + escHtml(explanation) + '</div>';
+      feedbackEl.style.display = 'flex';
+      lucide.createIcons();
+    }
+
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') {
+          var answered = container.querySelector('.scenario-option.disabled');
+          if (!answered) renderScenarios();
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+
+    renderScenarios();
+  })();
+  </script>
+
+  <!-- Phone Scripts Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 4;
+    var container = document.getElementById('scripts-container');
+    if (!container || typeof scriptsData === 'undefined') return;
+    var chapterScripts = scriptsData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScripts.length === 0) return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    function renderScripts() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScripts.forEach(function(script, idx) {
+        var title = lang === 'uz' ? script.title_uz : script.title_en;
+        var dialogue = lang === 'uz' ? script.script_uz : script.script_en;
+        var phrasesTitle = lang === 'uz' ? 'Kalit iboralar' : 'Key Phrases';
+        var el = document.createElement('div');
+        el.className = 'script-block';
+        var phrasesHtml = '';
+        script.key_phrases.forEach(function(kp) {
+          var phrase = lang === 'uz' ? kp.phrase_uz : kp.phrase_en;
+          phrasesHtml += '<div class="key-phrase"><span class="key-phrase-bullet">▸</span><span class="key-phrase-text">' + escHtml(phrase) + '</span></div>';
+        });
+        el.innerHTML =
+          '<div class="script-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.script-toggle').classList.toggle('open')">' +
+            '<span class="script-num">' + (idx + 1) + '</span>' +
+            '<span class="script-title">' + escHtml(title) + '</span>' +
+            '<i data-lucide="chevron-down" class="script-toggle" style="width:20px;height:20px"></i>' +
+          '</div>' +
+          '<div class="script-body">' +
+            '<div class="script-dialogue">' + escHtml(dialogue) + '</div>' +
+            '<div class="script-key-phrases">' +
+              '<div class="script-key-phrases-title"><i data-lucide="bookmark" style="width:16px;height:16px"></i> ' + escHtml(phrasesTitle) + '</div>' +
+              phrasesHtml +
+            '</div>' +
+          '</div>';
+        container.appendChild(el);
+      });
+      lucide.createIcons();
+    }
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') renderScripts();
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    renderScripts();
+  })();
+  </script>
+
+  <!-- Mark as Read Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 4;
+    var btn = document.getElementById('mark-read-btn');
+    if (!btn || typeof Progress === 'undefined') return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function updateBtn() {
+      var isRead = Progress.isChapterRead(CHAPTER);
+      if (isRead) {
+        btn.classList.add('read');
+        btn.innerHTML = '<i data-lucide="check-circle" style="width:18px;height:18px"></i><span class="lang-uz">O\'qilgan</span><span class="lang-en">Read</span>';
+      } else {
+        btn.classList.remove('read');
+        btn.innerHTML = '<i data-lucide="book-check" style="width:18px;height:18px"></i><span class="lang-uz">O\'qildi deb belgilash</span><span class="lang-en">Mark as read</span>';
+      }
+      lucide.createIcons();
+    }
+    btn.addEventListener('click', function() {
+      if (!Progress.isChapterRead(CHAPTER)) { Progress.markChapterRead(CHAPTER); updateBtn(); }
+    });
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) { if (m.attributeName === 'data-lang') updateBtn(); });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    updateBtn();
+  })();
+  </script>
+</body>
+</html>

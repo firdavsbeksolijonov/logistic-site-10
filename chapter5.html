@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="uz" data-lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5-Bob: Traylerlar va og'irlik balansi — Dispatcher Academy</title>
+  <meta name="description" content="Trailer turlari, dry van, reefer, trailer jihozlari, og'irlik balansi">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <a href="index.html" class="header-logo">
+        <i data-lucide="truck" class="logo-icon"></i>
+        <span class="logo-text">
+          <span class="lang-uz">Dispatcher Academy</span>
+          <span class="lang-en">Dispatcher Academy</span>
+        </span>
+      </a>
+    </div>
+    <div class="header-right">
+      <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">
+        <i data-lucide="globe"></i>
+        <span class="toggle-label">EN</span>
+      </button>
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <a href="index.html" class="sidebar-link">
+          <i data-lucide="home"></i>
+          <span class="lang-uz">Bosh sahifa</span>
+          <span class="lang-en">Home</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Boblar</span>
+          <span class="lang-en">Chapters</span>
+        </div>
+        <a href="chapter1.html" class="sidebar-link">
+          <span class="chapter-num">1</span>
+          <span class="lang-uz">Logistikaga kirish</span>
+          <span class="lang-en">Introduction to Logistics</span>
+        </a>
+        <a href="chapter2.html" class="sidebar-link">
+          <span class="chapter-num">2</span>
+          <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+          <span class="lang-en">Stakeholders in Trucking</span>
+        </a>
+        <a href="chapter3.html" class="sidebar-link">
+          <span class="chapter-num">3</span>
+          <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+          <span class="lang-en">Truck Drivers and Their Operations</span>
+        </a>
+        <a href="chapter4.html" class="sidebar-link">
+          <span class="chapter-num">4</span>
+          <span class="lang-uz">Avtopark va jihozlar</span>
+          <span class="lang-en">Fleet and Equipment</span>
+        </a>
+        <a href="chapter5.html" class="sidebar-link active">
+          <span class="chapter-num">5</span>
+          <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+          <span class="lang-en">Trailers and Weight Balance</span>
+        </a>
+        <a href="chapter6.html" class="sidebar-link">
+          <span class="chapter-num">6</span>
+          <span class="lang-uz">Yuk turlari</span>
+          <span class="lang-en">Freight Types</span>
+        </a>
+        <a href="chapter7.html" class="sidebar-link">
+          <span class="chapter-num">7</span>
+          <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+          <span class="lang-en">Load Security and Procedures</span>
+        </a>
+        <a href="chapter8.html" class="sidebar-link">
+          <span class="chapter-num">8</span>
+          <span class="lang-uz">AQSh avtomagistral tizimi</span>
+          <span class="lang-en">US Highway and Road System</span>
+        </a>
+        <a href="chapter9.html" class="sidebar-link">
+          <span class="chapter-num">9</span>
+          <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+          <span class="lang-en">US Safety and Compliance</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Asboblar</span>
+          <span class="lang-en">Tools</span>
+        </div>
+        <a href="glossary.html" class="sidebar-link">
+          <i data-lucide="book-open"></i>
+          <span class="lang-uz">Glossariy</span>
+          <span class="lang-en">Glossary</span>
+        </a>
+        <a href="resources.html" class="sidebar-link">
+          <i data-lucide="link"></i>
+          <span class="lang-uz">Resurslar</span>
+          <span class="lang-en">Resources</span>
+        </a>
+        <a href="progress.html" class="sidebar-link">
+          <i data-lucide="bar-chart-3"></i>
+          <span class="lang-uz">Progress</span>
+          <span class="lang-en">Progress</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="app-layout">
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- Chapter Header -->
+        <section class="chapter-header">
+          <div class="chapter-badge-large">5</div>
+          <h1 class="page-title">
+            <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+            <span class="lang-en">Trailers and Weight Balance</span>
+          </h1>
+          <p class="page-subtitle">
+            <span class="lang-uz">37 slayd · Trailer turlari, spetsifikatsiyalar, jihozlar, og'irlik chegaralari</span>
+            <span class="lang-en">37 slides · Trailer types, specs, equipment, weight limits</span>
+          </p>
+        </section>
+
+        <!-- ===== 5.1 Types of Trailers ===== -->
+        <section class="chapter-section card" id="section-5-1">
+          <h2 class="section-title">
+            <span class="section-num">5.1</span>
+            <span class="lang-uz">Trailer turlari</span>
+            <span class="lang-en">Types of Trailers</span>
+          </h2>
+          <div class="section-body">
+
+            <h4><span class="lang-uz">📦 Yopiq (Enclosed) traylerlar</span><span class="lang-en">📦 Enclosed Trailers</span></h4>
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">📦</div>
+                <h4>Dry Van</h4>
+                <p><span class="lang-uz">Eng keng tarqalgan — yopiq quti, umumiy yuklarni ob-havo va o'g'rilikdan himoyalaydi</span><span class="lang-en">Most common — enclosed box, protects general freight from weather and theft</span></p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">❄️</div>
+                <h4>Reefer</h4>
+                <p><span class="lang-uz">Muzlatgichli trailer — sovuq yoki issiq harorat nazorati kerak bo'lgan yuklar uchun</span><span class="lang-en">Refrigerated trailer — for loads needing cold or warm temperature control</span></p>
+              </div>
+            </div>
+
+            <h4 style="margin-top:1.5rem"><span class="lang-uz">🏗️ Ochiq (Open/Flatbed) traylerlar</span><span class="lang-en">🏗️ Open/Flatbed Trailers</span></h4>
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">🏗️</div>
+                <h4>Flatbed</h4>
+                <p><span class="lang-uz">Tekis platforma — qurilish materiallari, yog'och, katta jihozlar uchun</span><span class="lang-en">Flat platform — construction materials, lumber, large equipment</span></p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🚗</div>
+                <h4>Auto Hauler</h4>
+                <p><span class="lang-uz">Avtomobillar tashish uchun maxsus trailer (odatda 7–10 ta mashina)</span><span class="lang-en">Specialized trailer for transporting vehicles (usually 7–10 cars)</span></p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">📐</div>
+                <h4>Step Deck</h4>
+                <p><span class="lang-uz">2 darajali platforma — yuqori yuklar uchun, balandlik chegarasini qondiradi</span><span class="lang-en">2-level platform — for tall loads, meets height limits</span></p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">⬇️</div>
+                <h4>Double Drop / Lowboy</h4>
+                <p><span class="lang-uz">Juda baland/og'ir yuklar uchun — past platforma, maxsus ruxsatnoma kerak</span><span class="lang-en">For very tall/heavy loads — low platform, special permits needed</span></p>
+              </div>
+            </div>
+
+            <h4 style="margin-top:1.5rem"><span class="lang-uz">🔧 Maxsus traylerlar</span><span class="lang-en">🔧 Specialty Trailers</span></h4>
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">🏔️</div>
+                <h4>Dump</h4>
+                <p><span class="lang-uz">Qum, shag'al, tosh tashish va to'kish uchun</span><span class="lang-en">For hauling and dumping sand, gravel, rock</span></p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">💨</div>
+                <h4>Pneumatic</h4>
+                <p><span class="lang-uz">Quruq ko'mir, un, sement — havo bilan bo'shatiladi</span><span class="lang-en">Dry bulk like flour, cement — unloaded by air pressure</span></p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🌾</div>
+                <h4>Hopper</h4>
+                <p><span class="lang-uz">Don, urug' — pastdan ochib to'kiladi</span><span class="lang-en">Grain, seed — bottom-unloaded</span></p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🛢️</div>
+                <h4>Tanker</h4>
+                <p><span class="lang-uz">Suyuq yuklar — yoqilg'i, kimyoviy moddalar, sut</span><span class="lang-en">Liquid freight — fuel, chemicals, milk</span></p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🐄</div>
+                <h4>Livestock</h4>
+                <p><span class="lang-uz">Tirik hayvonlar uchun ventilyatsiyali trailer</span><span class="lang-en">Ventilated trailer for live animals</span></p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🎪</div>
+                <h4>Conestoga</h4>
+                <p><span class="lang-uz">Siljuvchi brezent qopqoqli flatbed — ob-havo himoyasi bilan ochiq yuklash</span><span class="lang-en">Flatbed with sliding tarp cover — open loading with weather protection</span></p>
+              </div>
+            </div>
+
+            <h4 style="margin-top:1.5rem"><span class="lang-uz">🔩 Boshqa traylerlar</span><span class="lang-en">🔩 Other Trailers</span></h4>
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">📦</div>
+                <h4>Container Chassis</h4>
+                <p><span class="lang-uz">Intermodal konteynerlarni tashish uchun rama</span><span class="lang-en">Frame for hauling intermodal containers</span></p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🎡</div>
+                <h4>Carnival Ride</h4>
+                <p><span class="lang-uz">Ko'chma attraksion va bayram jihozlari uchun maxsus trailer</span><span class="lang-en">Specialized trailer for mobile amusement rides and fair equipment</span></p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🛢️</div>
+                <h4>Frac Tank</h4>
+                <p><span class="lang-uz">Neft va gaz sanoatida suyuqlik saqlash uchun katta hajmli tank</span><span class="lang-en">Large-volume tank for fluid storage in oil and gas industry</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 5.2 Dry Van Specs ===== -->
+        <section class="chapter-section card" id="section-5-2">
+          <h2 class="section-title">
+            <span class="section-num">5.2</span>
+            <span class="lang-uz">Dry Van spetsifikatsiyalari</span>
+            <span class="lang-en">Dry Van Specifications</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th><span class="lang-uz">Parametr</span><span class="lang-en">Parameter</span></th>
+                    <th><span class="lang-uz">Qiymat</span><span class="lang-en">Value</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="lang-uz">Uzunlik (tashqi)</span><span class="lang-en">Length (exterior)</span></td><td>53 ft</td></tr>
+                  <tr><td><span class="lang-uz">Uzunlik (ichki)</span><span class="lang-en">Length (interior)</span></td><td>52 ft 6 in</td></tr>
+                  <tr><td><span class="lang-uz">Kengligi (ichki)</span><span class="lang-en">Width (interior)</span></td><td>8 ft 2 in (98.5 in)</td></tr>
+                  <tr><td><span class="lang-uz">Balandligi (ichki)</span><span class="lang-en">Height (interior)</span></td><td>9 ft (108 in)</td></tr>
+                  <tr><td><span class="lang-uz">Eshik kengligi</span><span class="lang-en">Door width</span></td><td>7 ft 8 in (92 in)</td></tr>
+                  <tr><td><span class="lang-uz">Eshik balandligi</span><span class="lang-en">Door height</span></td><td>9 ft (108 in)</td></tr>
+                  <tr><td><span class="lang-uz">Palet sig'imi</span><span class="lang-en">Pallet capacity</span></td><td><span class="lang-uz">26 standart palet (48×40 in)</span><span class="lang-en">26 standard pallets (48×40 in)</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 style="margin-top:1.5rem"><span class="lang-uz">Dry Van variantlari (14 ta)</span><span class="lang-en">Dry Van Options (14)</span></h4>
+            <div class="items-grid">
+              <div class="item-card">
+                <h4>E-Track</h4>
+                <p><span class="lang-uz">Devor bo'ylab mahkamlash yo'llari — kamar va to'siqlarni biriktirish uchun</span><span class="lang-en">Wall-mounted tie-down rails for straps and bars</span></p>
+              </div>
+              <div class="item-card">
+                <h4>Swing Doors</h4>
+                <p><span class="lang-uz">Standart orqa eshiklar — 270° ochiladi</span><span class="lang-en">Standard rear doors — open 270°</span></p>
+              </div>
+              <div class="item-card">
+                <h4>Roll-up Door</h4>
+                <p><span class="lang-uz">Yuqoriga siljuvchi eshik — LTL yuklar uchun qulay</span><span class="lang-en">Overhead sliding door — convenient for LTL loads</span></p>
+              </div>
+              <div class="item-card">
+                <h4>Side Doors</h4>
+                <p><span class="lang-uz">Yon tomondan yuklash eshiklari</span><span class="lang-en">Side loading doors</span></p>
+              </div>
+              <div class="item-card">
+                <h4>Translucent Roof</h4>
+                <p><span class="lang-uz">Shaffof tom — ichkariga tabiiy yorug'lik o'tkazadi</span><span class="lang-en">Translucent roof panel — lets natural light inside</span></p>
+              </div>
+              <div class="item-card">
+                <h4><span class="lang-uz">Plitali va yog'ochli devorlar</span><span class="lang-en">Plated vs Wood-Lined Walls</span></h4>
+                <p><span class="lang-uz">Metall plitalar (chidamli) yoki yog'och qoplama (yuklarni himoyalaydi)</span><span class="lang-en">Metal plates (durable) or wood lining (protects cargo)</span></p>
+              </div>
+              <div class="item-card">
+                <h4>Wooden Floor</h4>
+                <p><span class="lang-uz">Yog'och pol — standart, forklift va palletlarga mos</span><span class="lang-en">Wood floor — standard, forklift and pallet friendly</span></p>
+              </div>
+              <div class="item-card">
+                <h4>Vented Van</h4>
+                <p><span class="lang-uz">Shamollatish teshiklari — nam to'planishini oldini oladi</span><span class="lang-en">Ventilation holes — prevents moisture buildup</span></p>
+              </div>
+              <div class="item-card">
+                <h4>Roller Bed</h4>
+                <p><span class="lang-uz">Rolikli pol — yukni oson siljitish uchun (pochta va paketlar)</span><span class="lang-en">Roller floor — easy cargo sliding (mail and parcels)</span></p>
+              </div>
+              <div class="item-card">
+                <h4>Liftgate</h4>
+                <p><span class="lang-uz">Orqa ko'targich — yuklash rampa bo'lmagan joylarda yukni tushirish uchun</span><span class="lang-en">Rear lift — for unloading where no dock is available</span></p>
+              </div>
+              <div class="item-card">
+                <h4>Air Ride</h4>
+                <p><span class="lang-uz">Havo pnevmatik osma — mo'rt yuklarni silkitishdan himoyalaydi</span><span class="lang-en">Air suspension — protects fragile cargo from vibration</span></p>
+              </div>
+              <div class="item-card">
+                <h4>Food Grade</h4>
+                <p><span class="lang-uz">Oziq-ovqat uchun tozalangan va sertifikatlangan trailer</span><span class="lang-en">Cleaned and certified trailer for food transport</span></p>
+              </div>
+              <div class="item-card">
+                <h4>Side Skirts</h4>
+                <p><span class="lang-uz">Aerodinamik yon panellar — yoqilg'i tejaydi</span><span class="lang-en">Aerodynamic side panels — saves fuel</span></p>
+              </div>
+            </div>
+
+            <div class="highlight-card" style="margin-top:1rem">
+              <p><span class="lang-uz">💡 <strong>Eng ko'p ishlatiladigan konfiguratsiya:</strong> 53 ft dry van, swing doors, E-track, yog'och pol</span><span class="lang-en">💡 <strong>Most common setup:</strong> 53 ft dry van, swing doors, E-track, wooden floor</span></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 5.3 Reefer Specs ===== -->
+        <section class="chapter-section card" id="section-5-3">
+          <h2 class="section-title">
+            <span class="section-num">5.3</span>
+            <span class="lang-uz">Reefer spetsifikatsiyalari</span>
+            <span class="lang-en">Reefer Specifications</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th><span class="lang-uz">Parametr</span><span class="lang-en">Parameter</span></th>
+                    <th><span class="lang-uz">Qiymat</span><span class="lang-en">Value</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="lang-uz">Uzunlik (ichki)</span><span class="lang-en">Length (interior)</span></td><td>52 ft 6 in</td></tr>
+                  <tr><td><span class="lang-uz">Kengligi (ichki)</span><span class="lang-en">Width (interior)</span></td><td>8 ft 2 in (98.5 in)</td></tr>
+                  <tr><td><span class="lang-uz">Balandligi (ichki)</span><span class="lang-en">Height (interior)</span></td><td>8 ft 9 in (105 in)</td></tr>
+                  <tr><td><span class="lang-uz">Eshik kengligi</span><span class="lang-en">Door width</span></td><td>7 ft 8 in (92 in)</td></tr>
+                  <tr><td><span class="lang-uz">Eshik balandligi</span><span class="lang-en">Door height</span></td><td>8 ft 9 in (105 in)</td></tr>
+                  <tr><td><span class="lang-uz">Harorat diapazoni</span><span class="lang-en">Temperature range</span></td><td>-20°F to +80°F</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 style="margin-top:1.5rem"><span class="lang-uz">Harorat sozlash nuqtalari (5 ta)</span><span class="lang-en">Temperature Setting Points (5)</span></h4>
+            <div class="fact-list">
+              <div class="fact-item">
+                <span class="fact-icon">1️⃣</span>
+                <p><span class="lang-uz"><strong>Set Point:</strong> Kerakli harorat — dispetcher yoki BOL asosida o'rnatiladi</span><span class="lang-en"><strong>Set Point:</strong> Desired temperature — set per dispatcher or BOL</span></p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">2️⃣</span>
+                <p><span class="lang-uz"><strong>Return Air:</strong> Trailerga qaytayotgan havo harorati — bu haqiqiy yuk haroratiga eng yaqin</span><span class="lang-en"><strong>Return Air:</strong> Air temp returning to unit — closest reading to actual cargo temp</span></p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">3️⃣</span>
+                <p><span class="lang-uz"><strong>Discharge Air:</strong> Birlikdan chiqayotgan havo — set point dan sovuqroq yoki issiqroq bo'lishi mumkin</span><span class="lang-en"><strong>Discharge Air:</strong> Air leaving the unit — may be colder or warmer than set point</span></p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">4️⃣</span>
+                <p><span class="lang-uz"><strong>Continuous vs Start/Stop:</strong> Continuous — fan doimo ishlaydi (muzlatilgan yuklar); Start/Stop — kompressor kerak bo'lganda yonadi (salqin yuklar)</span><span class="lang-en"><strong>Continuous vs Start/Stop:</strong> Continuous — fan always runs (frozen); Start/Stop — compressor cycles as needed (cool loads)</span></p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">5️⃣</span>
+                <p><span class="lang-uz"><strong>Pre-cool:</strong> Yuklashdan oldin traylerni kerakli haroratga olib kelish — 1–2 soat kerak bo'lishi mumkin</span><span class="lang-en"><strong>Pre-cool:</strong> Bringing trailer to temp before loading — may need 1–2 hours</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 5.4 Trailer Equipment ===== -->
+        <section class="chapter-section card" id="section-5-4">
+          <h2 class="section-title">
+            <span class="section-num">5.4</span>
+            <span class="lang-uz">Trailer jihozlari</span>
+            <span class="lang-en">Trailer Equipment</span>
+          </h2>
+          <div class="section-body">
+
+            <div class="info-box">
+              <h4><span class="lang-uz">🦵 Landing Gear (Tirgovichlar)</span><span class="lang-en">🦵 Landing Gear</span></h4>
+              <p><span class="lang-uz">Trailer old qismidagi ikkita oyoq — tractor ulanmagan paytda traylerni ushlab turadi. Tractor bilan ulanganda oyoqlar ko'tariladi (crank yordamida). Ulanishdan oldin oyoqlarni tushirish va yukdan keyin ko'tarish kerak.</span><span class="lang-en">Two legs at front of trailer — supports trailer when no tractor attached. Raised (via crank) when connected to tractor. Lower before unhooking, raise after coupling.</span></p>
+            </div>
+
+            <div class="info-box" style="margin-top:1rem">
+              <h4><span class="lang-uz">🔗 Fifth Wheel (Beshinchi g'ildirak)</span><span class="lang-en">🔗 Fifth Wheel</span></h4>
+              <p><span class="lang-uz">Tractor orqasidagi ulanish plitasi. Trailer kingpin-ni qulflaydi.</span><span class="lang-en">Coupling plate on back of tractor. Locks onto trailer kingpin.</span></p>
+              <h4 style="margin-top:0.75rem"><span class="lang-uz">Pre-trip tekshiruv (4 nuqta):</span><span class="lang-en">Pre-trip check (4 points):</span></h4>
+              <ul>
+                <li><span class="lang-uz">Kingpin to'g'ri qulflangan — tug test o'tkazing</span><span class="lang-en">Kingpin properly locked — do a tug test</span></li>
+                <li><span class="lang-uz">Release handle yopiq va qulflangan</span><span class="lang-en">Release handle closed and locked</span></li>
+                <li><span class="lang-uz">Tirqish yo'q — plita va trailer orasida bo'shliq tekshiring</span><span class="lang-en">No gap — check space between plate and trailer</span></li>
+                <li><span class="lang-uz">Moylash — fifth wheel yuza greased bo'lishi kerak</span><span class="lang-en">Lubrication — fifth wheel surface must be greased</span></li>
+              </ul>
+              <p style="margin-top:0.75rem"><span class="lang-uz"><strong>Sliding fifth wheel:</strong> Og'irlikni qayta taqsimlash uchun oldga/orqaga siljitiladi — steer o'qi og'irligini moslash uchun ishlatiladi.</span><span class="lang-en"><strong>Sliding fifth wheel:</strong> Moves forward/back to redistribute weight — used to adjust steer axle weight.</span></p>
+            </div>
+
+            <div class="info-box" style="margin-top:1rem">
+              <h4><span class="lang-uz">🛑 Tormoz vanalari (Brake Valves)</span><span class="lang-en">🛑 Brake Valves</span></h4>
+              <div class="items-grid" style="margin-top:0.75rem">
+                <div class="item-card" style="border-left:4px solid #fdd835">
+                  <h4><span class="lang-uz">🔶 Sariq olmos (Yellow Diamond)</span><span class="lang-en">🔶 Yellow Diamond</span></h4>
+                  <p><span class="lang-uz"><strong>Parking/Emergency tormoz.</strong> Tortib chiqarish = tormoz qo'yiladi. Bosish = tormoz bo'shatiladi. Havo yo'qolsa avtomatik tormozlaydi.</span><span class="lang-en"><strong>Parking/Emergency brake.</strong> Pull out = brakes set. Push in = brakes released. Auto-applies if air lost.</span></p>
+                </div>
+                <div class="item-card" style="border-left:4px solid #e53935">
+                  <h4><span class="lang-uz">🔴 Qizil sakkizburchak (Red Octagon)</span><span class="lang-en">🔴 Red Octagon</span></h4>
+                  <p><span class="lang-uz"><strong>Trailer tormoz nazorati.</strong> Tortib chiqarish = faqat trailer tormozlari qo'yiladi. Tekshiruv va bobtail haydash uchun ishlatiladi.</span><span class="lang-en"><strong>Trailer brake control.</strong> Pull out = only trailer brakes apply. Used for testing and bobtail driving.</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 5.5 Weight Balance ===== -->
+        <section class="chapter-section card" id="section-5-5">
+          <h2 class="section-title">
+            <span class="section-num">5.5</span>
+            <span class="lang-uz">Og'irlik balansi</span>
+            <span class="lang-en">Weight Balance</span>
+          </h2>
+          <div class="section-body">
+
+            <h4><span class="lang-uz">Federal og'irlik chegaralari</span><span class="lang-en">Federal Weight Limits</span></h4>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th><span class="lang-uz">O'q / Jami</span><span class="lang-en">Axle / Total</span></th>
+                    <th><span class="lang-uz">Maksimal og'irlik</span><span class="lang-en">Max Weight</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong><span class="lang-uz">GVW (Jami yuk og'irligi)</span><span class="lang-en">GVW (Gross Vehicle Weight)</span></strong></td><td>80,000 lbs</td></tr>
+                  <tr><td><strong><span class="lang-uz">Steer o'qi</span><span class="lang-en">Steer axle</span></strong></td><td>~12,000 lbs</td></tr>
+                  <tr><td><strong><span class="lang-uz">Drive o'qlari</span><span class="lang-en">Drive axles</span></strong></td><td>34,000 lbs</td></tr>
+                  <tr><td><strong><span class="lang-uz">Trailer o'qlari</span><span class="lang-en">Trailer axles</span></strong></td><td>34,000 lbs</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="info-box" style="margin-top:1.5rem">
+              <h4><span class="lang-uz">⚖️ CAT Scale</span><span class="lang-en">⚖️ CAT Scale</span></h4>
+              <ul>
+                <li><span class="lang-uz">Truck stop-lardagi sertifikatlangan tarozilar — o'q bo'yicha og'irlikni ko'rsatadi</span><span class="lang-en">Certified scales at truck stops — shows weight per axle group</span></li>
+                <li><span class="lang-uz">Birinchi tortish ~$12–15, qayta tortish bepul (bir xil joyda)</span><span class="lang-en">First weigh ~$12–15, reweigh free (same location)</span></li>
+                <li><span class="lang-uz">Chipta (ticket) steer, drive va trailer o'qlarini alohida ko'rsatadi</span><span class="lang-en">Ticket shows steer, drive, and trailer axles separately</span></li>
+                <li><span class="lang-uz">Haydovchi truckni taroziga to'g'ri joylashtirishi kerak — bo'limlarga to'g'ri to'xtash muhim</span><span class="lang-en">Driver must position truck correctly on scale — proper stop on sections matters</span></li>
+                <li><span class="lang-uz"><strong>CAT Scale kafolati:</strong> Agar chiptadagi og'irlik noto'g'ri bo'lsa va jarima olinsa, CAT Scale jarimani qoplaydi</span><span class="lang-en"><strong>CAT Scale guarantee:</strong> If ticket weight is wrong and you get fined, CAT Scale covers the fine</span></li>
+              </ul>
+            </div>
+
+            <div class="highlight-card" style="margin-top:1rem">
+              <h4><span class="lang-uz">⚠️ Ortiqcha og'irlik bo'lsa (3 qadam)</span><span class="lang-en">⚠️ If Overweight (3 steps)</span></h4>
+              <ol class="content-list">
+                <li><span class="lang-uz"><strong>Sliding fifth wheel:</strong> Fifth wheel-ni oldga/orqaga siljiting — steer va drive orasida og'irlikni qayta taqsimlaydi</span><span class="lang-en"><strong>Sliding fifth wheel:</strong> Slide fifth wheel forward/back — redistributes weight between steer and drive</span></li>
+                <li><span class="lang-uz"><strong>Sliding tandem:</strong> Trailer tandem o'qlarini oldga/orqaga siljiting — drive va trailer orasida og'irlikni o'zgartiradi</span><span class="lang-en"><strong>Sliding tandem:</strong> Slide trailer tandem axles forward/back — shifts weight between drive and trailer</span></li>
+                <li><span class="lang-uz"><strong>Yukni qayta joylashtirish:</strong> Agar sliding yetarli bo'lmasa, yukni trailer ichida qayta joylashtiring</span><span class="lang-en"><strong>Reload cargo:</strong> If sliding isn't enough, reposition cargo inside trailer</span></li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 5.6 Fleet Operations ===== -->
+        <section class="chapter-section card" id="section-5-6">
+          <h2 class="section-title">
+            <span class="section-num">5.6</span>
+            <span class="lang-uz">Avtopark operatsiyalari</span>
+            <span class="lang-en">Fleet Operations</span>
+          </h2>
+          <div class="section-body">
+            <div class="fact-list">
+              <div class="fact-item">
+                <span class="fact-icon">1️⃣</span>
+                <p><span class="lang-uz">Carrier o'z traylerlarini boshqaradi yoki trailer pool/interchangedan foydalanadi</span><span class="lang-en">Carrier manages own trailers or uses trailer pool/interchange</span></p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">2️⃣</span>
+                <p><span class="lang-uz">Traylerni dock-da tashlab ketish (drop-and-hook) — haydovchi kutmaydi, vaqt tejaydi</span><span class="lang-en">Dropping trailer at dock (drop-and-hook) — driver doesn't wait, saves time</span></p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">3️⃣</span>
+                <p><span class="lang-uz">Trailer tracking — GPS va ELD orqali traylerni real vaqtda kuzatish</span><span class="lang-en">Trailer tracking — real-time monitoring via GPS and ELD</span></p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">4️⃣</span>
+                <p><span class="lang-uz">Trailer texnik xizmat jadvali — shinalar, tormozlar, chiroqlar, devor holati</span><span class="lang-en">Trailer maintenance schedule — tires, brakes, lights, wall condition</span></p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">5️⃣</span>
+                <p><span class="lang-uz">Trailer inspektsiyasi — FMCSA yillik inspektsiya (DOT stikeri) talab qilinadi</span><span class="lang-en">Trailer inspection — FMCSA annual inspection (DOT sticker) required</span></p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">6️⃣</span>
+                <p><span class="lang-uz">Pre-trip va post-trip — har safar haydovchi traylerni tekshirishi kerak</span><span class="lang-en">Pre-trip and post-trip — driver must inspect trailer every time</span></p>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">7️⃣</span>
+                <p><span class="lang-uz">Trailer ijarasi va pooling — kichik carrierlar ko'pincha traylerni ijaraga oladi</span><span class="lang-en">Trailer rental and pooling — smaller carriers often rent trailers</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 5.7 Terminology ===== -->
+        <section class="chapter-section card" id="section-5-7">
+          <h2 class="section-title">
+            <span class="section-num">5.7</span>
+            <span class="lang-uz">Terminologiya — 5-bob</span>
+            <span class="lang-en">Terminology — Chapter 5</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th><span class="lang-uz">Inglizcha atama</span><span class="lang-en">English Term</span></th>
+                    <th><span class="lang-uz">O'zbekcha tarjima</span><span class="lang-en">Uzbek Translation</span></th>
+                    <th><span class="lang-uz">Ta'rif</span><span class="lang-en">Definition</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Dry Van</strong></td>
+                    <td><span class="lang-uz">Quruq van</span><span class="lang-en">Dry Van</span></td>
+                    <td><span class="lang-uz">Eng keng tarqalgan yopiq trailer — umumiy yuklar uchun</span><span class="lang-en">Most common enclosed trailer — for general freight</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Reefer</strong></td>
+                    <td><span class="lang-uz">Muzlatgichli trailer</span><span class="lang-en">Reefer</span></td>
+                    <td><span class="lang-uz">Harorat nazorati bilan jihozlangan trailer</span><span class="lang-en">Temperature-controlled trailer</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Flatbed</strong></td>
+                    <td><span class="lang-uz">Tekis platforma</span><span class="lang-en">Flatbed</span></td>
+                    <td><span class="lang-uz">Devor va tomisiz ochiq trailer</span><span class="lang-en">Open trailer without walls or roof</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Step Deck</strong></td>
+                    <td><span class="lang-uz">Ikki darajali platforma</span><span class="lang-en">Step Deck</span></td>
+                    <td><span class="lang-uz">Ikki balandlikdagi flatbed — baland yuklar uchun</span><span class="lang-en">Two-level flatbed — for tall loads</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lowboy</strong></td>
+                    <td><span class="lang-uz">Past platformali trailer</span><span class="lang-en">Lowboy</span></td>
+                    <td><span class="lang-uz">Juda og'ir va baland jihozlar uchun past trailer</span><span class="lang-en">Low trailer for very heavy and tall equipment</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Landing Gear</strong></td>
+                    <td><span class="lang-uz">Tirgovichlar</span><span class="lang-en">Landing Gear</span></td>
+                    <td><span class="lang-uz">Trailer old oyoqlari — tractor bo'lmaganda tiraydi</span><span class="lang-en">Trailer front legs — supports without tractor</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Fifth Wheel</strong></td>
+                    <td><span class="lang-uz">Beshinchi g'ildirak</span><span class="lang-en">Fifth Wheel</span></td>
+                    <td><span class="lang-uz">Tractor-trailer ulanish plitasi</span><span class="lang-en">Tractor-trailer coupling plate</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Kingpin</strong></td>
+                    <td><span class="lang-uz">Kingpin</span><span class="lang-en">Kingpin</span></td>
+                    <td><span class="lang-uz">Trailer old qismidagi pin — fifth wheel ga kiritiladi</span><span class="lang-en">Pin at front of trailer — locks into fifth wheel</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>E-Track</strong></td>
+                    <td><span class="lang-uz">Mahkamlash yo'li</span><span class="lang-en">E-Track</span></td>
+                    <td><span class="lang-uz">Devor bo'ylab o'rnatilgan kamar/to'siq yo'llari</span><span class="lang-en">Wall-mounted rails for straps and bars</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Liftgate</strong></td>
+                    <td><span class="lang-uz">Ko'targich</span><span class="lang-en">Liftgate</span></td>
+                    <td><span class="lang-uz">Orqa gidravlik platforma — rampa bo'lmagan joylarda yukni tushirish uchun</span><span class="lang-en">Rear hydraulic platform — for unloading without a dock</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>CAT Scale</strong></td>
+                    <td><span class="lang-uz">CAT tarozi</span><span class="lang-en">CAT Scale</span></td>
+                    <td><span class="lang-uz">Truck stop-lardagi sertifikatlangan tarozi</span><span class="lang-en">Certified scales at truck stops</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Air Ride</strong></td>
+                    <td><span class="lang-uz">Havo pnevmatik osma</span><span class="lang-en">Air Ride</span></td>
+                    <td><span class="lang-uz">Mo'rt yuklar uchun silliqlashtirilgan osma tizimi</span><span class="lang-en">Smooth suspension system for fragile cargo</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>GVW</strong></td>
+                    <td><span class="lang-uz">Jami yuk og'irligi</span><span class="lang-en">Gross Vehicle Weight</span></td>
+                    <td><span class="lang-uz">Truck + trailer + yuk — jami og'irlik (maks. 80,000 lbs)</span><span class="lang-en">Truck + trailer + cargo — total weight (max 80,000 lbs)</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== ASOSIY FIKRLAR ===== -->
+        <section class="chapter-section card takeaways-section" id="takeaways">
+          <h2 class="section-title">
+            <i data-lucide="star" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Asosiy fikrlar</span>
+            <span class="lang-en">Key Takeaways</span>
+          </h2>
+          <div class="section-body">
+            <ul class="takeaways-list">
+              <li><span class="lang-uz">Traylerlar 5 guruhda 15 turga bo'linadi: yopiq (dry van, reefer), ochiq (flatbed, auto hauler, step deck, lowboy), maxsus (dump, pneumatic, hopper, tanker, livestock, conestoga) va boshqalar (container chassis, carnival ride, frac tank).</span><span class="lang-en">Trailers come in 15 types across 5 groups: enclosed (dry van, reefer), open (flatbed, auto hauler, step deck, lowboy), specialty (dump, pneumatic, hopper, tanker, livestock, conestoga), and others (container chassis, carnival ride, frac tank).</span></li>
+              <li><span class="lang-uz">Standart 53 ft dry van 26 palet sig'adi. Eng ko'p ishlatiladigan konfiguratsiya: swing doors, E-track, yog'och pol. Reefer harorat diapazoni: -20°F dan +80°F gacha.</span><span class="lang-en">A standard 53 ft dry van holds 26 pallets. Most common setup: swing doors, E-track, wooden floor. Reefer range: -20°F to +80°F.</span></li>
+              <li><span class="lang-uz">Asosiy trailer jihozlari: landing gear (tirgovichlar — tractor bo'lmaganda tiraydi), fifth wheel (ulanish plitasi — 4 nuqtali pre-trip tekshiruv), va tormoz vanalari (sariq olmos = parking, qizil sakkizburchak = trailer tormoz).</span><span class="lang-en">Key trailer equipment: landing gear (supports without tractor), fifth wheel (coupling plate — 4-point pre-trip check), and brake valves (yellow diamond = parking, red octagon = trailer brake).</span></li>
+              <li><span class="lang-uz">Federal og'irlik chegarasi: GVW 80,000 lbs, steer ~12,000, drive 34,000, trailer 34,000. CAT Scale da tortish ~$12–15. Ortiqcha og'irlikda: fifth wheel siljiting → tandem siljiting → yukni qayta joylashtiring.</span><span class="lang-en">Federal weight limit: GVW 80,000 lbs, steer ~12,000, drive 34,000, trailer 34,000. CAT Scale weigh ~$12–15. If overweight: slide fifth wheel → slide tandem → reload cargo.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== SCENARIOS (Interactive) ===== -->
+        <section class="chapter-section card" id="scenarios">
+          <h2 class="section-title">
+            <i data-lucide="help-circle" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Amaliy vaziyatlar</span>
+            <span class="lang-en">Practice Scenarios</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher vaziyatlarini tahlil qiling va to'g'ri javobni tanlang.</span>
+            <span class="lang-en">Analyze the following real dispatcher situations and choose the correct answer.</span>
+          </p>
+          <div id="scenarios-container"></div>
+        </section>
+
+        <!-- ===== PHONE SCRIPTS ===== -->
+        <section class="chapter-section card" id="phone-scripts">
+          <h2 class="section-title">
+            <i data-lucide="phone" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Telefon skriptlari</span>
+            <span class="lang-en">Phone Scripts</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher telefon muloqotlarini o'rganing. Kalit iboralarni yodlang.</span>
+            <span class="lang-en">Study the following real dispatcher phone conversations. Memorize the key phrases.</span>
+          </p>
+          <div id="scripts-container"></div>
+        </section>
+
+        <!-- ===== MARK AS READ ===== -->
+        <div class="mark-read-wrap">
+          <button class="mark-read-btn" id="mark-read-btn">
+            <i data-lucide="book-check" style="width:18px;height:18px"></i>
+            <span class="lang-uz">O'qildi deb belgilash</span>
+            <span class="lang-en">Mark as read</span>
+          </button>
+        </div>
+
+        <!-- ===== CHAPTER NAVIGATION ===== -->
+        <div class="chapter-nav">
+          <a href="chapter4.html" class="chapter-nav-btn prev">
+            <i data-lucide="arrow-left" style="width:18px;height:18px"></i>
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Oldingi bob</span>
+                <span class="lang-en">Previous Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Avtopark va jihozlar</span>
+                <span class="lang-en">Fleet and Equipment</span>
+              </span>
+            </span>
+          </a>
+          <a href="chapter6.html" class="chapter-nav-btn next">
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Keyingi bob</span>
+                <span class="lang-en">Next Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Yuk turlari</span>
+                <span class="lang-en">Freight Types</span>
+              </span>
+            </span>
+            <i data-lucide="arrow-right" style="width:18px;height:18px"></i>
+          </a>
+        </div>
+
+        <footer class="footer">
+          <p>
+            <span class="lang-uz">&copy; 2024 Dispatcher Academy — AQSh yuk tashish sanoati bo'yicha o'quv platformasi</span>
+            <span class="lang-en">&copy; 2024 Dispatcher Academy — US Trucking Industry Learning Platform</span>
+          </p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Progress Tracker -->
+  <script src="js/progress.js"></script>
+
+  <!-- Scenario Data -->
+  <script src="data/scenarios.js"></script>
+
+  <!-- Phone Scripts Data -->
+  <script src="data/scripts.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Scenario Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 5;
+    var container = document.getElementById('scenarios-container');
+    if (!container || typeof scenariosData === 'undefined') return;
+    var chapterScenarios = scenariosData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScenarios.length === 0) return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    function renderScenarios() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScenarios.forEach(function(scenario, idx) {
+        var situation = lang === 'uz' ? scenario.situation_uz : scenario.situation_en;
+        var scenarioEl = document.createElement('div');
+        scenarioEl.className = 'scenario-block';
+        scenarioEl.setAttribute('data-id', scenario.id);
+        var header = '<div class="scenario-header"><span class="scenario-num">' + (idx + 1) + '</span><div class="scenario-situation">' + escHtml(situation) + '</div></div>';
+        var optionsHtml = '<div class="scenario-options">';
+        scenario.options.forEach(function(opt, oi) {
+          var optText = lang === 'uz' ? opt.text_uz : opt.text_en;
+          optionsHtml += '<button class="scenario-option" data-scenario="' + scenario.id + '" data-index="' + oi + '"><span class="option-letter">' + String.fromCharCode(65 + oi) + '</span><span class="option-text">' + escHtml(optText) + '</span></button>';
+        });
+        optionsHtml += '</div>';
+        var feedbackHtml = '<div class="scenario-feedback" id="feedback-' + scenario.id + '" style="display:none"></div>';
+        scenarioEl.innerHTML = header + optionsHtml + feedbackHtml;
+        container.appendChild(scenarioEl);
+      });
+      container.querySelectorAll('.scenario-option').forEach(function(btn) { btn.addEventListener('click', function() { handleAnswer(this); }); });
+    }
+    function handleAnswer(btn) {
+      var scenarioId = btn.getAttribute('data-scenario');
+      var chosenIndex = parseInt(btn.getAttribute('data-index'));
+      var scenario = chapterScenarios.find(function(s) { return s.id === scenarioId; });
+      if (!scenario) return;
+      var lang = getLang();
+      var block = btn.closest('.scenario-block');
+      var allBtns = block.querySelectorAll('.scenario-option');
+      var isCorrect = chosenIndex === scenario.correct_index;
+      allBtns.forEach(function(b) {
+        b.disabled = true; b.classList.add('disabled');
+        var bIdx = parseInt(b.getAttribute('data-index'));
+        if (bIdx === scenario.correct_index) b.classList.add('correct');
+        if (bIdx === chosenIndex && !isCorrect) b.classList.add('incorrect');
+      });
+      var feedbackEl = document.getElementById('feedback-' + scenarioId);
+      var chosenOpt = scenario.options[chosenIndex];
+      var explanation = lang === 'uz' ? chosenOpt.explanation_uz : chosenOpt.explanation_en;
+      feedbackEl.className = 'scenario-feedback ' + (isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+      feedbackEl.innerHTML = '<div class="feedback-icon">' + (isCorrect ? '<i data-lucide="check-circle" style="width:20px;height:20px;color:#16a34a"></i>' : '<i data-lucide="x-circle" style="width:20px;height:20px;color:#dc2626"></i>') + '</div><div class="feedback-text">' + escHtml(explanation) + '</div>';
+      feedbackEl.style.display = 'flex';
+      lucide.createIcons();
+    }
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') {
+          var answered = container.querySelector('.scenario-option.disabled');
+          if (!answered) renderScenarios();
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    renderScenarios();
+  })();
+  </script>
+
+  <!-- Phone Scripts Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 5;
+    var container = document.getElementById('scripts-container');
+    if (!container || typeof scriptsData === 'undefined') return;
+    var chapterScripts = scriptsData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScripts.length === 0) return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    function renderScripts() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScripts.forEach(function(script, idx) {
+        var title = lang === 'uz' ? script.title_uz : script.title_en;
+        var dialogue = lang === 'uz' ? script.script_uz : script.script_en;
+        var phrasesTitle = lang === 'uz' ? 'Kalit iboralar' : 'Key Phrases';
+        var el = document.createElement('div');
+        el.className = 'script-block';
+        var phrasesHtml = '';
+        script.key_phrases.forEach(function(kp) {
+          var phrase = lang === 'uz' ? kp.phrase_uz : kp.phrase_en;
+          phrasesHtml += '<div class="key-phrase"><span class="key-phrase-bullet">▸</span><span class="key-phrase-text">' + escHtml(phrase) + '</span></div>';
+        });
+        el.innerHTML =
+          '<div class="script-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.script-toggle').classList.toggle('open')">' +
+            '<span class="script-num">' + (idx + 1) + '</span>' +
+            '<span class="script-title">' + escHtml(title) + '</span>' +
+            '<i data-lucide="chevron-down" class="script-toggle" style="width:20px;height:20px"></i>' +
+          '</div>' +
+          '<div class="script-body">' +
+            '<div class="script-dialogue">' + escHtml(dialogue) + '</div>' +
+            '<div class="script-key-phrases">' +
+              '<div class="script-key-phrases-title"><i data-lucide="bookmark" style="width:16px;height:16px"></i> ' + escHtml(phrasesTitle) + '</div>' +
+              phrasesHtml +
+            '</div>' +
+          '</div>';
+        container.appendChild(el);
+      });
+      lucide.createIcons();
+    }
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') renderScripts();
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    renderScripts();
+  })();
+  </script>
+
+  <!-- Mark as Read Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 5;
+    var btn = document.getElementById('mark-read-btn');
+    if (!btn || typeof Progress === 'undefined') return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function updateBtn() {
+      var isRead = Progress.isChapterRead(CHAPTER);
+      if (isRead) {
+        btn.classList.add('read');
+        btn.innerHTML = '<i data-lucide="check-circle" style="width:18px;height:18px"></i><span class="lang-uz">O\'qilgan</span><span class="lang-en">Read</span>';
+      } else {
+        btn.classList.remove('read');
+        btn.innerHTML = '<i data-lucide="book-check" style="width:18px;height:18px"></i><span class="lang-uz">O\'qildi deb belgilash</span><span class="lang-en">Mark as read</span>';
+      }
+      lucide.createIcons();
+    }
+    btn.addEventListener('click', function() {
+      if (!Progress.isChapterRead(CHAPTER)) { Progress.markChapterRead(CHAPTER); updateBtn(); }
+    });
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) { if (m.attributeName === 'data-lang') updateBtn(); });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    updateBtn();
+  })();
+  </script>
+</body>
+</html>

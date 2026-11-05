@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="uz" data-lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resurslar — Dispatcher Academy</title>
+  <meta name="description" content="Dispatcher va logistika sohasidagi eng foydali ilovalar, kanallar, hamjamiyatlar va davlat saytlari">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme & Language: apply before paint -->
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+
+  <style>
+    /* ===== Resources Page Styles ===== */
+    .resource-section {
+      margin-bottom: 32px;
+    }
+
+    .resource-section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-text, #1e293b);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--color-accent, #ff6d00);
+    }
+
+    .resource-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 600px) {
+      .resource-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .resource-card {
+      background: var(--color-surface, #ffffff);
+      border: 1px solid var(--color-border, #e2e8f0);
+      border-radius: 10px;
+      padding: 16px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .resource-card:hover {
+      border-color: var(--color-primary, #1a237e);
+      box-shadow: 0 2px 8px rgba(26, 35, 126, 0.08);
+    }
+
+    .resource-card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-text, #1e293b);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .resource-card-title a {
+      color: var(--color-primary, #1a237e);
+      text-decoration: none;
+    }
+
+    .resource-card-title a:hover {
+      text-decoration: underline;
+    }
+
+    .resource-card-desc {
+      font-size: 13px;
+      color: var(--color-text-light, #64748b);
+      line-height: 1.5;
+    }
+
+    .resource-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-top: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tag-free { background: rgba(22, 163, 74, 0.1); color: #16a34a; }
+    .tag-paid { background: rgba(255, 109, 0, 0.1); color: var(--color-accent, #ff6d00); }
+    .tag-gov { background: rgba(26, 35, 126, 0.1); color: var(--color-primary, #1a237e); }
+
+    /* Dark mode */
+    [data-theme="dark"] .resource-card {
+      background: var(--color-surface);
+      border-color: var(--color-border);
+    }
+
+    [data-theme="dark"] .resource-card:hover {
+      border-color: var(--color-primary-light, #7986cb);
+    }
+
+    [data-theme="dark"] .resource-card-title a {
+      color: var(--color-primary-light, #7986cb);
+    }
+
+    [data-theme="dark"] .resource-section-title {
+      border-bottom-color: var(--color-accent, #ff6d00);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <a href="index.html" class="header-logo">
+        <i data-lucide="truck" class="logo-icon"></i>
+        <span class="logo-text">
+          <span class="lang-uz">Dispatcher Academy</span>
+          <span class="lang-en">Dispatcher Academy</span>
+        </span>
+      </a>
+    </div>
+    <div class="header-right">
+      <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">
+        <i data-lucide="globe"></i>
+        <span class="toggle-label">EN</span>
+      </button>
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <a href="index.html" class="sidebar-link">
+          <i data-lucide="home"></i>
+          <span class="lang-uz">Bosh sahifa</span>
+          <span class="lang-en">Home</span>
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Boblar</span>
+          <span class="lang-en">Chapters</span>
+        </div>
+
+        <a href="chapter1.html" class="sidebar-link">
+          <span class="chapter-num">1</span>
+          <span class="lang-uz">Logistikaga kirish</span>
+          <span class="lang-en">Introduction to Logistics</span>
+        </a>
+        <a href="chapter2.html" class="sidebar-link">
+          <span class="chapter-num">2</span>
+          <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+          <span class="lang-en">Stakeholders in Trucking</span>
+        </a>
+        <a href="chapter3.html" class="sidebar-link">
+          <span class="chapter-num">3</span>
+          <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+          <span class="lang-en">Truck Drivers and Their Operations</span>
+        </a>
+        <a href="chapter4.html" class="sidebar-link">
+          <span class="chapter-num">4</span>
+          <span class="lang-uz">Avtopark va jihozlar</span>
+          <span class="lang-en">Fleet and Equipment</span>
+        </a>
+        <a href="chapter5.html" class="sidebar-link">
+          <span class="chapter-num">5</span>
+          <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+          <span class="lang-en">Trailers and Weight Balance</span>
+        </a>
+        <a href="chapter6.html" class="sidebar-link">
+          <span class="chapter-num">6</span>
+          <span class="lang-uz">Yuk turlari</span>
+          <span class="lang-en">Freight Types</span>
+        </a>
+        <a href="chapter7.html" class="sidebar-link">
+          <span class="chapter-num">7</span>
+          <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+          <span class="lang-en">Load Security and Procedures</span>
+        </a>
+        <a href="chapter8.html" class="sidebar-link">
+          <span class="chapter-num">8</span>
+          <span class="lang-uz">AQSh avtomagistral tizimi</span>
+          <span class="lang-en">US Highway and Road System</span>
+        </a>
+        <a href="chapter9.html" class="sidebar-link">
+          <span class="chapter-num">9</span>
+          <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+          <span class="lang-en">US Safety and Compliance</span>
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Asboblar</span>
+          <span class="lang-en">Tools</span>
+        </div>
+        <a href="glossary.html" class="sidebar-link">
+          <i data-lucide="book-open"></i>
+          <span class="lang-uz">Glossariy</span>
+          <span class="lang-en">Glossary</span>
+        </a>
+        <a href="resources.html" class="sidebar-link active">
+          <i data-lucide="link"></i>
+          <span class="lang-uz">Resurslar</span>
+          <span class="lang-en">Resources</span>
+        </a>
+        <a href="progress.html" class="sidebar-link">
+          <i data-lucide="bar-chart-3"></i>
+          <span class="lang-uz">Progress</span>
+          <span class="lang-en">Progress</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="app-layout">
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- Page Title -->
+        <div class="page-header" style="margin-bottom:24px">
+          <h1 class="page-title">
+            <i data-lucide="link" style="width:28px;height:28px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Foydali resurslar</span>
+            <span class="lang-en">Useful Resources</span>
+          </h1>
+          <p style="color:var(--color-text-light);font-size:14px;margin-top:8px">
+            <span class="lang-uz">Dispatcher va logistika sohasida bilimingizni oshirish uchun eng yaxshi ilovalar, kanallar va manbalar.</span>
+            <span class="lang-en">The best apps, channels and sources to deepen your knowledge in dispatching and logistics.</span>
+          </p>
+        </div>
+
+        <!-- ========== 1. APPS ========== -->
+        <div class="resource-section">
+          <div class="resource-section-title">
+            <i data-lucide="smartphone" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Ilovalar (Apps)</span>
+            <span class="lang-en">Apps</span>
+          </div>
+          <div class="resource-list">
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.dat.com/products/dat-one" target="_blank" rel="noopener">DAT One</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">AQShdagi eng katta yuk va transport bozori. Yuklar qidirish, narxlarni solishtirish va brokerlar bilan bog'lanish uchun.</span>
+                <span class="lang-en">The largest freight marketplace in the US. Search loads, compare rates, and connect with brokers.</span>
+              </div>
+              <span class="resource-tag tag-paid">Paid</span>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://truckerpath.com" target="_blank" rel="noopener">Trucker Path</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Haydovchilar uchun to'xtash joylari, yoqilg'i narxlari, tarozi stansiyalari va boshqa ma'lumotlar xaritasi.</span>
+                <span class="lang-en">Map of truck stops, fuel prices, weigh stations, and other useful info for drivers.</span>
+              </div>
+              <span class="resource-tag tag-free">Free</span>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://gomotive.com" target="_blank" rel="noopener">Motive (Keeptruckin)</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">ELD (elektron jurnal), GPS kuzatuv, haydovchilar xavfsizligi va avtopark boshqaruvi platformasi.</span>
+                <span class="lang-en">ELD, GPS tracking, driver safety, and fleet management platform.</span>
+              </div>
+              <span class="resource-tag tag-paid">Paid</span>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.sylectus.com" target="_blank" rel="noopener">Sylectus</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Dispetcherlar uchun TMS (Transport Boshqaruv Tizimi). Yuklar, haydovchilar va hisob-kitoblarni bir joyda boshqarish.</span>
+                <span class="lang-en">TMS (Transportation Management System) for dispatchers. Manage loads, drivers and accounting in one place.</span>
+              </div>
+              <span class="resource-tag tag-paid">Paid</span>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.truckstop.com" target="_blank" rel="noopener">Truckstop</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Yuk qidirish, narxlarni tahlil qilish va carrier/broker tekshirish uchun platforma.</span>
+                <span class="lang-en">Load board, rate analytics, and carrier/broker vetting platform.</span>
+              </div>
+              <span class="resource-tag tag-paid">Paid</span>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Marshrutlarni rejalashtirish, masofani hisoblash va real vaqt traffic holati. Dispetcherlar har kuni ishlatadi.</span>
+                <span class="lang-en">Route planning, distance calculation and real-time traffic. Used daily by dispatchers.</span>
+              </div>
+              <span class="resource-tag tag-free">Free</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ========== 2. YOUTUBE CHANNELS ========== -->
+        <div class="resource-section">
+          <div class="resource-section-title">
+            <i data-lucide="youtube" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">YouTube kanallari</span>
+            <span class="lang-en">YouTube Channels</span>
+          </div>
+          <div class="resource-list">
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.youtube.com/@SmartTrucking" target="_blank" rel="noopener">Smart Trucking</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Yuk tashish sanoati haqida keng qamrovli videolar — yangi haydovchilar va dispetcherlar uchun.</span>
+                <span class="lang-en">Comprehensive videos about the trucking industry — for new drivers and dispatchers.</span>
+              </div>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.youtube.com/@TruckerJoshVlogs" target="_blank" rel="noopener">Trucker Josh VLOGS</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Haydovchilik hayoti, CDL maslahatlar va yuk tashish yangiliklari.</span>
+                <span class="lang-en">Trucking life, CDL tips, and freight industry news.</span>
+              </div>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.youtube.com/@FreightBrokerBootCamp" target="_blank" rel="noopener">Freight Broker Boot Camp</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Freight broker va dispetcherlar uchun o'quv videolar — yuklar, muzokaralar, bozor tahlili.</span>
+                <span class="lang-en">Training videos for freight brokers and dispatchers — loads, negotiations, market analysis.</span>
+              </div>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.youtube.com/@TheLoadBoard" target="_blank" rel="noopener">The Load Board</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Yuk tashish sanoati yangiliklari, tahlillar va interview'lar.</span>
+                <span class="lang-en">Trucking industry news, analysis, and interviews.</span>
+              </div>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.youtube.com/@DrivingAcademy" target="_blank" rel="noopener">Driving Academy</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">CDL imtihoniga tayyorgarlik, haydovchilik ko'nikmalari va yuk mashinalari haqida o'quv videolar.</span>
+                <span class="lang-en">CDL exam prep, driving skills, and trucking educational videos.</span>
+              </div>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.youtube.com/@BigRigSteve" target="_blank" rel="noopener">Big Rig Steve</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">OTR haydovchilik tajribasi, marshrutlar va yuk tashish sanoati haqida real vloglar.</span>
+                <span class="lang-en">Real vlogs about OTR driving experience, routes, and the trucking industry.</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ========== 3. REDDIT & COMMUNITIES ========== -->
+        <div class="resource-section">
+          <div class="resource-section-title">
+            <i data-lucide="users" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Reddit va hamjamiyatlar</span>
+            <span class="lang-en">Reddit &amp; Communities</span>
+          </div>
+          <div class="resource-list">
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.reddit.com/r/Truckers/" target="_blank" rel="noopener">r/Truckers</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">AQSh haydovchilari hamjamiyati — tajriba almashish, maslahatlar, yangiliklar.</span>
+                <span class="lang-en">US truckers community — sharing experiences, advice, and news.</span>
+              </div>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.reddit.com/r/FreightBrokers/" target="_blank" rel="noopener">r/FreightBrokers</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Freight brokerlar va dispetcherlar uchun muhokamalar — narxlar, mijozlar, texnologiya.</span>
+                <span class="lang-en">Discussions for freight brokers and dispatchers — rates, clients, technology.</span>
+              </div>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.reddit.com/r/truckdispatchers/" target="_blank" rel="noopener">r/truckdispatchers</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Dispetcherlar uchun maxsus subreddit — ish qidirish, TMS maslahatlar, brokerlar bilan munosabat.</span>
+                <span class="lang-en">Dedicated subreddit for dispatchers — job search, TMS tips, broker relations.</span>
+              </div>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.thetruckersreport.com/truckingindustryforum/" target="_blank" rel="noopener">TheTruckersReport Forum</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">AQShdagi eng katta yuk tashish forumi — CDL, kompaniyalar sharhlari, maslahatlar.</span>
+                <span class="lang-en">The largest trucking forum in the US — CDL, company reviews, tips.</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ========== 4. GOVERNMENT SITES ========== -->
+        <div class="resource-section">
+          <div class="resource-section-title">
+            <i data-lucide="landmark" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Davlat saytlari</span>
+            <span class="lang-en">Government Sites</span>
+          </div>
+          <div class="resource-list">
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.fmcsa.dot.gov" target="_blank" rel="noopener">FMCSA</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Federal Motor Carrier Safety Administration — yuk tashish xavfsizligi qoidalari, litsenziyalar, HOS qoidalari.</span>
+                <span class="lang-en">Federal Motor Carrier Safety Administration — trucking safety regulations, licenses, HOS rules.</span>
+              </div>
+              <span class="resource-tag tag-gov">Gov</span>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://safer.fmcsa.dot.gov" target="_blank" rel="noopener">SAFER (FMCSA)</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Carrier va broker ma'lumotlarini tekshirish — MC/DOT raqami, sug'urta, xavfsizlik reytingi.</span>
+                <span class="lang-en">Look up carrier and broker info — MC/DOT number, insurance, safety rating.</span>
+              </div>
+              <span class="resource-tag tag-gov">Gov</span>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://clearinghouse.fmcsa.dot.gov" target="_blank" rel="noopener">FMCSA Clearinghouse</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Haydovchilarning giyohvand moddalar testi natijalari bazasi — ishga olishdan oldin tekshirish majburiy.</span>
+                <span class="lang-en">Drug and alcohol testing results database for drivers — pre-employment checks required.</span>
+              </div>
+              <span class="resource-tag tag-gov">Gov</span>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://li-public.fmcsa.dot.gov/LIVIEW/pkg_carrquery.prc_carrlist" target="_blank" rel="noopener">FMCSA Licensing &amp; Insurance</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Carrier litsenziyasi va sug'urta ma'lumotlarini onlayn tekshirish.</span>
+                <span class="lang-en">Check carrier licensing and insurance information online.</span>
+              </div>
+              <span class="resource-tag tag-gov">Gov</span>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <a href="https://www.transportation.gov" target="_blank" rel="noopener">US DOT</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">AQSh Transport Departamenti — federal transport siyosati va qoidalari.</span>
+                <span class="lang-en">US Department of Transportation — federal transportation policy and regulations.</span>
+              </div>
+              <span class="resource-tag tag-gov">Gov</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ========== 5. BOOKS & PODCASTS ========== -->
+        <div class="resource-section">
+          <div class="resource-section-title">
+            <i data-lucide="headphones" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Kitoblar va podkastlar</span>
+            <span class="lang-en">Books &amp; Podcasts</span>
+          </div>
+          <div class="resource-list">
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <span>&#128214;</span>Erta Fletcher — "Freight Broker Business Startup"
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Freight broker va dispatcher biznesini noldan boshlash uchun amaliy qo'llanma. Amazon'da mavjud.</span>
+                <span class="lang-en">Practical guide to starting a freight broker and dispatcher business from scratch. Available on Amazon.</span>
+              </div>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <span>&#128214;</span> Timothy Brady — "How to Become a Freight Broker"
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Freight broker litsenziyasi olish, mijozlar topish va operatsiyalarni boshqarish bo'yicha kitob.</span>
+                <span class="lang-en">Book on getting a freight broker license, finding clients, and managing operations.</span>
+              </div>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-card-title">
+                <span>&#127911;</span>
+                <a href="https://www.freightwaves.com/podcasts" target="_blank" rel="noopener">FreightWaves Podcasts</a>
+              </div>
+              <div class="resource-card-desc">
+                <span class="lang-uz">Yuk tashish sanoati yangiliklari, bozor tahlili va ekspert intervyu'lari. Bir nechta podkast seriyalari.</span>
+                <span class="lang-en">Trucking industry news, market analysis, and expert interviews. Multiple podcast series.</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>
+            <span class="lang-uz">&copy; 2024 Dispatcher Academy — AQSh yuk tashish sanoati bo'yicha o'quv platformasi</span>
+            <span class="lang-en">&copy; 2024 Dispatcher Academy — US Trucking Industry Learning Platform</span>
+          </p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- Navigation -->
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

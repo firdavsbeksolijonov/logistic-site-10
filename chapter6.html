@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="uz" data-lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6-Bob: Yuk turlari — Dispatcher Academy</title>
+  <meta name="description" content="LTL, Partial, Truckload, hazmat, intermodal, bulk, power only, deadhead, expedited, dedicated lanes">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme & Language: apply before paint -->
+  <script src="js/theme.js"></script>
+  <script src="js/lang.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <a href="index.html" class="header-logo">
+        <i data-lucide="truck" class="logo-icon"></i>
+        <span class="logo-text">
+          <span class="lang-uz">Dispatcher Academy</span>
+          <span class="lang-en">Dispatcher Academy</span>
+        </span>
+      </a>
+    </div>
+    <div class="header-right">
+      <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">
+        <i data-lucide="globe"></i>
+        <span class="toggle-label">EN</span>
+      </button>
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <a href="index.html" class="sidebar-link">
+          <i data-lucide="home"></i>
+          <span class="lang-uz">Bosh sahifa</span>
+          <span class="lang-en">Home</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Boblar</span>
+          <span class="lang-en">Chapters</span>
+        </div>
+        <a href="chapter1.html" class="sidebar-link">
+          <span class="chapter-num">1</span>
+          <span class="lang-uz">Logistikaga kirish</span>
+          <span class="lang-en">Introduction to Logistics</span>
+        </a>
+        <a href="chapter2.html" class="sidebar-link">
+          <span class="chapter-num">2</span>
+          <span class="lang-uz">Yuk tashish ishtirokchilari</span>
+          <span class="lang-en">Stakeholders in Trucking</span>
+        </a>
+        <a href="chapter3.html" class="sidebar-link">
+          <span class="chapter-num">3</span>
+          <span class="lang-uz">Haydovchilar va operatsiyalar</span>
+          <span class="lang-en">Truck Drivers and Their Operations</span>
+        </a>
+        <a href="chapter4.html" class="sidebar-link">
+          <span class="chapter-num">4</span>
+          <span class="lang-uz">Avtopark va jihozlar</span>
+          <span class="lang-en">Fleet and Equipment</span>
+        </a>
+        <a href="chapter5.html" class="sidebar-link">
+          <span class="chapter-num">5</span>
+          <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+          <span class="lang-en">Trailers and Weight Balance</span>
+        </a>
+        <a href="chapter6.html" class="sidebar-link active">
+          <span class="chapter-num">6</span>
+          <span class="lang-uz">Yuk turlari</span>
+          <span class="lang-en">Freight Types</span>
+        </a>
+        <a href="chapter7.html" class="sidebar-link">
+          <span class="chapter-num">7</span>
+          <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+          <span class="lang-en">Load Security and Procedures</span>
+        </a>
+        <a href="chapter8.html" class="sidebar-link">
+          <span class="chapter-num">8</span>
+          <span class="lang-uz">AQSh avtomagistral tizimi</span>
+          <span class="lang-en">US Highway and Road System</span>
+        </a>
+        <a href="chapter9.html" class="sidebar-link">
+          <span class="chapter-num">9</span>
+          <span class="lang-uz">AQSh xavfsizlik va muvofiqlik</span>
+          <span class="lang-en">US Safety and Compliance</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          <span class="lang-uz">Asboblar</span>
+          <span class="lang-en">Tools</span>
+        </div>
+        <a href="glossary.html" class="sidebar-link">
+          <i data-lucide="book-open"></i>
+          <span class="lang-uz">Glossariy</span>
+          <span class="lang-en">Glossary</span>
+        </a>
+        <a href="resources.html" class="sidebar-link">
+          <i data-lucide="link"></i>
+          <span class="lang-uz">Resurslar</span>
+          <span class="lang-en">Resources</span>
+        </a>
+        <a href="progress.html" class="sidebar-link">
+          <i data-lucide="bar-chart-3"></i>
+          <span class="lang-uz">Progress</span>
+          <span class="lang-en">Progress</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="app-layout">
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- Chapter Header -->
+        <section class="chapter-header">
+          <div class="chapter-badge-large">6</div>
+          <h1 class="page-title">
+            <span class="lang-uz">Yuk turlari</span>
+            <span class="lang-en">Freight Types</span>
+          </h1>
+          <p class="page-subtitle">
+            <span class="lang-uz">25 slayd &nbsp;·&nbsp; LTL/Partial/TL, maxsus xizmatlar, hazmat, intermodal, bulk, power only, deadhead, expedited, dedicated lanes</span>
+            <span class="lang-en">25 slides &nbsp;·&nbsp; LTL/Partial/TL, special services, hazmat, intermodal, bulk, power only, deadhead, expedited, dedicated lanes</span>
+          </p>
+        </section>
+
+        <!-- ===== 6.1 Freight Terminology ===== -->
+        <section class="chapter-section card" id="section-6-1">
+          <h2 class="section-title">
+            <span class="section-num">6.1</span>
+            <span class="lang-uz">Yuk terminologiyasi</span>
+            <span class="lang-en">Freight Terminology</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">So'z</span>
+                      <span class="lang-en">Word</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Yuk tashishdagi ma'nosi</span>
+                      <span class="lang-en">Meaning in Trucking</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Freight</strong></td>
+                    <td>
+                      <span class="lang-uz">Tijorat maqsadida tashiladigan har qanday tovarlar — umumiy so'z</span>
+                      <span class="lang-en">Any goods moved commercially — the general word</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Load</strong></td>
+                    <td>
+                      <span class="lang-uz">Bitta truck uchun bitta ish: yuklash nuqtasidan yetkazish nuqtasigacha</span>
+                      <span class="lang-en">One job booked for one truck: pickup to delivery</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Shipment</strong></td>
+                    <td>
+                      <span class="lang-uz">Bitta bill of lading ostida birga jo'natiladigan tovarlar</span>
+                      <span class="lang-en">Goods sent together under one bill of lading</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Commodity</strong></td>
+                    <td>
+                      <span class="lang-uz">Tovarning turi — jihozlar va narxni belgilaydi</span>
+                      <span class="lang-en">What the goods are — decides equipment and rate</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Goods</strong></td>
+                    <td>
+                      <span class="lang-uz">Sotib olinayotgan va sotiladigan mahsulotlar</span>
+                      <span class="lang-en">Products being bought and sold</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cargo</strong></td>
+                    <td>
+                      <span class="lang-uz">Har qanday transportdagi tovarlar — ko'proq kema/samolyot uchun ishlatiladi</span>
+                      <span class="lang-en">Goods on any vehicle — used most for ships/planes</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 6.2 Freight by Size ===== -->
+        <section class="chapter-section card" id="section-6-2">
+          <h2 class="section-title">
+            <span class="section-num">6.2</span>
+            <span class="lang-uz">Yuk hajmi bo'yicha: LTL, Partial, Truckload</span>
+            <span class="lang-en">Freight by Size: LTL, Partial, Truckload</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Tur</span>
+                      <span class="lang-en">Type</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Tavsif</span>
+                      <span class="lang-en">Description</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Narxlash</span>
+                      <span class="lang-en">Pricing</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>LTL (Less Than Truckload)</strong></td>
+                    <td>
+                      <span class="lang-uz">Ko'p jo'natuvchilardan kichik yuklar bitta trailerda, terminallar orqali o'tadi</span>
+                      <span class="lang-en">Small shipments from many shippers share a trailer, pass through terminals</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Yuk klassi, og'irlik, masofa bo'yicha</span>
+                      <span class="lang-en">By freight class, weight, distance</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Partial</strong></td>
+                    <td>
+                      <span class="lang-uz">O'rtacha hajmdagi yuk 1-2 boshqa yuk bilan birga, terminallarni chetlab o'tadi</span>
+                      <span class="lang-en">Mid-size shipment shares truck with 1–2 others, skips terminals</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Trailer futlari bo'yicha</span>
+                      <span class="lang-en">By trailer feet used</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Truckload (FTL)</strong></td>
+                    <td>
+                      <span class="lang-uz">Bitta jo'natuvchi butun trailerni ishlatadi, to'g'ridan-to'g'ri yetkazish</span>
+                      <span class="lang-en">One shipper uses whole trailer, straight pickup to delivery</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Belgilangan narx yoki mil boshiga</span>
+                      <span class="lang-en">Flat rate or per mile</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="info-box">
+              <h4>
+                <span class="lang-uz">LTL qanday harakatlanadi:</span>
+                <span class="lang-en">How LTL Moves:</span>
+              </h4>
+              <p>
+                <span class="lang-uz">Yuklash 1,2,3 → Kelib chiqish terminali → Linehaul → Yetkazish terminali → Tushirish 1,2,3</span>
+                <span class="lang-en">Picks 1,2,3 → Origin terminal → Linehaul → Destination terminal → Drops 1,2,3</span>
+              </p>
+            </div>
+
+            <h3>
+              <span class="lang-uz">Daromad taqqoslash (bir xil trailer, bir xil marshrut):</span>
+              <span class="lang-en">Revenue Comparison (Same Trailer, Same Lane):</span>
+            </h3>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-value">$1,350</div>
+                <div class="stat-desc">
+                  <span class="lang-uz">4 ta LTL yuk: $250 + $300 + $350 + $450 (eng ko'p pul, eng ko'p to'xtash)</span>
+                  <span class="lang-en">4 LTL shipments: $250 + $300 + $350 + $450 (most money, most stops)</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">$1,200</div>
+                <div class="stat-desc">
+                  <span class="lang-uz">2 ta Partial: $900 + $300 (yaxshi o'rta variant)</span>
+                  <span class="lang-en">2 Partials: $900 + $300 (good middle ground)</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">$1,150</div>
+                <div class="stat-desc">
+                  <span class="lang-uz">1 ta Truckload (bitta yuklash, bitta tushirish)</span>
+                  <span class="lang-en">1 Truckload (one pickup, one delivery)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 6.3 Special Freight Services ===== -->
+        <section class="chapter-section card" id="section-6-3">
+          <h2 class="section-title">
+            <span class="section-num">6.3</span>
+            <span class="lang-uz">Maxsus yuk xizmatlari</span>
+            <span class="lang-en">Special Freight Services</span>
+          </h2>
+          <div class="section-body">
+            <ul class="fact-list">
+              <li class="fact-item">
+                <span class="fact-icon">🛡️</span>
+                <div>
+                  <strong>
+                    <span class="lang-uz">Air ride truckload</span>
+                    <span class="lang-en">Air ride truckload</span>
+                  </strong>
+                  <p>
+                    <span class="lang-uz">Nozik yuklarlar uchun — havo yostiqchali osilib turish tizimi, qimmatroq</span>
+                    <span class="lang-en">For fragile freight — air-bag suspension, costs more</span>
+                  </p>
+                </div>
+              </li>
+              <li class="fact-item">
+                <span class="fact-icon">⚡</span>
+                <div>
+                  <strong>
+                    <span class="lang-uz">Expedited (Tezkor)</span>
+                    <span class="lang-en">Expedited</span>
+                  </strong>
+                  <p>
+                    <span class="lang-uz">Vaqt jihatdan muhim, imkon qadar tez yetkaziladi — ko'pincha jamoaviy haydovchilar, 1–5 kun</span>
+                    <span class="lang-en">Time-critical, moved ASAP — often team drivers, 1–5 days</span>
+                  </p>
+                </div>
+              </li>
+              <li class="fact-item">
+                <span class="fact-icon">✅</span>
+                <div>
+                  <strong>
+                    <span class="lang-uz">Guaranteed delivery (Kafolatlangan yetkazish)</span>
+                    <span class="lang-en">Guaranteed delivery</span>
+                  </strong>
+                  <p>
+                    <span class="lang-uz">Carrier sana/vaqt oynasiga majburiyat oladi, kechiksa premiumni qaytaradi</span>
+                    <span class="lang-en">Carrier commits to date/time window, refunds premium if late</span>
+                  </p>
+                </div>
+              </li>
+              <li class="fact-item">
+                <span class="fact-icon">🧶</span>
+                <div>
+                  <strong>
+                    <span class="lang-uz">Blanket wrap (Adyol o'rash)</span>
+                    <span class="lang-en">Blanket wrap</span>
+                  </strong>
+                  <p>
+                    <span class="lang-uz">Qutisiz buyumlar (mebel) ko'chirish adyollariga o'raladi, qutilar ishlatilmaydi</span>
+                    <span class="lang-en">Unboxed items (furniture) wrapped in moving blankets, no crates</span>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 6.4 General Freight Classification ===== -->
+        <section class="chapter-section card" id="section-6-4">
+          <h2 class="section-title">
+            <span class="section-num">6.4</span>
+            <span class="lang-uz">Umumiy yuk klassifikatsiyasi</span>
+            <span class="lang-en">General Freight Classification</span>
+          </h2>
+          <div class="section-body">
+            <ul class="fact-list">
+              <li class="fact-item">
+                <span class="fact-icon">📦</span>
+                <div>
+                  <strong>
+                    <span class="lang-uz">Palletlangan (Palletized)</span>
+                    <span class="lang-en">Palletized</span>
+                  </strong>
+                  <p>
+                    <span class="lang-uz">Har bir pallet = bitta dona, birga qoladi. Tez yuklash, kamroq zarar</span>
+                    <span class="lang-en">Each pallet = one piece, stays together. Fast loading, less damage</span>
+                  </p>
+                </div>
+              </li>
+              <li class="fact-item">
+                <span class="fact-icon">🧱</span>
+                <div>
+                  <strong>
+                    <span class="lang-uz">Polga yuklangan (Floor loaded)</span>
+                    <span class="lang-en">Floor loaded</span>
+                  </strong>
+                  <p>
+                    <span class="lang-uz">Qutilar qo'lda terilib chiqiladi — ko'proq sig'adi, lekin yuklash/tushirish soatlab davom etadi</span>
+                    <span class="lang-en">Boxes stacked by hand — holds more, but loading/unloading takes hours</span>
+                  </p>
+                </div>
+              </li>
+              <li class="fact-item">
+                <span class="fact-icon">🪵</span>
+                <div>
+                  <strong>
+                    <span class="lang-uz">Qutilanagan (Crated)</span>
+                    <span class="lang-en">Crated</span>
+                  </strong>
+                  <p>
+                    <span class="lang-uz">Og'ir/nozik buyumlar yog'och qutilarda, forklift bilan ko'tariladi</span>
+                    <span class="lang-en">Heavy/delicate items in wooden crates, handled by forklift</span>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 6.5 Heavy and Oversize Loads ===== -->
+        <section class="chapter-section card" id="section-6-5">
+          <h2 class="section-title">
+            <span class="section-num">6.5</span>
+            <span class="lang-uz">Og'ir va katta o'lchamli yuklar</span>
+            <span class="lang-en">Heavy and Oversize Loads</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Cheklov</span>
+                      <span class="lang-en">Limit</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Qonuniy o'lcham (Flatbed)</span>
+                      <span class="lang-en">Legal Size (Flatbed)</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="lang-uz">Eni</span>
+                      <span class="lang-en">Width</span>
+                    </td>
+                    <td>8 ft 6 in (102 in)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz">Balandligi</span>
+                      <span class="lang-en">Height</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">13 ft 6 in (ko'pchilik shtatlarda; ba'zi g'arbiy shtatlarda 14 ft)</span>
+                      <span class="lang-en">13 ft 6 in (most states; 14 ft some western states)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz">Uzunligi</span>
+                      <span class="lang-en">Length</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">48–53 ft trailer; umumiy/chiqish cheklovlari shtatga qarab farq qiladi</span>
+                      <span class="lang-en">48–53 ft trailer; overall/overhang limits vary by state</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz">Og'irlik</span>
+                      <span class="lang-en">Weight</span>
+                    </td>
+                    <td>80,000 lb gross</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Yuk orqa tomondan 4+ ft chiqsa — qizil bayroq kerak (kechasi qizil chiroq)</span>
+                <span class="lang-en">Freight sticking out 4+ ft past rear needs red flag (red lights at night)</span>
+              </li>
+              <li>
+                <span class="lang-uz">Keng yuklar odatda pilot mashinalari kerak (~12 ft kenglikdan boshlab); har bir shtat o'z qoidalarini belgilaydi</span>
+                <span class="lang-en">Wide loads usually need pilot cars (~12 ft wide+); each state sets own rules</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 6.6 Refrigerated Freight ===== -->
+        <section class="chapter-section card" id="section-6-6">
+          <h2 class="section-title">
+            <span class="section-num">6.6</span>
+            <span class="lang-uz">Muzlatilgan yuklarlar</span>
+            <span class="lang-en">Refrigerated Freight</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Harorat</span>
+                      <span class="lang-en">Temperature</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Yuk turi</span>
+                      <span class="lang-en">Freight Type</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0°F or below</td>
+                    <td>
+                      <span class="lang-uz">Muzlatilgan</span>
+                      <span class="lang-en">Frozen</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>33–40°F</td>
+                    <td>
+                      <span class="lang-uz">Yangi go'sht, sut mahsulotlari</span>
+                      <span class="lang-en">Fresh meat, dairy</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>36–46°F</td>
+                    <td>
+                      <span class="lang-uz">Ko'pchilik dori-darmonlar</span>
+                      <span class="lang-en">Most medicines</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="highlight-card">
+              <p>
+                <span class="lang-uz">⚠️ Doimo bill of lading dagi <strong>aniq haroratni</strong> ishlating.</span>
+                <span class="lang-en">⚠️ Always use the <strong>exact temperature</strong> on the bill of lading.</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 6.7 Hazardous Freight (Hazmat) ===== -->
+        <section class="chapter-section card" id="section-6-7">
+          <h2 class="section-title">
+            <span class="section-num">6.7</span>
+            <span class="lang-uz">Xavfli yuklarlar (Hazmat)</span>
+            <span class="lang-en">Hazardous Freight (Hazmat)</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">49 CFR 171–180 qoidalari bilan boshqariladi</span>
+                <span class="lang-en">Governed by 49 CFR Parts 171–180</span>
+              </li>
+              <li>
+                <span class="lang-uz">Part 172: Xavfli materiallar jadvali, jo'natish hujjatlari, belgilar, yorliqlar, plakardlar, trening, xavfsizlik</span>
+                <span class="lang-en">Part 172: Hazardous Materials Table, shipping papers, marking, labels, placards, training, security</span>
+              </li>
+              <li>
+                <span class="lang-uz">Eng xavfli materiallar uchun har qanday miqdorda plakardlar kerak; boshqalar uchun 1,001 lb dan</span>
+                <span class="lang-en">Placards needed for any amount of most dangerous materials; from 1,001 lb for others</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>UN raqamlari</strong>: 4 raqamli ID (UN 1203 = benzin)</span>
+                <span class="lang-en"><strong>UN numbers</strong>: 4-digit IDs (UN 1203 = gasoline)</span>
+              </li>
+              <li>
+                <span class="lang-uz">Haydovchiga <strong>H endorsement + TSA tekshiruvi</strong> kerak</span>
+                <span class="lang-en">Driver needs <strong>H endorsement + TSA background check</strong></span>
+              </li>
+              <li>
+                <span class="lang-uz">Carrierga yuqoriroq sug'urta kerak ($1M–$5M)</span>
+                <span class="lang-en">Carrier needs higher insurance ($1M–$5M)</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span class="lang-uz">To'qqiz xavf klassi</span>
+              <span class="lang-en">The Nine Hazard Classes</span>
+            </h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Klass</span>
+                      <span class="lang-en">Class</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Xavf</span>
+                      <span class="lang-en">Hazard</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <span class="lang-uz">Portlovchi moddalar</span>
+                      <span class="lang-en">Explosives</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <span class="lang-uz">Gazlar</span>
+                      <span class="lang-en">Gases</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <span class="lang-uz">Yonuvchan suyuqliklar</span>
+                      <span class="lang-en">Flammable liquids</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <span class="lang-uz">Yonuvchan qattiq moddalar</span>
+                      <span class="lang-en">Flammable solids</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>
+                      <span class="lang-uz">Oksidlovchilar, organik peroksidlar</span>
+                      <span class="lang-en">Oxidizers, organic peroxides</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>
+                      <span class="lang-uz">Zaharli, yuqumli</span>
+                      <span class="lang-en">Toxic, infectious</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>
+                      <span class="lang-uz">Radioaktiv</span>
+                      <span class="lang-en">Radioactive</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>
+                      <span class="lang-uz">Korroziv (yemiruvchi)</span>
+                      <span class="lang-en">Corrosives</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>
+                      <span class="lang-uz">Turli xil</span>
+                      <span class="lang-en">Miscellaneous</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 6.8 Intermodal Freight ===== -->
+        <section class="chapter-section card" id="section-6-8">
+          <h2 class="section-title">
+            <span class="section-num">6.8</span>
+            <span class="lang-uz">Intermodal yuklarlar</span>
+            <span class="lang-en">Intermodal Freight</span>
+          </h2>
+          <div class="section-body">
+            <p>
+              <span class="lang-uz">Bitta konteyner kema → temir yo'l → truck orqali yuk tegmasdan harakatlanadi. Kamroq ko'chirish = kamroq zarar/yo'qotish; uzoq masofalar uchun yo'l transportidan arzonroq.</span>
+              <span class="lang-en">One container moves by ship → rail → truck without freight being touched. Less handling = less damage/loss; long distances cost less than over-the-road.</span>
+            </p>
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">🚢</div>
+                <h4>
+                  <span class="lang-uz">Kema</span>
+                  <span class="lang-en">Ship</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">20 ft va 40 ft okean konteynerlari</span>
+                  <span class="lang-en">20 ft and 40 ft ocean containers</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🚂</div>
+                <h4>
+                  <span class="lang-uz">Temir yo'l</span>
+                  <span class="lang-en">Rail</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">53 ft ichki konteynerlar, ikki qavatli</span>
+                  <span class="lang-en">53 ft domestic containers, double-stacked</span>
+                </p>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🚛</div>
+                <h4>
+                  <span class="lang-uz">Truck (drayage)</span>
+                  <span class="lang-en">Truck (drayage)</span>
+                </h4>
+                <p>
+                  <span class="lang-uz">Birinchi va oxirgi millar — chassis ustida</span>
+                  <span class="lang-en">First and last miles on a chassis</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 6.9 Bulk Freight ===== -->
+        <section class="chapter-section card" id="section-6-9">
+          <h2 class="section-title">
+            <span class="section-num">6.9</span>
+            <span class="lang-uz">Ommaviy yuklarlar</span>
+            <span class="lang-en">Bulk Freight</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Yuk</span>
+                      <span class="lang-en">Freight</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Odatdagi trailer</span>
+                      <span class="lang-en">Usual Trailer</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="lang-uz">Qum, shag'al</span>
+                      <span class="lang-en">Sand, gravel</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Dump trailer</span>
+                      <span class="lang-en">Dump trailer</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz">Don, urug'</span>
+                      <span class="lang-en">Grain, seed</span>
+                    </td>
+                    <td>Hopper</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz">Sement, plastik granulalar</span>
+                      <span class="lang-en">Cement, plastic pellets</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Pnevmatik tank</span>
+                      <span class="lang-en">Pneumatic tank</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz">Suyuqliklar</span>
+                      <span class="lang-en">Liquids</span>
+                    </td>
+                    <td>Tanker</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="lang-uz">Ommaviy sabzavotlar</span>
+                      <span class="lang-en">Bulk vegetables</span>
+                    </td>
+                    <td>
+                      <span class="lang-uz">Linerli van yoki walking floor</span>
+                      <span class="lang-en">Van with liner, or walking floor</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 6.10 Power Only Loads ===== -->
+        <section class="chapter-section card" id="section-6-10">
+          <h2 class="section-title">
+            <span class="section-num">6.10</span>
+            <span class="lang-uz">Power Only yuklar</span>
+            <span class="lang-en">Power Only Loads</span>
+          </h2>
+          <div class="section-body">
+            <p>
+              <span class="lang-uz">Trailer allaqachon yuklangan, shipper/brokerga tegishli. Carrier faqat tractor ("power") olib kelib ulaydi va tortadi.</span>
+              <span class="lang-en">Trailer already loaded, belongs to shipper/broker. Carrier brings only the tractor ("power") to hook up and haul.</span>
+            </p>
+
+            <div class="info-box">
+              <h4>
+                <span class="lang-uz">Asosiy tushunchalar:</span>
+                <span class="lang-en">Key terms:</span>
+              </h4>
+              <ul>
+                <li>
+                  <span class="lang-uz"><strong>Bobtail</strong> — Trailersiz tractor haydash</span>
+                  <span class="lang-en"><strong>Bobtail</strong> — Driving tractor with no trailer</span>
+                </li>
+                <li>
+                  <span class="lang-uz"><strong>Trailer interchange insurance</strong> — Boshqa birovning traylerini tortish uchun majburiy sug'urta</span>
+                  <span class="lang-en"><strong>Trailer interchange insurance</strong> — Required — hauling someone else's trailer</span>
+                </li>
+              </ul>
+            </div>
+
+            <h3>
+              <span class="lang-uz">Keng tarqalgan Power Only yuklar:</span>
+              <span class="lang-en">Common Power Only Loads:</span>
+            </h3>
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Yuklangan dry van, yuklangan reefer, yuklangan flatbed</span>
+                <span class="lang-en">Loaded dry van, loaded reefer, loaded flatbed</span>
+              </li>
+              <li>
+                <span class="lang-uz">Juft traylerlar, intermodal konteyner</span>
+                <span class="lang-en">Double trailers, intermodal container</span>
+              </li>
+              <li>
+                <span class="lang-uz">Chassis to'plami, frac tank, attraksion</span>
+                <span class="lang-en">Stack of chassis, frac tank, amusement ride</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 6.11 Deadhead ===== -->
+        <section class="chapter-section card" id="section-6-11">
+          <h2 class="section-title">
+            <span class="section-num">6.11</span>
+            <span class="lang-uz">Deadhead (bo'sh yurish)</span>
+            <span class="lang-en">Deadhead</span>
+          </h2>
+          <div class="section-body">
+            <p>
+              <span class="lang-uz">Bo'sh trailer bilan haydash — yuk yo'q, to'lov yo'q. Yetkazishdan keyin, keyingi yuklash joyiga/truck stopga/uyga yo'lda sodir bo'ladi.</span>
+              <span class="lang-en">Driving with empty trailer — no load, no pay. Happens after delivery, on way to next pickup/truck stop/home.</span>
+            </p>
+
+            <div class="highlight-card">
+              <h4>
+                <span class="lang-uz">📊 Dispatcherning hisobi:</span>
+                <span class="lang-en">📊 Dispatcher's math:</span>
+              </h4>
+              <p>
+                <span class="lang-uz">Mil boshiga narx = yuk to'lovi ÷ (yukli millar + deadhead millar)</span>
+                <span class="lang-en">Rate per mile = load pay ÷ (loaded miles + deadhead miles)</span>
+              </p>
+              <ul>
+                <li>
+                  <span class="lang-uz">$2,000 / 800 yukli mil = <strong>$2.50/mi</strong></span>
+                  <span class="lang-en">$2,000 for 800 loaded miles = <strong>$2.50/mi</strong></span>
+                </li>
+                <li>
+                  <span class="lang-uz">200 deadhead mil bilan = <strong>$2.00/mi</strong> (haqiqiy narx)</span>
+                  <span class="lang-en">With 200 deadhead miles = <strong>$2.00/mi</strong> (real rate)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 6.12 Doubles and Triples (Pups) ===== -->
+        <section class="chapter-section card" id="section-6-12">
+          <h2 class="section-title">
+            <span class="section-num">6.12</span>
+            <span class="lang-uz">Juft va uchlik traylerlar (Pups)</span>
+            <span class="lang-en">Doubles and Triples (Pups)</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Ikki yoki uchta qisqa 28 ft traylerlar ("pups") converter dolly bilan birga tortiladi</span>
+                <span class="lang-en">Two or three short 28 ft trailers ("pups") pulled together with converter dolly</span>
+              </li>
+              <li>
+                <span class="lang-uz">Asosan UPS, FedEx, USPS, Amazon uchun ishlatiladi — ko'pincha LTL linehaul sifatida</span>
+                <span class="lang-en">Run mostly for UPS, FedEx, USPS, Amazon — often as LTL linehaul</span>
+              </li>
+              <li>
+                <span class="lang-uz">Har bir pup turli manzilga ajratilishi mumkin</span>
+                <span class="lang-en">Each pup can split off to different destination</span>
+              </li>
+              <li>
+                <span class="lang-uz">Uchliklar faqat ba'zi (asosan g'arbiy) shtatlarda qonuniy</span>
+                <span class="lang-en">Triples legal only in some (mostly western) states</span>
+              </li>
+              <li>
+                <span class="lang-uz">CDL da <strong>T endorsement</strong> kerak</span>
+                <span class="lang-en">Requires <strong>T endorsement</strong> on CDL</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 6.13 Expedited and High-Value Loads ===== -->
+        <section class="chapter-section card" id="section-6-13">
+          <h2 class="section-title">
+            <span class="section-num">6.13</span>
+            <span class="lang-uz">Tezkor va yuqori qiymatli yuklar</span>
+            <span class="lang-en">Expedited and High-Value Loads</span>
+          </h2>
+          <div class="section-body">
+            <ul class="content-list">
+              <li>
+                <span class="lang-uz">Vaqt jihatdan muhim yuk: to'xtatilgan yig'ish liniyasi uchun avto qismlari, tibbiy buyumlar, bayram posilkalari</span>
+                <span class="lang-en">Time-critical freight: auto parts for stopped assembly line, medical supplies, holiday parcels</span>
+              </li>
+              <li>
+                <span class="lang-uz">Cargo van, straight truck yoki semi bilan tashiladi — eng yaqini qaysi bo'lsa</span>
+                <span class="lang-en">Moved by cargo van, straight truck, or semi — whatever is closest</span>
+              </li>
+              <li>
+                <span class="lang-uz">Uzoq masofalar uchun jamoaviy haydovchilar ishlatiladi</span>
+                <span class="lang-en">Long runs use team drivers</span>
+              </li>
+              <li>
+                <span class="lang-uz">Yuqori qiymatli yuklar: qo'shimcha xavfsizlik — jo'natuvchi yaqinida to'xtamaslik, qulflangan trailer, kuzatuv</span>
+                <span class="lang-en">High-value loads: extra security — no stops near shipper, locked trailer, tracking</span>
+              </li>
+              <li>
+                <span class="lang-uz"><strong>"Straight thru"</strong>: keraksiz to'xtashlarsiz yetkaziladi</span>
+                <span class="lang-en"><strong>"Straight thru"</strong>: Delivered with no unnecessary stops</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== 6.14 Packaging Types ===== -->
+        <section class="chapter-section card" id="section-6-14">
+          <h2 class="section-title">
+            <span class="section-num">6.14</span>
+            <span class="lang-uz">Qadoqlash turlari</span>
+            <span class="lang-en">Packaging Types</span>
+          </h2>
+          <div class="section-body">
+            <div class="items-grid">
+              <div class="item-card">
+                <div class="item-icon">📦</div>
+                <h4>Pallets</h4>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🪵</div>
+                <h4>Skids</h4>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🧊</div>
+                <h4>Totes (IBC)</h4>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">🛢️</div>
+                <h4>Drums</h4>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">💰</div>
+                <h4>Super sacks</h4>
+              </div>
+              <div class="item-card">
+                <div class="item-icon">📐</div>
+                <h4>
+                  <span class="lang-uz">Plastik va yog'och qutilar</span>
+                  <span class="lang-en">Plastic &amp; Wooden crates</span>
+                </h4>
+              </div>
+            </div>
+
+            <div class="highlight-card">
+              <p>
+                <span class="lang-uz">💡 <strong>Maslahat:</strong> Yuklash joyida donalarni va palletlarni sanaing va BOL bilan solishtiring.</span>
+                <span class="lang-en">💡 <strong>Tip:</strong> Count pieces and pallets at pickup and check them against the BOL.</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 6.15 Dedicated Loads and Lanes ===== -->
+        <section class="chapter-section card" id="section-6-15">
+          <h2 class="section-title">
+            <span class="section-num">6.15</span>
+            <span class="lang-uz">Doimiy yuklar va marshrutlar</span>
+            <span class="lang-en">Dedicated Loads and Lanes</span>
+          </h2>
+          <div class="section-body">
+            <p>
+              <span class="lang-uz">Bir yoki bir necha truck shartnoma asosida belgilangan jadval bilan bir xil marshrut (A→B) bo'ylab yurishadi.</span>
+              <span class="lang-en">One or more trucks run same route (A→B) on contract with fixed schedule.</span>
+            </p>
+
+            <div class="info-box">
+              <h4>
+                <span class="lang-uz">Afzalliklari:</span>
+                <span class="lang-en">Pros:</span>
+              </h4>
+              <ul>
+                <li>
+                  <span class="lang-uz">Bozordan qat'i nazar barqaror daromad, trucklar har kuni band</span>
+                  <span class="lang-en">Steady gross regardless of market, trucks covered every day</span>
+                </li>
+                <li>
+                  <span class="lang-uz">Mijoz/broker bilan yuqori reyting</span>
+                  <span class="lang-en">High rating with customer/broker</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="info-box">
+              <h4>
+                <span class="lang-uz">Kamchiliklari:</span>
+                <span class="lang-en">Cons:</span>
+              </h4>
+              <ul>
+                <li>
+                  <span class="lang-uz">Ba'zan yetarli truck yo'q, qaytish yo'nalishi uchun yuk kerak</span>
+                  <span class="lang-en">Sometimes not enough trucks, need backhaul if not round trip</span>
+                </li>
+                <li>
+                  <span class="lang-uz">Yuqori mavsumda qoplash qiyin</span>
+                  <span class="lang-en">Hard to cover in peak season</span>
+                </li>
+              </ul>
+            </div>
+
+            <p>
+              <span class="lang-uz"><strong>Dispatcher vazifasi:</strong> Brokerlar va shipperlar bilan kuchli aloqalar o'rnatish va doimiy marshrutlarni yutib olish.</span>
+              <span class="lang-en"><strong>Dispatcher's job:</strong> Build strong relationships with brokers and shippers to win dedicated lanes.</span>
+            </p>
+          </div>
+        </section>
+
+        <!-- ===== 6.16 Terminology ===== -->
+        <section class="chapter-section card" id="section-6-16">
+          <h2 class="section-title">
+            <span class="section-num">6.16</span>
+            <span class="lang-uz">Terminologiya — 6-bob</span>
+            <span class="lang-en">Terminology — Chapter 6</span>
+          </h2>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="lang-uz">Inglizcha atama</span>
+                      <span class="lang-en">English Term</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">O'zbekcha tarjima</span>
+                      <span class="lang-en">Uzbek Translation</span>
+                    </th>
+                    <th>
+                      <span class="lang-uz">Ta'rif</span>
+                      <span class="lang-en">Definition</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>LTL</strong></td>
+                    <td>LTL (Kam yuk)</td>
+                    <td>
+                      <span class="lang-uz">Less Than Truckload — bir necha kichik yuklar bitta trailerda</span>
+                      <span class="lang-en">Less Than Truckload — several small shipments share one trailer</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>FTL / Truckload</strong></td>
+                    <td>FTL (To'liq yuk)</td>
+                    <td>
+                      <span class="lang-uz">Full Truckload — bitta shipper butun trailerni ishlatadi</span>
+                      <span class="lang-en">Full Truckload — one shipper uses whole trailer</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Partial</strong></td>
+                    <td>Partial / Qisman yuk</td>
+                    <td>
+                      <span class="lang-uz">O'rtacha hajmdagi yuk — 1-2 boshqa yuk bilan birga</span>
+                      <span class="lang-en">Mid-size shipment — shares truck with 1-2 others</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Hazmat</strong></td>
+                    <td>Hazmat (Xavfli materiallar)</td>
+                    <td>
+                      <span class="lang-uz">Hazardous materials — maxsus ruxsat va sug'urta talab qiladi</span>
+                      <span class="lang-en">Hazardous materials — requires special permits and insurance</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Reefer</strong></td>
+                    <td>Reefer</td>
+                    <td>
+                      <span class="lang-uz">Muzlatgichli trailer — haroratni nazorat qiladi</span>
+                      <span class="lang-en">Refrigerated trailer — controls temperature</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Intermodal</strong></td>
+                    <td>Intermodal</td>
+                    <td>
+                      <span class="lang-uz">Konteyner bir necha transport turida — kema, temir yo'l, truck</span>
+                      <span class="lang-en">Container moves by multiple transport modes — ship, rail, truck</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Drayage</strong></td>
+                    <td>Drayage</td>
+                    <td>
+                      <span class="lang-uz">Port/temir yo'l stantsiyasidan qisqa masofali konteyner tashish</span>
+                      <span class="lang-en">Short-distance container haul from port/rail yard</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Power Only</strong></td>
+                    <td>Power Only</td>
+                    <td>
+                      <span class="lang-uz">Faqat tractor — trailer allaqachon yuklangan</span>
+                      <span class="lang-en">Tractor only — trailer is already loaded</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Bobtail</strong></td>
+                    <td>Bobtail</td>
+                    <td>
+                      <span class="lang-uz">Trailersiz tractor haydash</span>
+                      <span class="lang-en">Driving tractor with no trailer</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Deadhead</strong></td>
+                    <td>Deadhead / Bo'sh yurish</td>
+                    <td>
+                      <span class="lang-uz">Bo'sh trailer bilan yurish — daromadsiz</span>
+                      <span class="lang-en">Driving with empty trailer — no pay</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Expedited</strong></td>
+                    <td>Expedited / Tezkor</td>
+                    <td>
+                      <span class="lang-uz">Vaqt jihatdan muhim yuk — tez yetkazish</span>
+                      <span class="lang-en">Time-critical freight — fast delivery</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dedicated Lane</strong></td>
+                    <td>Dedicated Lane</td>
+                    <td>
+                      <span class="lang-uz">Shartnoma asosida doimiy marshrut</span>
+                      <span class="lang-en">Fixed route on contract</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== ASOSIY FIKRLAR (Key Takeaways) ===== -->
+        <section class="chapter-section card takeaways-section" id="takeaways">
+          <h2 class="section-title">
+            <i data-lucide="star" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Asosiy fikrlar</span>
+            <span class="lang-en">Key Takeaways</span>
+          </h2>
+          <div class="section-body">
+            <ul class="takeaways-list">
+              <li>
+                <span class="lang-uz">Yuk uch xil hajmda tashiladi: LTL (kichik yuklar terminallar orqali), Partial (o'rtacha, terminalsiz) va Truckload (butun trailer). Har birining narxlash usuli farq qiladi.</span>
+                <span class="lang-en">Freight moves in three sizes: LTL (small shipments through terminals), Partial (mid-size, no terminals) and Truckload (whole trailer). Each has different pricing.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Xavfli yuk (Hazmat) 49 CFR 171–180 bilan boshqariladi va 9 ta xavf klassiga bo'linadi. Haydovchiga H endorsement va TSA tekshiruvi, carrierga yuqoriroq sug'urta kerak.</span>
+                <span class="lang-en">Hazardous freight (Hazmat) is governed by 49 CFR 171–180 and divided into 9 hazard classes. Driver needs H endorsement and TSA check, carrier needs higher insurance.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Intermodal yuk kema → temir yo'l → truck orqali konteyner tegmasdan harakatlanadi. Uzoq masofalar uchun arzonroq va kamroq zarar.</span>
+                <span class="lang-en">Intermodal freight moves by ship → rail → truck without touching the container. Cheaper for long distances with less damage.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Power Only da carrier faqat tractor olib keladi — trailer allaqachon yuklangan. Bobtail — trailersiz tractor haydash.</span>
+                <span class="lang-en">In Power Only, carrier brings only the tractor — trailer is already loaded. Bobtail means driving tractor with no trailer.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Deadhead (bo'sh yurish) haqiqiy mil boshiga narxni pasaytiradi. Dispatcher hisobi: $2,000 / (800 yukli + 200 bo'sh) = $2.00/mi.</span>
+                <span class="lang-en">Deadhead (empty miles) lowers the real rate per mile. Dispatcher's math: $2,000 / (800 loaded + 200 empty) = $2.00/mi.</span>
+              </li>
+              <li>
+                <span class="lang-uz">Doimiy marshrutlar (Dedicated lanes) bozordan qat'i nazar barqaror daromad beradi. Dispatcherning vazifasi — brokerlar bilan kuchli munosabat o'rnatish.</span>
+                <span class="lang-en">Dedicated lanes provide steady income regardless of market. Dispatcher's job — build strong relationships with brokers.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===== SCENARIOS (Interactive) ===== -->
+        <section class="chapter-section card" id="scenarios">
+          <h2 class="section-title">
+            <i data-lucide="help-circle" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Amaliy vaziyatlar</span>
+            <span class="lang-en">Practice Scenarios</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher vaziyatlarini tahlil qiling va to'g'ri javobni tanlang.</span>
+            <span class="lang-en">Analyze the following real dispatcher situations and choose the correct answer.</span>
+          </p>
+          <div id="scenarios-container"></div>
+        </section>
+
+        <!-- ===== PHONE SCRIPTS ===== -->
+        <section class="chapter-section card" id="phone-scripts">
+          <h2 class="section-title">
+            <i data-lucide="phone" style="width:20px;height:20px;color:var(--color-accent)"></i>
+            <span class="lang-uz">Telefon skriptlari</span>
+            <span class="lang-en">Phone Scripts</span>
+          </h2>
+          <p class="section-intro">
+            <span class="lang-uz">Quyidagi real dispatcher telefon muloqotlarini o'rganing. Kalit iboralarni yodlang.</span>
+            <span class="lang-en">Study the following real dispatcher phone conversations. Memorize the key phrases.</span>
+          </p>
+          <div id="scripts-container"></div>
+        </section>
+
+        <!-- ===== MARK AS READ ===== -->
+        <div class="mark-read-wrap">
+          <button class="mark-read-btn" id="mark-read-btn">
+            <i data-lucide="book-check" style="width:18px;height:18px"></i>
+            <span class="lang-uz">O'qildi deb belgilash</span>
+            <span class="lang-en">Mark as read</span>
+          </button>
+        </div>
+
+        <!-- ===== CHAPTER NAVIGATION ===== -->
+        <div class="chapter-nav">
+          <a href="chapter5.html" class="chapter-nav-btn prev">
+            <i data-lucide="arrow-left" style="width:18px;height:18px"></i>
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Oldingi bob</span>
+                <span class="lang-en">Previous Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Traylerlar va og'irlik balansi</span>
+                <span class="lang-en">Trailers and Weight Balance</span>
+              </span>
+            </span>
+          </a>
+          <a href="chapter7.html" class="chapter-nav-btn next">
+            <span>
+              <span class="nav-label">
+                <span class="lang-uz">Keyingi bob</span>
+                <span class="lang-en">Next Chapter</span>
+              </span>
+              <span class="nav-title">
+                <span class="lang-uz">Yuk xavfsizligi va protseduralar</span>
+                <span class="lang-en">Load Security and Procedures</span>
+              </span>
+            </span>
+            <i data-lucide="arrow-right" style="width:18px;height:18px"></i>
+          </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>
+            <span class="lang-uz">&copy; 2024 Dispatcher Academy — AQSh yuk tashish sanoati bo'yicha o'quv platformasi</span>
+            <span class="lang-en">&copy; 2024 Dispatcher Academy — US Trucking Industry Learning Platform</span>
+          </p>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Lucide Icons -->
+  <!-- Progress Tracker -->
+  <script src="js/progress.js"></script>
+
+  <!-- Scenario Data -->
+  <script src="data/scenarios.js"></script>
+
+  <!-- Phone Scripts Data -->
+  <script src="data/scripts.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Scenario Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 6;
+    var container = document.getElementById('scenarios-container');
+    if (!container || typeof scenariosData === 'undefined') return;
+    var chapterScenarios = scenariosData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScenarios.length === 0) return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    function renderScenarios() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScenarios.forEach(function(scenario, idx) {
+        var situation = lang === 'uz' ? scenario.situation_uz : scenario.situation_en;
+        var scenarioEl = document.createElement('div');
+        scenarioEl.className = 'scenario-block';
+        scenarioEl.setAttribute('data-id', scenario.id);
+        var header = '<div class="scenario-header"><span class="scenario-num">' + (idx + 1) + '</span><div class="scenario-situation">' + escHtml(situation) + '</div></div>';
+        var optionsHtml = '<div class="scenario-options">';
+        scenario.options.forEach(function(opt, oi) {
+          var optText = lang === 'uz' ? opt.text_uz : opt.text_en;
+          optionsHtml += '<button class="scenario-option" data-scenario="' + scenario.id + '" data-index="' + oi + '"><span class="option-letter">' + String.fromCharCode(65 + oi) + '</span><span class="option-text">' + escHtml(optText) + '</span></button>';
+        });
+        optionsHtml += '</div>';
+        var feedbackHtml = '<div class="scenario-feedback" id="feedback-' + scenario.id + '" style="display:none"></div>';
+        scenarioEl.innerHTML = header + optionsHtml + feedbackHtml;
+        container.appendChild(scenarioEl);
+      });
+      container.querySelectorAll('.scenario-option').forEach(function(btn) { btn.addEventListener('click', function() { handleAnswer(this); }); });
+    }
+    function handleAnswer(btn) {
+      var scenarioId = btn.getAttribute('data-scenario');
+      var chosenIndex = parseInt(btn.getAttribute('data-index'));
+      var scenario = chapterScenarios.find(function(s) { return s.id === scenarioId; });
+      if (!scenario) return;
+      var lang = getLang();
+      var block = btn.closest('.scenario-block');
+      var allBtns = block.querySelectorAll('.scenario-option');
+      var isCorrect = chosenIndex === scenario.correct_index;
+      allBtns.forEach(function(b) {
+        b.disabled = true; b.classList.add('disabled');
+        var bIdx = parseInt(b.getAttribute('data-index'));
+        if (bIdx === scenario.correct_index) b.classList.add('correct');
+        if (bIdx === chosenIndex && !isCorrect) b.classList.add('incorrect');
+      });
+      var feedbackEl = document.getElementById('feedback-' + scenarioId);
+      var chosenOpt = scenario.options[chosenIndex];
+      var explanation = lang === 'uz' ? chosenOpt.explanation_uz : chosenOpt.explanation_en;
+      feedbackEl.className = 'scenario-feedback ' + (isCorrect ? 'feedback-correct' : 'feedback-incorrect');
+      feedbackEl.innerHTML = '<div class="feedback-icon">' + (isCorrect ? '<i data-lucide="check-circle" style="width:20px;height:20px;color:#16a34a"></i>' : '<i data-lucide="x-circle" style="width:20px;height:20px;color:#dc2626"></i>') + '</div><div class="feedback-text">' + escHtml(explanation) + '</div>';
+      feedbackEl.style.display = 'flex';
+      lucide.createIcons();
+    }
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') {
+          var answered = container.querySelector('.scenario-option.disabled');
+          if (!answered) renderScenarios();
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    renderScenarios();
+  })();
+  </script>
+
+  <!-- Phone Scripts Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 6;
+    var container = document.getElementById('scripts-container');
+    if (!container || typeof scriptsData === 'undefined') return;
+    var chapterScripts = scriptsData.filter(function(s) { return s.chapter === CHAPTER; });
+    if (chapterScripts.length === 0) return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    function renderScripts() {
+      var lang = getLang();
+      container.innerHTML = '';
+      chapterScripts.forEach(function(script, idx) {
+        var title = lang === 'uz' ? script.title_uz : script.title_en;
+        var dialogue = lang === 'uz' ? script.script_uz : script.script_en;
+        var phrasesTitle = lang === 'uz' ? 'Kalit iboralar' : 'Key Phrases';
+        var el = document.createElement('div');
+        el.className = 'script-block';
+        var phrasesHtml = '';
+        script.key_phrases.forEach(function(kp) {
+          var phrase = lang === 'uz' ? kp.phrase_uz : kp.phrase_en;
+          phrasesHtml += '<div class="key-phrase"><span class="key-phrase-bullet">▸</span><span class="key-phrase-text">' + escHtml(phrase) + '</span></div>';
+        });
+        el.innerHTML =
+          '<div class="script-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.script-toggle').classList.toggle('open')">' +
+            '<span class="script-num">' + (idx + 1) + '</span>' +
+            '<span class="script-title">' + escHtml(title) + '</span>' +
+            '<i data-lucide="chevron-down" class="script-toggle" style="width:20px;height:20px"></i>' +
+          '</div>' +
+          '<div class="script-body">' +
+            '<div class="script-dialogue">' + escHtml(dialogue) + '</div>' +
+            '<div class="script-key-phrases">' +
+              '<div class="script-key-phrases-title"><i data-lucide="bookmark" style="width:16px;height:16px"></i> ' + escHtml(phrasesTitle) + '</div>' +
+              phrasesHtml +
+            '</div>' +
+          '</div>';
+        container.appendChild(el);
+      });
+      lucide.createIcons();
+    }
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) {
+        if (m.attributeName === 'data-lang') renderScripts();
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    renderScripts();
+  })();
+  </script>
+
+  <!-- Mark as Read Logic -->
+  <script>
+  (function() {
+    var CHAPTER = 6;
+    var btn = document.getElementById('mark-read-btn');
+    if (!btn || typeof Progress === 'undefined') return;
+    function getLang() { return document.documentElement.getAttribute('data-lang') || 'uz'; }
+    function updateBtn() {
+      var isRead = Progress.isChapterRead(CHAPTER);
+      if (isRead) {
+        btn.classList.add('read');
+        btn.innerHTML = '<i data-lucide="check-circle" style="width:18px;height:18px"></i><span class="lang-uz">O\'qilgan</span><span class="lang-en">Read</span>';
+      } else {
+        btn.classList.remove('read');
+        btn.innerHTML = '<i data-lucide="book-check" style="width:18px;height:18px"></i><span class="lang-uz">O\'qildi deb belgilash</span><span class="lang-en">Mark as read</span>';
+      }
+      lucide.createIcons();
+    }
+    btn.addEventListener('click', function() {
+      if (!Progress.isChapterRead(CHAPTER)) { Progress.markChapterRead(CHAPTER); updateBtn(); }
+    });
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(m) { if (m.attributeName === 'data-lang') updateBtn(); });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    updateBtn();
+  })();
+  </script>
+</body>
+</html>
